@@ -22,7 +22,7 @@ public class LoginPageTest extends TestBase{
 	public void setUp() {
 		initialization();
 		
-		//now creating the object of LoginPage class
+		//now creating the object of LoginPage class.
 		
 		 loginPage = new LoginPage();
 	}
