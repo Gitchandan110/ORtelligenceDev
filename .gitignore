@@ -11,6 +11,7 @@ dist/
 *.class
 .classpath
 .project
+.settings/
 
 # Compiled Python bytecode
 *.py[cod]
