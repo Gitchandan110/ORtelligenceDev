@@ -53,11 +53,16 @@ public class DashboardPageTest extends TestBase {
 	}
 	
 	@Test(priority=3)
+	public void verifymenu() {
+		Assert.assertTrue(dashboardPage.verifyMenu());
+		}
+	
+	@Test(priority=4)
 	public void verifyProfileLinkTest() {
 		profilePage=dashboardPage.clickOnProfileLink();
 		}
 	
-	@Test(priority=4)
+	@Test(priority=5)
 	public void verifyManageHealthSystemLinkTest() {
 		manageHealthSystemPage=dashboardPage.clickOnManageHealthSystemLink();
 		}

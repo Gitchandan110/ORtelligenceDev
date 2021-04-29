@@ -25,7 +25,7 @@ import com.TestBase.TestBase;
 		WebElement forgotPassword;
 		
 		@FindBy(id ="recovery-code")
-		WebElement recoveryCode;
+		WebElement recoveryCode;  
 
 		@FindBy(id ="new")
 		WebElement enterNewPassword;
@@ -70,8 +70,18 @@ import com.TestBase.TestBase;
 			password.sendKeys(pwd);
 			signUpBtn.click();
 			    		
-			return new DashboardPage();
+			return new DashboardPage(); // it  will return to Dashboard page
 		}
+		
+		
+		public ManageHealthSystemPage dashboard(String un, String pwd){
+			username.sendKeys(un);
+			password.sendKeys(pwd);
+			signUpBtn.click();
+			    		
+			return new ManageHealthSystemPage(); // it  will return to Dashboard page
+		}
+		
 		
 	}
 
