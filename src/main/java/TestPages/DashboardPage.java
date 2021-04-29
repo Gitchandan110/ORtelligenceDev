@@ -17,11 +17,14 @@ public class DashboardPage extends TestBase
 	@FindBy(xpath="//img[@class='logo-width']]")                      //xpath for logolink
 	WebElement ORtLogo;
 	
+	@FindBy(xpath="//*[@id=\"menu-ul\"]/ul/li[3]/a")
+	WebElement menu;
+	
 	@FindBy(xpath="//*[@id=\"menu-ul\"]/ul/li[3]/div/a[1]")                     //xpath for profile link
 	WebElement profilelink;
 	
 	@FindBy(xpath="//*[@id=\"menu-ul\"]/ul/li[1]/a")                    //xpath for ManageHealthSystemLink
-	WebElement ManageHealthSystemLink;
+	WebElement manageHealthSystemLink;
 	
 	@FindBy(xpath="//a[@class='menu-font menu-active']")                    //xpath for AlertsLink
 	WebElement AlertsLink;
@@ -40,14 +43,18 @@ public class DashboardPage extends TestBase
 	return usernameLable.isDisplayed();            //ignore this
 }
 
+	public  boolean verifyMenu() {
+		return menu.isDisplayed(); 
+		
+	}
 	
 	public  ProfilePage clickOnProfileLink() {
 		profilelink.click();
-		return new ProfilePage();
+		return new ProfilePage();  
 		
 	}
 	public  ManageHealthSystemPage clickOnManageHealthSystemLink() {
-		 ManageHealthSystemLink.click();
+		 manageHealthSystemLink.click();
 		return new ManageHealthSystemPage();
 	}
 	
