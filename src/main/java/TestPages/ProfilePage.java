@@ -2,6 +2,8 @@ package TestPages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
 
 import com.TestBase.TestBase;
 
@@ -39,5 +41,13 @@ public class ProfilePage extends TestBase {
 
 	@FindBy(id ="lastName")
 	WebElement lastName;
+	
+	
+	
+	public ProfilePage(){                             //creating loginpage constructor
+		PageFactory.initElements(driver, this);    //PageFactory is a class and InitElements is method 
+		                                          //driver is coming from base class  //'this' means current class object, instead of this we can write LoginPage.class but better to use 'this'
+	}
+	
 
 }

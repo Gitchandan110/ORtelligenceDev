@@ -1,6 +1,7 @@
 package TestPages;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -21,7 +22,7 @@ public class DashboardPage extends TestBase
 	WebElement menu;
 	
 	@FindBy(xpath="//*[@id=\"menu-ul\"]/ul/li[3]/div/a[1]")                     //xpath for profile link
-	WebElement profilelink;
+	WebElement profileLink;
 	
 	@FindBy(xpath="//*[@id=\"menu-ul\"]/ul/li[1]/a")                    //xpath for ManageHealthSystemLink
 	WebElement manageHealthSystemLink;
@@ -48,9 +49,12 @@ public class DashboardPage extends TestBase
 		
 	}
 	
-	public  ProfilePage clickOnProfileLink() {
-		profilelink.click();
-		return new ProfilePage();  
+	public  void clickOnProfileLink() {
+		Actions action = new Actions(driver);
+		action.moveToElement(profileLink).build().perform();
+		profileLink.click();
+		//profilelink.click();
+		//return new ProfilePage();  
 		
 	}
 	public  ManageHealthSystemPage clickOnManageHealthSystemLink() {
@@ -63,4 +67,4 @@ public class DashboardPage extends TestBase
 		return new AlertsPage();
 	}
 	
-}
+}  

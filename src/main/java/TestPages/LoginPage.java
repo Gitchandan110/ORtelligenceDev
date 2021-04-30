@@ -28,7 +28,7 @@ import com.TestBase.TestBase;
 		WebElement recoveryCode;  
 
 		@FindBy(id ="new")
-		WebElement enterNewPassword;
+		WebElement enterNewPassword; 
 
 		@FindBy(id ="verify")
 		WebElement verifyNewPassword;
@@ -79,7 +79,7 @@ import com.TestBase.TestBase;
 			password.sendKeys(pwd);
 			signUpBtn.click();
 			    		
-			return new ManageHealthSystemPage(); // it  will return to Dashboard page
+			return new ManageHealthSystemPage(); // it  will return to ManageHealthPage
 		}
 		
 		
