@@ -7,38 +7,48 @@ import org.openqa.selenium.support.PageFactory;
 import com.TestBase.TestBase;
 
 public class ForgotPasswordPage extends TestBase {
-	
-	@FindBy(xpath="//img[@class='org-logo__image']")//For Logo
+	//For Logo
+	@FindBy(xpath="//img[@class='org-logo__image']")
 	WebElement ORtLogo;
-
-	@FindBy(xpath="//a[text()='Forgot Password']")//For forgot Password
+	
+	//For forgot Password
+	@FindBy(xpath="//a[text()='Forgot Password']")
 	WebElement forgotPassword;
-
-	@FindBy(xpath="//img[@class='org-logo__image']")//Logo for next page.
+	
+	//Logo for next page.
+	@FindBy(xpath="//img[@class='org-logo__image']")
 	WebElement ORtLogo1;
-
-	@FindBy(id ="username")//username for forgot password
+	
+	//username for forgot password
+	@FindBy(id ="username")
 	WebElement username;
-
-	@FindBy(xpath="//button[text()='Submit']")//submit button password
+	
+	//submit button password
+	@FindBy(xpath="//button[text()='Submit']")
 	WebElement submit;
-
-	@FindBy(xpath="//img[@class='org-logo__image']")//Logo for page 2
+	
+	//Logo for page 2
+	@FindBy(xpath="//img[@class='org-logo__image']")
 	WebElement ORtLogo2;
-
-	@FindBy(id ="recovery-code")//Recovery code Purpose
+	
+	//Recovery code Purpose
+	@FindBy(id ="recovery-code")
 	WebElement recoveryCode;
-
-	@FindBy(id ="new")//For new Password 
+	
+	//For new Password
+	@FindBy(id ="new") 
 	WebElement enterNewPassword;
-
-	@FindBy(id ="verify")//For new Password
+	
+	//For new Password
+	@FindBy(id ="verify")
 	WebElement verifyNewPassword;
-
-	@FindBy(xpath="//button[@type='submit']")//For next page
+	
+	//For next page
+	@FindBy(xpath="//button[@type='submit']")
 	WebElement save;
-
-	@FindBy(xpath="//a[@href='#']")//Link for Resend
+	
+	//Link for Resend
+	@FindBy(xpath="//a[@href='#']")
 	WebElement resend;
 
 	public ForgotPasswordPage(){                             //creating  constructor

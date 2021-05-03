@@ -15,7 +15,7 @@ import com.TestBase.TestBase;
 		@FindBy(name="password")
 		WebElement password;
 
-		@FindBy(xpath="//*[@id=\"page-ui-container\"]/div/div/div/div[2]/div[1]/div/form/div[3]/button")   //xpath
+		@FindBy(xpath="//*[@id=\"page-ui-container\"]/div/div/div/div[2]/div[1]/div/form/div[3]/button")  
 		WebElement signUpBtn;
 		
 		@FindBy(xpath="//img[contains(@class,org-logo__image)]")
@@ -39,9 +39,12 @@ import com.TestBase.TestBase;
 		//using @FindBy annotation we have created different WebElements of login page
 		//Now we are initializing the elements using PageFactory
 		//Initializing the Page Objects:
-		public LoginPage(){                             //creating loginpage constructor
-			PageFactory.initElements(driver, this);    //PageFactory is a class and InitElements is method 
-			                                          //driver is coming from base class  //'this' means current class object, instead of this we can write LoginPage.class but better to use 'this'
+		//creating loginpage constructor
+		public LoginPage(){ 
+		//PageFactory is a class and InitElements is method 
+		//driver is coming from base class  //'this' means current class object, instead of this we can write LoginPage.class but better to use 'this'
+			PageFactory.initElements(driver, this);    
+			                                          
 		}
 		
 		//Actions:
@@ -49,8 +52,9 @@ import com.TestBase.TestBase;
 			return driver.getTitle();
 		}
 		
+		//isDisplayed method will return true or false if the logo is available
 		public boolean validateORtLogo() {
-		return ORtLogo.isDisplayed();   //isDisplayed method will return true or false if the logo is available
+		return ORtLogo.isDisplayed();   
 		}
 		
 		public ForgotPasswordPage login(String Rcd, String ENpwd, String VN) {
@@ -69,8 +73,9 @@ import com.TestBase.TestBase;
 			username.sendKeys(un);
 			password.sendKeys(pwd);
 			signUpBtn.click();
-			    		
-			return new DashboardPage(); // it  will return to Dashboard page
+			
+			// it  will return to Dashboard page    		
+			return new DashboardPage(); 
 		}
 		
 		
@@ -78,8 +83,9 @@ import com.TestBase.TestBase;
 			username.sendKeys(un);
 			password.sendKeys(pwd);
 			signUpBtn.click();
-			    		
-			return new ManageHealthSystemPage(); // it  will return to ManageHealthPage
+			
+			// it  will return to ManageHealthPage    		
+			return new ManageHealthSystemPage(); 
 		}
 		
 		

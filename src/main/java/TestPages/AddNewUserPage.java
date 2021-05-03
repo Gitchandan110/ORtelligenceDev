@@ -20,12 +20,12 @@ public class AddNewUserPage extends TestBase{
 	WebElement username;
 	
 	//Initializing the Page Objects:
-		public AddNewUserPage(){                             
-			PageFactory.initElements(driver, this);    
+	public AddNewUserPage(){                             
+		    PageFactory.initElements(driver, this);    
 			                                          
 		}
 		
-		public void createNewUser(String ftname,String ltname,String uname) {
+	public void createNewUser(String ftname,String ltname,String uname) {
 			Select select =new Select(driver.findElement(By.name("name"))); 
 			select.selectByVisibleText("name");
 			firstname.sendKeys(ftname);
