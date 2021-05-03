@@ -3,15 +3,22 @@ package TestCases;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.TestBase.TestBase;
 
 import TestPages.DashboardPage;
 import TestPages.LoginPage;
+import Utility.ExcelUtility;
 public class LoginPageTest extends TestBase{
 	LoginPage loginPage;   //Defined the loginPage variable
 	DashboardPage dashboardPage;
+	
+	 //name of the sheet in excel
+	 String sheetName = "NurseData";
+	
+	
 	public LoginPageTest() {  // here created the constructor of LoginPageTest
 		super();	  //it will call superclass constructor bcz i want to initialize my properties also
 		              // only after calling the superclass constructor it will go to the initialization
@@ -39,6 +46,12 @@ public class LoginPageTest extends TestBase{
 	public void ORtLogoImageTest() {
 		boolean flag=loginPage.validateORtLogo();
 		Assert.assertFalse(flag);     //if flag is true ur assertion will be passed otherwise it will fail
+	}
+	
+	@DataProvider
+	public Object getORtTestData() {
+		Object data [][]=ExcelUtility.getTestData(sheetName);
+		return data;
 	}
 	
 	@Test(priority=3)
