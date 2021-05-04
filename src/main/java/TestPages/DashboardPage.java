@@ -1,6 +1,7 @@
 package TestPages;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -13,26 +14,32 @@ public class DashboardPage extends TestBase
 	@FindBy(xpath="/html/body/app-root/app-full-layout/app-header/div/div[2]/div/div[1]/label")
 		WebElement usernameLable;   //ignore this
 		
-	
-	@FindBy(xpath="//img[@class='logo-width']]")                      //xpath for logolink
+	//to check logo link
+	@FindBy(xpath="//img[@class='logo-width']]")                     
 	WebElement ORtLogo;
 	
-	@FindBy(xpath="//*[@id=\"menu-ul\"]/ul/li[3]/div/a[1]")                     //xpath for profile link
-	WebElement profilelink;
+	@FindBy(xpath="//*[@id=\"menu-ul\"]/ul/li[3]/a")
+	WebElement menu;
 	
-	@FindBy(xpath="//*[@id=\"menu-ul\"]/ul/li[1]/a")                    //xpath for ManageHealthSystemLink
-	WebElement ManageHealthSystemLink;
+	//to check profile link
+	@FindBy(xpath="//*[@id=\"menu-ul\"]/ul/li[3]/div/a[1]")                     
+	WebElement profileLink;
 	
-	@FindBy(xpath="//a[@class='menu-font menu-active']")                    //xpath for AlertsLink
+	//to check manage health system link
+	@FindBy(xpath="//*[@id=\"menu-ul\"]/ul/li[1]/a")                    
+	WebElement manageHealthSystemLink;
+	
+	//to check Alert Link
+	@FindBy(xpath="//a[@class='menu-font menu-active']")                   
 	WebElement AlertsLink;
 	
-	
-	public DashboardPage(){                             //creating loginpage constructor
+	//creating DashboardPage Constructor and initializing page elements
+	public DashboardPage(){                           
 		PageFactory.initElements(driver, this);
 	
 	}
-
-	public String verifyDashboardPageTitle() {  // this method will call from DashBoard Test Class
+	// verifyDashboardPageTitle method will call from DashBoard Test Class
+	public String verifyDashboardPageTitle() {  
 		return driver.getTitle();
 		
 	}
@@ -40,14 +47,21 @@ public class DashboardPage extends TestBase
 	return usernameLable.isDisplayed();            //ignore this
 }
 
+	public  boolean verifyMenu() {
+		return menu.isDisplayed(); 
+		
+	}
 	
-	public  ProfilePage clickOnProfileLink() {
-		profilelink.click();
-		return new ProfilePage();
+	public  void clickOnProfileLink() {
+		Actions action = new Actions(driver);
+		action.moveToElement(profileLink).build().perform();
+		profileLink.click();
+		//profilelink.click();
+		//return new ProfilePage();  
 		
 	}
 	public  ManageHealthSystemPage clickOnManageHealthSystemLink() {
-		 ManageHealthSystemLink.click();
+		 manageHealthSystemLink.click();
 		return new ManageHealthSystemPage();
 	}
 	
@@ -56,4 +70,4 @@ public class DashboardPage extends TestBase
 		return new AlertsPage();
 	}
 	
-}
+}  

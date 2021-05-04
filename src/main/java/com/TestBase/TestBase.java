@@ -9,13 +9,18 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.openqa.selenium.support.events.WebDriverEventListener;
 
 import Utility.TestUtil;
+
 
 public class TestBase {
 	
 	public static WebDriver driver;
 	public static Properties prop;
+	public  static EventFiringWebDriver e_driver;
+	public static WebDriverEventListener eventListener;
 	
 	public TestBase(){
 	try {
@@ -43,7 +48,8 @@ public class TestBase {
 			driver = new FirefoxDriver(); 
 		}	
 	
-   
+	
+		
 	    driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
