@@ -36,7 +36,9 @@ public class TestBase {
 	}   
 	
 	public static void initialization(){
-		String browserName = prop.getProperty("browser");  //initialising the browser using property file
+		
+		//initialising the browser using property file
+		String browserName = prop.getProperty("browser");  
 		
 		if(browserName.equals("chrome")){
 			System.setProperty("webdriver.chrome.driver","D:\\SELENIUM\\DRIVERS\\chromedriver");	     //C:\SeleniumDriver
@@ -53,7 +55,10 @@ public class TestBase {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-	    driver.get(prop.getProperty("url"));  //reading the property file to get URL
+		
+		 //reading the property file to get URL
+	    driver.get(prop.getProperty("url")); 
+	   
 		
 	
 	}

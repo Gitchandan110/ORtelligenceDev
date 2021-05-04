@@ -62,35 +62,39 @@ public class ForgotPasswordPage extends TestBase {
 	public boolean validateORtLogo() {
 		return ORtLogo.isDisplayed();   
 	}
-	public ForgotPasswordPage click() {//Link click for Forgot Password
+	
+	//Link click for Forgot Password
+	public ForgotPasswordPage click() {
 		forgotPassword.click();
 		return new ForgotPasswordPage();
 	}
-
-	public boolean validateORtLogo1() {//Logo for new page1
-		return ORtLogo1.isDisplayed();   //isDisplayed method will return true or false if the logo is available
+	//Logo for new page1
+	//isDisplayed method will return true or false if the logo is available
+	public boolean validateORtLogo1() {
+		return ORtLogo1.isDisplayed();   
 	}
-
-	public ForgotPasswordPage username(String un) {//For the username and Submit Purpose
+	//For the username and Submit Purpose
+	public ForgotPasswordPage username(String un) {
 		username.sendKeys(un);
 		submit.click();
 		return new ForgotPasswordPage();
 	}
-
-	public boolean validateORtLogo2() {//Logo for new page2
-		return ORtLogo2.isDisplayed();   //isDisplayed method will return true or false if the logo is available
+	//Logo for new page2
+	//isDisplayed method will return true or false if the logo is available
+	public boolean validateORtLogo2() {
+		return ORtLogo2.isDisplayed();   
 	}
 
-
-	public DashboardPage recoveryCode(String rcd,String enpwd,String vn) {//Coding for the purpose of Recovery.new password,verify new password.then click on that button
+	//Coding for the purpose of Recovery.new password,verify new password.then click on that button
+	public DashboardPage recoveryCode(String rcd,String enpwd,String vn) {
 		recoveryCode.sendKeys(rcd);
 		enterNewPassword.sendKeys(enpwd);
 		verifyNewPassword.sendKeys(vn);
 		save.click();
 		return new DashboardPage();
 	}
-
-	public ForgotPasswordPage resend() {//for the purpose of New Page Link we are going to Click on the Resend option such that we can get our code.
+	//for the purpose of New Page Link we are going to Click on the Resend option such that we can get our code.
+	public ForgotPasswordPage resend() {
 		resend.click();
 		return new ForgotPasswordPage();
 	}
