@@ -23,9 +23,9 @@ public class CreateCaseFindPatientPage extends TestBase
 	@FindBy(xpath="//input[@id='dob']")
 	WebElement patientDOB;
 
-////	Date of Birth Calander icon
-//	@FindBy(xpath="//input[@id='dob']")
-//	WebElement ;
+//	Date of Birth Calander icon
+	@FindBy(xpath="//span[@class='date-picker-icon']")
+	WebElement patientDOBIcon;
 	
 //	MRN# Number	
 	@FindBy(xpath="//input[@id='mrn']")

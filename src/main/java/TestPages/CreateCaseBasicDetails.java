@@ -22,29 +22,29 @@ public class CreateCaseBasicDetails extends TestBase
 	@FindBy(xpath="//button[text()='Quick Pick']")
 	WebElement quickPick;	
 	
-////	Second Surgeon + icon
-//	@FindBy(xpath="")
-//	WebElement ;
+//	Second Surgeon + icon
+	@FindBy(xpath="//i[@class='fa fa-plus padding-plus-layout cursor-pointer']")
+	WebElement secondSergeonPlusIcon;
 	
 //		Second Surgeon dropdown
 		@FindBy(xpath="//select[@id='surgeonPlus']")
 		WebElement secondSurgeon;
 
-////	Surgeon Latex Allergy* dropdown . This is auto filled if data is already saved.
-//	@FindBy(xpath="") 
-//	WebElement ;
-//	
-////	2nd Surg. Latex Allergy* dropdown This is auto filled if data is already saved.
-//	@FindBy(xpath="")
-//	WebElement ;
+//	Surgeon Latex Allergy* dropdown . This is auto filled if data is already saved.
+	@FindBy(xpath="(//select[@class='form-control ng-untouched ng-pristine ng-invalid'])[1]") 
+	WebElement surgeonAllergy;
 	
-////	Patient Latex Allergy* dropdown This is auto filled if data is already saved.
-//	@FindBy(xpath="")
-//	WebElement ;
+//	2nd Surg. Latex Allergy* dropdown This is auto filled if data is already saved.
+	@FindBy(xpath="(//select[@class='form-control ng-untouched ng-pristine ng-invalid'])[2]")
+	WebElement secondSurgeonAllergy;
 	
-////	Physician Assistant* dropdown
-//	@FindBy(xpath="")
-//	WebElement ;
+//	Patient Latex Allergy* dropdown This is auto filled if data is already saved.
+	@FindBy(xpath="(//select[@class='form-control ng-untouched ng-pristine ng-valid'])[3]")
+	WebElement patientAllergy;
+	
+//	Physician Assistant* dropdown
+	@FindBy(xpath="(//select[@class='form-control ng-untouched ng-pristine ng-valid'])[4]")
+	WebElement physicianAssistant;
 	
 //	Urgency*
 	@FindBy(xpath="//select[@id='urgency']")
@@ -58,15 +58,15 @@ public class CreateCaseBasicDetails extends TestBase
 	@FindBy(xpath="//select[@id='specialtyId']")
 	WebElement speciaity;
 	
-////	Surgery Date/Time*
-////	Text Field is generally auto filled based upon Urgency but User can mannually enter data 
-////	Data format [ 5/3/2021, 3:40 PM ]
-//	@FindBy(xpath="")
-//	WebElement ;
+//	Surgery Date/Time*
+//	Text Field is generally auto filled based upon Urgency but User can mannually enter data 
+//	Data format [ 5/3/2021, 3:40 PM ]
+	@FindBy(xpath="//input[@class='form-control ng-untouched ng-pristine ng-invalid']")
+	WebElement surgeryDateTime;
 	
-////	Surgery Date/Time* Calander
-//	@FindBy(xpath="")
-//	WebElement ;
+//	Surgery Date/Time* Calendar
+	@FindBy(xpath="//span[@class='input-group-append']")
+	WebElement surgeryDateTimeCalenderIcon;
 	
 //	Notes
 	@FindBy(xpath="//textarea[@id='notesbydoctor']")

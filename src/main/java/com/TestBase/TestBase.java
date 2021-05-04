@@ -22,9 +22,11 @@ public class TestBase {
 			prop = new Properties();
 			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+ "\\src\\main\\resources\\config.properties");
 			prop.load(ip);
-		} catch (FileNotFoundException e) {
+		} 
+	catch (FileNotFoundException e) {
 			e.printStackTrace();
-		} catch (IOException e) {
+		} 
+	catch (IOException e) {
 			e.printStackTrace();
 		}
 	}   
@@ -33,12 +35,11 @@ public class TestBase {
 		String browserName = prop.getProperty("browser");  //initialising the browser using property file
 		
 		if(browserName.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver",
-		            "C:\\SeleniumDriver\\chromedriver.exe");	     //C:\SeleniumDriver
+			System.setProperty("webdriver.chrome.driver","D:\\SELENIUM\\DRIVERS\\chromedriver");	     //C:\SeleniumDriver
 			driver = new ChromeDriver(); 
 		}
 		else if(browserName.equals("FF")){
-			System.setProperty("webdriver.gecko.driver", "C:\\SeleniumDriver\\geckodriver.exe");	
+			System.setProperty("webdriver.gecko.driver", "");	
 			driver = new FirefoxDriver(); 
 		}	
 	
