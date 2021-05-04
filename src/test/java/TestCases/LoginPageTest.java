@@ -12,17 +12,19 @@ import TestPages.DashboardPage;
 import TestPages.LoginPage;
 import Utility.ExcelUtility;
 public class LoginPageTest extends TestBase{
-	LoginPage loginPage;   //Defined the loginPage variable
+	//Defined the loginPage variable
+	LoginPage loginPage;   
 	DashboardPage dashboardPage;
 	
-	 //name of the sheet in excel
-	 String sheetName = "NurseData";
+	//name of the sheet in excel
+	String sheetName = "NurseData";
 	
-	
-	public LoginPageTest() {  // here created the constructor of LoginPageTest
-		super();	  //it will call superclass constructor bcz i want to initialize my properties also
-		              // only after calling the superclass constructor it will go to the initialization
-// the moment it will go to initialization method of super class it will not give nullpointer exception bcz we already defined the properties
+	// here created the constructor of LoginPageTest
+	//it will call superclass constructor bcz i want to initialize my properties also
+	// only after calling the superclass constructor it will go to the initialization
+	// the moment it will go to initialization method of super class it will not give nullpointer exception bcz we already defined the properties
+	public LoginPageTest() {  
+		super();	                           
 		}
 	
 	@BeforeMethod
@@ -45,7 +47,8 @@ public class LoginPageTest extends TestBase{
 	@Test(priority=2)
 	public void ORtLogoImageTest() {
 		boolean flag=loginPage.validateORtLogo();
-		Assert.assertFalse(flag);     //if flag is true ur assertion will be passed otherwise it will fail
+		Assert.assertFalse(flag);     
+		//if flag is true ur assertion will be passed otherwise it will fail
 	}
 	
 	@DataProvider

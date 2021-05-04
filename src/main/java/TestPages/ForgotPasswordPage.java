@@ -50,14 +50,17 @@ public class ForgotPasswordPage extends TestBase {
 	//Link for Resend
 	@FindBy(xpath="//a[@href='#']")
 	WebElement resend;
-
-	public ForgotPasswordPage(){                             //creating  constructor
+	
+	//creating  constructor
+	public ForgotPasswordPage(){                            
 		PageFactory.initElements(driver, this);
 	}
+	
 	//Actions
-
-	public boolean validateORtLogo() {//For first logo
-		return ORtLogo.isDisplayed();   //isDisplayed method will return true or false if the logo is available
+	//For first logo
+	//isDisplayed method will return true or false if the logo is available
+	public boolean validateORtLogo() {
+		return ORtLogo.isDisplayed();   
 	}
 	public ForgotPasswordPage click() {//Link click for Forgot Password
 		forgotPassword.click();

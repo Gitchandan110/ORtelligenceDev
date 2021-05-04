@@ -15,7 +15,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 public class ExcelUtility extends TestBase
 {
 	
-	public static String  TESTDATA_SHEET_PATH="";
+	public static String  TESTDATA_SHEET_PATH="E:\\BitBucket\\ortelligence-automation-qa\\src\\test\\resources\\Driver\\ort excel.xls";
 	static Workbook book;
 	static Sheet sheet;
 	
