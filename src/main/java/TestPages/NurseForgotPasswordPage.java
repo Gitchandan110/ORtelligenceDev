@@ -6,10 +6,15 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.TestBase.TestBase;
 
-public class ForgotPasswordPage extends TestBase {
-
+public class NurseForgotPasswordPage  extends TestBase {
+	
 	@FindBy(xpath="//img[@class='org-logo__image']")//For Logo
 	WebElement ORtLogo;
+
+
+
+	@FindBy(id ="username")//username for forgot password
+	WebElement username;
 
 	@FindBy(xpath="//a[text()='Forgot Password']")//For forgot Password
 	WebElement forgotPassword;
@@ -18,7 +23,7 @@ public class ForgotPasswordPage extends TestBase {
 	//WebElement ORtLogo1;
 
 	@FindBy(id ="username")//username for forgot password
-	WebElement username;
+	WebElement usernameReset;
 
 	@FindBy(xpath="//button[text()='Submit']")//submit button password
 	WebElement submit;
@@ -41,25 +46,30 @@ public class ForgotPasswordPage extends TestBase {
 	@FindBy(xpath="//a[@href='#']")//Link for Resend
 	WebElement resend;
 
-	public ForgotPasswordPage(){                             //creating  constructor
+	public void ForgotPasswordPage(){                             //creating  constructor
 		PageFactory.initElements(driver, this);
 	}
 	//Actions
 
 	public boolean validateORtLogo() {//For first logo
-		return ORtLogo.isDisplayed();   //isDisplayed method will return true or false if the logo is available
+		return ORtLogo.isDisplayed(); 
+		
+	}
+	public ForgotPasswordPage username(String un) {//For the username and Submit Purpose
+		username.sendKeys(un);
+
+		return new ForgotPasswordPage();
 	}
 	public ForgotPasswordPage click() {//Link click for Forgot Password
 		forgotPassword.click();
 		return new ForgotPasswordPage();
 	}
 
-	//public boolean validateORtLogo1() {//Logo for new page1
-	//	return ORtLogo1.isDisplayed();   //isDisplayed method will return true or false if the logo is available
-	//}
+	
+	
 
-	public ForgotPasswordPage username(String un) {//For the username and Submit Purpose
-		username.sendKeys(un);
+	public ForgotPasswordPage prusername(String prun) {//For the username and Submit Purpose
+		username.sendKeys(prun);
 		submit.click();
 		return new ForgotPasswordPage();
 	}
@@ -81,4 +91,7 @@ public class ForgotPasswordPage extends TestBase {
 		resend.click();
 		return new ForgotPasswordPage();
 	}
+	
+	
+
 }
