@@ -1,5 +1,5 @@
 package TestPages;
-
+ 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -34,12 +34,36 @@ public class CreateCaseFindPatientPage extends TestBase
 //	Search button	
 	@FindBy(xpath="//button[text()='Search']")
 	WebElement search;
-	
-	
+		
 //	User needs to Select the Patient from the list of Patients
 //	page ignition is also present
 //	Actions : 
 	
+////	Page Title
+//	public String validate......PageTitle(){
+//		return driver.getTitle();
+	
+////	Soft Assertion
+//	SoftAssert softAssert = new SoftAssert();
+	
+//	Patient Search can be performed by entering data in any 2 of the 4 fields. 
+//	public void FindPatientFieldsAccessability()
+//	{
+////		boolean pln = patientLastName.click();
+//		softAssert.assertAll(patientLastName.click());
+//		
+//	}
+	
+	
+	public void FindPatientData(String lastName, String firstName, String DOB, String MNR) 
+	{
+		patientLastName.sendKeys(lastName);
+		patientFirstName.sendKeys(firstName);
+		patientDOB.sendKeys(DOB);
+		patientMRN.sendKeys(MNR);
+		search.click();
+	}
+		
 	
 	public void AddFacilityPage() 
 	{

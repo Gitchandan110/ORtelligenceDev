@@ -46,33 +46,33 @@ public class CreateCaseBasicDetails extends TestBase
 	@FindBy(xpath="(//select[@class='form-control ng-untouched ng-pristine ng-valid'])[4]")
 	WebElement physicianAssistant;
 	
-//	Urgency*
+//	Urgency* dropdown
 	@FindBy(xpath="//select[@id='urgency']")
 	WebElement urgency;
 	
-//	Procedure
+//	Procedure text 
 	@FindBy(xpath="//input[@id='selectProcedure']")
 	WebElement procedure;
 
-//	Specialty*
+//	Specialty* dropdown
 	@FindBy(xpath="//select[@id='specialtyId']")
 	WebElement speciaity;
 	
-//	Surgery Date/Time*
+//	Surgery Date/Time* text
 //	Text Field is generally auto filled based upon Urgency but User can mannually enter data 
 //	Data format [ 5/3/2021, 3:40 PM ]
 	@FindBy(xpath="//input[@class='form-control ng-untouched ng-pristine ng-invalid']")
 	WebElement surgeryDateTime;
 	
-//	Surgery Date/Time* Calendar
+//	Surgery Date/Time* Calendar icon
 	@FindBy(xpath="//span[@class='input-group-append']")
 	WebElement surgeryDateTimeCalenderIcon;
 	
-//	Notes
+//	Notes text
 	@FindBy(xpath="//textarea[@id='notesbydoctor']")
 	WebElement notes;
 	
-//	Diagnosis Code
+//	Diagnosis Code text
 	@FindBy(xpath="//input[@id='diagnosisCodes']")
 	WebElement diagnosisCode;
 	
@@ -99,6 +99,36 @@ public class CreateCaseBasicDetails extends TestBase
 //	Capture Case Number
 //	Verify DOB
 //	Verify MNR#
+	
+	
+	public void BasicDetails(String surgeonName, String surgeonPreferenceCard, String secondSurgeonName, String surgeonAllergyOption, String secondSurgeonAllergyOption, String patientAllergyOption, String physicianAssistantOption, String urgencyOption, String procedureOption, String speciaityOption, String surgeryDateTimeText, String notesText, String diagnosisCodeText)
+	
+	{
+		surgeon.sendKeys(surgeonName);
+		preferenceCard.sendKeys(surgeonPreferenceCard);
+		quickPick.click();
+		secondSergeonPlusIcon.click();
+		secondSurgeon.sendKeys(secondSurgeonName);
+		surgeonAllergy.sendKeys(surgeonAllergyOption);
+		secondSurgeonAllergy.sendKeys(secondSurgeonAllergyOption);
+		patientAllergy.sendKeys(patientAllergyOption);
+		physicianAssistant.sendKeys(physicianAssistantOption);
+		urgency.sendKeys(urgencyOption);
+		procedure.sendKeys(procedureOption);
+		speciaity.sendKeys(speciaityOption);
+		surgeryDateTime.sendKeys(surgeryDateTimeText);
+		surgeryDateTimeCalenderIcon.click();
+		notes.sendKeys(notesText);
+		diagnosisCode.sendKeys(diagnosisCodeText);
+		diagnosisCodeSearch.click();
+		uploadImagePhoto.click();
+		uploadImageBrowse.click();
+		next.click();
+				
+	}
+	
+	
+	
 	
 	public void AddFacilityPage() 
 	{

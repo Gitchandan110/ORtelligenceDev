@@ -14,6 +14,9 @@ public class SelectFacilityPage extends TestBase
 	@FindBy(xpath="//select[@name='locationId']")
 	WebElement facilityDropdown;
 	
+//	Submit button
+	@FindBy(xpath="//button[text()='Confirm']")
+	WebElement submit;
 	
 //	Actions : 
 	

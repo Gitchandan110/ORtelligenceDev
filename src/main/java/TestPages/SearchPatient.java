@@ -21,6 +21,15 @@ public class SearchPatient extends TestBase
 	@FindBy(xpath="//input[@id='caseId']")
 	WebElement caseNumber;
 	 
+	public void SearchPatient()
+	{
+		
+		
+		
+		
+		
+	}
+	
 	
 	public void AddFacilityPage() 
 	{
