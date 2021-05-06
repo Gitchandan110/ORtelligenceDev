@@ -20,7 +20,13 @@ public class SearchPatient extends TestBase
 //	Case Number	
 	@FindBy(xpath="//input[@id='caseId']")
 	WebElement caseNumber;
-	 
+	
+	public void SearchPatient(String specialityOption, String caseNumberText)
+	{
+		speciality.sendKeys(specialityOption);
+		caseNumber.sendKeys(caseNumberText);
+			
+	}
 	
 	public void AddFacilityPage() 
 	{

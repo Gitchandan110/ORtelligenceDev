@@ -100,6 +100,32 @@ public class CreateCaseBasicDetails extends TestBase
 //	Verify DOB
 //	Verify MNR#
 	
+	public void BasicDetails(String surgeonName, String surgeonPreferenceCard, String secondSurgeonName, String surgeonAllergyOption, String secondSurgeonAllergyOption, String patientAllergyOption, String physicianAssistantOption, String urgencyOption, String procedureOption, String speciaityOption, String surgeryDateTimeText, String notesText, String diagnosisCodeText)
+	
+	{
+		surgeon.sendKeys(surgeonName);
+		preferenceCard.sendKeys(surgeonPreferenceCard);
+		quickPick.click();
+		secondSergeonPlusIcon.click();
+		secondSurgeon.sendKeys(secondSurgeonName);
+		surgeonAllergy.sendKeys(surgeonAllergyOption);
+		secondSurgeonAllergy.sendKeys(secondSurgeonAllergyOption);
+		patientAllergy.sendKeys(patientAllergyOption);
+		physicianAssistant.sendKeys(physicianAssistantOption);
+		urgency.sendKeys(urgencyOption);
+		procedure.sendKeys(procedureOption);
+		speciaity.sendKeys(speciaityOption);
+		surgeryDateTime.sendKeys(surgeryDateTimeText);
+		surgeryDateTimeCalenderIcon.click();
+		notes.sendKeys(notesText);
+		diagnosisCode.sendKeys(diagnosisCodeText);
+		diagnosisCodeSearch.click();
+		uploadImagePhoto.click();
+		uploadImageBrowse.click();
+		next.click();
+				
+	}
+	
 	public void AddFacilityPage() 
 	{
 		PageFactory.initElements(driver, this);

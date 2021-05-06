@@ -13,11 +13,17 @@ public class SelectFacilityPage extends TestBase
 //	Select Facility Dropdown*
 	@FindBy(xpath="//select[@name='locationId']")
 	WebElement facilityDropdown;
-	
+
+//	Confirm button
+	@FindBy(xpath="//button[text()='Confirm']")
+	WebElement confirm;	
 	
 //	Actions : 
-	
-		
+	public void SelectFacility(String facilityName)
+	{
+		facilityDropdown.sendKeys(facilityName);
+		confirm.click();
+	}
 	
 	public void AddFacilityPage() 
 	{

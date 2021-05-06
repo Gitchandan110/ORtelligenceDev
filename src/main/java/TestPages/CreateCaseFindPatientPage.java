@@ -39,7 +39,14 @@ public class CreateCaseFindPatientPage extends TestBase
 //	User needs to Select the Patient from the list of Patients
 //	page ignition is also present
 //	Actions : 
-	
+	public void FindPatientData(String lastName, String firstName, String DOB, String MNR) 
+	{
+		patientLastName.sendKeys(lastName);
+		patientFirstName.sendKeys(firstName);
+		patientDOB.sendKeys(DOB);
+		patientMRN.sendKeys(MNR);
+		search.click();
+	}
 	
 	public void AddFacilityPage() 
 	{
