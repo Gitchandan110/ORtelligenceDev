@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.TestBase.TestBase;
 
-public class SearchPatient extends TestBase
+public class SearchPatientPage extends TestBase
 {
 //	We have to use Page Factory-Object Repository
 //	Here we will segregate all locators using @FindBy annotation

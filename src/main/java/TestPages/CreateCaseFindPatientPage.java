@@ -1,8 +1,10 @@
 package TestPages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.TestBase.TestBase;
 
@@ -41,11 +43,13 @@ public class CreateCaseFindPatientPage extends TestBase
 //	Actions : 
 	public void FindPatientData(String lastName, String firstName, String DOB, String MNR) 
 	{
+						
 		patientLastName.sendKeys(lastName);
 		patientFirstName.sendKeys(firstName);
 		patientDOB.sendKeys(DOB);
 		patientMRN.sendKeys(MNR);
 		search.click();
+		
 	}
 	
 	public void AddFacilityPage() 
