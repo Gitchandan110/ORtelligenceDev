@@ -13,12 +13,15 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 
 import Utility.TestUtil;
+import Utility.WebEventListener;
 
 
 public class TestBase {
 	
 	public static WebDriver driver;
 	public static Properties prop;
+	public  static EventFiringWebDriver e_driver;
+	public static WebEventListener eventListener;
 	
 	
 	public TestBase(){
@@ -49,7 +52,11 @@ public class TestBase {
 			driver = new FirefoxDriver(); 
 		}	
 	
-	
+		e_driver = new EventFiringWebDriver(driver);
+		// Now create object of EventListerHandler to register it with EventFiringWebDriver
+		eventListener = new WebEventListener();
+		e_driver.register(eventListener);
+		driver = e_driver;
 		
 	    driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();

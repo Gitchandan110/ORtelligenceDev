@@ -6,7 +6,6 @@ package TestPages;
 import com.TestBase.TestBase;
 
 	public class LoginPage extends TestBase{ 
-		
 		// we have to use Page Factory-Object Repository
 		//Here we will segregate all XPath using @FindBy annotation
 		@FindBy(name="username")
@@ -43,8 +42,7 @@ import com.TestBase.TestBase;
 		public LoginPage(){ 
 		//PageFactory is a class and InitElements is method 
 		//driver is coming from base class  //'this' means current class object, instead of this we can write LoginPage.class but better to use 'this'
-			PageFactory.initElements(driver, this);    
-			                                          
+			PageFactory.initElements(driver, this);                                              
 		}
 		
 		//Actions:
@@ -55,6 +53,16 @@ import com.TestBase.TestBase;
 		//isDisplayed method will return true or false if the logo is available
 		public boolean validateORtLogo() {
 		return ORtLogo.isDisplayed();   
+		}
+		
+		
+		public DashboardPage login(String un, String pwd){
+			username.sendKeys(un);
+			password.sendKeys(pwd);
+			signUpBtn.click();
+			
+			// it  will return to Dashboard page    		
+			return new DashboardPage(); 
 		}
 		
 		public ForgotPasswordPage login(String Rcd, String ENpwd, String VN) {
@@ -69,14 +77,7 @@ import com.TestBase.TestBase;
 		}
 		
 			
-		public DashboardPage login(String un, String pwd){
-			username.sendKeys(un);
-			password.sendKeys(pwd);
-			signUpBtn.click();
-			
-			// it  will return to Dashboard page    		
-			return new DashboardPage(); 
-		}
+		
 		
 		
 		public ManageHealthSystemPage dashboard(String un, String pwd){
