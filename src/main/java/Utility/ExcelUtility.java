@@ -29,7 +29,7 @@ public class ExcelUtility extends TestBase
 		}
 		try {
 			book = WorkbookFactory.create(file);
-		} catch (InvalidFormatException e) {
+		} catch (InvalidFormatException e) { 
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
