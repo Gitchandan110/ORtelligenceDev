@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <title>TestNG Report</title>
@@ -7,41 +7,12 @@
 </head>
 <body>
 <table>
-<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Ortelligence Surgery Management Application Test Suite</th></tr>
-<tr><td><a href="#t0">Ortelligence Application Test Cases</a></td><td class="num">6</td><td class="num">0</td><td class="num attn">2</td><td class="num">116,336</td><td></td><td></td></tr>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">41,491</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Ortelligence Surgery Management Application Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Ortelligence Application Test Cases &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">TestCases.DashboardPageTest</td><td><a href="#m0">verifyProfileLink</a></td><td rowspan="1">1620385986818</td><td rowspan="1">3829</td></tr><tr class="failedodd"><td rowspan="1">TestCases.LoginPageTest</td><td><a href="#m1">ORtLogoImageTest</a></td><td rowspan="1">1620385922526</td><td rowspan="1">3195</td></tr><tr><th colspan="4">Ortelligence Application Test Cases &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">TestCases.DashboardPageTest</td><td><a href="#m2">verifyCorrectUserNameLableTest</a></td><td rowspan="1">1620385940092</td><td rowspan="1">3904</td></tr><tr class="passedeven"><td><a href="#m3">verifyDashboardPageTitleTest</a></td><td rowspan="1">1620385915344</td><td rowspan="1">13</td></tr><tr class="passedeven"><td><a href="#m4">verifyManageHealthSystemLinkTest</a></td><td rowspan="1">1620386003715</td><td rowspan="1">4495</td></tr><tr class="passedeven"><td><a href="#m5">verifymenu</a></td><td rowspan="1">1620385971589</td><td rowspan="1">3839</td></tr><tr class="passedodd"><td rowspan="2">TestCases.LoginPageTest</td><td><a href="#m6">LoginPageTiltleTest</a></td><td rowspan="1">1620385901038</td><td rowspan="1">27</td></tr><tr class="passedodd"><td><a href="#m7">LoginTest</a></td><td rowspan="1">1620385955514</td><td rowspan="1">4427</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">TestCases.CreateCaseBasicDetailsTest</td><td><a href="#m0">LoginTest</a></td><td rowspan="1">1620629999883</td><td rowspan="1">23352</td></tr></tbody>
 </table>
-<h2>Ortelligence Application Test Cases</h2><h3 id="m0">TestCases.DashboardPageTest#verifyProfileLink</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable: https://qa.ortelligence.com/# has no size and location
-  (Session info: chrome=90.0.4430.93)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
-System info: host: &apos;DESKTOP-B8QHPPA&apos;, ip: &apos;192.168.1.104&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.93, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\Priyanka\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57273}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c84eaa7de4d93cfa264e1c8139ca72f1
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
-	at com.sun.proxy.$Proxy8.perform(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.perform(EventFiringWebDriver.java:360)
-	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
-	at TestPages.DashboardPage.clickOnProfileLink(DashboardPage.java:57)
-	at TestCases.DashboardPageTest.verifyProfileLink(DashboardPageTest.java:66)
-... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">TestCases.LoginPageTest#ORtLogoImageTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [false] but found [true]
-	at TestCases.LoginPageTest.ORtLogoImageTest(LoginPageTest.java:50)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">TestCases.DashboardPageTest#verifyCorrectUserNameLableTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">TestCases.DashboardPageTest#verifyDashboardPageTitleTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">TestCases.DashboardPageTest#verifyManageHealthSystemLinkTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">TestCases.DashboardPageTest#verifymenu</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">TestCases.LoginPageTest#LoginPageTiltleTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">TestCases.LoginPageTest#LoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">TestCases.CreateCaseBasicDetailsTest#LoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
