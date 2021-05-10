@@ -57,14 +57,51 @@ public class CreateCaseBasicDetailsTest
 
 		// Create Case button
 		wd.findElement(By.xpath("(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[4]")).click();
+		Thread.sleep(10000);
+	
+		// Last Name
+		wd.findElement(By.xpath("//input[@id='lastName']")).sendKeys("s");
+		Thread.sleep(3000);
+		
+		// First Name
+		wd.findElement(By.xpath("//input[@id='firstName']")).sendKeys("v");
+		Thread.sleep(3000);
+		
+		// MNR
+		wd.findElement(By.xpath("//input[@id='mrn']")).sendKeys("646464");
 		Thread.sleep(3000);
 	
-		CreateCaseBasicDetailsPage createCaseBasicDetails;
+		// Search button
+		wd.findElement(By.xpath("//button[text()='Search']")).click();
+		Thread.sleep(5000);
+
+		// Select Patient
+		wd.findElement(By.xpath("//button[@name='Select']")).click();
+		Thread.sleep(3000);
+			
+		// Surgeon
+		wd.findElement(By.xpath("//select[@id='surgeon']")).sendKeys("QAHcpSurgeonOA FacilityOASystemOA");
+		Thread.sleep(3000);
 		
+		// Urgency
+		wd.findElement(By.xpath("//select[@id='urgency']")).sendKeys(" Normal (Up to 48hrs.)");
+		Thread.sleep(3000);
+			
+		// Speciality
+		wd.findElement(By.xpath("//select[@id='specialtyId']")).sendKeys(" Trauma");
+		Thread.sleep(3000);
 		
+		// Next button
+		wd.findElement(By.xpath("//button[text()='Next']")).click();
+		Thread.sleep(3000);
 		
-		
+//		// 
+//		wd.findElement(By.xpath("")).click();
+//		Thread.sleep(3000);
 		
 	
+	
+	
 	}
+	
 }
