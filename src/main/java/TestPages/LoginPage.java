@@ -31,7 +31,7 @@ import com.TestBase.TestBase;
 
 		@FindBy(id ="verify")
 		WebElement verifyNewPassword;
-		
+		 
 		@FindBy(xpath="//button[@type='submit']")
 		WebElement save;
 		//

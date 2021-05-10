@@ -47,7 +47,7 @@ public class LoginPageTest extends TestBase{
 	@Test(priority=2)
 	public void ORtLogoImageTest() {
 		boolean flag=loginPage.validateORtLogo();
-		Assert.assertFalse(flag);     
+		Assert.assertTrue(flag);     
 		//if flag is true ur assertion will be passed otherwise it will fail
 	}
 	
