@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.TestBase.TestBase;
 
-public class AddNewUserPage extends TestBase{
+public class AdminAddNewUserPage extends TestBase{
 	
 	@FindBy(id="")
 	WebElement firstname;
@@ -20,7 +20,7 @@ public class AddNewUserPage extends TestBase{
 	WebElement username;
 	
 	//Initializing the Page Objects:
-	public AddNewUserPage(){                             
+	public AdminAddNewUserPage(){                             
 		    PageFactory.initElements(driver, this);    
 			                                          
 		}

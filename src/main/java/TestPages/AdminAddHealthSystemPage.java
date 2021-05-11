@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.TestBase.TestBase;
 
-public class AddHealthSystemPage extends TestBase
+public class AdminAddHealthSystemPage extends TestBase
 {
 
 //	We have to use Page Factory-Object Repository
@@ -61,7 +61,7 @@ public class AddHealthSystemPage extends TestBase
 //	Using @FindBy annotation we have created different WebElements of Add Health System Page
 //	Now we are initializing the elements using PageFactory
 //	Initializing the Page Objects:
-	public AddHealthSystemPage() 
+	public AdminAddHealthSystemPage() 
 	{
 			PageFactory.initElements(driver, this);
 	}

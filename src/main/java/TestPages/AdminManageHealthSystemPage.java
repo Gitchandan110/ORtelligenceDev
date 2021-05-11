@@ -10,7 +10,7 @@ import com.TestBase.TestBase;
 
 
 
-public class ManageHealthSystemPage extends TestBase {
+public class AdminManageHealthSystemPage extends TestBase {
 	
 	
 	
@@ -21,14 +21,14 @@ public class ManageHealthSystemPage extends TestBase {
 	@FindBy(xpath="/html/body/app-root/app-full-layout/div[1]/app-admin/app-client-hospital/div[2]/div[3]/a")                     //xpath for profile link
 	WebElement manageSUusersLink;
 
-	public ManageHealthSystemPage(){                             
+	public AdminManageHealthSystemPage(){                             
 		PageFactory.initElements(driver, this);
 	
 	}
 	
-	public  AddNewHealthSystemPage clickOnAddNewHealthSystemLink() {
+	public  AdminAddNewHealthSystemPage clickOnAddNewHealthSystemLink() {
 		addNewHealthSystemLink.click();
-		return new AddNewHealthSystemPage();  
+		return new AdminAddNewHealthSystemPage();  
 	
 	
 	}

@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.TestBase.TestBase;
 
-public class DashboardPage extends TestBase
+public class AdminDashboardPage extends TestBase
 {
 	
 	
@@ -34,7 +34,7 @@ public class DashboardPage extends TestBase
 	WebElement AlertsLink;
 	
 	//creating DashboardPage Constructor and initializing page elements
-	public DashboardPage(){                           
+	public AdminDashboardPage(){                           
 		PageFactory.initElements(driver, this);
 	
 	}
@@ -60,9 +60,9 @@ public class DashboardPage extends TestBase
 		//return new ProfilePage();  
 		
 	}
-	public  ManageHealthSystemPage clickOnManageHealthSystemLink() {
+	public  AdminManageHealthSystemPage clickOnManageHealthSystemLink() {
 		 manageHealthSystemLink.click();
-		return new ManageHealthSystemPage();
+		return new AdminManageHealthSystemPage();
 	}
 	
 	public AlertsPage  AlertsLink() {

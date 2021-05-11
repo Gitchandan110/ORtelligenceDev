@@ -2,6 +2,8 @@ package TestCases;
 
 import java.util.concurrent.TimeUnit;
 
+import javax.security.auth.callback.ConfirmationCallback;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -49,10 +51,11 @@ public class CreateCaseBasicDetailsTest
 
 		// Facility Dropdown - Select value
 		wd.findElement(By.name("locationId")).sendKeys("Test Facility OA System OA Address OA , Dallas, Texas, 650");
-		Thread.sleep(3000);
-
+		Thread.sleep(1000);
+		
+		String confirmButton = "button[contains(text(),'Confirm')]";
 		// Confirm button
-		wd.findElement(By.xpath("//button[contains(text(),'Confirm')]")).click();
+		wd.findElement(By.xpath(confirmButton)).click();
 		Thread.sleep(3000);
 
 		// Create Case button
@@ -95,9 +98,9 @@ public class CreateCaseBasicDetailsTest
 		wd.findElement(By.xpath("//button[text()='Next']")).click();
 		Thread.sleep(3000);
 		
-//		// 
-//		wd.findElement(By.xpath("")).click();
-//		Thread.sleep(3000);
+		// Femur
+		wd.findElement(By.xpath("//map[@class='ng-star-inserted'] //area[@coords='200,361,199,383,198,401,194,423,208,422,208,413,211,398,213,381,216,362']")).click();
+		Thread.sleep(3000);
 		
 	
 	

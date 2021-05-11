@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.TestBase.TestBase;
 
-public class ForgotPasswordPage extends TestBase {
+public class AdminForgotPasswordPage extends TestBase {
 	//For Logo
 	@FindBy(xpath="//img[@class='org-logo__image']")
 	WebElement ORtLogo;
@@ -52,7 +52,7 @@ public class ForgotPasswordPage extends TestBase {
 	WebElement resend;
 	
 	//creating  constructor
-	public ForgotPasswordPage(){                            
+	public AdminForgotPasswordPage(){                            
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -62,19 +62,19 @@ public class ForgotPasswordPage extends TestBase {
 	public boolean validateORtLogo() {
 		return ORtLogo.isDisplayed();   
 	}
-	public ForgotPasswordPage click() {//Link click for Forgot Password
+	public AdminForgotPasswordPage click() {//Link click for Forgot Password
 		forgotPassword.click();
-		return new ForgotPasswordPage();
+		return new AdminForgotPasswordPage();
 	}
 
 	public boolean validateORtLogo1() {//Logo for new page1
 		return ORtLogo1.isDisplayed();   //isDisplayed method will return true or false if the logo is available
 	}
 
-	public ForgotPasswordPage username(String un) {//For the username and Submit Purpose
+	public AdminForgotPasswordPage username(String un) {//For the username and Submit Purpose
 		username.sendKeys(un);
 		submit.click();
-		return new ForgotPasswordPage();
+		return new AdminForgotPasswordPage();
 	}
 
 	public boolean validateORtLogo2() {//Logo for new page2
@@ -82,17 +82,17 @@ public class ForgotPasswordPage extends TestBase {
 	}
 
 
-	public DashboardPage recoveryCode(String rcd,String enpwd,String vn) {//Coding for the purpose of Recovery.new password,verify new password.then click on that button
+	public AdminDashboardPage recoveryCode(String rcd,String enpwd,String vn) {//Coding for the purpose of Recovery.new password,verify new password.then click on that button
 		recoveryCode.sendKeys(rcd);
 		enterNewPassword.sendKeys(enpwd);
 		verifyNewPassword.sendKeys(vn);
 		save.click();
-		return new DashboardPage();
+		return new AdminDashboardPage();
 	}
 
-	public ForgotPasswordPage resend() {//for the purpose of New Page Link we are going to Click on the Resend option such that we can get our code.
+	public AdminForgotPasswordPage resend() {//for the purpose of New Page Link we are going to Click on the Resend option such that we can get our code.
 		resend.click();
-		return new ForgotPasswordPage();
+		return new AdminForgotPasswordPage();
 	}
 }
 

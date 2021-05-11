@@ -8,13 +8,13 @@ import org.testng.annotations.Test;
 
 import com.TestBase.TestBase;
 
-import TestPages.DashboardPage;
+import TestPages.AdminDashboardPage;
 import TestPages.LoginPage;
 import Utility.ExcelUtility;
 public class LoginPageTest extends TestBase{
 	//Defined the loginPage variable
 	LoginPage loginPage;   
-	DashboardPage dashboardPage;
+	AdminDashboardPage dashboardPage;
 	
 	//name of the sheet in excel
 	String sheetName = "NurseData";

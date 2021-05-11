@@ -7,16 +7,16 @@ import org.testng.annotations.Test;
 
 import com.TestBase.TestBase;
 
-import TestPages.DashboardPage;
+import TestPages.AdminDashboardPage;
 import TestPages.LoginPage;
-import TestPages.ManageHealthSystemPage;
+import TestPages.AdminManageHealthSystemPage;
 import TestPages.ProfilePage;
 
 public class DashboardPageTest extends TestBase {
 	LoginPage loginPage;
-	 DashboardPage dashboardPage;
+	 AdminDashboardPage dashboardPage;
 	 ProfilePage profilePage;
-	 ManageHealthSystemPage manageHealthSystemPage;
+	 AdminManageHealthSystemPage manageHealthSystemPage;
 	public DashboardPageTest() {
 		super();
 		
@@ -30,7 +30,7 @@ public class DashboardPageTest extends TestBase {
 		initialization();
 		 profilePage= new  ProfilePage();  //initialising profile page reference
 		 loginPage = new LoginPage();
-		 manageHealthSystemPage = new ManageHealthSystemPage();
+		 manageHealthSystemPage = new AdminManageHealthSystemPage();
 		 //properties will get initialized here
 		 dashboardPage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));  //can access login method here, and in login method we are passing the properties username and password
 	}

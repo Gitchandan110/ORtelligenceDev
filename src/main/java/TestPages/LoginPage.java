@@ -56,23 +56,23 @@ import com.TestBase.TestBase;
 		}
 		
 		
-		public DashboardPage login(String un, String pwd){
+		public AdminDashboardPage login(String un, String pwd){
 			username.sendKeys(un);
 			password.sendKeys(pwd);
 			signUpBtn.click();
 			
 			// it  will return to Dashboard page    		
-			return new DashboardPage(); 
+			return new AdminDashboardPage(); 
 		}
 		
-		public ForgotPasswordPage login(String Rcd, String ENpwd, String VN) {
+		public AdminForgotPasswordPage login(String Rcd, String ENpwd, String VN) {
 			forgotPassword.click();
 			recoveryCode.sendKeys("Rcd");
 			enterNewPassword.sendKeys("ENpwd");
 			verifyNewPassword.sendKeys("VN");
 			save.click();
 			
-			return new ForgotPasswordPage();
+			return new AdminForgotPasswordPage();
 			
 		}
 		
@@ -80,13 +80,13 @@ import com.TestBase.TestBase;
 		
 		
 		
-		public ManageHealthSystemPage dashboard(String un, String pwd){
+		public AdminManageHealthSystemPage dashboard(String un, String pwd){
 			username.sendKeys(un);
 			password.sendKeys(pwd);
 			signUpBtn.click();
 			
 			// it  will return to ManageHealthPage    		
-			return new ManageHealthSystemPage(); 
+			return new AdminManageHealthSystemPage(); 
 		}
 		
 		

@@ -5,19 +5,19 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import com.TestBase.TestBase;
 
-import TestPages.AddNewUserPage;
-import TestPages.DashboardPage;
+import TestPages.AdminAddNewUserPage;
+import TestPages.AdminDashboardPage;
 import TestPages.LoginPage;
-import TestPages.ManageHealthSystemPage;
+import TestPages.AdminManageHealthSystemPage;
 import TestPages.ProfilePage;
 import Utility.ExcelUtility;
 
 public class AddNewUserPageTest extends TestBase {
 	LoginPage loginPage;
-	 DashboardPage dashboardPage;
+	 AdminDashboardPage dashboardPage;
 	 ProfilePage profilePage;
-	 ManageHealthSystemPage manageHealthSystemPage;
-	 AddNewUserPage addNewUserPage;
+	 AdminManageHealthSystemPage manageHealthSystemPage;
+	 AdminAddNewUserPage addNewUserPage;
 	 
 	 //name of the sheet in excel
 	 String sheetName = "UserData";
@@ -30,7 +30,7 @@ public class AddNewUserPageTest extends TestBase {
 	@BeforeMethod
 	public void setUp() {
 		initialization();
-		addNewUserPage =new AddNewUserPage();
+		addNewUserPage =new AdminAddNewUserPage();
 	}
 	
 	@DataProvider

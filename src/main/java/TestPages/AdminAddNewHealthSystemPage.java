@@ -6,10 +6,10 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.TestBase.TestBase;
 
-public class AddNewHealthSystemPage extends TestBase {
+public class AdminAddNewHealthSystemPage extends TestBase {
 	
 	//Initializing the Page Objects:
-	public AddNewHealthSystemPage(){                             
+	public AdminAddNewHealthSystemPage(){                             
 		PageFactory.initElements(driver, this);    
 		                                          
 	}

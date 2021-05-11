@@ -5,20 +5,20 @@ import org.testng.annotations.Test;
 
 import com.TestBase.TestBase;
 
-import TestPages.AddNewHealthSystemPage;
+import TestPages.AdminAddNewHealthSystemPage;
 import TestPages.AlertsPage;
-import TestPages.DashboardPage;
+import TestPages.AdminDashboardPage;
 import TestPages.LoginPage;
-import TestPages.ManageHealthSystemPage;
+import TestPages.AdminManageHealthSystemPage;
 import TestPages.ProfilePage;
 
 public class ManageHealthSystemPageTest extends TestBase {
 	
 	LoginPage loginPage;
-	 DashboardPage dashboardPage;
+	 AdminDashboardPage dashboardPage;
 	 ProfilePage profilePage;
-	 ManageHealthSystemPage manageHealthSystemPage;
-	 AddNewHealthSystemPage addNewHealthSystemPage;
+	 AdminManageHealthSystemPage manageHealthSystemPage;
+	 AdminAddNewHealthSystemPage addNewHealthSystemPage;
 	public ManageHealthSystemPageTest() {
 		super();
 	}
@@ -30,7 +30,7 @@ public class ManageHealthSystemPageTest extends TestBase {
 		initialization();
 		 profilePage= new  ProfilePage();  //initialising profile page reference
 		 loginPage = new LoginPage();
-		 manageHealthSystemPage = new ManageHealthSystemPage();
+		 manageHealthSystemPage = new AdminManageHealthSystemPage();
 		 //properties will get initialized here
 		 manageHealthSystemPage=loginPage.dashboard(prop.getProperty("username"), prop.getProperty("password"));  //can access login method here, and in login method we are passing the properties username and password
 	}
