@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.TestBase.TestBase;
 
-public class CaseCreationSystemSelectionPage extends TestBase
+public class CreateCaseSystemSelectionPage extends TestBase
 {
 
 //	Checkbox 1st option
@@ -50,6 +50,12 @@ public class CaseCreationSystemSelectionPage extends TestBase
 	@FindBy(xpath="//button[@class='close']")
 	WebElement closeIcon;
 
+	public void CreateCaseSystemSelection()
+	{
+		checkboxSystem1.click();
+		checkboxSystem2.click();
+				
+	}
 		
 	public void AddFacilityPage() 
 	{

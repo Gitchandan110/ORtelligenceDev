@@ -27,6 +27,15 @@ public class CreateCaseProcedureSelectionPage extends TestBase
 //	WebElement ;	
 	
 	
+	
+	public void CreateCaseProcedureSelection() 
+	{
+		selectProcedure1.click();
+		selectProcedure2.click();
+		back.click();	
+		
+	}
+	
 	public void AddFacilityPage() 
 	{
 		PageFactory.initElements(driver, this);
