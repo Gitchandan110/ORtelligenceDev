@@ -11,7 +11,6 @@ import com.TestBase.TestBase;
 import TestPages.AdminDashboardPage;
 import TestPages.LoginPage;
 import Utility.DataProviderExcel;
-import Utility.ExcelUtility;
 public class LoginPageTest extends TestBase{
 	//Defined the loginPage variable
 	LoginPage loginPage;   
@@ -62,7 +61,7 @@ public class LoginPageTest extends TestBase{
 	public void LoginTest(String user,String password) {
 		
 		//LoginPage lpage=new LoginPage();
-//		loginPage.loginuser(user, password);
+		loginPage.loginuser(user, password);
 		
 		//dashboardPage =loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}

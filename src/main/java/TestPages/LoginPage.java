@@ -42,6 +42,7 @@ import com.TestBase.TestBase;
 		//Now we are initializing the elements using PageFactory
 		//Initializing the Page Objects:
 		//creating loginpage constructor
+	
 		public LoginPage(WebDriver dr){ 
 		//PageFactory is a class and InitElements is method 
 		//driver is coming from base class  //'this' means current class object, instead of this we can write LoginPage.class but better to use 'this'
@@ -61,26 +62,26 @@ import com.TestBase.TestBase;
 		}
 		
 		
-////<<<<<<< HEAD
-//		public AdminDashboardPage login(String un, String pwd){
-////=======
-//		public void loginuser(String user, String pwd)
-//		{
-//			username.sendKeys(user);
-//			password.sendKeys(pwd);
-//			save.click();
-//			
-//		}
-//		
-////		public DashboardPage login(String un, String pwd){
-////>>>>>>> 46537dab4829e9af0cb9d9e6a154850d7e3482cc
-////			username.sendKeys(un);
-////			password.sendKeys(pwd);
-////			signUpBtn.click();
-////			
-////			// it  will return to Dashboard page    		
-////			return new AdminDashboardPage(); 
-////		}
+
+	//	public AdminDashboardPage login(String un, String pwd){
+
+		public void loginuser(String user, String pwd) {
+		
+			username.sendKeys(user);
+		    password.sendKeys(pwd);
+			save.click();
+			
+		}
+		
+		public AdminDashboardPage login(String un, String pwd){
+
+	         username.sendKeys(un);
+			password.sendKeys(pwd);
+			signUpBtn.click();
+			
+			// it  will return to Dashboard page    		
+			return new AdminDashboardPage(); 
+		}
 		
 		public AdminForgotPasswordPage login(String Rcd, String ENpwd, String VN) {
 			forgotPassword.click();
@@ -110,7 +111,7 @@ import com.TestBase.TestBase;
 	}
 
 	
-		
+	
 	
 
 
