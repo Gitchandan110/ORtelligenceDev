@@ -29,8 +29,13 @@ public class ManageHealthSystemPageTest extends TestBase {
 	public void setUp() {
 		initialization();
 		 profilePage= new  ProfilePage();  //initialising profile page reference
-		 loginPage = new LoginPage();
-		 manageHealthSystemPage = new AdminManageHealthSystemPage();
+//<<<<<<< HEAD
+//		 loginPage = new LoginPage();
+//		 manageHealthSystemPage = new AdminManageHealthSystemPage();
+//=======
+//		 loginPage = new LoginPage(driver);
+//		 manageHealthSystemPage = new ManageHealthSystemPage();
+//>>>>>>> 46537dab4829e9af0cb9d9e6a154850d7e3482cc
 		 //properties will get initialized here
 		 manageHealthSystemPage=loginPage.dashboard(prop.getProperty("username"), prop.getProperty("password"));  //can access login method here, and in login method we are passing the properties username and password
 	}

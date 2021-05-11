@@ -10,6 +10,7 @@ import com.TestBase.TestBase;
 
 import TestPages.AdminDashboardPage;
 import TestPages.LoginPage;
+import Utility.DataProviderExcel;
 import Utility.ExcelUtility;
 public class LoginPageTest extends TestBase{
 	//Defined the loginPage variable
@@ -33,7 +34,7 @@ public class LoginPageTest extends TestBase{
 		
 		//now creating the object of LoginPage class.
 		
-		 loginPage = new LoginPage();
+		 loginPage = new LoginPage(driver);
 	}
 	
 	@Test(priority=1)
@@ -51,15 +52,19 @@ public class LoginPageTest extends TestBase{
 		//if flag is true ur assertion will be passed otherwise it will fail
 	}
 	
-	@DataProvider
-	public Object getORtTestData() {
-		Object data [][]=ExcelUtility.getTestData(sheetName);
-		return data;
-	}
+//	//@DataProvider
+//	public Object getORtTestData() {
+//		Object data [][]=ExcelUtility.getTestData(sheetName);
+//		return data;
+//	}
 	
-	@Test(priority=3)
-	public void LoginTest() {
-		dashboardPage =loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+	@Test(priority=3,dataProvider="NurseData",dataProviderClass=DataProviderExcel.class)
+	public void LoginTest(String user,String password) {
+		
+		//LoginPage lpage=new LoginPage();
+//		loginPage.loginuser(user, password);
+		
+		//dashboardPage =loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 	
 

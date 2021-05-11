@@ -21,7 +21,7 @@ public class CreateCaseBasicDetailsTest
 	@BeforeMethod
 	public void Setup() {
 	
-	System.setProperty("webdriver.chrome.driver","D:\\SELENIUM\\DRIVERS\\chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver","C:\\SeleniumDriver\\chromedriver.exe");
 	wd = new ChromeDriver();
 	wd.get("https://qa.ortelligence.com/#/");
 	wd.manage().window().maximize();
@@ -98,9 +98,19 @@ public class CreateCaseBasicDetailsTest
 		wd.findElement(By.xpath("//button[text()='Next']")).click();
 		Thread.sleep(3000);
 		
+//<<<<<<< HEAD
 		// Femur
 		wd.findElement(By.xpath("//map[@class='ng-star-inserted'] //area[@coords='200,361,199,383,198,401,194,423,208,422,208,413,211,398,213,381,216,362']")).click();
 		Thread.sleep(3000);
+//=======
+//		wd.findElement(By.xpath("//div[@id='selectedBodyPartNameDivId']")).click();
+////		Thread.sleep(2000);
+		
+//		// 
+//		wd.findElement(By.xpath("")).click();
+//		Thread.sleep(3000);
+//>>>>>>> 46537dab4829e9af0cb9d9e6a154850d7e3482cc
+		
 		
 	
 	
