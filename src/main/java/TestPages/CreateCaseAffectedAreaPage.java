@@ -12,8 +12,8 @@ public class CreateCaseAffectedAreaPage extends TestBase
 ////	Here we will segregate all locators using @FindBy annotation
 ////	Speciality = Trauma .................................................................................
 ////	Clavicle
-//	@FindBy(xpath="")
-//	WebElement ;
+    @FindBy(xpath="//div[@id='selectedBodyPartNameDivId']")
+	WebElement clavicle;
 //	
 ////	Proximal Humerus
 //	@FindBy(xpath="")

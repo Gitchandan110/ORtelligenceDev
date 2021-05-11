@@ -1,11 +1,14 @@
 package TestPages;
-	import org.openqa.selenium.WebElement;
+	import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 	import org.openqa.selenium.support.FindBy;
 	import org.openqa.selenium.support.PageFactory;
 
 import com.TestBase.TestBase;
 
 	public class LoginPage extends TestBase{ 
+		
+		WebDriver driver;
 		// we have to use Page Factory-Object Repository
 		//Here we will segregate all XPath using @FindBy annotation
 		@FindBy(name="username")
@@ -26,7 +29,7 @@ import com.TestBase.TestBase;
 		@FindBy(id ="recovery-code")
 		WebElement recoveryCode;  
 
-		@FindBy(id ="new")
+		@FindBy(id ="new") 
 		WebElement enterNewPassword; 
 
 		@FindBy(id ="verify")
@@ -39,9 +42,11 @@ import com.TestBase.TestBase;
 		//Now we are initializing the elements using PageFactory
 		//Initializing the Page Objects:
 		//creating loginpage constructor
-		public LoginPage(){ 
+		public LoginPage(WebDriver dr){ 
 		//PageFactory is a class and InitElements is method 
 		//driver is coming from base class  //'this' means current class object, instead of this we can write LoginPage.class but better to use 'this'
+		
+			driver=dr;
 			PageFactory.initElements(driver, this);                                              
 		}
 		
@@ -55,6 +60,14 @@ import com.TestBase.TestBase;
 		return ORtLogo.isDisplayed();   
 		}
 		
+		
+		public void loginuser(String user, String pwd)
+		{
+			username.sendKeys(user);
+			password.sendKeys(pwd);
+			save.click();
+			
+		}
 		
 		public DashboardPage login(String un, String pwd){
 			username.sendKeys(un);

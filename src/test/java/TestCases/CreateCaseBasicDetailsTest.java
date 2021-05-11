@@ -19,7 +19,7 @@ public class CreateCaseBasicDetailsTest
 	@BeforeMethod
 	public void Setup() {
 	
-	System.setProperty("webdriver.chrome.driver","D:\\SELENIUM\\DRIVERS\\chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver","C:\\SeleniumDriver\\chromedriver.exe");
 	wd = new ChromeDriver();
 	wd.get("https://qa.ortelligence.com/#/");
 	wd.manage().window().maximize();
@@ -95,9 +95,13 @@ public class CreateCaseBasicDetailsTest
 		wd.findElement(By.xpath("//button[text()='Next']")).click();
 		Thread.sleep(3000);
 		
+		wd.findElement(By.xpath("//div[@id='selectedBodyPartNameDivId']")).click();
+		Thread.sleep(2000);
+		
 //		// 
 //		wd.findElement(By.xpath("")).click();
 //		Thread.sleep(3000);
+		
 		
 	
 	
