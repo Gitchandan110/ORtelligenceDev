@@ -78,7 +78,7 @@ public class CreateCaseSystemSelectionPage extends TestBase
 //		Redirects user to Basic details sub-module
 		selectAnotherProcedure.click();
 		
-//		Close pop-up
+//		Close pop-up byt clicking on Icon
 		closeIcon.click();
 		
 	}
