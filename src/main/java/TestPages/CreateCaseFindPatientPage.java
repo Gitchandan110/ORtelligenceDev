@@ -1,11 +1,9 @@
 package TestPages;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
-
 import com.TestBase.TestBase;
 
 public class CreateCaseFindPatientPage extends TestBase
@@ -14,6 +12,7 @@ public class CreateCaseFindPatientPage extends TestBase
 //	Here we will segregate all locators using @FindBy annotation
 //	Mandatory to Use any of the 4 provided options
 //	Last Name
+	WebDriver driver;
 	@FindBy(xpath="//input[@id='lastName']")
 	WebElement patientLastName;
 	
@@ -45,7 +44,11 @@ public class CreateCaseFindPatientPage extends TestBase
 //	User needs to Select the Patient from the list of Patients
 //	page ignition is also present
 //	Actions : 
+<<<<<<< HEAD
 	public void CreateCaseFindPatientData(String lastName, String firstName, String DOB, String MNR) 
+=======
+	public void findPatientData(String lastName, String firstName, String DOB, String MNR) 
+>>>>>>> e027ecfc522e51ed07934bda89842c1809dd4867
 	{
 						
 		patientLastName.sendKeys(lastName);
@@ -56,6 +59,7 @@ public class CreateCaseFindPatientPage extends TestBase
 		
 	}
 	
+<<<<<<< HEAD
 //	Select Patient
 	public void CreateCaseSelectPatient()
 	{
@@ -65,6 +69,13 @@ public class CreateCaseFindPatientPage extends TestBase
 		
 	public void AddFacilityPage() 
 	{
+=======
+	
+	
+	public void createCaseFindPatientPage(WebDriver dr) 
+	{	
+		driver=dr;
+>>>>>>> e027ecfc522e51ed07934bda89842c1809dd4867
 		PageFactory.initElements(driver, this);
 	}
 }
