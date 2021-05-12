@@ -5,8 +5,9 @@
   <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
-    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -23,6 +24,7 @@
   <body>
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
+      <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
       <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
@@ -49,7 +51,11 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
+<<<<<<< HEAD
+                    <span>C:\Users\Piyush\AppData\Local\Temp\testng-eclipse-1121229479\testng-customsuite.xml</span>
+=======
                     <span>C:\Users\Priyanka\AppData\Local\Temp\testng-eclipse-282706208\testng-customsuite.xml</span>
+>>>>>>> e027ecfc522e51ed07934bda89842c1809dd4867
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +108,11 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
+<<<<<<< HEAD
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="TestCases.CreateCaseBasicDetailsTest" hash-for-method="LoginTest">LoginTest</a> <!-- method navigator-link -->
+=======
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="TestCases.CreateCaseFindPatientPageTest" hash-for-method="createCaseFindPatientPageTest(null, null, null, null)">createCaseFindPatientPageTest(null, null, null, null)</a> <!-- method navigator-link -->
+>>>>>>> e027ecfc522e51ed07934bda89842c1809dd4867
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -120,11 +130,40 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
+<<<<<<< HEAD
+              <span class="class-name">TestCases.CreateCaseBasicDetailsTest</span>
+=======
               <span class="class-name">TestCases.CreateCaseFindPatientPageTest</span>
+>>>>>>> e027ecfc522e51ed07934bda89842c1809dd4867
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+<<<<<<< HEAD
+                  <a name="LoginTest">
+                  </a> <!-- LoginTest -->
+                  <span class="method-name">LoginTest</span>
+                  <div class="stack-trace">org.openqa.selenium.NoAlertPresentException: no such alert
+  (Session info: chrome=90.0.4430.212)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PAVANSHARMA&apos;, ip: &apos;192.168.100.100&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.212, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\Piyush\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:54397}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 898519f61fa535288a1c0f3730168e91
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:932)
+	at TestCases.CreateCaseBasicDetailsTest.LoginTest(CreateCaseBasicDetailsTest.java:116)
+=======
                   <a name="createCaseFindPatientPageTest(null, null, null, null)">
                   </a> <!-- createCaseFindPatientPageTest(null, null, null, null) -->
                   <span class="method-name">createCaseFindPatientPageTest</span>
@@ -132,10 +171,34 @@
                   <div class="stack-trace">java.lang.NullPointerException
 	at TestPages.CreateCaseFindPatientPage.findPatientData(CreateCaseFindPatientPage.java:49)
 	at TestCases.CreateCaseFindPatientPageTest.createCaseFindPatientPageTest(CreateCaseFindPatientPageTest.java:34)
+>>>>>>> e027ecfc522e51ed07934bda89842c1809dd4867
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
+<<<<<<< HEAD
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+=======
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
@@ -154,6 +217,7 @@
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
 	at org.testng.TestNG.runSuites(TestNG.java:1049)
 	at org.testng.TestNG.run(TestNG.java:1017)
+>>>>>>> e027ecfc522e51ed07934bda89842c1809dd4867
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
@@ -166,16 +230,24 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
+<<<<<<< HEAD
+            <span class="header-content">C:\Users\Piyush\AppData\Local\Temp\testng-eclipse-1121229479\testng-customsuite.xml</span>
+=======
             <span class="header-content">C:\Users\Priyanka\AppData\Local\Temp\testng-eclipse-282706208\testng-customsuite.xml</span>
+>>>>>>> e027ecfc522e51ed07934bda89842c1809dd4867
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
+<<<<<<< HEAD
+      &lt;class name=&quot;TestCases.CreateCaseBasicDetailsTest&quot;/&gt;
+=======
       &lt;class name=&quot;TestCases.CreateCaseFindPatientPageTest&quot;/&gt;
+>>>>>>> e027ecfc522e51ed07934bda89842c1809dd4867
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -217,14 +289,24 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
+<<<<<<< HEAD
+data.setCell(0, 1, 'LoginTest')
+data.setCell(0, 2, 'TestCases.CreateCaseBasicDetailsTest')
+data.setCell(0, 3, 63802);
+=======
 data.setCell(0, 1, 'createCaseFindPatientPageTest')
 data.setCell(0, 2, 'TestCases.CreateCaseFindPatientPageTest')
 data.setCell(0, 3, 11);
+>>>>>>> e027ecfc522e51ed07934bda89842c1809dd4867
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
+<<<<<<< HEAD
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+=======
               <span class="suite-total-time">Total running time: 11 ms</span>
+>>>>>>> e027ecfc522e51ed07934bda89842c1809dd4867
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -250,14 +332,23 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+<<<<<<< HEAD
+              <div class="chronological-class-name">TestCases.CreateCaseBasicDetailsTest</div> <!-- chronological-class-name -->
+=======
               <div class="chronological-class-name">TestCases.CreateCaseFindPatientPageTest</div> <!-- chronological-class-name -->
+>>>>>>> e027ecfc522e51ed07934bda89842c1809dd4867
               <div class="configuration-method before">
-                <span class="method-name">setUp</span>
+                <span class="method-name">Setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
+<<<<<<< HEAD
+                <span class="method-name">LoginTest</span>
+                <span class="method-start">32422 ms</span>
+              </div> <!-- test-method -->
+=======
                 <span class="method-name">createCaseFindPatientPageTest(null, null, null, null)</span>
                 <span class="method-start">10734 ms</span>
               </div> <!-- test-method -->
@@ -265,9 +356,11 @@ return data;
                 <span class="method-name">tearDown</span>
                 <span class="method-start">10750 ms</span>
               </div> <!-- configuration-method after -->
+>>>>>>> e027ecfc522e51ed07934bda89842c1809dd4867
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
     </div> <!-- wrapper -->
   </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
 </html>

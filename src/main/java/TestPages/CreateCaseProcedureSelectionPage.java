@@ -27,14 +27,28 @@ public class CreateCaseProcedureSelectionPage extends TestBase
 //	WebElement ;	
 	
 	
-	
-	public void CreateCaseProcedureSelection() 
+//	Actions:
+//	Select 1st Procedure
+	public void CreateCaseProcedureSelectionOption1() 
 	{
 		selectProcedure1.click();
-		selectProcedure2.click();
-		back.click();	
-		
+				
 	}
+
+//	Select 2nd Procedure
+	public void CreateCaseProcedureSelectionOption2() 
+	{
+		selectProcedure2.click();
+				
+	}
+	
+//	Redirect user to previous sub-module
+	public void CreateCaseProcedureSelectionBack() 
+	{
+		back.click();
+				
+	}
+	
 	
 	public void AddFacilityPage() 
 	{
