@@ -20,6 +20,12 @@ public class SearchPatientPage extends TestBase
 //	Case Number	
 	@FindBy(xpath="//input[@id='caseId']")
 	WebElement caseNumber;
+
+	//Initialization
+	public SearchPatientPage() 
+	{
+		PageFactory.initElements(driver, this);
+	}
 	
 	public void SearchPatient(String specialityOption, String caseNumberText)
 	{
@@ -28,8 +34,5 @@ public class SearchPatientPage extends TestBase
 			
 	}
 	
-	public void AddFacilityPage() 
-	{
-		PageFactory.initElements(driver, this);
-	}
+	
 }

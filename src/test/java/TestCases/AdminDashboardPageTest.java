@@ -12,12 +12,12 @@ import TestPages.LoginPage;
 import TestPages.AdminManageHealthSystemPage;
 import TestPages.ProfilePage;
 
-public class DashboardPageTest extends TestBase {
+public class AdminDashboardPageTest extends TestBase {
 	LoginPage loginPage;
 	AdminDashboardPage dashboardPage;
 	ProfilePage profilePage;
 	AdminManageHealthSystemPage manageHealthSystemPage;
-	public DashboardPageTest() {
+	public AdminDashboardPageTest() {
 		super();
 		
 	}
@@ -33,8 +33,7 @@ public class DashboardPageTest extends TestBase {
 		 loginPage = new LoginPage(driver);
 		 manageHealthSystemPage = new AdminManageHealthSystemPage();
 
-//		 loginPage = new LoginPage(driver);
-//		 manageHealthSystemPage = new ManageHealthSystemPage();
+
 
 		 //properties will get initialized here
 		 dashboardPage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));  //can access login method here, and in login method we are passing the properties username and password
