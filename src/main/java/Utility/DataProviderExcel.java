@@ -56,6 +56,21 @@ import com.TestBase.TestBase;
            // return data;
         }   
         
+        @DataProvider(name="PatientData")
+        public static  Object [][] findPatientData () throws IOException, NoSuchMethodException, SecurityException{
+            
+            Object[][] data = null;
+            
+          //  if(m.getName().equalsIgnoreCase("loginWithValidTest"))
+             //   {
+                    
+                data= getData(System.getProperty("user.dir")+"\\src\\test\\resources\\Driver\\ort_excel.xlsx","PatientData"); 
+                
+                return data;
+             ///   }
+           // return data;
+        }   
+        
          // supplying data for a test method.
         public static  Object[][] getData(String FilePath,String SheetName) throws IOException 
         {
@@ -72,7 +87,7 @@ import com.TestBase.TestBase;
             System.out.println(colCount);
             
             Object data[][] = new Object[rowCount-1][colCount];
-            for (int rNum = 2; rNum <= rowCount; rNum++) 
+            for (int rNum = 5; rNum <= rowCount; rNum++) 
             {
                 for (int cNum = 0; cNum < colCount; cNum++) 
                 {
@@ -81,7 +96,7 @@ import com.TestBase.TestBase;
                     row = excelSheet.getRow(rNum - 1);
                     
                     cell = row.getCell(cNum);
-                    data[rNum - 2][cNum] = cell.getStringCellValue(); //Your sheet name
+                    data[rNum - 5][cNum] = cell.getStringCellValue(); //Your sheet name?
                 }
                 System.out.println();
             }
