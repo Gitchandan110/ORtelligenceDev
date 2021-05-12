@@ -6,7 +6,6 @@ import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-
 import com.TestBase.TestBase;
 
 
@@ -23,5 +22,7 @@ public class TestUtil extends TestBase {
 		String currentDir = System.getProperty("user.dir");
 		FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + System.currentTimeMillis() + ".png"));
 	}
+	
+	
 
 }

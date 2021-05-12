@@ -61,10 +61,7 @@ import com.TestBase.TestBase;
 		return ORtLogo.isDisplayed();   
 		}
 		
-		
-
-	//	public AdminDashboardPage login(String un, String pwd){
-
+	
 		public void loginuser(String user, String pwd) {
 		
 			username.sendKeys(user);

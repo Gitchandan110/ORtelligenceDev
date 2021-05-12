@@ -87,6 +87,12 @@ public class NurseDashboardPage extends TestBase
 	@FindBy(xpath="((//a[text()='Alerts '])[1]")
 	WebElement menuAlerts;
 	
+//Initialization
+	public NurseDashboardPage()
+	{                           
+		PageFactory.initElements(driver, this);
+	}
+		
 //	Actions:
 	
 	public void NurseDashboard()
@@ -133,8 +139,5 @@ public class NurseDashboardPage extends TestBase
 	}
 	
 	
-	public NurseDashboardPage()
-	{                           
-		PageFactory.initElements(driver, this);
-	}
+
 }

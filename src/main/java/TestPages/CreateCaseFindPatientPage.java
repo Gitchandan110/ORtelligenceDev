@@ -8,8 +8,7 @@ import com.TestBase.TestBase;
 
 public class CreateCaseFindPatientPage extends TestBase
 {
-//	We have to use Page Factory-Object Repository
-//	Here we will segregate all locators using @FindBy annotation
+
 //	Mandatory to Use any of the 4 provided options
 //	Last Name
 	WebDriver driver;
@@ -37,8 +36,15 @@ public class CreateCaseFindPatientPage extends TestBase
 	WebElement search;
 	
 	
-//	User needs to Select the Patient from the list of Patients
-//	page ignition is also present
+//Initialization	
+	
+	public void createCaseFindPatientPage(WebDriver dr) 
+	{	
+		driver=dr;
+		PageFactory.initElements(driver, this);
+	}	
+	
+
 //	Actions : 
 	public void findPatientData(String lastName, String firstName, String DOB, String MNR) 
 	{
@@ -52,10 +58,5 @@ public class CreateCaseFindPatientPage extends TestBase
 	}
 	
 	
-	
-	public void createCaseFindPatientPage(WebDriver dr) 
-	{	
-		driver=dr;
-		PageFactory.initElements(driver, this);
-	}
+
 }

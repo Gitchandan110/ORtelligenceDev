@@ -14,9 +14,9 @@ import TestPages.ProfilePage;
 
 public class DashboardPageTest extends TestBase {
 	LoginPage loginPage;
-	 AdminDashboardPage dashboardPage;
-	 ProfilePage profilePage;
-	 AdminManageHealthSystemPage manageHealthSystemPage;
+	AdminDashboardPage dashboardPage;
+	ProfilePage profilePage;
+	AdminManageHealthSystemPage manageHealthSystemPage;
 	public DashboardPageTest() {
 		super();
 		

@@ -1,15 +1,16 @@
 package TestPages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import com.TestBase.TestBase;
 
 public class SelectFacilityPage extends TestBase
 {
-//	We have to use Page Factory-Object Repository
-//	Here we will segregate all locators using @FindBy annotation
+
 //	Select Facility Dropdown*
 	@FindBy(xpath="//select[@name='locationId']")
 	WebElement facilityDropdown;
@@ -18,6 +19,13 @@ public class SelectFacilityPage extends TestBase
 	@FindBy(xpath="//button[text()='Confirm']")
 	WebElement confirm;	
 	
+//  Initialization
+	public SelectFacilityPage() 
+	{
+		PageFactory.initElements(driver, this);
+	}
+		
+	
 //	Actions : 
 	public void SelectFacility(String facilityName)
 	{
@@ -25,8 +33,15 @@ public class SelectFacilityPage extends TestBase
 		confirm.click();
 	}
 	
-	public void AddFacilityPage() 
-	{
-		PageFactory.initElements(driver, this);
-	}
+	
+//	public static WebElement getElement(By element) {
+//		return driver.findElement(element);
+//}
+//	
+//	
+//	public static void SelectUsingVisibleValue(WebElement element, String visibleValue) {
+//		Select select = new Select(element);
+//		select.selectByVisibleText(visibleValue);
+//		}
+
 }
