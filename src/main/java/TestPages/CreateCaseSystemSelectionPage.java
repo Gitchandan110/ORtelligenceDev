@@ -9,6 +9,7 @@ import com.TestBase.TestBase;
 public class CreateCaseSystemSelectionPage extends TestBase
 {
 
+//	System found
 //	Checkbox 1st option
 	@FindBy(xpath="(//input[@type='checkbox'])[1]")
 	WebElement checkboxSystem1;
@@ -26,14 +27,6 @@ public class CreateCaseSystemSelectionPage extends TestBase
 	WebElement select;
 	
 //	System not found exception
-////
-//	@FindBy(xpath="")
-//	WebElement ;
-//
-////
-//	@FindBy(xpath="")
-//	WebElement ;
-	
 //	Click here link to open pop-up
 	@FindBy(xpath="//a[text()='Click here']")
 	WebElement clickHere;
@@ -50,13 +43,52 @@ public class CreateCaseSystemSelectionPage extends TestBase
 	@FindBy(xpath="//button[@class='close']")
 	WebElement closeIcon;
 
-	public void CreateCaseSystemSelection()
+//	Actions:
+//	Select 1st System
+	public void CreateCaseSystemSelectionOption1()
 	{
 		checkboxSystem1.click();
-		checkboxSystem2.click();
+		select.click();
 				
 	}
+
+//	Select 2nd System	
+	public void CreateCaseSystemSelectionOption2()
+	{
+		checkboxSystem2.click();
+		select.click();
+				
+	}
+	
+//	If no system is found
+	public void CreateCaseSystemSelectionNoSystem()
+	{
+//		Click here link to open Confirmation pop-up
+		clickHere.click();
+//		Confirmation pop-up will open.
+						
+	}
+	
+//	Confirmation pop-up
+	public void CreateCaseConfirmationPopUp() 
+	{
+//		Redirects user to Set selection sub-module
+		proceedToCart.click();
 		
+//		Redirects user to Basic details sub-module
+		selectAnotherProcedure.click();
+		
+//		Close pop-up
+		closeIcon.click();
+		
+	}
+	
+//	Back to previous sub-module
+	public void CreateCaseSystemSelectionBack()
+	{
+		back.click();
+	}
+	
 	public void AddFacilityPage() 
 	{
 		PageFactory.initElements(driver, this);
