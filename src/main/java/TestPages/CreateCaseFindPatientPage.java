@@ -40,15 +40,19 @@ public class CreateCaseFindPatientPage extends TestBase
 	@FindBy(xpath="//button[@name='Select']")
 	WebElement selectPatient;
 	
+	//Initialization	
 	
+	public void createCaseFindPatientPage(WebDriver dr) 
+		{	
+			driver=dr;
+			PageFactory.initElements(driver, this);
+		}
+		
 //	User needs to Select the Patient from the list of Patients
 //	page ignition is also present
 //	Actions : 
-<<<<<<< HEAD
+
 	public void CreateCaseFindPatientData(String lastName, String firstName, String DOB, String MNR) 
-=======
-	public void findPatientData(String lastName, String firstName, String DOB, String MNR) 
->>>>>>> e027ecfc522e51ed07934bda89842c1809dd4867
 	{
 						
 		patientLastName.sendKeys(lastName);
@@ -59,7 +63,6 @@ public class CreateCaseFindPatientPage extends TestBase
 		
 	}
 	
-<<<<<<< HEAD
 //	Select Patient
 	public void CreateCaseSelectPatient()
 	{
@@ -67,15 +70,4 @@ public class CreateCaseFindPatientPage extends TestBase
 			
 	}
 		
-	public void AddFacilityPage() 
-	{
-=======
-	
-	
-	public void createCaseFindPatientPage(WebDriver dr) 
-	{	
-		driver=dr;
->>>>>>> e027ecfc522e51ed07934bda89842c1809dd4867
-		PageFactory.initElements(driver, this);
-	}
 }
