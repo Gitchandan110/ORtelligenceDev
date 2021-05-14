@@ -24,7 +24,7 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 		
 		//now creating the object of LoginPage class.
 		
-		createCaseFindPatientPage = new CreateCaseFindPatientPage();
+		//createCaseFindPatientPage = new CreateCaseFindPatientPage();
 	}
 	
 	

@@ -50,11 +50,6 @@ public class LoginPageTest extends TestBase{
 		//if flag is true ur assertion will be passed otherwise it will fail
 	}
 	
-//	//@DataProvider
-//	public Object getORtTestData() {
-//		Object data [][]=ExcelUtility.getTestData(sheetName);
-//		return data;
-//	}
 	
 	@Test(priority=3,dataProvider="NurseData",dataProviderClass=DataProviderExcel.class)
 	public void LoginTest(String user,String password) {

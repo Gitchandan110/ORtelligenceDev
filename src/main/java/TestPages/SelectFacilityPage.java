@@ -1,6 +1,7 @@
 package TestPages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -8,9 +9,13 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.TestBase.TestBase;
 
+import Utility.DropDownHandler;
+
+
+
 public class SelectFacilityPage extends TestBase
 {
-
+	WebDriver driver;
 //	Select Facility Dropdown*
 	@FindBy(xpath="//select[@name='locationId']")
 	WebElement facilityDropdown;
@@ -20,18 +25,27 @@ public class SelectFacilityPage extends TestBase
 	WebElement confirm;	
 	
 //  Initialization
-	public SelectFacilityPage() 
+	public SelectFacilityPage(WebDriver dr ) 
 	{
+		driver = dr;
 		PageFactory.initElements(driver, this);
 	}
 		
 	
 //	Actions : 
-	public void SelectFacility(String facilityName)
+	public void clickConfirm()
 	{
-		facilityDropdown.sendKeys(facilityName);
+		
 		confirm.click();
 	}
+	
+	
+	public void clickOnDropDown() {
+		DropDownHandler dp =new DropDownHandler(driver);
+        dp.SelectUsingVisibleText(facilityDropdown,"Wilmington, DE, 19899 , Wilmington, Delaware, 19899");
+	}
+	
+	
 	
 	
 //	public static WebElement getElement(By element) {

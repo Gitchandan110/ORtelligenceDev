@@ -8,9 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 
-public class DropDown extends TestBase {
+public class DropDownHandler extends TestBase {
 	
-	public DropDown(WebDriver driver) {
+	public DropDownHandler(WebDriver driver) {
 	}
 
 	public static void SelectUsingVisibleValue(WebElement element, String visibleValue) {

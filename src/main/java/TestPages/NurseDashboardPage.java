@@ -1,5 +1,6 @@
 package TestPages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -9,6 +10,7 @@ import com.TestBase.TestBase;
 
 public class NurseDashboardPage extends TestBase
 {
+	WebDriver dr;
 //	Dashboard
 //	In Process
 	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[1]")
@@ -24,7 +26,7 @@ public class NurseDashboardPage extends TestBase
 	
 //	Create Case
 	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[4]")
-	WebElement dashboardCreateCase;   
+	public WebElement dashboardCreateCase;   
 	
 //	Search Case
 	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[5]")
@@ -88,8 +90,9 @@ public class NurseDashboardPage extends TestBase
 	WebElement menuAlerts;
 	
 //Initialization
-	public NurseDashboardPage()
-	{                           
+	public NurseDashboardPage(WebDriver driver)
+	{ 
+		dr=driver;
 		PageFactory.initElements(driver, this);
 	}
 		

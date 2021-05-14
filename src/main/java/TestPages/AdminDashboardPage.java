@@ -39,7 +39,7 @@ public class AdminDashboardPage extends TestBase
 	
 	}
 	// verifyDashboardPageTitle method will call from DashBoard Test Class
-	public String verifyDashboardPageTitle() {  
+	public String verifyAdminDashboardPageTitle() {  
 		return driver.getTitle();
 		
 	}

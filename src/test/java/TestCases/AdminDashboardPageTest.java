@@ -14,7 +14,7 @@ import TestPages.ProfilePage;
 
 public class AdminDashboardPageTest extends TestBase {
 	LoginPage loginPage;
-	AdminDashboardPage dashboardPage;
+	AdminDashboardPage adminDashboardPage;
 	ProfilePage profilePage;
 	AdminManageHealthSystemPage manageHealthSystemPage;
 	public AdminDashboardPageTest() {
@@ -36,7 +36,7 @@ public class AdminDashboardPageTest extends TestBase {
 
 
 		 //properties will get initialized here
-		 dashboardPage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));  //can access login method here, and in login method we are passing the properties username and password
+		adminDashboardPage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));  //can access login method here, and in login method we are passing the properties username and password
 	}
 	
 	
@@ -44,21 +44,21 @@ public class AdminDashboardPageTest extends TestBase {
 	@Test(priority=1)
 	public void verifyDashboardPageTitleTest()
 	{
-		String dashboardPageTitle =dashboardPage.verifyDashboardPageTitle();
+		String dashboardPageTitle =adminDashboardPage.verifyAdminDashboardPageTitle();
 		Assert.assertEquals(dashboardPageTitle, "Login", "Dashboard Page Title not matched");  //if assertion is getting failed then"Dashboard Page Title not matched" this msg will gets displyed at the time of reporting. it will get printed only when test case gets passed
 	}
 	
 	
 	@Test(priority=2)
 	public void verifyCorrectUserNameLableTest() {
-		Assert.assertTrue(dashboardPage.verifyCorrectUserNameLable());
+		Assert.assertTrue(adminDashboardPage.verifyCorrectUserNameLable());
 		
 		
 	}
 	
 	@Test(priority=3)
 	public void verifymenu() {
-		Assert.assertTrue(dashboardPage.verifyMenu());
+		Assert.assertTrue(adminDashboardPage.verifyMenu());
 		}
 	
 	/*@Test(priority=4)
@@ -67,14 +67,14 @@ public class AdminDashboardPageTest extends TestBase {
 		}*/
 	@Test(priority=4)
 	public void verifyProfileLink() {
-		dashboardPage.clickOnProfileLink();
+		adminDashboardPage.clickOnProfileLink();
 	}
 	
 	
 	
 	@Test(priority=5)
 	public void verifyManageHealthSystemLinkTest() {
-		manageHealthSystemPage=dashboardPage.clickOnManageHealthSystemLink();
+		manageHealthSystemPage=adminDashboardPage.clickOnManageHealthSystemLink();
 		}
 	
 	
