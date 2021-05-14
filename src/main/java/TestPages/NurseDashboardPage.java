@@ -10,92 +10,132 @@ import com.TestBase.TestBase;
 public class NurseDashboardPage extends TestBase
 {
 
-//	Dashboard
-//	In Process
+	/*	Dashboard
+    *In Process
+ */
+	
 	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[1]")
 	WebElement dashboardInProcess;   
 	
-//	On Hold
+	/*	On Hold
+	 */
+	
 	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[2]")
 	WebElement dashboardOnHold;   
 	
-//	Cart Review
+	/*	Cart Review
+	 */
+	
 	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[3]")
 	WebElement dashboardCartReview;   
 	
-//	Create Case
+	/*	Create Case
+	 */
+	
 	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[4]")
 	public WebElement dashboardCreateCase;   
 	
-//	Search Case
+	/*	Search Case
+	 */
+	
 	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[5]")
 	WebElement dashboardSearchCase;   
 	
-//	Open Case
+	/*Open Case
+	 */
+	
 	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[6]")
 	WebElement dashboardOpenCase;   
 	
-//	ORtelligence
+	/*	ORtelligence
+	 */
+	
 	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[7]")
 	WebElement dashboardORtelligence;   
 	
-//	Menu Bar
-//	In Process
+	/*	Menu Bar 
+	 * 	In Process 
+ */
+	
 	@FindBy(xpath="(//a[text()='In-Process'])[1]")
 	WebElement menuInProcess;   
 	
-//	On Hold
+	/*On Hold
+	 */
+	
 	@FindBy(xpath="(//a[text()='On-Hold'])[1]")
 	WebElement menuOnHold;   
 	
-//	Cart Review
+	/*	Cart Review
+	 */
+	
 	@FindBy(xpath="(//a[text()='Cart Review'])[1]")
 	WebElement menuCartReview;   
 
-//	Create Case
+	/*	Create Case
+	 */
+	
 	@FindBy(xpath="(//a[text()='Create Case'])[1]")
 	WebElement menuCreateCase;   
 	
-//	Search Case
+	/*	Search Case
+	 */
+	
 	@FindBy(xpath="(//a[text()='Search Cases'])[1]")
 	WebElement menuSearchCase;   
+	/*	Open Case
+	 */
 	
-//	Open Case
 	@FindBy(xpath="(//a[text()='Open Cases'])[1]")
 	WebElement menuOpenCase;   
 	
-//	ORtelligence
+	/*	ORtelligence
+	 */
+	
 	@FindBy(xpath="(//a[text()='ORtelligence'])[1]")
 	WebElement menuORtelligence;   
 	
-//	User Name
+	/*	User Name
+	 */
+	
 	@FindBy(xpath="//li[@class='dropdown user-menu pl-sm-0']")
 	WebElement menuUserName;   
 	
-//	Profile
+	/*	Profile
+	 */
+	
 	@FindBy(xpath="(//a[@class='menu-font'])[7]")
 	WebElement menuProfile;   
 	
-//	Switch Location
+	/*Switch Location
+	 */
+	
 	@FindBy(xpath="(//a[@class='menu-font'])[8]")
 	WebElement menuSwitchLocatoin;   
 	
-//	Logout
+	/*Logout
+	 */
+	
 	@FindBy(xpath="(//a[@class='menu-font'])[9]")
 	WebElement menuLogout;
 
-//	Alerts 
+	/*	Alerts 
+	 */
+	
 	@FindBy(xpath="((//a[text()='Alerts '])[1]")
 	WebElement menuAlerts;
 	
-//Initialization
+	/*Initialization
+	 */
+	
 	public NurseDashboardPage()
 	{ 
 		
 		PageFactory.initElements(driver, this);
 	}
 		
-//	Actions:
+	/*	Actions:
+	 */
 	
 	public void NurseDashboard()
 	{
