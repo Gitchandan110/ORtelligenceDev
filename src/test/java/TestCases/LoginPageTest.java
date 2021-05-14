@@ -7,13 +7,13 @@ import org.testng.annotations.Test;
 
 import com.TestBase.TestBase;
 
-import TestPages.AdminDashboardPage;
 import TestPages.LoginPage;
+import TestPages.NurseDashboardPage;
 import Utility.DataProviderExcel;
 public class LoginPageTest extends TestBase{
 	//Defined the loginPage variable
 	LoginPage loginPage;   
-	AdminDashboardPage dashboardPage;
+	NurseDashboardPage dashboardPage;
 	
 	//name of the sheet in excel
 	String sheetName = "NurseData";
@@ -32,7 +32,7 @@ public class LoginPageTest extends TestBase{
 		
 		//now creating the object of LoginPage class.
 		
-		 loginPage = new LoginPage(driver);
+		 loginPage = new LoginPage();
 	}
 	
 	@Test(priority=1)
@@ -51,15 +51,17 @@ public class LoginPageTest extends TestBase{
 	}
 	
 	
-	@Test(priority=3,dataProvider="NurseData",dataProviderClass=DataProviderExcel.class)
+	@Test(priority=3,enabled = false,dataProvider="NurseData",dataProviderClass=DataProviderExcel.class)
 	public void LoginTest(String user,String password) {
-		
-		//LoginPage lpage=new LoginPage();
-		loginPage.loginuser(user, password);
-		
-		//dashboardPage =loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		loginPage.loginuser(user, password);	
 	}
 	
+	
+	
+	@Test(priority=4)
+	public  void  loginTest() {
+		dashboardPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+	}
 
 	 @AfterMethod
 	public void tearDown() {

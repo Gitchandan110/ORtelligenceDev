@@ -9,8 +9,8 @@
   <test thread-count="5" name="Ortelligence Application Test Cases">
     <classes>
       <class name="TestCases.LoginPageTest"/>
-       <class name="TestCases.DashboardPageTest"/>
-        <class name="TestCases.ManageHealthSystemPageTest"/>
+      
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

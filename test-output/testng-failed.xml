@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Ortelligence Surgery Management Application Test Suite]">
+  <listeners>
+    <listener class-name="ExtentReportListner.ExtentReport"/>
+  </listeners>
+  <test thread-count="5" name="Ortelligence Application Test Cases(failed)">
     <classes>
-      <class name="TestCases.SelectFacilityPageTest">
+      <class name="TestCases.LoginPageTest">
         <methods>
-          <include name="selectFacilityPage"/>
           <include name="setUp"/>
+          <include name="ORtLogoImageTest"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- TestCases.SelectFacilityPageTest -->
+      </class> <!-- TestCases.LoginPageTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Ortelligence Application Test Cases(failed) -->
+</suite> <!-- Failed suite [Ortelligence Surgery Management Application Test Suite] -->

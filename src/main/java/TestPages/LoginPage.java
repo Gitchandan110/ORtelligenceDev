@@ -1,6 +1,5 @@
 package TestPages;
-	import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+	import org.openqa.selenium.WebElement;
 	import org.openqa.selenium.support.FindBy;
 	import org.openqa.selenium.support.PageFactory;
 
@@ -8,7 +7,7 @@ import com.TestBase.TestBase;
 
 	public class LoginPage extends TestBase{ 
 		
-		WebDriver driver;
+		
 		// we have to use Page Factory-Object Repository
 		//Here we will segregate all XPath using @FindBy annotation
 		@FindBy(name="username")
@@ -43,11 +42,10 @@ import com.TestBase.TestBase;
 		//Initializing the Page Objects:
 		//creating loginpage constructor
 	
-		public LoginPage(WebDriver dr){ 
+		public LoginPage(){ 
 		//PageFactory is a class and InitElements is method 
 		//driver is coming from base class  //'this' means current class object, instead of this we can write LoginPage.class but better to use 'this'
 		
-			driver=dr;
 			PageFactory.initElements(driver, this);                                              
 		}
 		
@@ -70,14 +68,24 @@ import com.TestBase.TestBase;
 			
 		}
 		
-		public AdminDashboardPage login(String un, String pwd){
+//		public AdminDashboardPage login(String un, String pwd){
+//
+//	         username.sendKeys(un);
+//			password.sendKeys(pwd);
+//			signUpBtn.click();
+//			
+//			// it  will return to Dashboard page    		
+//			return new AdminDashboardPage(); 
+//		}
+		
+		public NurseDashboardPage login(String un, String pwd){
 
 	         username.sendKeys(un);
 			password.sendKeys(pwd);
 			signUpBtn.click();
 			
 			// it  will return to Dashboard page    		
-			return new AdminDashboardPage(); 
+			return new NurseDashboardPage(); 
 		}
 		
 		public AdminForgotPasswordPage login(String Rcd, String ENpwd, String VN) {

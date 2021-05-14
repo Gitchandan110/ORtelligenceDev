@@ -21,7 +21,7 @@ public class SelectFacilityPageTest extends TestBase {
 		@BeforeMethod
 		public void setUp() {
 			initialization();
-			loginPage = new LoginPage(driver);
+			loginPage = new LoginPage();
 	        selectFacilityPage = new SelectFacilityPage(driver);
 	     
 			

@@ -30,13 +30,13 @@ public class AdminDashboardPageTest extends TestBase {
 		initialization();
 		 profilePage= new  ProfilePage();  //initialising profile page reference
 
-		 loginPage = new LoginPage(driver);
+		 loginPage = new LoginPage();
 		 manageHealthSystemPage = new AdminManageHealthSystemPage();
 
 
 
 		 //properties will get initialized here
-		adminDashboardPage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));  //can access login method here, and in login method we are passing the properties username and password
+		//adminDashboardPage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));  //can access login method here, and in login method we are passing the properties username and password
 	}
 	
 	

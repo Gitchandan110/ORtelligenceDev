@@ -6,17 +6,9 @@
   </listeners>
   <test thread-count="5" name="Ortelligence Application Test Cases(failed)">
     <classes>
-      <class name="TestCases.DashboardPageTest">
-        <methods>
-          <include name="verifyProfileLink"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- TestCases.DashboardPageTest -->
       <class name="TestCases.LoginPageTest">
         <methods>
           <include name="setUp"/>
-          <include name="LoginTest"/>
           <include name="ORtLogoImageTest"/>
           <include name="tearDown"/>
         </methods>
