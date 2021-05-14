@@ -1,6 +1,6 @@
 package TestPages;
 
-import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -11,7 +11,7 @@ public class CreateCaseFindPatientPage extends TestBase
 
 //	Mandatory to Use any of the 4 provided options
 //	Last Name
-	WebDriver driver;
+
 	@FindBy(xpath="//input[@id='lastName']")
 	WebElement patientLastName;
 	
@@ -42,9 +42,9 @@ public class CreateCaseFindPatientPage extends TestBase
 
 //Initialization	
 	
-	public void createCaseFindPatientPage(WebDriver dr) 
+	public void createCaseFindPatientPage() 
 	{	
-		driver=dr;
+
 		PageFactory.initElements(driver, this);
 	}	
 
