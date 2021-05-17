@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17855" started-at="2021-05-14T10:22:47Z" finished-at="2021-05-14T10:23:04Z">
+  <suite name="Default suite" duration-ms="14997" started-at="2021-05-16T15:25:18Z" finished-at="2021-05-16T15:25:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17855" started-at="2021-05-14T10:22:47Z" finished-at="2021-05-14T10:23:04Z">
-      <class name="TestCases.NurseDashboardPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:TestCases.NurseDashboardPageTest@204f30ec]" name="setUp" is-config="true" duration-ms="17004" started-at="2021-05-14T10:22:47Z" finished-at="2021-05-14T10:23:04Z">
+    <test name="Default test" duration-ms="14997" started-at="2021-05-16T15:25:18Z" finished-at="2021-05-16T15:25:33Z">
+      <class name="com.ort.qa.testcases.LoginPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.LoginPageTest@6eebc39e]" name="setUp" is-config="true" duration-ms="8219" started-at="2021-05-16T15:25:18Z" finished-at="2021-05-16T15:25:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyDashboardPageTitleTest()[pri:1, instance:TestCases.NurseDashboardPageTest@204f30ec]" name="verifyDashboardPageTitleTest" duration-ms="23" started-at="2021-05-14T10:23:04Z" finished-at="2021-05-14T10:23:04Z">
+        <test-method status="PASS" signature="loginTest()[pri:4, instance:com.ort.qa.testcases.LoginPageTest@6eebc39e]" name="loginTest" duration-ms="5939" started-at="2021-05-16T15:25:26Z" finished-at="2021-05-16T15:25:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyDashboardPageTitleTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:TestCases.NurseDashboardPageTest@204f30ec]" name="tearDown" is-config="true" duration-ms="792" started-at="2021-05-14T10:23:04Z" finished-at="2021-05-14T10:23:04Z">
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.LoginPageTest@6eebc39e]" name="tearDown" is-config="true" duration-ms="804" started-at="2021-05-16T15:25:32Z" finished-at="2021-05-16T15:25:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- TestCases.NurseDashboardPageTest -->
+      </class> <!-- com.ort.qa.testcases.LoginPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.SelectFacilityPageTest">
+      <class name="com.ort.qa.testcases.LoginPageTest">
         <methods>
-          <include name="selectFacilityPage"/>
+          <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="ortLogoImageTest"/>
         </methods>
-      </class> <!-- TestCases.SelectFacilityPageTest -->
+      </class> <!-- com.ort.qa.testcases.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
