@@ -28,6 +28,11 @@ public class SelectFacilityPage extends TestBase
 	
 	@FindBy(xpath="//button[text()='Confirm']")
 	WebElement confirm;	
+	 
+	
+	@FindBy(xpath="(//a[@class='menu-font'])[4]")
+	WebElement createcase;	
+	 
 	
  /*  Initialization
  */
@@ -56,15 +61,7 @@ public class SelectFacilityPage extends TestBase
 	
 	
 	
+		
 	
-	/*	public static WebElement getElement(By element) {
-*		return driver.findElement(element);
-*		}
-*
-*
-*public static void SelectUsingVisibleValue(WebElement element, String visibleValue) {
-*		Select select = new Select(element);
-*		select.selectByVisibleText(visibleValue);
-*		}
- */
+	
 }

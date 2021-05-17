@@ -90,8 +90,10 @@ public class NurseDashboardPage extends TestBase
 	@FindBy(xpath="(//a[text()='Open Cases'])[1]")
 	WebElement menuOpenCase;   
 	
+
  /*	ORtelligence
 */
+
 	
 	@FindBy(xpath="(//a[text()='ORtelligence'])[1]")
 	WebElement menuORtelligence;   

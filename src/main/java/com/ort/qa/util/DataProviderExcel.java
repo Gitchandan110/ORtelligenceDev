@@ -4,8 +4,6 @@ package com.ort.qa.util;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.lang.reflect.Method;
-
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -60,7 +58,7 @@ public class DataProviderExcel extends TestBase  {
         }   
         
         @DataProvider(name="PatientData")
-        public static  Object [][] findPatientData () throws IOException, NoSuchMethodException, SecurityException{
+        public   Object [][] findPatientData () throws IOException, NoSuchMethodException, SecurityException{
             
             Object[][] data = null;
             
