@@ -20,7 +20,8 @@ public class SelectFacilityPageTest extends TestBase {
 		public void setUp() {
 			initialization();
 			loginPage = new LoginPage();
-	        selectFacilityPage = new SelectFacilityPage(driver);
+	        selectFacilityPage = new SelectFacilityPage();
+	        selectFacilityPage = loginPage.login1(prop.getProperty("username"), prop.getProperty("password"));
 	     
 			
 		}
@@ -28,6 +29,7 @@ public class SelectFacilityPageTest extends TestBase {
 		@Test(priority=1)
 		public void selectFacilityPage() {
 			selectFacilityPage.clickOnDropDown();
+			selectFacilityPage.clickConfirm();
 		}
 		
 }
