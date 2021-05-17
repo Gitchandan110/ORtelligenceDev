@@ -18,14 +18,11 @@ public class CreateCaseFindPatientPage extends TestBase
 	/*	Mandatory to Use any of the 4 provided options
 *Last Name 
  */
-	
-
 	@FindBy(xpath="//input[@id='lastName']")
 	WebElement patientLastName;
 	
 	/*	First Name
 	 */
-	
 	@FindBy(xpath="//input[@id='firstName']")
 	WebElement patientFirstName;
 
@@ -34,20 +31,18 @@ public class CreateCaseFindPatientPage extends TestBase
 	@FindBy(xpath="//input[@id='dob']")
 	WebElement patientDOB;
 
-	/*	Date of Birth Calander icon
+	/*	Date of Birth Calendar icon
 	 */
 	@FindBy(xpath="//span[@class='date-picker-icon']")
 	WebElement patientDOBIcon;
 	
 	/*	MRN# Number	
 	 */
-	
 	@FindBy(xpath="//input[@id='mrn']")
 	WebElement patientMRN;
 	
 	/*Search button	
 	 */
-	
 	@FindBy(xpath="//button[text()='Search']")
 	WebElement search;
 	
@@ -59,8 +54,7 @@ public class CreateCaseFindPatientPage extends TestBase
 
 	/*Initialization	
 	 */
-	
-	public void createCaseFindPatientPage() 
+	public CreateCaseFindPatientPage() 
 	{	
 
 		PageFactory.initElements(driver, this);
@@ -72,13 +66,13 @@ public class CreateCaseFindPatientPage extends TestBase
 	
 /*Actions : 
  */
-	public void CreateCaseFindPatientData(String lastName, String firstName, String DOB, String MNR) 
+	public void createCaseFindPatientData(String lastName, String firstName, String dOB, String mNR) 
 	{
 						
 		patientLastName.sendKeys(lastName);
 		patientFirstName.sendKeys(firstName);
-		patientDOB.sendKeys(DOB);
-		patientMRN.sendKeys(MNR);
+		patientDOB.sendKeys(dOB);
+		patientMRN.sendKeys(mNR);
 		search.click();
 		
 	}
@@ -86,7 +80,7 @@ public class CreateCaseFindPatientPage extends TestBase
 
 	/*	Select Patient
 	 */
-	public void CreateCaseSelectPatient()
+	public void createCaseSelectPatient()
 	{
 		selectPatient.click();
 			

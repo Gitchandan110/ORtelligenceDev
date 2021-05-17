@@ -44,8 +44,14 @@ public class CreateCaseSystemSelectionPage extends TestBase
 	WebElement closeIcon;
 
 //	Actions:
+	
+	public CreateCaseSystemSelectionPage() 
+	{
+		PageFactory.initElements(driver, this);
+	}
+	
 //	Select 1st System
-	public void CreateCaseSystemSelectionOption1()
+	public void createCaseSystemSelectionOption1()
 	{
 		checkboxSystem1.click();
 		select.click();
@@ -53,7 +59,7 @@ public class CreateCaseSystemSelectionPage extends TestBase
 	}
 
 //	Select 2nd System	
-	public void CreateCaseSystemSelectionOption2()
+	public void createCaseSystemSelectionOption2()
 	{
 		checkboxSystem2.click();
 		select.click();
@@ -61,7 +67,7 @@ public class CreateCaseSystemSelectionPage extends TestBase
 	}
 	
 //	If no system is found
-	public void CreateCaseSystemSelectionNoSystem()
+	public void createCaseSystemSelectionNoSystem()
 	{
 //		Click here link to open Confirmation pop-up
 		clickHere.click();
@@ -70,7 +76,7 @@ public class CreateCaseSystemSelectionPage extends TestBase
 	}
 	
 //	Confirmation pop-up
-	public void CreateCaseConfirmationPopUp() 
+	public void createCaseConfirmationPopUp() 
 	{
 //		Redirects user to Set selection sub-module
 		proceedToCart.click();
@@ -78,19 +84,16 @@ public class CreateCaseSystemSelectionPage extends TestBase
 //		Redirects user to Basic details sub-module
 		selectAnotherProcedure.click();
 		
-//		Close pop-up byt clicking on Icon
+//		Close pop-up by clicking on Icon
 		closeIcon.click();
 		
 	}
 	
 //	Back to previous sub-module
-	public void CreateCaseSystemSelectionBack()
+	public void createCaseSystemSelectionBack()
 	{
 		back.click();
 	}
 	
-	public void AddFacilityPage() 
-	{
-		PageFactory.initElements(driver, this);
-	}
+
 }

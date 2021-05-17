@@ -101,42 +101,48 @@ public class CreateCaseSetSelectionPage extends TestBase
 	WebElement clickHere;
 
 //	Actions:
+	
+	public CreateCaseSetSelectionPage() 
+	{
+		PageFactory.initElements(driver, this);
+	}
+	
 //	Basic set and other details
-	public void CreateCaseSetSelection(String recordsOption, String searchSetText, String searchSuppliesText, String anesthesiaOption, String blockAnesthesiaTypeOption, String medicationsText, String sideOption, String positionOption, String positioningCommentText, String instructionsText) 
+	public void createCaseSetSelection(String recordsOption, String searchSetText, String searchSuppliesText, String anesthesiaOption, String blockAnesthesiaTypeOption, String medicationsText, String sideOption, String positionOption, String positioningCommentText, String instructionsText) 
 	{
 		
-		records.sendKeys("recordsOption");
-		searchSet.sendKeys("searchSetText");
+		records.sendKeys(recordsOption);
+		searchSet.sendKeys(searchSetText);
 		supplies.click();
-		searchSupplies.sendKeys("searchSuppliesText");
-		anesthesia.sendKeys("anesthesiaOption");
-		blockAnesthesiaType.sendKeys("blockAnesthesiaTypeOption");
+		searchSupplies.sendKeys(searchSuppliesText);
+		anesthesia.sendKeys(anesthesiaOption);
+		blockAnesthesiaType.sendKeys(blockAnesthesiaTypeOption);
 		xRayYes.click();
 		xRayNo.click();
-		medications.sendKeys("medicationsText");
-		side.sendKeys("sideOption");
-		position.sendKeys("positionOption");
-		positioningComment.sendKeys("positioningCommentText");
-		instructions.sendKeys("instructionsText");
+		medications.sendKeys(medicationsText);
+		side.sendKeys(sideOption);
+		position.sendKeys(positionOption);
+		positioningComment.sendKeys(positioningCommentText);
+		instructions.sendKeys(instructionsText);
 		create.click();
 				
 	}
 	
 //	Back to previous sub-module
-	public void CreateCaseSetSelectionBack()
+	public void createCaseSetSelectionBack()
 	{
 		back.click();
 	}
 	
 //	Remove Procedure button
-	public void CreateCaseRemoveProcedure()
+	public void createCaseRemoveProcedure()
 	{
 		removeProcedure.click();
 		
 	}
 	
 //	Remove Procedure - Procedure details pop-up
-	public void CreateCaseProcedureDetailsPopup()
+	public void createCaseProcedureDetailsPopup()
 	{
 		closePopupButton.click();
 		closePopupIcon.click();
@@ -144,7 +150,7 @@ public class CreateCaseSetSelectionPage extends TestBase
 	}
 	
 //	Confirmation Pop-up 
-	public void CreateCaseConfirmationPopup() 
+	public void createCaseConfirmationPopup() 
 	{
 		clickHere.click();
 		confirmationOk.click();
@@ -152,8 +158,5 @@ public class CreateCaseSetSelectionPage extends TestBase
 	}
 	
 	
-	public void AddFacilityPage() 
-	{
-		PageFactory.initElements(driver, this);
-	}
+
 }

@@ -134,12 +134,18 @@ public class CreateCaseBasicDetailsPage extends TestBase
 
 
 	/*	Actions :
-	*	Verify Patient name
-	*	Capture Case Number
-	*	Verify DOB
+	*/
+	public CreateCaseBasicDetailsPage() 
+	{
+		PageFactory.initElements(driver, this);
+	}
+	
+	/*	Verify Patient name - pending
+	*	Capture Case Number -  pending
+	*	Verify DOB -  pending
 	Verify MNR#
       */
-	public void BasicDetails(String surgeonName, String surgeonPreferenceCard, String secondSurgeonName, String surgeonAllergyOption, String secondSurgeonAllergyOption, String patientAllergyOption, String physicianAssistantOption, String urgencyOption, String procedureOption, String speciaityOption, String surgeryDateTimeText, String notesText, String diagnosisCodeText)
+	public void basicDetails(String surgeonName, String surgeonPreferenceCard, String secondSurgeonName, String surgeonAllergyOption, String secondSurgeonAllergyOption, String patientAllergyOption, String physicianAssistantOption, String urgencyOption, String procedureOption, String speciaityOption, String surgeryDateTimeText, String notesText, String diagnosisCodeText)
 
 	{
 		surgeon.sendKeys(surgeonName);
@@ -165,9 +171,6 @@ public class CreateCaseBasicDetailsPage extends TestBase
 
 	}
 
-	public void AddFacilityPage() 
-	{
-		PageFactory.initElements(driver, this);
-	}
+
 
 }

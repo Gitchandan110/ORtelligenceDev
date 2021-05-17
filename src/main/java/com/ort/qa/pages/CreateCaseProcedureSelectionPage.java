@@ -36,7 +36,12 @@ public class CreateCaseProcedureSelectionPage extends TestBase
 		 *	Select 1st Procedure
 		*/
 	
-	public void CreateCaseProcedureSelectionOption1() 
+	public CreateCaseProcedureSelectionPage() 
+	{
+		PageFactory.initElements(driver, this);
+	}
+	
+	public void createCaseProcedureSelectionOption1() 
 	{
 		selectProcedure1.click();
 				
@@ -44,7 +49,7 @@ public class CreateCaseProcedureSelectionPage extends TestBase
 
 	/*	Select 2nd Procedure
 	 */
-	public void CreateCaseProcedureSelectionOption2() 
+	public void createCaseProcedureSelectionOption2() 
 	{
 		selectProcedure2.click();
 				
@@ -53,15 +58,12 @@ public class CreateCaseProcedureSelectionPage extends TestBase
 	/*	Redirect user to previous sub-module
 	 */
 	
-	public void CreateCaseProcedureSelectionBack() 
+	public void createCaseProcedureSelectionBack() 
 	{
 		back.click();
 				
 	}
 	
 	
-	public void AddFacilityPage() 
-	{
-		PageFactory.initElements(driver, this);
-	}
+
 }
