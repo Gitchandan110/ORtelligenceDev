@@ -1,4 +1,5 @@
 package com.ort.qa.pages;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -6,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.ort.qa.base.TestBase;
 
 public class LoginPage extends TestBase{ 
+		
 
 
 	/* we have to use Page Factory-Object Repository
@@ -48,9 +50,9 @@ public class LoginPage extends TestBase{
 	
 	public LoginPage(){
 		
-		/*PageFactory is a class and InitElements is method 
-		 *driver is coming from base class  //'this' means current class object, instead of this we can write LoginPage.class but better to use 'this'
-		 */
+	/*PageFactory is a class and InitElements is method 
+	 *driver is coming from base class  //'this' means current class object, instead of this we can write LoginPage.class but better to use 'this'
+	 */
 		
 		PageFactory.initElements(driver, this);                                              
 	}
@@ -77,6 +79,15 @@ public class LoginPage extends TestBase{
 		signUpBtn.click();
 		return new NurseDashboardPage(); 
 	}
+	
+	public void loginuser(String user, String pwd)
+			{
+				username.sendKeys(user);
+				password.sendKeys(pwd);
+				save.click();
+				
+			}
+			
 
 	public SelectFacilityPage login1(String un, String pwd){
 

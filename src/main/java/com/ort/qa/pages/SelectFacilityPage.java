@@ -15,7 +15,7 @@ import com.ort.qa.util.DropDownHandler;
 public class SelectFacilityPage extends TestBase
 {
 
-	WebDriver driver;
+	
 	/*	Select Facility Dropdown*
 	 */
 	

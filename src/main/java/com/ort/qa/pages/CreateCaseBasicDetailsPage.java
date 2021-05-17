@@ -28,8 +28,9 @@ public class CreateCaseBasicDetailsPage extends TestBase
 	@FindBy(xpath="//button[text()='Quick Pick']")
 	WebElement quickPick;	
 
-	/*	Second Surgeon + icon 
-	 */
+	/*
+	Second Surgeon + icon 
+	*/
 
 	@FindBy(xpath="//i[@class='fa fa-plus padding-plus-layout cursor-pointer']")
 	WebElement secondSergeonPlusIcon;

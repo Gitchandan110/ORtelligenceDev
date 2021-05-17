@@ -43,6 +43,11 @@ public class TestBase {
 		 */
 		String browserName = prop.getProperty("browser");  
 		
+		/*priyanka's driver path:"webdriver.chrome.driver","C:\\SeleniumDriver\\chromedriver.exe
+		 * 
+		 * 
+		 * */
+		
 		if(browserName.equals("chrome")){
 			System.setProperty("webdriver.chrome.driver","C:\\SeleniumDriver\\chromedriver.exe");	     
 			driver = new ChromeDriver(); 

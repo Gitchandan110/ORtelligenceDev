@@ -3,19 +3,21 @@ package com.ort.qa.testcases;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.ort.qa.base.TestBase;
 import com.ort.qa.pages.LoginPage;
 import com.ort.qa.pages.NurseDashboardPage;
 import com.ort.qa.util.DataProviderExcel;
+import com.ort.qa.util.ExcelUtility;
 public class LoginPageTest extends TestBase{
 	//Defined the loginPage variable
 	LoginPage loginPage;   
 	NurseDashboardPage nurseDashboardPage;
 	
 	//name of the sheet in excel //will use this later
-	//String sheetName = "NurseData";
+	String sheetName = "NurseData";
 	
 	// here created the constructor of LoginPageTest
 	//it will call superclass constructor bcz i want to initialize my properties also
@@ -51,10 +53,26 @@ public class LoginPageTest extends TestBase{
 	//this test case is for fetching the multiple username and password from the excel sheet 
     //we will run this testcase later
     
-	@Test(priority=3,enabled = false,dataProvider="NurseData",dataProviderClass=DataProviderExcel.class)
+  @DataProvider
+    	public Object getORtTestData() {
+   		Object data [][]=ExcelUtility.getTestData(sheetName);
+   		return data;
+    	}
+
+ 
+  	@Test(priority=3,dataProvider="NurseData",dataProviderClass=DataProviderExcel.class)
+  	public void LoginTest(String user,String password) {
+  		
+  		//LoginPage lpage=new LoginPage();
+  		loginPage.loginuser(user, password);
+  		
+  		//dashboardPage =loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+   	}
+   	 
+	/*@Test(priority=3,dataProvider="NurseData",dataProviderClass=DataProviderExcel.class)
 	public void LoginTest(String un,String pwd) {
 		loginPage.login(un, pwd);	
-	}
+	}*/
 	
 	
 	@Test(priority=4)

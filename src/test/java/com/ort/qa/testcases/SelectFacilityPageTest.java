@@ -7,19 +7,22 @@ import com.ort.qa.base.TestBase;
 import com.ort.qa.pages.LoginPage;
 import com.ort.qa.pages.SelectFacilityPage;
 
-public class SelectFacilityPageTest extends TestBase {
+public class SelectFacilityPageTest extends TestBase
+{
 
      LoginPage loginPage;
 	 SelectFacilityPage selectFacilityPage;
-
-		public SelectFacilityPageTest() {  
+	 
+		public SelectFacilityPageTest() 
+		{  
 			super();	                           
-			}
+		}
 		
 		@BeforeMethod
-		public void setUp() {
-			initialization();
-			loginPage = new LoginPage();
+		public void setUp() 
+		{
+			           initialization();
+			         loginPage = new LoginPage();
 	        selectFacilityPage = new SelectFacilityPage();
 	        selectFacilityPage = loginPage.login1(prop.getProperty("username"), prop.getProperty("password"));
 	     
@@ -27,9 +30,13 @@ public class SelectFacilityPageTest extends TestBase {
 		}
 		
 		@Test(priority=1)
-		public void selectFacilityPage() {
+		public void selectFacilityPage() 
+		{
 			selectFacilityPage.clickOnDropDown();
 			selectFacilityPage.clickConfirm();
+	
 		}
+		
+		
 		
 }
