@@ -14,7 +14,7 @@ import com.ort.qa.util.DropDownHandler;
 
 public class SelectFacilityPage extends TestBase
 {
-	WebDriver driver;
+
 //	Select Facility Dropdown*
 	@FindBy(xpath="//select[@name='locationId']")
 	WebElement facilityDropdown;
@@ -24,9 +24,9 @@ public class SelectFacilityPage extends TestBase
 	WebElement confirm;	
 	
 //  Initialization
-	public SelectFacilityPage(WebDriver dr ) 
+	public SelectFacilityPage() 
 	{
-		driver = dr;
+		
 		PageFactory.initElements(driver, this);
 	}
 		
