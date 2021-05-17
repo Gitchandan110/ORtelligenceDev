@@ -11,9 +11,9 @@ public class CreateCaseFindPatientPage extends TestBase
 {
 
 
-//	Mandatory to Use any of the 4 provided options
-//	Last Name
-
+	/*	Mandatory to Use any of the 4 provided options
+*	Last Name
+ */
 
 	/*	Mandatory to Use any of the 4 provided options
 *Last Name 

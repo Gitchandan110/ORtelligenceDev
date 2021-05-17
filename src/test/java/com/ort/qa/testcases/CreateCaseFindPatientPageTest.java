@@ -21,16 +21,18 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 	public void setUp() {
 		initialization();
 		
-		//now creating the object of LoginPage class.
+		/*now creating the object of LoginPage class.
+		 * createCaseFindPatientPage = new CreateCaseFindPatientPage();
+		 */
 		
-		//createCaseFindPatientPage = new CreateCaseFindPatientPage();
 	}
 	
 	
 	@Test(priority=1,dataProvider="PatientData",dataProviderClass=DataProviderExcel.class)
 	public void createCaseFindPatientPageTest(String firstname, String lastname, String DOB, String MNR) {
 		
-//		CreateCaseFindPatientPage.CreateCaseFindPatientData(firstname,lastname,DOB,MNR);
+		/*		CreateCaseFindPatientPage.CreateCaseFindPatientData(firstname,lastname,DOB,MNR);
+		 */
 		createCaseFindPatientPage.CreateCaseFindPatientData(lastname, firstname, DOB, MNR);
 	}
 	

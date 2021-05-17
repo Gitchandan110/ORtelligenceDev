@@ -9,99 +9,122 @@ import com.ort.qa.base.TestBase;
 public class CreateCaseSetSelectionPage extends TestBase 
 {
 	
-//	Set Checkbox is pending
-//	Open quantity is pending
-//	Hold quantity is pending
-//	Delete set is pending
+	/*	Set Checkbox is pending
+*	Open quantity is pending
+*	Hold quantity is pending
+*	Delete set is pending
 	
-//	Records display quantity dropdown
+*	Records display quantity dropdown
+	 */
 	@FindBy(xpath="//select[@class='custom-select']")
 	WebElement records;
 	
-//	Search Set text
+	/*		Search Set text
+	 */
 	@FindBy(xpath="//input[@id='selectSetSubstInstrument']")
 	WebElement searchSet;
-//	Select option xpath is pending
-	
-//	Supplies + icon
+	/*	Select option xpath is pending
+*		Supplies + icon
+ */
 	@FindBy(xpath="//i[@class='fa fa-plus-circle icon-size']")
 	WebElement supplies;
 	
-//	Search Supplies text
+	/*	Search Supplies text
+	*/
 	@FindBy(xpath="//input[@id='selectSupply']")
 	WebElement searchSupplies;	
-//	Select option xpath is pending
-	
-//	Anesthesia Request* dropdown
+	/*	Select option xpath is pending
+ * 	Anesthesia Request* dropdown
+ * 
+ */
 	@FindBy(xpath="(//select[@class='form-control ng-untouched ng-pristine ng-valid'])[1]")
 	WebElement anesthesia;
-//		Block Anesthesia type	
+	
+		/*	Block Anesthesia type	
+	 */
 		@FindBy(xpath="(//select[@class='form-control ng-untouched ng-pristine ng-valid'])[1]")
 		WebElement blockAnesthesiaType;
 	
-//	X-Ray Needed* - Yes checkbox
+		/*	X-Ray Needed* - Yes checkbox
+		 */
 	@FindBy(xpath="(//label[@class='form-check-label'])[1]")
 	WebElement xRayYes;
 
-//	X-Ray Needed* - No checkbox
+	/*	X-Ray Needed* - No checkbox
+	 */
 	@FindBy(xpath="(//label[@class='form-check-label'])[2]")
 	WebElement xRayNo;	
 	
-//	Medications text
+	/*	Medications text
+	 */
 	@FindBy(xpath="//textarea[@id='medications']")
 	WebElement medications;
 	
-//	Side* dropdown
+	/*	Side* dropdown
+	 */
 	@FindBy(xpath="(//select[@class='form-control ng-untouched ng-pristine ng-valid'])[3]")
 	WebElement side;
 	
-//	Position* dropdown
+	/*	Position* dropdown
+	 */
 	@FindBy(xpath="(//select[@class='form-control ng-untouched ng-pristine ng-valid'])[4]")
 	WebElement position;
 	
-//	Positioning Comments text
+	/*	Positioning Comments text
+	 */
 	@FindBy(xpath="//textarea[@id='positioning_information']")
 	WebElement positioningComment;
 	
-//	Instructions text
+	/*	Instructions text
+	 */
 	@FindBy(xpath="//textarea[@id='instructions']")
 	WebElement instructions;
 	
-//	Back button
+	/*	Back button
+	 */
 	@FindBy(xpath="//button[text()='Back']")
 	WebElement back;
 	
-//	Remove Procedure button
+	/*	Remove Procedure button
+	 */
 	@FindBy(xpath="//button[text()='Remove Procedure']")
 	WebElement removeProcedure;
 	
-//	This will open a pop-up box
+	/*	This will open a pop-up box
 
-//	Delete procedure is pending
+*	Delete procedure is pending
 	
-//	Close popup button
+*	Close popup button
+	*/
+	
 	@FindBy(xpath="//button[text()='Close']")
 	WebElement closePopupButton;	
 
-//	Close popup icon
+	/*	Close popup icon
+	 */
 	@FindBy(xpath="//button[@class='close']")
 	WebElement closePopupIcon;	
 	
-//	Create button
+	/*	Create button
+	 */
+	
 	@FindBy(xpath="//button[text()='Create']")
 	WebElement create;	
 	
-//	Confirmation pop-up
-//	Ok button
+	/*	Confirmation pop-up
+ * 	Ok button 
+ */
 	@FindBy(xpath="//button[text()='Ok']")
 	WebElement confirmationOk;
 	
-//	Click here button to download the Case Details
+	/*Click here button to download the Case Details
+	 */
 	@FindBy(xpath="//a[text()='Click here']']")
 	WebElement clickHere;
 
-//	Actions:
-//	Basic set and other details
+	/*	Actions:
+ *	Basic set and other details
+ */
 	public void CreateCaseSetSelection(String recordsOption, String searchSetText, String searchSuppliesText, String anesthesiaOption, String blockAnesthesiaTypeOption, String medicationsText, String sideOption, String positionOption, String positioningCommentText, String instructionsText) 
 	{
 		
@@ -122,20 +145,23 @@ public class CreateCaseSetSelectionPage extends TestBase
 				
 	}
 	
-//	Back to previous sub-module
+	/*	Back to previous sub-module
+	 */
 	public void CreateCaseSetSelectionBack()
 	{
 		back.click();
 	}
 	
-//	Remove Procedure button
+	/*	Remove Procedure button
+	 */
 	public void CreateCaseRemoveProcedure()
 	{
 		removeProcedure.click();
 		
 	}
 	
-//	Remove Procedure - Procedure details pop-up
+	/*	Remove Procedure - Procedure details pop-up
+	 */
 	public void CreateCaseProcedureDetailsPopup()
 	{
 		closePopupButton.click();
@@ -143,7 +169,8 @@ public class CreateCaseSetSelectionPage extends TestBase
 		
 	}
 	
-//	Confirmation Pop-up 
+	/*	Confirmation Pop-up 
+	 */
 	public void CreateCaseConfirmationPopup() 
 	{
 		clickHere.click();

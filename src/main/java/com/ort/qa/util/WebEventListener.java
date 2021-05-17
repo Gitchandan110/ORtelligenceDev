@@ -62,11 +62,11 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 	public void afterNavigateForward(WebDriver driver) {
 		System.out.println("Navigated forward to next page");
 	}
-//want to capture a screenshot only and olny when any exception or any error is coming thats why i written throwable,
-//throwable means it will handle exceptions as well as errors
-// onException method will get call automatically through listener and if any exception is coming automatically it will throw screenshot
-//No need to write screenshot method again and again in the script
-	
+	/*	want to capture a screenshot only and olny when any exception or any error is coming thats why i written throwable,
+ *throwable means it will handle exceptions as well as errors
+ * onException method will get call automatically through listener and if any exception is coming automatically it will throw screenshot
+ *No need to write screenshot method again and again in the script
+	 */
 	public void onException(Throwable error, WebDriver driver) {
 		System.out.println("Exception occured: " + error);
 		try {
@@ -94,32 +94,29 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 	}
 
 	public void beforeAlertAccept(WebDriver driver) {
-		// TODO Auto-generated method stub
+	
 
 	}
 
 	public void afterAlertAccept(WebDriver driver) {
-		// TODO Auto-generated method stub
+
 
 	}
 
 	public void afterAlertDismiss(WebDriver driver) {
-		// TODO Auto-generated method stub
 
 	}
 
 	public void beforeAlertDismiss(WebDriver driver) {
-		// TODO Auto-generated method stub
+
 
 	}
 
 	public void beforeNavigateRefresh(WebDriver driver) {
-		// TODO Auto-generated method stub
 
 	}
 
 	public void afterNavigateRefresh(WebDriver driver) {
-		// TODO Auto-generated method stub
 
 	}
 
@@ -128,7 +125,7 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 	}
 
 	public void afterChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
-		// TODO Auto-generated method stub
+
 
 	}
 

@@ -39,7 +39,8 @@ public class TestBase {
 	
 	public static void initialization(){
 		
-		//initialising the browser using property file
+		/*initialising the browser using property file
+		 */
 		String browserName = prop.getProperty("browser");  
 		
 		if(browserName.equals("chrome")){
@@ -52,7 +53,8 @@ public class TestBase {
 		}	
 	
 		e_driver = new EventFiringWebDriver(driver);
-		// Now create object of EventListerHandler to register it with EventFiringWebDriver
+		/* Now create object of EventListerHandler to register it with EventFiringWebDriver
+		 */
 		eventListener = new WebEventListener();
 		e_driver.register(eventListener);
 		driver = e_driver;
@@ -62,7 +64,8 @@ public class TestBase {
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		
-		 //reading the property file to get URL
+		/*reading the property file to get URL
+		 */
 	    driver.get(prop.getProperty("url")); 
 	   
 		
