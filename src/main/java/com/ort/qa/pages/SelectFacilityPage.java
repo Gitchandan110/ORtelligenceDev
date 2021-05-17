@@ -14,6 +14,7 @@ import com.ort.qa.util.DropDownHandler;
 
 public class SelectFacilityPage extends TestBase
 {
+
 	WebDriver driver;
 	/*	Select Facility Dropdown*
 	 */
@@ -27,12 +28,14 @@ public class SelectFacilityPage extends TestBase
 	@FindBy(xpath="//button[text()='Confirm']")
 	WebElement confirm;	
 	
+
 	/*  Initialization
 	 */
 	
-	public SelectFacilityPage(WebDriver dr ) 
+	public SelectFacilityPage() 
+
 	{
-		driver = dr;
+		
 		PageFactory.initElements(driver, this);
 	}
 		
@@ -56,6 +59,7 @@ public class SelectFacilityPage extends TestBase
 	
 	/*	public static WebElement getElement(By element) {
 *		return driver.findElement(element);
+*		}
 *
 *
 *public static void SelectUsingVisibleValue(WebElement element, String visibleValue) {

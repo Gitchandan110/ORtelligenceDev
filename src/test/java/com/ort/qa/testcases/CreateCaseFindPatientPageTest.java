@@ -29,11 +29,11 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 	
 	
 	@Test(priority=1,dataProvider="PatientData",dataProviderClass=DataProviderExcel.class)
-	public void createCaseFindPatientPageTest(String firstname, String lastname, String DOB, String MNR) {
+	public void createCaseFindPatientPageTest(String lastName, String firstName, String dOB, String mNR) 
+	{
 		
-		/*		CreateCaseFindPatientPage.CreateCaseFindPatientData(firstname,lastname,DOB,MNR);
-		 */
-		createCaseFindPatientPage.CreateCaseFindPatientData(lastname, firstname, DOB, MNR);
+		createCaseFindPatientPage.createCaseFindPatientData(lastName, firstName, dOB, mNR);
+
 	}
 	
 	 @AfterMethod

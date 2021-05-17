@@ -182,7 +182,7 @@ public class CreateCaseAffectedAreaPage extends TestBase
 	
 	
 	
-	public void AddFacilityPage() 
+	public CreateCaseAffectedAreaPage() 
 	{
 		PageFactory.initElements(driver, this);
 	}

@@ -78,6 +78,13 @@ public class LoginPage extends TestBase{
 		return new NurseDashboardPage(); 
 	}
 
+	public SelectFacilityPage login1(String un, String pwd){
+
+		username.sendKeys(un);
+		password.sendKeys(pwd);
+		signUpBtn.click();
+		return new SelectFacilityPage(); 
+	}
 
 }
 

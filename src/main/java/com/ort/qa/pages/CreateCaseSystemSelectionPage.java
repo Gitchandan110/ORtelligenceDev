@@ -10,8 +10,8 @@ public class CreateCaseSystemSelectionPage extends TestBase
 {
 
 	/*	System found
- * 	Checkbox 1st option
- */
+	 * 	Checkbox 1st option
+	 */
 	@FindBy(xpath="(//input[@type='checkbox'])[1]")
 	WebElement checkboxSystem1;
 	
@@ -31,8 +31,8 @@ public class CreateCaseSystemSelectionPage extends TestBase
 	WebElement select;
 	
 	/*	System not found exception
- *	Click here link to open pop-up
- */
+	 *	Click here link to open pop-up
+	 */
 	@FindBy(xpath="//a[text()='Click here']")
 	WebElement clickHere;
 
@@ -51,19 +51,29 @@ public class CreateCaseSystemSelectionPage extends TestBase
 	@FindBy(xpath="//button[@class='close']")
 	WebElement closeIcon;
 
+
 	/*Actions:
- *	Select 1st System
- */
-	public void CreateCaseSystemSelectionOption1()
+*/
+	public CreateCaseSystemSelectionPage() 
+	{
+		PageFactory.initElements(driver, this);
+	}
+	
+	/*	Select 1st system 
+	 */
+	public void createCaseSystemSelectionOption1()
+
 	{
 		checkboxSystem1.click();
 		select.click();
 				
 	}
 
+
 	/*	Select 2nd System	
 	 */
-	public void CreateCaseSystemSelectionOption2()
+
+	public void createCaseSystemSelectionOption2()
 	{
 		checkboxSystem2.click();
 		select.click();
@@ -72,7 +82,8 @@ public class CreateCaseSystemSelectionPage extends TestBase
 	
 	/*If no system is found
 	 */
-	public void CreateCaseSystemSelectionNoSystem()
+
+	public void createCaseSystemSelectionNoSystem()
 	{
 		/*		Click here link to open Confirmation pop-up
 		 */
@@ -82,9 +93,11 @@ public class CreateCaseSystemSelectionPage extends TestBase
 						
 	}
 	
+
 	/*	Confirmation pop-up
 	 */
-	public void CreateCaseConfirmationPopUp() 
+ 
+	public void createCaseConfirmationPopUp() 
 	{
 		/*		Redirects user to Set selection sub-module
 		 */
@@ -94,21 +107,21 @@ public class CreateCaseSystemSelectionPage extends TestBase
 		 */
 		selectAnotherProcedure.click();
 		
+
 		/*		Close pop-up byt clicking on Icon
 		 */
+
 		closeIcon.click();
 		
 	}
 	
 	/*	Back to previous sub-module
 	 */
-	public void CreateCaseSystemSelectionBack()
+
+	public void createCaseSystemSelectionBack()
 	{
 		back.click();
 	}
 	
-	public void AddFacilityPage() 
-	{
-		PageFactory.initElements(driver, this);
-	}
+
 }
