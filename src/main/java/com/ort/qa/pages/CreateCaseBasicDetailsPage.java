@@ -84,7 +84,7 @@ public class CreateCaseBasicDetailsPage extends TestBase
 	WebElement speciaity;
 
 	/*	Surgery Date/Time*
-	*	Text Field is generally auto filled based upon Urgency but User can mannually enter data 
+	*	Text Field is generally auto filled based upon Urgency but User can manually enter data 
 	*	Data format [ 5/3/2021, 3:40 PM ]
 	 */
 	
@@ -115,7 +115,7 @@ public class CreateCaseBasicDetailsPage extends TestBase
 	@FindBy(xpath="//a[text()='Search ICD 10 Codes']")
 	WebElement diagnosisCodeSearch;
 
-	/*	Image can be draged and dropped
+	/*	Image can be dragged and dropped
 	 * 	Upload image - Take a Photo  
 	 */
 	
