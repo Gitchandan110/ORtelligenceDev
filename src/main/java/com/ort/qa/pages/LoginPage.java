@@ -7,10 +7,9 @@ import com.ort.qa.base.TestBase;
 
 public class LoginPage extends TestBase{ 
 
-
-	/* we have to use Page Factory-Object Repository
-	 *Here we will segregate all XPath using @FindBy annotation
-	 */
+ /* we have to use Page Factory-Object Repository
+ * Here we will segregate all XPath using @FindBy annotation
+ */
 	
 	@FindBy(name="username")
 	WebElement username;
@@ -39,31 +38,31 @@ public class LoginPage extends TestBase{
 	@FindBy(xpath="//button[@type='submit']")
 	WebElement save;
 	
-	/*
-	 *using @FindBy annotation we have created different WebElements of login page
-	 *Now we are initializing the elements using PageFactory
-	 *Initializing the Page Objects:
-	 *creating loginpage constructor
-	 */
+ /*
+ * using @FindBy annotation we have created different WebElements of login page
+ * Now we are initializing the elements using PageFactory
+ * Initializing the Page Objects:
+ * creating loginpage constructor
+ */
 	
 	public LoginPage(){
 		
-		/*PageFactory is a class and InitElements is method 
-		 *driver is coming from base class  //'this' means current class object, instead of this we can write LoginPage.class but better to use 'this'
-		 */
+ /* PageFactory is a class and InitElements is method 
+ * driver is coming from base class  //'this' means current class object, instead of this we can write LoginPage.class but better to use 'this'
+ */
 		
 		PageFactory.initElements(driver, this);                                              
 	}
 
-	/*Actions:
-	 */
+ /* Actions:
+ */
 	
 	public String validateLoginPageTitle(){
 		return driver.getTitle();
 	}
 
-	/*isDisplayed method will return true or false if the logo is available
-	 */
+ /* isDisplayed method will return true or false if the logo is available
+ */
 	
 	public boolean validateORtLogo() {
 		return ortLogo.isDisplayed();   

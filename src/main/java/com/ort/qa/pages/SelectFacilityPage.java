@@ -15,22 +15,22 @@ import com.ort.qa.util.DropDownHandler;
 public class SelectFacilityPage extends TestBase
 {
 
-	WebDriver driver;
-	/*	Select Facility Dropdown*
-	 */
+
+	
+ /*	Select Facility Dropdown*
+ */
 	
 	@FindBy(xpath="//select[@name='locationId']")
 	WebElement facilityDropdown;
 
-	/*	Confirm button
-	 */
+ /*	Confirm button
+ */
 	
 	@FindBy(xpath="//button[text()='Confirm']")
 	WebElement confirm;	
 	
-
-	/*  Initialization
-	 */
+ /*  Initialization
+ */
 	
 	public SelectFacilityPage() 
 

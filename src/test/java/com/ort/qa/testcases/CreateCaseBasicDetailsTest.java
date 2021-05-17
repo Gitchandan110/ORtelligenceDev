@@ -1,5 +1,6 @@
-		/*Hard Coded file
-		 */
+ /*Hard Coded file
+ */
+
 package com.ort.qa.testcases;
 
 import java.util.concurrent.TimeUnit;
@@ -23,9 +24,10 @@ public class CreateCaseBasicDetailsTest
 	@BeforeMethod
 	public void Setup() {
 	
-		/*	Piyush Driver Location: D:\\SELENIUM\\DRIVERS\\chromedriver.exe
-		 * Priyanka Driver Location: 
-		 */ 
+ /*	Piyush Driver Location: D:\\SELENIUM\\DRIVERS\\chromedriver.exe
+ * Priyanka Driver Location: 
+ */
+		
 	System.setProperty("webdriver.chrome.driver","D:\\SELENIUM\\DRIVERS\\chromedriver.exe");
 	wd = new ChromeDriver();
 	wd.get("https://qa.ortelligence.com/#/");
@@ -39,42 +41,46 @@ public class CreateCaseBasicDetailsTest
 	public void LoginTest() throws InterruptedException 
 	{
 		Thread.sleep(3000);
-		/*Username Field
-		 */
+		
+ /* Username Field
+ */
+		
 		wd.findElement(By.id("username")).sendKeys("Christiana_nurse1@mailinator.com");
 		Thread.sleep(1000);
-		/*Password Field
-		 */
+		
+ /*Password Field
+ */
+		
 		wd.findElement(By.id("password")).sendKeys("ORT@33221");
 		Thread.sleep(1000);
-		/* Login button
-		 */
+		
+ /* Login button
+ */
+	
 		wd.findElement(By.xpath("//button[contains(text(),'Sign On')]")).click();
 		Thread.sleep(2000);
 
-	/* Facility Dropdown - Click
-	 * Thread.sleep(3000);
-	 * wd.findElement(By.name("locationId")).click();
-	 * Thread.sleep(3000);
-	 */
-		
-
-		/*  Facility Dropdown - Select value
-		 */
+ /* Facility Dropdown - Click
+ * Thread.sleep(3000);
+ * wd.findElement(By.name("locationId")).click();
+ * Thread.sleep(3000);
+ */
+ /*  Facility Dropdown - Select value
+ */
+	
 		wd.findElement(By.name("locationId")).sendKeys("Wilmington, DE, 19899 , Wilmington, Delaware, 19899");
 		Thread.sleep(3000);
 		
-	
-		
-		/*	String confirmButton = "button[contains(text(),'Confirm')]";
-		 * Confirm button
-		 */
+ /*	String confirmButton = "button[contains(text(),'Confirm')]";
+ * Confirm button
+ */
 	
 		wd.findElement(By.xpath("//button[contains(text(),'Confirm')]")).click();
 		Thread.sleep(3000);
 
 		/* Create Case button
 		 */
+		
 		wd.findElement(By.xpath("(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[4]")).click();
 		Thread.sleep(10000);
 	

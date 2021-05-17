@@ -8,25 +8,28 @@ import com.ort.qa.base.TestBase;
 
 public class SearchPatientPage extends TestBase
 {
-	/*	
-*	We have to use Page Factory-Object Repository
-*	Here we will segregate all locators using @FindBy annotation
-*	Mandatory to Use any of the 4 provided options
-*	Use the elements of CreateCaseFindPatientPage
-*	Remaining elements are present below
-*	Specialty
-	 */
+	
+ /*	
+ * We have to use Page Factory-Object Repository
+ * Here we will segregate all locators using @FindBy annotation
+ * Mandatory to Use any of the 4 provided options
+ * Use the elements of CreateCaseFindPatientPage
+ * Remaining elements are present below
+ * Specialty
+ */
+	
 	@FindBy(xpath="//select[@id='specialtyId']")
 	WebElement speciality;
 	
-	/*	Case Number	
-		 */
+ /*	Case Number	
+ */
 	
 	@FindBy(xpath="//input[@id='caseId']")
 	WebElement caseNumber;
 
-	/*Initialization
-	 */
+ /*Initialization
+ */
+	
 	public SearchPatientPage() 
 	{
 		PageFactory.initElements(driver, this);
