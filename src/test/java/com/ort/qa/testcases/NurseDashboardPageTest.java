@@ -29,7 +29,9 @@ public class NurseDashboardPageTest extends TestBase
  	public void setUp() {
  		initialization();
  		 loginPage = new LoginPage();
-
+ 		 selectFacilityPage = new SelectFacilityPage();
+ 		 nurseDashboardPage = new NurseDashboardPage();
+ 		 createCaseFindPatientPage = new CreateCaseFindPatientPage();
  /*properties will get initialized here
  */
  		 
@@ -44,9 +46,30 @@ public class NurseDashboardPageTest extends TestBase
  		String dashboardPageTitle =nurseDashboardPage.verifyNurseDashboardPageTitle();
 		Assert.assertEquals(dashboardPageTitle, "Login", "Dashboard Page Title not matched");  
 	}
-	
 
- 
+ 	@Test(priority=2)
+ 	public void createCaseTest()
+ 	{
+ 		 selectFacilityPage.clickOnDropDown();
+ 		 selectFacilityPage.clickConfirm();
+ 		 nurseDashboardPage.dashboardCreateCase.click();
+ 		
+ 		
+ 	}
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 	}
+  /* (In progress)
+  * 
+  * @Test(priority=2)
+=======
+ 	
+ 	/*
+>>>>>>> 9800092468e2da9cf10821bf4f29bab55ec81f4a
  	 @Test(priority=2)
 
  	public void createCaseTest()
@@ -66,11 +89,18 @@ public class NurseDashboardPageTest extends TestBase
 
  	} 
 
+<<<<<<< HEAD
 
  	/*
  	@AfterMethod
  	public void tearDown() {
  		driver.quit();
+=======
+ 	
+ 	//@AfterMethod
+ 	//public void tearDown() {
+ 		//driver.quit();
+>>>>>>> 9800092468e2da9cf10821bf4f29bab55ec81f4a
  	}
  	*/
  	
@@ -84,4 +114,3 @@ public class NurseDashboardPageTest extends TestBase
 
 
 
-}

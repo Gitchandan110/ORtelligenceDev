@@ -167,6 +167,7 @@ public class NurseDashboardPage extends TestBase
 		
 	}
 	
+	
 	public  void clickOnMenuSwitchLocation() 
 	{
 		Actions action = new Actions(driver);
@@ -187,7 +188,13 @@ public class NurseDashboardPage extends TestBase
 		
 	}
 	
+<<<<<<< HEAD
 	public void createCaseTest() {
+=======
+	public void clickOncreateCase()
+	{
+		
+>>>>>>> 9800092468e2da9cf10821bf4f29bab55ec81f4a
 		dashboardCreateCase.click();
 	}
 
