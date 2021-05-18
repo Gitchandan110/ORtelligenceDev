@@ -6,6 +6,10 @@
       <class name="com.ort.qa.testcases.SelectFacilityPageTest">
         <methods>
           <include name="selectFacilityPage"/>
+<<<<<<< HEAD
+=======
+          <include name="initialization"/>
+>>>>>>> 4a37218f6f4c2f0e5701568f5d77aaeea7bd2f62
           <include name="setUp"/>
         </methods>
       </class> <!-- com.ort.qa.testcases.SelectFacilityPageTest -->

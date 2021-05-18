@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.testng.annotations.BeforeMethod;
 
 import com.ort.qa.util.TestUtil;
 import com.ort.qa.util.WebEventListener;
@@ -21,6 +22,8 @@ public class TestBase {
 	public static Properties prop;
 	public static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
+	
+   
 	
 	
 	public TestBase(){
@@ -36,8 +39,9 @@ public class TestBase {
 			e.printStackTrace();
 		}
 	}   
-	
-	public static void initialization(){
+	@BeforeMethod
+	public static void initialization()
+	{
 		
 		/*initialising the browser using property file
 		 */
@@ -72,6 +76,10 @@ public class TestBase {
 		/*reading the property file to get URL
 		 */
 	    driver.get(prop.getProperty("url")); 
+	    
+	   
+	
+      
 	   
 		
 	

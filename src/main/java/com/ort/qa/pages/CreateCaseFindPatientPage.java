@@ -10,10 +10,12 @@ import com.ort.qa.base.TestBase;
 public class CreateCaseFindPatientPage extends TestBase
 {
 
+
  /*	Mandatory to Use any of the 4 provided options
  *Last Name 
  */
 	
+
 	@FindBy(xpath="//input[@id='lastName']")
 	WebElement patientLastName;
 	
