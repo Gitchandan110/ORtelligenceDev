@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
+  <suite name="Default suite" duration-ms="23480" started-at="2021-05-18T06:20:47Z" finished-at="2021-05-18T06:21:10Z">
+=======
 <<<<<<< HEAD
   <suite name="Default suite" duration-ms="20188" started-at="2021-05-17T16:58:08 IST" finished-at="2021-05-17T16:58:28 IST">
     <groups>
@@ -15,14 +18,22 @@
         <test-method status="PASS" signature="selectFacilityPage()[pri:1, instance:com.ort.qa.testcases.SelectFacilityPageTest@4d41cee]" name="selectFacilityPage" duration-ms="3300" started-at="2021-05-17T16:58:25 IST" finished-at="2021-05-17T16:58:28 IST">
 =======
   <suite name="Default suite" duration-ms="32845" started-at="2021-05-17T11:03:46Z" finished-at="2021-05-17T11:04:18Z">
+>>>>>>> dd5fb309fab58b0282c8760d748705eb835aa9a8
     <groups>
     </groups>
-    <test name="Default test" duration-ms="32845" started-at="2021-05-17T11:03:46Z" finished-at="2021-05-17T11:04:18Z">
-      <class name="com.ort.qa.testcases.CreateCaseFindPatientPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@6eebc39e]" name="setUp" is-config="true" duration-ms="11105" started-at="2021-05-17T11:03:46Z" finished-at="2021-05-17T11:03:57Z">
+    <test name="Default test" duration-ms="23480" started-at="2021-05-18T06:20:47Z" finished-at="2021-05-18T06:21:10Z">
+      <class name="com.ort.qa.testcases.LoginPageTest">
+        <test-method status="PASS" signature="initialization()[pri:0, instance:com.ort.qa.testcases.LoginPageTest@13deb50e]" name="initialization" is-config="true" duration-ms="7777" started-at="2021-05-18T06:20:47Z" finished-at="2021-05-18T06:20:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.LoginPageTest@13deb50e]" name="setUp" is-config="true" duration-ms="9799" started-at="2021-05-18T06:20:54Z" finished-at="2021-05-18T06:21:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
+<<<<<<< HEAD
+        <test-method status="PASS" signature="loginTest()[pri:4, instance:com.ort.qa.testcases.LoginPageTest@13deb50e]" name="loginTest" duration-ms="5066" started-at="2021-05-18T06:21:04Z" finished-at="2021-05-18T06:21:09Z">
+=======
         <test-method status="FAIL" signature="createCaseFindPatientPageTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@6eebc39e]" name="createCaseFindPatientPageTest" duration-ms="20262" started-at="2021-05-17T11:03:57Z" data-provider="PatientData" finished-at="2021-05-17T11:04:18Z">
           <params>
             <param index="0">
@@ -115,14 +126,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
 >>>>>>> 097fb37048dbf072db7c2c833b000211b77e4220
+>>>>>>> dd5fb309fab58b0282c8760d748705eb835aa9a8
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createCaseFindPatientPageTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@6eebc39e]" name="tearDown" is-config="true" duration-ms="871" started-at="2021-05-17T11:04:18Z" finished-at="2021-05-17T11:04:18Z">
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.LoginPageTest@13deb50e]" name="tearDown" is-config="true" duration-ms="798" started-at="2021-05-18T06:21:09Z" finished-at="2021-05-18T06:21:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.ort.qa.testcases.CreateCaseFindPatientPageTest -->
+      </class> <!-- com.ort.qa.testcases.LoginPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

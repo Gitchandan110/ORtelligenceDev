@@ -3,18 +3,17 @@ package com.ort.qa.testcases;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.ort.qa.base.TestBase;
 import com.ort.qa.pages.LoginPage;
-import com.ort.qa.pages.NurseDashboardPage;
+import com.ort.qa.pages.SelectFacilityPage;
 import com.ort.qa.util.DataProviderExcel;
-import com.ort.qa.util.ExcelUtility;
 public class LoginPageTest extends TestBase{
 	//Defined the loginPage variable
 	LoginPage loginPage;   
-	NurseDashboardPage nurseDashboardPage;
+	SelectFacilityPage selectFacilityPage;
+	
 	
 	//name of the sheet in excel //will use this later
 	String sheetName = "NurseData";
@@ -50,34 +49,22 @@ public class LoginPageTest extends TestBase{
 		//if flag is true ur assertion will be passed otherwise it will fail
 	}
 	
-	//this test case is for fetching the multiple username and password from the excel sheet 
-    //we will run this testcase later
-    
-  @DataProvider
-    	public Object getORtTestData() {
-   		Object data [][]=ExcelUtility.getTestData(sheetName);
-   		return data;
-    	}
-
+	   //this test case is for fetching the multiple username and password from the excel sheet 
+       //we will run this testcase later
  
-  	@Test(priority=3,dataProvider="NurseData",dataProviderClass=DataProviderExcel.class)
+  	@Test(priority=3,enabled=false,dataProvider="NurseData",dataProviderClass=DataProviderExcel.class)
   	public void LoginTest(String user,String password) {
   		
   		//LoginPage lpage=new LoginPage();
-  		loginPage.loginuser(user, password);
+  		loginPage.login(user, password);
   		
   		//dashboardPage =loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
    	}
    	 
-	/*@Test(priority=3,dataProvider="NurseData",dataProviderClass=DataProviderExcel.class)
-	public void LoginTest(String un,String pwd) {
-		loginPage.login(un, pwd);	
-	}*/
-	
-	
+  	
 	@Test(priority=4)
 	public  void  loginTest() {
-		nurseDashboardPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		selectFacilityPage = loginPage.login1(prop.getProperty("username"), prop.getProperty("password"));
 	
 	}
 
