@@ -6,9 +6,13 @@ import org.testng.annotations.Test;
 
 import com.ort.qa.base.TestBase;
 import com.ort.qa.pages.CreateCaseFindPatientPage;
+import com.ort.qa.pages.LoginPage;
+import com.ort.qa.pages.SelectFacilityPage;
 import com.ort.qa.util.DataProviderExcel;
 
 public class CreateCaseFindPatientPageTest extends TestBase {
+	LoginPage loginPage;
+	SelectFacilityPage selectFacilityPage;
 	CreateCaseFindPatientPage createCaseFindPatientPage;  
 	String sheetName = "PatientData";
 	
@@ -20,10 +24,10 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 	@BeforeMethod
 	public void setUp() {
 		initialization();
-		
-		//now creating the object of LoginPage class.
+		                  loginPage = new LoginPage();
+		         selectFacilityPage = new SelectFacilityPage();
 		  createCaseFindPatientPage = new CreateCaseFindPatientPage();
-		 
+		         selectFacilityPage = loginPage.login1(prop.getProperty("username"), prop.getProperty("password"));
 		
 	}
 	

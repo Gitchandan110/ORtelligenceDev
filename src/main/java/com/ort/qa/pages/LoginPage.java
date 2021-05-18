@@ -1,5 +1,4 @@
 package com.ort.qa.pages;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -48,7 +47,8 @@ public class LoginPage extends TestBase{
 	 *creating loginpage constructor
 	 */
 	
-	public LoginPage(){
+	public LoginPage()
+	{
 		
 	/*PageFactory is a class and InitElements is method 
 	 *driver is coming from base class  //'this' means current class object, instead of this we can write LoginPage.class but better to use 'this'
@@ -67,11 +67,19 @@ public class LoginPage extends TestBase{
 	/*isDisplayed method will return true or false if the logo is available
 	 */
 	
-	public boolean validateORtLogo() {
+	public boolean validateORtLogo() 
+	{
 		return ortLogo.isDisplayed();   
 	}
+			
+	public SelectFacilityPage login1(String un, String pwd){
 
-
+		username.sendKeys(un);
+		password.sendKeys(pwd);
+		signUpBtn.click();
+		return new SelectFacilityPage(); 
+	}
+	
 	public NurseDashboardPage login(String un, String pwd){
 
 		username.sendKeys(un);
@@ -80,22 +88,6 @@ public class LoginPage extends TestBase{
 		return new NurseDashboardPage(); 
 	}
 	
-	public void loginuser(String user, String pwd)
-			{
-				username.sendKeys(user);
-				password.sendKeys(pwd);
-				save.click();
-				
-			}
-			
-
-	public SelectFacilityPage login1(String un, String pwd){
-
-		username.sendKeys(un);
-		password.sendKeys(pwd);
-		signUpBtn.click();
-		return new SelectFacilityPage(); 
-	}
 
 }
 

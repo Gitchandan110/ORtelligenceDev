@@ -15,9 +15,7 @@ public class CreateCaseFindPatientPage extends TestBase
 *	Last Name
  */
 
-	/*	Mandatory to Use any of the 4 provided options
-*Last Name 
- */
+
 	@FindBy(xpath="//input[@id='lastName']")
 	WebElement patientLastName;
 	

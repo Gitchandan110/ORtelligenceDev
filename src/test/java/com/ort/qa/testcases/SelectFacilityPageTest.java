@@ -23,8 +23,8 @@ public class SelectFacilityPageTest extends TestBase
 		{
 			           initialization();
 			         loginPage = new LoginPage();
-	        selectFacilityPage = new SelectFacilityPage();
-	        selectFacilityPage = loginPage.login1(prop.getProperty("username"), prop.getProperty("password"));
+	      selectFacilityPage = new SelectFacilityPage();
+	      selectFacilityPage = loginPage.login1(prop.getProperty("username"), prop.getProperty("password"));
 	     
 			
 		}
