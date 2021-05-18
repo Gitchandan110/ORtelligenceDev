@@ -44,12 +44,12 @@ public class TestBase {
 		String browserName = prop.getProperty("browser");  
 		
 		/*priyanka's driver path:"webdriver.chrome.driver","C:\\SeleniumDriver\\chromedriver.exe
-		 * 
+		 * Piyush's driver path : D:\BITBUCKET\ortelligence-automation-qa\src\test\resources\Driver\chromedriver.exe
 		 * 
 		 * */
 		
 		if(browserName.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver","D:\\BIT\\ortelligence-automation-qa\\src\\test\\resources\\Driver\\chromedriver.exe");	     
+			System.setProperty("webdriver.chrome.driver","D:\\BITBUCKET\\ortelligence-automation-qa\\src\\test\\resources\\Driver\\chromedriver.exe");	     
 			driver = new ChromeDriver(); 
 		}
 		else if(browserName.equals("FF")){
