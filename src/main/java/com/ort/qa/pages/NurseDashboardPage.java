@@ -187,13 +187,22 @@ public class NurseDashboardPage extends TestBase
 		return driver.getTitle();
 		
 	}
+<<<<<<< HEAD
 	
 
 //	public void createCaseTest() {
+=======
+
+	//public void createCaseTest() {
+>>>>>>> 563b022682d150e8190324c6c32111293566c986
 
 	public void clickOncreateCase()
 	{
 		
+<<<<<<< HEAD
+=======
+
+>>>>>>> 563b022682d150e8190324c6c32111293566c986
 		dashboardCreateCase.click();
 	}
 
