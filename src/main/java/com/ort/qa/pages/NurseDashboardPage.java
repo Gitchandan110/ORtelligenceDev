@@ -188,7 +188,7 @@ public class NurseDashboardPage extends TestBase
 	}
 	
 	public void createCaseTest() {
-		
+		dashboardCreateCase.click();
 	}
 
 }

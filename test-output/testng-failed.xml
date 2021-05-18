@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ort.qa.testcases.SelectFacilityPageTest">
+      <class name="com.ort.qa.testcases.NurseDashboardPageTest">
         <methods>
-          <include name="selectFacilityPage"/>
           <include name="initialization"/>
           <include name="setUp"/>
+          <include name="createCaseTest"/>
         </methods>
-      </class> <!-- com.ort.qa.testcases.SelectFacilityPageTest -->
+      </class> <!-- com.ort.qa.testcases.NurseDashboardPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

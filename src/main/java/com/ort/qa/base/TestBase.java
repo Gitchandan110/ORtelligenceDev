@@ -53,7 +53,7 @@ public class TestBase {
 		 * */
 		
 		if(browserName.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver","D:\\BIT\\ortelligence-automation-qa\\src\\test\\resources\\Driver\\chromedriver.exe");	     
+			System.setProperty("webdriver.chrome.driver","C:\\SeleniumDriver\\chromedriver.exe");	     
 			driver = new ChromeDriver(); 
 		}
 		else if(browserName.equals("FF")){

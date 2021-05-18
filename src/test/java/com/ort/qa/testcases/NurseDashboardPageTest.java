@@ -46,12 +46,7 @@ public class NurseDashboardPageTest extends TestBase
 	}
 	
 
-  /* (In progress)
-  * 
-  * @Test(priority=2)
-=======
- 	
- 	/*
+ 
  	 @Test(priority=2)
 
  	public void createCaseTest()
@@ -60,24 +55,24 @@ public class NurseDashboardPageTest extends TestBase
 	     selectFacilityPage.clickConfirm();
 	     Assert.assertTrue(driver.getCurrentUrl().contains("dashboard"));
 	     nurseDashboardPage.dashboardCreateCase.click();
-	     createCaseFindPatientPage.patientLastName.sendKeys("Sharma");
-	     createCaseFindPatientPage.patientFirstName.sendKeys("Vikas");
-	     createCaseFindPatientPage.search.click();
+	    // createCaseFindPatientPage.patientLastName.sendKeys("Sharma");
+	    // createCaseFindPatientPage.patientFirstName.sendKeys("Vikas");
+	    // createCaseFindPatientPage.search.click();
 	     
-	     String actual="Sharma";
-	     Assert.assertEquals("Sharma","Sharma");
+	    // String actual="Sharma";
+	    // Assert.assertEquals("Sharma","Sharma");
 	      
 
 
  	} 
- */
 
- 	
+
+ 	/*
  	@AfterMethod
  	public void tearDown() {
  		driver.quit();
  	}
- 	
+ 	*/
  	
 
      
