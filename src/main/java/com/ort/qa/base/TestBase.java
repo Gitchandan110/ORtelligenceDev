@@ -26,16 +26,20 @@ public class TestBase {
    
 	
 	
-	public TestBase(){
-	try {
+	public TestBase()
+	{
+		try 
+		{
 			prop = new Properties();
 			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+ "\\src\\main\\resources\\config.properties");
 			prop.load(ip);
 		} 
-	catch (FileNotFoundException e) {
+	catch (FileNotFoundException e) 
+		{
 			e.printStackTrace();
 		} 
-	catch (IOException e) {
+	catch (IOException e) 
+		{
 			e.printStackTrace();
 		}
 	}   
@@ -52,16 +56,19 @@ public class TestBase {
 		 * 
 		 * */
 		
-		if(browserName.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver","D:\\BITBUCKET\\ortelligence-automation-qa\\src\\test\\resources\\Driver\\chromedriver.exe");	     
+		if(browserName.equals("chrome"))
+		{
+			System.setProperty("webdriver.chrome.driver","C:\\SeleniumDriver\\chromedriver.exe");	     
 			driver = new ChromeDriver(); 
 		}
-		else if(browserName.equals("FF")){
+		else if(browserName.equals("FF"))
+		{
 			System.setProperty("webdriver.gecko.driver", "");	
 			driver = new FirefoxDriver(); 
 		}	
 	
 		e_driver = new EventFiringWebDriver(driver);
+		
 		/* Now create object of EventListerHandler to register it with EventFiringWebDriver
 		 */
 		eventListener = new WebEventListener();
@@ -77,11 +84,6 @@ public class TestBase {
 		 */
 	    driver.get(prop.getProperty("url")); 
 	    
-	   
-	
-      
-	   
-		
-	
+	   	
 	}
 }

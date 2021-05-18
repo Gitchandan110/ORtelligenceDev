@@ -60,7 +60,6 @@ public class SelectFacilityPage extends TestBase
 	}
 	
 	
-	
 		
 	
 	

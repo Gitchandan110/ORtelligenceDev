@@ -46,6 +46,7 @@ public class NurseDashboardPageTest extends TestBase
  		String dashboardPageTitle =nurseDashboardPage.verifyNurseDashboardPageTitle();
 		Assert.assertEquals(dashboardPageTitle, "Login", "Dashboard Page Title not matched");  
 	}
+
  	@Test(priority=2)
  	public void createCaseTest()
  	{
@@ -54,7 +55,7 @@ public class NurseDashboardPageTest extends TestBase
  		 nurseDashboardPage.dashboardCreateCase.click();
  		
  		
- 		
+ 	}
  		
  		
  		
@@ -68,6 +69,7 @@ public class NurseDashboardPageTest extends TestBase
 =======
  	
  	/*
+>>>>>>> 9800092468e2da9cf10821bf4f29bab55ec81f4a
  	 @Test(priority=2)
 
  	public void createCaseTest()
@@ -76,24 +78,31 @@ public class NurseDashboardPageTest extends TestBase
 	     selectFacilityPage.clickConfirm();
 	     Assert.assertTrue(driver.getCurrentUrl().contains("dashboard"));
 	     nurseDashboardPage.dashboardCreateCase.click();
-	     createCaseFindPatientPage.patientLastName.sendKeys("Sharma");
-	     createCaseFindPatientPage.patientFirstName.sendKeys("Vikas");
-	     createCaseFindPatientPage.search.click();
+	    // createCaseFindPatientPage.patientLastName.sendKeys("Sharma");
+	    // createCaseFindPatientPage.patientFirstName.sendKeys("Vikas");
+	    // createCaseFindPatientPage.search.click();
 	     
-	     String actual="Sharma";
-	     Assert.assertEquals("Sharma","Sharma");
+	    // String actual="Sharma";
+	    // Assert.assertEquals("Sharma","Sharma");
 	      
 
 
  	} 
- */
 
+<<<<<<< HEAD
+
+ 	/*
+ 	@AfterMethod
+ 	public void tearDown() {
+ 		driver.quit();
+=======
  	
  	//@AfterMethod
  	//public void tearDown() {
  		//driver.quit();
+>>>>>>> 9800092468e2da9cf10821bf4f29bab55ec81f4a
  	}
- 	
+ 	*/
  	
 
      

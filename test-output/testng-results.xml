@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
@@ -35,13 +36,25 @@
     <test name="Default test" duration-ms="23480" started-at="2021-05-18T06:20:47Z" finished-at="2021-05-18T06:21:10Z">
       <class name="com.ort.qa.testcases.LoginPageTest">
         <test-method status="PASS" signature="initialization()[pri:0, instance:com.ort.qa.testcases.LoginPageTest@13deb50e]" name="initialization" is-config="true" duration-ms="7777" started-at="2021-05-18T06:20:47Z" finished-at="2021-05-18T06:20:54Z">
+=======
+<testng-results skipped="0" failed="1" ignored="1" total="2" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="27258" started-at="2021-05-18T10:35:18Z" finished-at="2021-05-18T10:35:45Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="27258" started-at="2021-05-18T10:35:18Z" finished-at="2021-05-18T10:35:45Z">
+      <class name="com.ort.qa.testcases.NurseDashboardPageTest">
+        <test-method status="PASS" signature="initialization()[pri:0, instance:com.ort.qa.testcases.NurseDashboardPageTest@464bee09]" name="initialization" is-config="true" duration-ms="9318" started-at="2021-05-18T10:35:18Z" finished-at="2021-05-18T10:35:27Z">
+>>>>>>> efdc811f6cd5b8ffe57493daaede70ae8ceafee3
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.LoginPageTest@13deb50e]" name="setUp" is-config="true" duration-ms="9799" started-at="2021-05-18T06:20:54Z" finished-at="2021-05-18T06:21:04Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.NurseDashboardPageTest@464bee09]" name="setUp" is-config="true" duration-ms="17883" started-at="2021-05-18T10:35:27Z" finished-at="2021-05-18T10:35:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
+<<<<<<< HEAD
 <<<<<<< HEAD
         <test-method status="PASS" signature="loginTest()[pri:4, instance:com.ort.qa.testcases.LoginPageTest@13deb50e]" name="loginTest" duration-ms="5066" started-at="2021-05-18T06:21:04Z" finished-at="2021-05-18T06:21:09Z">
 =======
@@ -121,6 +134,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               <![CDATA[java.lang.NullPointerException
 at com.ort.qa.testcases.LoginPageTest.loginTest(LoginPageTest.java:80)
 at com.ort.qa.testcases.SelectFacilityPageTest.setUp(SelectFacilityPageTest.java:27)
+=======
+        <test-method status="FAIL" signature="createCaseTest()[pri:2, instance:com.ort.qa.testcases.NurseDashboardPageTest@464bee09]" name="createCaseTest" duration-ms="9" started-at="2021-05-18T10:35:45Z" finished-at="2021-05-18T10:35:45Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.ort.qa.testcases.NurseDashboardPageTest.createCaseTest(NurseDashboardPageTest.java:54)
+>>>>>>> efdc811f6cd5b8ffe57493daaede70ae8ceafee3
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -156,6 +176,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
 <<<<<<< HEAD
+<<<<<<< HEAD
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
@@ -174,6 +195,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
         </test-method> <!-- tearDown -->
       </class> <!-- com.ort.qa.testcases.LoginPageTest -->
 >>>>>>> 4a37218f6f4c2f0e5701568f5d77aaeea7bd2f62
+=======
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createCaseTest -->
+      </class> <!-- com.ort.qa.testcases.NurseDashboardPageTest -->
+>>>>>>> efdc811f6cd5b8ffe57493daaede70ae8ceafee3
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

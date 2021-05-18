@@ -13,7 +13,9 @@ import com.ort.qa.util.DataProviderExcel;
 public class CreateCaseFindPatientPageTest extends TestBase {
 	LoginPage loginPage;
 	SelectFacilityPage selectFacilityPage;
-	CreateCaseFindPatientPage createCaseFindPatientPage;  
+	CreateCaseFindPatientPage createCaseFindPatientPage; 
+	
+	
 	String sheetName = "PatientData";
 	
 	
@@ -47,10 +49,10 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 		createCaseFindPatientPage.createCaseFindPatientData(lastName, firstName, dOB, mNR);
 
 	}
-	
+	/*
 	 @AfterMethod
 	public void tearDown() {
 		driver.quit();
-	 }
+	 }*/
 
 }

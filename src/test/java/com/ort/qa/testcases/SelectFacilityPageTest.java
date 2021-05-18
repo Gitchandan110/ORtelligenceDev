@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import com.ort.qa.base.TestBase;
 import com.ort.qa.pages.LoginPage;
+import com.ort.qa.pages.NurseDashboardPage;
 import com.ort.qa.pages.SelectFacilityPage;
 
 public class SelectFacilityPageTest extends TestBase
@@ -12,7 +13,7 @@ public class SelectFacilityPageTest extends TestBase
 
      LoginPage loginPage;
 	 SelectFacilityPage selectFacilityPage;
-	 
+	 NurseDashboardPage nurseDashboardPage;
 		public SelectFacilityPageTest() 
 		{  
 			super();	                           
@@ -34,6 +35,7 @@ public class SelectFacilityPageTest extends TestBase
 		{
 			selectFacilityPage.clickOnDropDown();
 			selectFacilityPage.clickConfirm();
+			//nurseDashboardPage.dashboardCreateCase.click();
 	
 		}
 		
