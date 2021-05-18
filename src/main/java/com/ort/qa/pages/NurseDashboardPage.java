@@ -190,10 +190,10 @@ public class NurseDashboardPage extends TestBase
 
 	//public void createCaseTest() {
 
+
 	public void clickOncreateCase()
 	{
 		
-
 		dashboardCreateCase.click();
 	}
 
