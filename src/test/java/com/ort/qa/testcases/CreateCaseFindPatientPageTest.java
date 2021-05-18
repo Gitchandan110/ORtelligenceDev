@@ -24,10 +24,18 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 	@BeforeMethod
 	public void setUp() {
 		initialization();
+
 		                  loginPage = new LoginPage();
 		         selectFacilityPage = new SelectFacilityPage();
 		  createCaseFindPatientPage = new CreateCaseFindPatientPage();
 		         selectFacilityPage = loginPage.login1(prop.getProperty("username"), prop.getProperty("password"));
+
+		
+
+ /*now creating the object of LoginPage class.
+ * createCaseFindPatientPage = new CreateCaseFindPatientPage();
+ */
+
 		
 	}
 	

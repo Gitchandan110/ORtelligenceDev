@@ -11,59 +11,67 @@ public class CreateCaseFindPatientPage extends TestBase
 {
 
 
-	/*	Mandatory to Use any of the 4 provided options
-*	Last Name
+ /*	Mandatory to Use any of the 4 provided options
+ *Last Name 
  */
-
+	
 
 	@FindBy(xpath="//input[@id='lastName']")
 	WebElement patientLastName;
 	
-	/*	First Name
-	 */
+ /*	First Name
+ */
+	
 	@FindBy(xpath="//input[@id='firstName']")
 	WebElement patientFirstName;
 
-	/*	Date of Birth text field	
-	 */
+ /*	Date of Birth text field	
+ */
+	
 	@FindBy(xpath="//input[@id='dob']")
 	WebElement patientDOB;
 
-	/*	Date of Birth Calendar icon
-	 */
+ /*	Date of Birth Calendar icon
+ */ 
+	
 	@FindBy(xpath="//span[@class='date-picker-icon']")
 	WebElement patientDOBIcon;
 	
-	/*	MRN# Number	
-	 */
+ /*	MRN# Number	
+ */
+	
 	@FindBy(xpath="//input[@id='mrn']")
 	WebElement patientMRN;
 	
-	/*Search button	
-	 */
+ /*Search button	
+ */
+	
 	@FindBy(xpath="//button[text()='Search']")
 	WebElement search;
 	
-	/*	Select Patient
-	 */
+ /*	Select Patient
+ */
+	
 	@FindBy(xpath="//button[@name='Select']")
 	WebElement selectPatient;
 	
 
-	/*Initialization	
-	 */
+ /*Initialization	
+ */
+	
 	public CreateCaseFindPatientPage() 
 	{	
 
 		PageFactory.initElements(driver, this);
 	}	
 
-	/*	User needs to Select the Patient from the list of Patients
+ /*	User needs to Select the Patient from the list of Patients
  *	page ignition is also present
  */
 	
-/*Actions : 
+ /*Actions : 
  */
+	
 	public void createCaseFindPatientData(String lastName, String firstName, String dOB, String mNR) 
 	{
 						
@@ -75,9 +83,9 @@ public class CreateCaseFindPatientPage extends TestBase
 		
 	}
 	
-
-	/*	Select Patient
-	 */
+ /*	Select Patient
+ */
+	
 	public void createCaseSelectPatient()
 	{
 		selectPatient.click();

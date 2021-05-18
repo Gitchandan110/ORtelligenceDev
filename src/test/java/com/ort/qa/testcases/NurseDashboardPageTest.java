@@ -30,7 +30,9 @@ public class NurseDashboardPageTest extends TestBase
  		initialization();
  		 loginPage = new LoginPage();
 
- 		 //properties will get initialized here
+ /*properties will get initialized here
+ */
+ 		 
  		 nurseDashboardPage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));  
  	}
  	
@@ -43,9 +45,15 @@ public class NurseDashboardPageTest extends TestBase
 		Assert.assertEquals(dashboardPageTitle, "Login", "Dashboard Page Title not matched");  
 	}
 	
+
+  /* (In progress)
+  * 
+  * @Test(priority=2)
+=======
  	
  	/*
  	 @Test(priority=2)
+
  	public void createCaseTest()
  	{   
  		 selectFacilityPage.clickOnDropDown();
@@ -60,8 +68,10 @@ public class NurseDashboardPageTest extends TestBase
 	     Assert.assertEquals("Sharma","Sharma");
 	      
 
- 	} */
- 	
+
+ 	} 
+ */
+
  	
  	@AfterMethod
  	public void tearDown() {

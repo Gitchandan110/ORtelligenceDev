@@ -8,10 +8,8 @@ import com.ort.qa.base.TestBase;
 
 public class NurseForgotPasswordPage  extends TestBase {
 	
-	@FindBy(xpath="//img[@class='org-logo__image']")//For Logo
+	@FindBy(xpath="//img[@class='org-logo__image']")
 	WebElement ORtLogo;
-
-
 
 	@FindBy(id ="username")//username for forgot password
 	WebElement username;
@@ -19,9 +17,9 @@ public class NurseForgotPasswordPage  extends TestBase {
 	@FindBy(xpath="//a[text()='Forgot Password']")//For forgot Password
 	WebElement forgotPassword;
 
-	/*@FindBy(xpath="//img[@class='org-logo__image']")//Logo for next page.
-	*WebElement ORtLogo1;
-	 */
+ /* @FindBy(xpath="//img[@class='org-logo__image']")//Logo for next page.
+ * WebElement ORtLogo1;
+ */
 	
 	@FindBy(id ="username")//username for forgot password
 	WebElement usernameReset;
@@ -29,9 +27,10 @@ public class NurseForgotPasswordPage  extends TestBase {
 	@FindBy(xpath="//button[text()='Submit']")//submit button password
 	WebElement submit;
 
-	 /*@FindBy(xpath="//img[@class='org-logo__image']")//Logo for page 2
-	*WebElement ORtLogo2;
-	 */
+  /*@FindBy(xpath="//img[@class='org-logo__image']")//Logo for page 2
+  *WebElement ORtLogo2;
+  */
+	
 	@FindBy(id ="recovery-code")
 	WebElement recoveryCode;
 
@@ -50,8 +49,10 @@ public class NurseForgotPasswordPage  extends TestBase {
 	public void ForgotPasswordPage(){                           
 		PageFactory.initElements(driver, this);
 	}
-	/*Actions
-*/
+	
+ /*Actions
+ */
+	
 	public boolean validateORtLogo() {
 		return ORtLogo.isDisplayed(); 
 		
@@ -74,8 +75,8 @@ public class NurseForgotPasswordPage  extends TestBase {
 		return new NurseForgotPasswordPage();
 	}
 
-	/*Coding for the purpose of Recovery.new password,verify new password.then click on that button. 
-	 */
+ /* Coding for the purpose of Recovery.new password,verify new password.then click on that button. 
+ */
 
 	public NurseDashboardPage recoveryCode(String rcd,String enpwd,String vn) {//Coding for the purpose of Recovery.new password,verify new password.then click on that button
 		recoveryCode.sendKeys(rcd);

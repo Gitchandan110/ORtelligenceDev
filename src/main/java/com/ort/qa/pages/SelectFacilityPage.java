@@ -15,22 +15,27 @@ import com.ort.qa.util.DropDownHandler;
 public class SelectFacilityPage extends TestBase
 {
 
+
 	
-	/*	Select Facility Dropdown*
-	 */
+ /*	Select Facility Dropdown*
+ */
 	
 	@FindBy(xpath="//select[@name='locationId']")
 	WebElement facilityDropdown;
 
-	/*	Confirm button
-	 */
+ /*	Confirm button
+ */
 	
 	@FindBy(xpath="//button[text()='Confirm']")
 	WebElement confirm;	
+	 
 	
-
-	/*  Initialization
-	 */
+	@FindBy(xpath="(//a[@class='menu-font'])[4]")
+	WebElement createcase;	
+	 
+	
+ /*  Initialization
+ */
 	
 	public SelectFacilityPage() 
 
@@ -56,15 +61,7 @@ public class SelectFacilityPage extends TestBase
 	
 	
 	
+		
 	
-	/*	public static WebElement getElement(By element) {
-*		return driver.findElement(element);
-*		}
-*
-*
-*public static void SelectUsingVisibleValue(WebElement element, String visibleValue) {
-*		Select select = new Select(element);
-*		select.selectByVisibleText(visibleValue);
-*		}
- */
+	
 }

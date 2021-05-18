@@ -43,47 +43,46 @@ public class ProfilePage extends TestBase {
 	WebElement lastName;
 	
 	
-	/*creating profilepage constructor
-	*public ProfilePage(){                             
-	*	PageFactory.initElements(driver, this); 
-	*/   
+ /* creating profilepage constructor
+ * public ProfilePage(){                             
+ * PageFactory.initElements(driver, this); 
+ */   
 	}
 	
 
-
-/*	@FindBy(xpath="(//label[text()='System setup']")//
-*	WebElement  systemSetup ;
-*
-*	@FindBy(xpath="(//i[@class='fas fa-pen link rowEdit']")
-*	WebElement  personalInformation ;
-*
-*
-*	@FindBy(id ="lastName")
-*	WebElement lastName;
-*
-*
-*	@FindBy(name="emailAddress")
-*	WebElement emailAddress;
-*
-*	@FindBy(id ="mobile")
-*WebElement mobile;
-*	
-*	public ProfilePage(){                             //creating  constructor
-*	PageFactory.initElements(driver, this);
-*	}
-*	//ACTIONS
-*
-*	public ProfilePage click1() {//Link click for Forgot Password
-*	profile.click();
-*	return new ProfilePage();
-*	}
-*	public String validateProfilePageTitle(){
-*		return driver.getTitle();
-*}
-*public editProfilePicture click() {//Link click for Forgot Password
-*		profile.click();
-*	return new ProfilePage();
-*	}
-*	
-*}
-*/ 
+ /*	@FindBy(xpath="(//label[text()='System setup']")//
+ *	WebElement  systemSetup ;
+ *
+ *	@FindBy(xpath="(//i[@class='fas fa-pen link rowEdit']")
+ *	WebElement  personalInformation ;
+ *
+ *
+ *	@FindBy(id ="lastName")
+ *	WebElement lastName;
+ *
+ *
+ *	@FindBy(name="emailAddress")
+ *	WebElement emailAddress;
+ *
+ *	@FindBy(id ="mobile")
+ *WebElement mobile;
+ *	
+ *	public ProfilePage(){                             //creating  constructor
+ *	PageFactory.initElements(driver, this);
+ *	}
+ *	//ACTIONS
+ *
+ *	public ProfilePage click1() {//Link click for Forgot Password
+ *	profile.click();
+ *	return new ProfilePage();
+ *	}
+ *	public String validateProfilePageTitle(){
+ *		return driver.getTitle();
+ * }
+ * public editProfilePicture click() {//Link click for Forgot Password
+ * profile.click();
+ * return new ProfilePage();
+ *	}
+ *	
+ * }
+ */ 
