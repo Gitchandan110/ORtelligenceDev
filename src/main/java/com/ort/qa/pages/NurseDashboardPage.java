@@ -158,7 +158,12 @@ public class NurseDashboardPage extends TestBase
 		menuORtelligence.click();
 		menuAlerts.click();
 	}
-		
+	
+	public void clickInProcessDashboardPage()
+ 	{
+ 		dashboardInProcess.click();
+ 	} 
+	
 	public  void clickOnMenuProfile() 
 	{
 		Actions action = new Actions(driver);

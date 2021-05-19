@@ -1,5 +1,6 @@
 package com.ort.qa.testcases;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -37,6 +38,12 @@ public class SelectFacilityPageTest extends TestBase
 			selectFacilityPage.clickConfirm();
 			//nurseDashboardPage.dashboardCreateCase.click();
 	
+		}
+		
+		@AfterMethod
+		public void tearDown() 
+		{
+			driver.quit();
 		}
 		
 		
