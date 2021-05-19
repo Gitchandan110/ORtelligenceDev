@@ -23,8 +23,8 @@ public class SelectFacilityPageTest extends TestBase
 		public void setUp() 
 		{
 			           initialization();
-			         loginPage = new LoginPage();
-	      selectFacilityPage = new SelectFacilityPage();
+			         loginPage = new LoginPage(driver);
+	      selectFacilityPage = new SelectFacilityPage(driver);
 	      selectFacilityPage = loginPage.login1(prop.getProperty("username"), prop.getProperty("password"));
 	     
 			

@@ -5,14 +5,7 @@
     <classes>
       <class name="com.ort.qa.testcases.NurseDashboardPageTest">
         <methods>
-<<<<<<< HEAD
-          <include name="selectFacilityPage"/>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> efdc811f6cd5b8ffe57493daaede70ae8ceafee3
           <include name="initialization"/>
->>>>>>> 4a37218f6f4c2f0e5701568f5d77aaeea7bd2f62
           <include name="setUp"/>
           <include name="createCaseTest"/>
         </methods>

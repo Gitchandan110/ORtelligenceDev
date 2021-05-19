@@ -1,5 +1,6 @@
 package com.ort.qa.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -12,7 +13,7 @@ public class NurseDashboardPage extends TestBase
 
  /*	Dashboard
  * In Process
- */
+ */WebDriver driver;
 	
 	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[1]")
 	WebElement dashboardInProcess;   
@@ -128,12 +129,30 @@ public class NurseDashboardPage extends TestBase
 	@FindBy(xpath="((//a[text()='Alerts '])[1]")
 	WebElement menuAlerts;
 	
+	@FindBy(xpath="//input[@id='lastName']")
+	WebElement patientLastName;
+	
+ /*	First Name
+ */
+	
+	@FindBy(xpath="//input[@id='firstName']")
+	WebElement patientFirstName;
+
+ /*	Date of Birth text field	
+ */
+	
+	@FindBy(xpath="//input[@id='dob']")
+	WebElement patientDOB;
+
+	
+	
+	
  /*Initialization
  */
 	
-	public NurseDashboardPage()
+	public NurseDashboardPage(WebDriver dr)
 	{ 
-		
+		driver=dr;
 		PageFactory.initElements(driver, this);
 	}
 		
@@ -197,4 +216,15 @@ public class NurseDashboardPage extends TestBase
 		dashboardCreateCase.click();
 	}
 
+	public void createCaseFindPatientData(String lastName, String firstName, String dOB, String mNR) 
+	{
+						
+		patientLastName.sendKeys(lastName);
+		patientFirstName.sendKeys(firstName);
+		patientDOB.sendKeys(dOB);
+		//patientMRN.sendKeys(mNR);
+		//search.click();
+		
+	}
+	
 }

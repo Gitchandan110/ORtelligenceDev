@@ -1,7 +1,7 @@
 package com.ort.qa.testcases;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -10,15 +10,18 @@ import com.ort.qa.pages.CreateCaseFindPatientPage;
 import com.ort.qa.pages.LoginPage;
 import com.ort.qa.pages.NurseDashboardPage;
 import com.ort.qa.pages.SelectFacilityPage;
+import com.ort.qa.util.DataProviderExcel;
 
 public class NurseDashboardPageTest extends TestBase
      {
-	
+	WebDriver driver;
 	LoginPage loginPage;
 	NurseDashboardPage nurseDashboardPage;
     SelectFacilityPage selectFacilityPage;
 	CreateCaseFindPatientPage createCaseFindPatientPage;
 	
+	
+	String sheetName = "PatientData";
     public NurseDashboardPageTest() 
     {
 	super();	
@@ -28,10 +31,10 @@ public class NurseDashboardPageTest extends TestBase
      @BeforeMethod
  	public void setUp() {
  		initialization();
- 		 loginPage = new LoginPage();
- 		 selectFacilityPage = new SelectFacilityPage();
- 		 nurseDashboardPage = new NurseDashboardPage();
- 		 createCaseFindPatientPage = new CreateCaseFindPatientPage();
+ 		 loginPage = new LoginPage(driver);
+ 		 selectFacilityPage = new SelectFacilityPage(driver);
+ 		 nurseDashboardPage = new NurseDashboardPage(driver);
+ 		 createCaseFindPatientPage = new CreateCaseFindPatientPage(driver);
  /*properties will get initialized here
  */
  		 
@@ -47,17 +50,23 @@ public class NurseDashboardPageTest extends TestBase
 		Assert.assertEquals(dashboardPageTitle, "Login", "Dashboard Page Title not matched");  
 	}
 
- 	@Test(priority=2)
- 	public void createCaseTest()
+ 	@Test(priority=2,dataProvider="PatientData",dataProviderClass=DataProviderExcel.class)
+ 	public void createCaseTest(String lastName, String firstName, String dOB, String mNR)
  	{
  		 selectFacilityPage.clickOnDropDown();
  		 selectFacilityPage.clickConfirm();
  		 nurseDashboardPage.dashboardCreateCase.click();
- 		
+ 		 createCaseFindPatientPage.createCaseFindPatientData(lastName, firstName, dOB, mNR);
  		
  	}
  		
- 		
+ 	@Test(priority=3,enabled=false,dataProvider="PatientData",dataProviderClass=DataProviderExcel.class)
+	public void createCaseFindPatientPageTest(String lastName, String firstName, String dOB, String mNR) 
+	{
+		
+		createCaseFindPatientPage.createCaseFindPatientData(lastName, firstName, dOB, mNR);
+
+	}	
  		
  		
  		

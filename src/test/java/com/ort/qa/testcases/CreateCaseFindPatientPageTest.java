@@ -1,6 +1,5 @@
 package com.ort.qa.testcases;
 
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -27,9 +26,9 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 	public void setUp() {
 		initialization();
 
-		                  loginPage = new LoginPage();
-		         selectFacilityPage = new SelectFacilityPage();
-		  createCaseFindPatientPage = new CreateCaseFindPatientPage();
+		                  loginPage = new LoginPage(driver);
+		         selectFacilityPage = new SelectFacilityPage(driver);
+		  createCaseFindPatientPage = new CreateCaseFindPatientPage(driver);
 		         selectFacilityPage = loginPage.login1(prop.getProperty("username"), prop.getProperty("password"));
 
 		
@@ -47,12 +46,11 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 	{
 		
 		createCaseFindPatientPage.createCaseFindPatientData(lastName, firstName, dOB, mNR);
-
 	}
 	/*
 	 @AfterMethod
 	public void tearDown() {
 		driver.quit();
-	 }*/
-
+	 }
+*/
 }
