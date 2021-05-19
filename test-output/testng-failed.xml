@@ -5,6 +5,9 @@
     <classes>
       <class name="com.ort.qa.testcases.NurseDashboardPageTest">
         <methods>
+<<<<<<< HEAD
+          <include name="initialization"/>
+=======
           <include name="clickCreateCaseMenu"/>
           <include name="tearDown"/>
           <include name="clickCartReviewMenu"/>
@@ -15,6 +18,7 @@
           <include name="initialization"/>
           <include name="clickInProcessMenu"/>
           <include name="clickOpenCaseMenu"/>
+>>>>>>> a81091447d249d468643e20f43441b6b569e6440
           <include name="setUp"/>
           <include name="clickOnHoldMenu"/>
           <include name="clickCartReviewDashboard"/>

@@ -32,7 +32,7 @@ public class LoginPageTest extends TestBase{
 		
 		//now creating the object of LoginPage class.
 		
-		 loginPage = new LoginPage();
+		 loginPage = new LoginPage(driver);
 	}
 	
 	@Test(priority=1)

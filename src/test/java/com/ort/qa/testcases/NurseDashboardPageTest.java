@@ -1,3 +1,5 @@
+//Nurse dashboard Test
+
 package com.ort.qa.testcases;
 
 import org.openqa.selenium.WebDriver;
@@ -33,9 +35,9 @@ public class NurseDashboardPageTest extends TestBase
  	public void setUp() throws InterruptedException 
     {
  		initialization();
- 		loginPage = new LoginPage();
+ 		loginPage = new LoginPage(driver);
  		nurseDashboardPage = new NurseDashboardPage();
- 		selectFacilityPage = new SelectFacilityPage();
+ 		selectFacilityPage = new SelectFacilityPage(driver);
  		nurseDashboardPage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));  
  		Thread.sleep(1000);
  		selectFacilityPage.clickOnDropDown();
