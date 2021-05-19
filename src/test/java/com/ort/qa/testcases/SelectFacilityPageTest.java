@@ -1,5 +1,6 @@
 package com.ort.qa.testcases;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -23,8 +24,8 @@ public class SelectFacilityPageTest extends TestBase
 		public void setUp() 
 		{
 			           initialization();
-			         loginPage = new LoginPage();
-	      selectFacilityPage = new SelectFacilityPage();
+			         loginPage = new LoginPage(driver);
+	      selectFacilityPage = new SelectFacilityPage(driver);
 	      selectFacilityPage = loginPage.login1(prop.getProperty("username"), prop.getProperty("password"));
 	     
 			
@@ -37,6 +38,12 @@ public class SelectFacilityPageTest extends TestBase
 			selectFacilityPage.clickConfirm();
 			//nurseDashboardPage.dashboardCreateCase.click();
 	
+		}
+		
+		@AfterMethod
+		public void tearDown() 
+		{
+			driver.quit();
 		}
 		
 		

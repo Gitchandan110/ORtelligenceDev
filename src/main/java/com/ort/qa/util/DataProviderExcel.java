@@ -58,7 +58,7 @@ public class DataProviderExcel extends TestBase  {
         }   
         
         @DataProvider(name="PatientData")
-        public   Object [][] findPatientData () throws IOException, NoSuchMethodException, SecurityException{
+        public   Object [][] FindPatientData () throws IOException, NoSuchMethodException, SecurityException{
             
             Object[][] data = null;
             
@@ -66,7 +66,7 @@ public class DataProviderExcel extends TestBase  {
  * {
  */
                
-                data= getData(System.getProperty("user.dir")+"\\src\\test\\resources\\Driver\\ort_excel.xlsx","PatientData"); 
+                data= getData(System.getProperty("user.dir")+"\\src\\test\\resources\\Driver\\ort_excel2.xlsx","PatientData"); 
                 
                 return data;
  /*  }
@@ -97,7 +97,7 @@ public class DataProviderExcel extends TestBase  {
             System.out.println(colCount);
             
             Object data[][] = new Object[rowCount-1][colCount];
-            for (int rNum = 5; rNum <= rowCount; rNum++) 
+            for (int rNum = 3; rNum <= rowCount; rNum++) 
             {
                 for (int cNum = 0; cNum < colCount; cNum++) 
                 {
@@ -109,7 +109,7 @@ public class DataProviderExcel extends TestBase  {
                     row = excelSheet.getRow(rNum - 1);
                     
                     cell = row.getCell(cNum);
-                    data[rNum - 5][cNum] = cell.getStringCellValue(); //Your sheet name?
+                    data[rNum - 2][cNum] = cell.getStringCellValue(); //Your sheet name?
                 }
                 System.out.println();
             }
