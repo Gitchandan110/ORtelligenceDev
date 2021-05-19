@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results skipped="1" failed="0" ignored="2" total="3" passed="0">
   <reporter-output>
   </reporter-output>
@@ -97,6 +98,32 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createCaseTest -->
+=======
+<testng-results skipped="0" failed="0" ignored="15" total="16" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="91876" started-at="2021-05-19T18:52:33 IST" finished-at="2021-05-19T18:54:05 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="91876" started-at="2021-05-19T18:52:33 IST" finished-at="2021-05-19T18:54:05 IST">
+      <class name="com.ort.qa.testcases.NurseDashboardPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.NurseDashboardPageTest@2833cc44]" name="setUp" is-config="true" duration-ms="54911" started-at="2021-05-19T18:52:33 IST" finished-at="2021-05-19T18:53:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="initialization()[pri:0, instance:com.ort.qa.testcases.NurseDashboardPageTest@2833cc44]" name="initialization" is-config="true" duration-ms="30762" started-at="2021-05-19T18:53:28 IST" finished-at="2021-05-19T18:53:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method status="PASS" signature="verifyMenuOptionVisibility()[pri:2, instance:com.ort.qa.testcases.NurseDashboardPageTest@2833cc44]" name="verifyMenuOptionVisibility" duration-ms="2323" started-at="2021-05-19T18:53:59 IST" finished-at="2021-05-19T18:54:01 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMenuOptionVisibility -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.NurseDashboardPageTest@2833cc44]" name="tearDown" is-config="true" duration-ms="3827" started-at="2021-05-19T18:54:01 IST" finished-at="2021-05-19T18:54:05 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+>>>>>>> a81091447d249d468643e20f43441b6b569e6440
       </class> <!-- com.ort.qa.testcases.NurseDashboardPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

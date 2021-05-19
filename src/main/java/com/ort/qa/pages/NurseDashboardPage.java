@@ -1,6 +1,6 @@
+//Nurse Dashboard Page
 package com.ort.qa.pages;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -13,22 +13,22 @@ public class NurseDashboardPage extends TestBase
 
  /*	Dashboard
  * In Process
- */WebDriver driver;
+ */
 	
 	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[1]")
-	WebElement dashboardInProcess;   
+	public WebElement dashboardInProcess;   
 	
  /* On Hold
  */
 	
 	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[2]")
-	WebElement dashboardOnHold;   
+	public WebElement dashboardOnHold;   
 	
  /*	Cart Review
  */
 	
 	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[3]")
-	WebElement dashboardCartReview;   
+	public WebElement dashboardCartReview;   
 	
  /*	Create Case
  */
@@ -40,56 +40,56 @@ public class NurseDashboardPage extends TestBase
  */
 	
 	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[5]")
-	WebElement dashboardSearchCase;   
+	public WebElement dashboardSearchCase;   
 	
  /* Open Case
  */
 	
 	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[6]")
-	WebElement dashboardOpenCase;   
+	public WebElement dashboardOpenCase;   
 	
  /*	ORtelligence
  */
 	
 	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[7]")
-	WebElement dashboardORtelligence;   
+	public WebElement dashboardORtelligence;   
 	
  /*	Menu Bar 
  * In Process 
  */
 	
 	@FindBy(xpath="(//a[text()='In-Process'])[1]")
-	WebElement menuInProcess;   
+	public WebElement menuInProcess;   
 	
  /*On Hold
  */
 	
 	@FindBy(xpath="(//a[text()='On-Hold'])[1]")
-	WebElement menuOnHold;   
+	public WebElement menuOnHold;   
 	
  /*	Cart Review
  */
 	
 	@FindBy(xpath="(//a[text()='Cart Review'])[1]")
-	WebElement menuCartReview;   
+	public WebElement menuCartReview;   
 
  /*	Create Case
  */
 	
 	@FindBy(xpath="(//a[text()='Create Case'])[1]")
-	WebElement menuCreateCase;   
+	public WebElement menuCreateCase;   
 	
  /*	Search Case
  */
 	
 	@FindBy(xpath="(//a[text()='Search Cases'])[1]")
-	WebElement menuSearchCase;  
+	public WebElement menuSearchCase;  
 	
  /*	Open Case
  */
 	
 	@FindBy(xpath="(//a[text()='Open Cases'])[1]")
-	WebElement menuOpenCase;   
+	public WebElement menuOpenCase;   
 	
 
  /*	ORtelligence
@@ -97,62 +97,44 @@ public class NurseDashboardPage extends TestBase
 
 	
 	@FindBy(xpath="(//a[text()='ORtelligence'])[1]")
-	WebElement menuORtelligence;   
+	public WebElement menuORtelligence;   
 	
  /*	User Name
  */
 	
 	@FindBy(xpath="//li[@class='dropdown user-menu pl-sm-0']")
-	WebElement menuUserName;   
+	public WebElement menuUserName;   
 	
  /*	Profile
  */
 	
 	@FindBy(xpath="(//a[@class='menu-font'])[7]")
-	WebElement menuProfile;   
+	public WebElement menuProfile;   
 	
  /*Switch Location
  */
 	
 	@FindBy(xpath="(//a[@class='menu-font'])[8]")
-	WebElement menuSwitchLocatoin;   
+	public WebElement menuSwitchLocatoin;   
 	
  /*Logout
  */
 	
 	@FindBy(xpath="(//a[@class='menu-font'])[9]")
-	WebElement menuLogout;
+	public WebElement menuLogout;
 
  /*	Alerts 
  */
 	
 	@FindBy(xpath="((//a[text()='Alerts '])[1]")
-	WebElement menuAlerts;
-	
-	@FindBy(xpath="//input[@id='lastName']")
-	WebElement patientLastName;
-	
- /*	First Name
- */
-	
-	@FindBy(xpath="//input[@id='firstName']")
-	WebElement patientFirstName;
-
- /*	Date of Birth text field	
- */
-	
-	@FindBy(xpath="//input[@id='dob']")
-	WebElement patientDOB;
-
-	
-	
+	public WebElement menuAlerts;
 	
  /*Initialization
  */
 	
-	public NurseDashboardPage(WebDriver dr)
+	public NurseDashboardPage()
 	{ 
-		driver=dr;
+		
 		PageFactory.initElements(driver, this);
 	}
 		
@@ -177,7 +159,12 @@ public class NurseDashboardPage extends TestBase
 		menuORtelligence.click();
 		menuAlerts.click();
 	}
-		
+	
+	public void clickInProcessDashboardPage()
+ 	{
+ 		dashboardInProcess.click();
+ 	} 
+	
 	public  void clickOnMenuProfile() 
 	{
 		Actions action = new Actions(driver);
@@ -207,24 +194,11 @@ public class NurseDashboardPage extends TestBase
 		
 	}
 
-	//public void createCaseTest() {
-
+//	public void createCaseTest() {
 
 	public void clickOncreateCase()
 	{
-		
 		dashboardCreateCase.click();
 	}
 
-	public void createCaseFindPatientData(String lastName, String firstName, String dOB, String mNR) 
-	{
-						
-		patientLastName.sendKeys(lastName);
-		patientFirstName.sendKeys(firstName);
-		patientDOB.sendKeys(dOB);
-		//patientMRN.sendKeys(mNR);
-		//search.click();
-		
-	}
-	
 }
