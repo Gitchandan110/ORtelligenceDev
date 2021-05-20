@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="29945" started-at="2021-05-20T16:55:40 IST" finished-at="2021-05-20T16:56:09 IST">
+  <suite name="Default suite" duration-ms="29536" started-at="2021-05-20T17:06:28 IST" finished-at="2021-05-20T17:06:57 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="29945" started-at="2021-05-20T16:55:40 IST" finished-at="2021-05-20T16:56:09 IST">
-      <class name="com.ort.qa.testcases.NurseDashboardClickAlertMenu">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.NurseDashboardClickAlertMenu@6acdbdf5]" name="setUp" is-config="true" duration-ms="21800" started-at="2021-05-20T16:55:40 IST" finished-at="2021-05-20T16:56:01 IST">
+    <test name="Default test" duration-ms="29536" started-at="2021-05-20T17:06:28 IST" finished-at="2021-05-20T17:06:57 IST">
+      <class name="com.ort.qa.testcases.NurseDashboardClickCreateCaseDashboard">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.NurseDashboardClickCreateCaseDashboard@6acdbdf5]" name="setUp" is-config="true" duration-ms="21463" started-at="2021-05-20T17:06:28 IST" finished-at="2021-05-20T17:06:49 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="clickAlertMenu()[pri:1, instance:com.ort.qa.testcases.NurseDashboardClickAlertMenu@6acdbdf5]" name="clickAlertMenu" duration-ms="4117" started-at="2021-05-20T16:56:01 IST" finished-at="2021-05-20T16:56:06 IST">
+        <test-method status="PASS" signature="clickCreateCaseDashboard()[pri:1, instance:com.ort.qa.testcases.NurseDashboardClickCreateCaseDashboard@6acdbdf5]" name="clickCreateCaseDashboard" duration-ms="4102" started-at="2021-05-20T17:06:49 IST" finished-at="2021-05-20T17:06:53 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickAlertMenu -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.NurseDashboardClickAlertMenu@6acdbdf5]" name="tearDown" is-config="true" duration-ms="3950" started-at="2021-05-20T16:56:06 IST" finished-at="2021-05-20T16:56:09 IST">
+        </test-method> <!-- clickCreateCaseDashboard -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.NurseDashboardClickCreateCaseDashboard@6acdbdf5]" name="tearDown" is-config="true" duration-ms="3877" started-at="2021-05-20T17:06:53 IST" finished-at="2021-05-20T17:06:57 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.ort.qa.testcases.NurseDashboardClickAlertMenu -->
+      </class> <!-- com.ort.qa.testcases.NurseDashboardClickCreateCaseDashboard -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
