@@ -9,16 +9,15 @@ import com.ort.qa.pages.LoginPage;
 import com.ort.qa.pages.NurseDashboardPage;
 import com.ort.qa.pages.SelectFacilityPage;
 
-public class CreateCaseSpecialtyTest extends TestBase 
+public class CreateCaseProcedureSelectionPageTest extends TestBase
 {
-
-
-    LoginPage loginPage;
+	 LoginPage loginPage;
 	 SelectFacilityPage selectFacilityPage;
 	 NurseDashboardPage nurseDashboardPage;
 	 CreateCaseSpecialtyPage createCaseSpecialtyPage;
-		public CreateCaseSpecialtyTest() 
-		{  
+	 com.ort.qa.pages.CreateCaseProcedureSelectionPage createCaseProcedureSelectionPage;
+		public CreateCaseProcedureSelectionPageTest() 
+		{
 			super();	                           
 		}
 		
@@ -29,17 +28,29 @@ public class CreateCaseSpecialtyTest extends TestBase
 			         loginPage = new LoginPage(driver);
 	      selectFacilityPage = new SelectFacilityPage(driver);
 	      selectFacilityPage = loginPage.login1(prop.getProperty("username"), prop.getProperty("password"));
+	    nurseDashboardPage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	      createCaseSpecialtyPage =new CreateCaseSpecialtyPage();
+	      createCaseProcedureSelectionPage =new com.ort.qa.pages.CreateCaseProcedureSelectionPage();
+			
+		}
+		@Test(priority=1)
+		public void CreateCaseProcedureSelectionPage() 
+		{
+			 createCaseProcedureSelectionPage.click();
 			
 		}
 		
-		@Test(priority=1)
-		public void createCaseSpecialtyPage()
-		{
-			
-			createCaseSpecialtyPage.clickOnDropDown();
-			createCaseSpecialtyPage.clickOnNext();
-			
-			
 		}
-}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+

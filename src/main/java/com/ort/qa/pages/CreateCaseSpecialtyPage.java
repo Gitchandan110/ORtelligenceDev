@@ -46,6 +46,12 @@ public class CreateCaseSpecialtyPage extends TestBase
 		 ds.SelectUsingVisibleText(selectSpecialty,"Trauma");
 	
 	}
+	public void clickOnNext()
+	{
+
+		 next.click();
+	}
+	
 	
 	
 	
