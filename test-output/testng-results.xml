@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="15" total="16" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="91876" started-at="2021-05-19T18:52:33 IST" finished-at="2021-05-19T18:54:05 IST">
+  <suite name="Default suite" duration-ms="29945" started-at="2021-05-20T16:55:40 IST" finished-at="2021-05-20T16:56:09 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="91876" started-at="2021-05-19T18:52:33 IST" finished-at="2021-05-19T18:54:05 IST">
-      <class name="com.ort.qa.testcases.NurseDashboardPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.NurseDashboardPageTest@2833cc44]" name="setUp" is-config="true" duration-ms="54911" started-at="2021-05-19T18:52:33 IST" finished-at="2021-05-19T18:53:28 IST">
+    <test name="Default test" duration-ms="29945" started-at="2021-05-20T16:55:40 IST" finished-at="2021-05-20T16:56:09 IST">
+      <class name="com.ort.qa.testcases.NurseDashboardClickAlertMenu">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.NurseDashboardClickAlertMenu@6acdbdf5]" name="setUp" is-config="true" duration-ms="21800" started-at="2021-05-20T16:55:40 IST" finished-at="2021-05-20T16:56:01 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="initialization()[pri:0, instance:com.ort.qa.testcases.NurseDashboardPageTest@2833cc44]" name="initialization" is-config="true" duration-ms="30762" started-at="2021-05-19T18:53:28 IST" finished-at="2021-05-19T18:53:59 IST">
+        <test-method status="PASS" signature="clickAlertMenu()[pri:1, instance:com.ort.qa.testcases.NurseDashboardClickAlertMenu@6acdbdf5]" name="clickAlertMenu" duration-ms="4117" started-at="2021-05-20T16:56:01 IST" finished-at="2021-05-20T16:56:06 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initialization -->
-        <test-method status="PASS" signature="verifyMenuOptionVisibility()[pri:2, instance:com.ort.qa.testcases.NurseDashboardPageTest@2833cc44]" name="verifyMenuOptionVisibility" duration-ms="2323" started-at="2021-05-19T18:53:59 IST" finished-at="2021-05-19T18:54:01 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyMenuOptionVisibility -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.NurseDashboardPageTest@2833cc44]" name="tearDown" is-config="true" duration-ms="3827" started-at="2021-05-19T18:54:01 IST" finished-at="2021-05-19T18:54:05 IST">
+        </test-method> <!-- clickAlertMenu -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.NurseDashboardClickAlertMenu@6acdbdf5]" name="tearDown" is-config="true" duration-ms="3950" started-at="2021-05-20T16:56:06 IST" finished-at="2021-05-20T16:56:09 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.ort.qa.testcases.NurseDashboardPageTest -->
+      </class> <!-- com.ort.qa.testcases.NurseDashboardClickAlertMenu -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -106,26 +106,26 @@ public class NurseDashboardPage extends TestBase
 	
  /*	Profile
  */
-	
-	@FindBy(xpath="(//a[@class='menu-font'])[7]")
+//	//a[@class='menu-font'])[7]
+	@FindBy(xpath="(//a[text()='Profile'])[1]")
 	public WebElement menuProfile;   
 	
  /*Switch Location
  */
 	
-	@FindBy(xpath="(//a[@class='menu-font'])[8]")
+	@FindBy(xpath="(//a[@class='menu-font'])[9]")
 	public WebElement menuSwitchLocatoin;   
 	
  /*Logout
  */
 	
-	@FindBy(xpath="(//a[@class='menu-font'])[9]")
+	@FindBy(xpath="(//a[text()='Logout'])[1]")
 	public WebElement menuLogout;
 
  /*	Alerts 
  */
 	
-	@FindBy(xpath="((//a[text()='Alerts '])[1]")
+	@FindBy(xpath="(//a[text()='Alerts '])[1]")
 	public WebElement menuAlerts;
 	
  /*Initialization

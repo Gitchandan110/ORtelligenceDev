@@ -3,27 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ort.qa.testcases.NurseDashboardPageTest">
+      <class name="com.ort.qa.testcases.NurseDashboardClickAlertMenu">
         <methods>
-          <include name="clickCreateCaseMenu"/>
+          <include name="clickAlertMenu"/>
           <include name="tearDown"/>
-          <include name="clickCartReviewMenu"/>
-          <include name="clickORtelligenceDashboard"/>
-          <include name="clickOnHoldDashboard"/>
-          <include name="clickSearchCaseDashboard"/>
-          <include name="clickCreateCaseDashboard"/>
-          <include name="initialization"/>
-          <include name="clickInProcessMenu"/>
-          <include name="clickOpenCaseMenu"/>
           <include name="setUp"/>
-          <include name="clickOnHoldMenu"/>
-          <include name="clickCartReviewDashboard"/>
-          <include name="clickORtelligenceMenu"/>
-          <include name="clickSearchCaseMenu"/>
-          <include name="clickOpenCaseDashboard"/>
-          <include name="clickInProcessDashboard"/>
         </methods>
-      </class> <!-- com.ort.qa.testcases.NurseDashboardPageTest -->
+      </class> <!-- com.ort.qa.testcases.NurseDashboardClickAlertMenu -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

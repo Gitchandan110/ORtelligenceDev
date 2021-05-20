@@ -45,15 +45,15 @@ public class NurseDashboardPageTest extends TestBase
 		
  	}
     
-//// 	Verification of page title  
-// 	@Test(priority=1)
-// 	public void verifyDashboardPageTitleTest()
-// 	{
-// 		String dashboardPageTitle =nurseDashboardPage.verifyNurseDashboardPageTitle();
-//		Assert.assertEquals(dashboardPageTitle, "Login", "Dashboard Page Title not matched");  
-//	}
+// 	Verification of page title  
+ 	@Test(priority=1)
+ 	public void verifyDashboardPageTitleTest()
+ 	{
+ 		String dashboardPageTitle =nurseDashboardPage.verifyNurseDashboardPageTitle();
+		System.out.println("Nurse Dashboard page title is -  "+dashboardPageTitle);  
+	}
 
-// 	Verification of visibility of different options of Header
+// 	Verification of visibility of different options of Menu
  	@Test(priority=2)
  	public void verifyMenuOptionVisibility() throws InterruptedException
  	{
@@ -81,20 +81,6 @@ public class NurseDashboardPageTest extends TestBase
  		Assert.assertEquals(true, nurseDashboardPage.dashboardOpenCase.isDisplayed());
  		Assert.assertEquals(true, nurseDashboardPage.dashboardORtelligence.isDisplayed());		 		
  	}		
-// 		
-//// 	Verification of text of different options of Menu
-// 	@Test(priority=4)
-// 	public void verifyHeaderOptiontext()
-// 	{
-// 		 		
-// 	}
-// 		
-//// 	Verification of text of different options of Dashboard
-// 	@Test(priority=5)
-// 	public void verifyDashboardOptiontext()
-// 	{
-// 		 		
-// 	} 		
     
 //	Dashboard option Click. 	
 // 	Click on In Process option of Dashboard
@@ -102,20 +88,8 @@ public class NurseDashboardPageTest extends TestBase
  	public void clickInProcessDashboard() throws InterruptedException
  	{
  		Thread.sleep(2000);
-// 		initialization();
-// 		loginPage = new LoginPage();
-// 		nurseDashboardPage = new NurseDashboardPage();
-// 		selectFacilityPage = new SelectFacilityPage();
-// 		nurseDashboardPage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));  
-// 		Thread.sleep(1000);
-//  		selectFacilityPage.clickOnDropDown();
-//  		Thread.sleep(1000);
-//		selectFacilityPage.clickConfirm();
-//		Thread.sleep(1000);
-// 		nurseDashboardPage.clickInProcessDashboardPage();
  		nurseDashboardPage.dashboardInProcess.click();
  		Thread.sleep(2000);
-// 		System.out.println("dashboardInProcess performed");
  	} 
  	
 // 	Click on On Hold option of Dashboard
@@ -123,18 +97,8 @@ public class NurseDashboardPageTest extends TestBase
  	public void clickOnHoldDashboard() throws InterruptedException
  	{
  		Thread.sleep(2000);
-// 		initialization();
-// 		loginPage = new LoginPage();
-// 		nurseDashboardPage = new NurseDashboardPage();
-// 		selectFacilityPage = new SelectFacilityPage();
-// 		nurseDashboardPage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));  
-// 		Thread.sleep(1000);
-//  		selectFacilityPage.clickOnDropDown();
-//  		Thread.sleep(1000);
-//		selectFacilityPage.clickConfirm();
-//		Thread.sleep(1000);
  		nurseDashboardPage.dashboardOnHold.click(); 		
- 		System.out.println("clickOnHoldDashboard performed");
+
  	} 
  	
 // 	Click on Cart Review option of Dashboard
@@ -143,7 +107,6 @@ public class NurseDashboardPageTest extends TestBase
  	{
  		Thread.sleep(2000);
  		nurseDashboardPage.dashboardCartReview.click();
- 		System.out.println("clickCartReviewDashboard performed");
  	} 
  	
 // 	Click on Create Case option of Dashboard
@@ -152,7 +115,6 @@ public class NurseDashboardPageTest extends TestBase
  	{
  		Thread.sleep(2000);
  		nurseDashboardPage.dashboardCreateCase.click();	
- 		System.out.println("clickCreateCaseDashboard performed");
  	} 
  	
 // 	Click on Search Case option of Dashboard
@@ -161,7 +123,6 @@ public class NurseDashboardPageTest extends TestBase
  	{
  		Thread.sleep(2000);
  		nurseDashboardPage.dashboardSearchCase.click();
- 		System.out.println("clickSearchCaseDashboard performed");
  	} 
  	
 // 	Click on Open Case option of Dashboard
@@ -170,7 +131,6 @@ public class NurseDashboardPageTest extends TestBase
  	{
  		Thread.sleep(2000);
  		nurseDashboardPage.dashboardOpenCase.click();
- 		System.out.println("clickOpenCaseDashboard performed");
  	} 
 
 // 	Click on ORtelligence option of Dashboard
@@ -179,7 +139,6 @@ public class NurseDashboardPageTest extends TestBase
  	{
  		Thread.sleep(2000);
  		nurseDashboardPage.dashboardORtelligence.click();
- 		System.out.println("clickORtelligenceDashboard performed");
  	} 
  	
 //	Header option Click. 	
@@ -189,7 +148,6 @@ public class NurseDashboardPageTest extends TestBase
  	{
  		Thread.sleep(2000);
  		nurseDashboardPage.menuInProcess.click();
- 		System.out.println("clickInProcessMenu performed");
  	} 
  	
 // 	Click on On Hold option of Menu
@@ -198,7 +156,6 @@ public class NurseDashboardPageTest extends TestBase
  	{
  		Thread.sleep(2000);
  		nurseDashboardPage.menuOnHold.click();
- 		System.out.println("clickOnHoldMenu performed");
  	} 
  	
 // 	Click on Cart Review option of Menu
@@ -207,7 +164,6 @@ public class NurseDashboardPageTest extends TestBase
  	{
  		Thread.sleep(2000);
  		nurseDashboardPage.menuCartReview.click();
- 		System.out.println("clickCartReviewMenu performed");
  	} 
  	
 // 	Click on Create Case option of Menu
@@ -216,7 +172,6 @@ public class NurseDashboardPageTest extends TestBase
  	{
  		Thread.sleep(2000);
  		nurseDashboardPage.menuCreateCase.click();
- 		System.out.println("clickCreateCaseMenu performed");
  	} 
  	
 // 	Click on Search Case option of Menu
@@ -225,7 +180,6 @@ public class NurseDashboardPageTest extends TestBase
  	{
  		Thread.sleep(2000);
  		nurseDashboardPage.menuSearchCase.click();
- 		System.out.println("clickSearchCaseMenu performed");
  	} 
  	
 // 	Click on Open Case option of Menu
@@ -234,7 +188,6 @@ public class NurseDashboardPageTest extends TestBase
  	{
  		Thread.sleep(2000);
  		nurseDashboardPage.menuOpenCase.click();
- 		System.out.println("clickOpenCaseMenu performed");
  	} 
 
 // 	Click on ORtelligence option of Menu
@@ -243,7 +196,30 @@ public class NurseDashboardPageTest extends TestBase
  	{
  		Thread.sleep(2000);
  		nurseDashboardPage.menuORtelligence.click();
- 		System.out.println("clickORtelligenceMenu performed");
+ 	} 	
+
+// 	Click on Profile option of Menu
+ 	@Test(priority=20)
+ 	public void clickProfileMenu() throws InterruptedException
+ 	{
+ 		Thread.sleep(2000);
+ 		nurseDashboardPage.clickOnMenuProfile();
+ 	}	
+ 	
+// 	Click on Switch Location option of Menu
+ 	@Test(priority=21)
+ 	public void clickSwitchLocationMenu() throws InterruptedException
+ 	{
+ 		Thread.sleep(2000);
+ 		nurseDashboardPage.clickOnMenuSwitchLocation();
+ 	}	
+ 	
+// 	Click on Logout option of Menu
+ 	@Test(priority=22)
+ 	public void clickLogoutMenu() throws InterruptedException
+ 	{
+ 		Thread.sleep(2000);
+ 		nurseDashboardPage.clickOnMenuLogout();
  	} 	
  	
 //	Quit browser
