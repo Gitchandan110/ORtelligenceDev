@@ -1,193 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="15" passed="15">
+<testng-results skipped="0" failed="0" ignored="14" total="15" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="426400" started-at="2021-05-21T15:43:30 IST" finished-at="2021-05-21T15:50:36 IST">
+  <suite name="Default suite" duration-ms="30652" started-at="2021-05-21T18:18:17 IST" finished-at="2021-05-21T18:18:48 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="426400" started-at="2021-05-21T15:43:30 IST" finished-at="2021-05-21T15:50:36 IST">
-      <class name="com.ort.qa.testcases.SurgeonDashboardPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="setUp" is-config="true" duration-ms="20637" started-at="2021-05-21T15:43:30 IST" finished-at="2021-05-21T15:43:51 IST">
+    <test name="Default test" duration-ms="30652" started-at="2021-05-21T18:18:17 IST" finished-at="2021-05-21T18:18:48 IST">
+      <class name="com.ort.qa.testcases.SPDDashboardPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.SPDDashboardPageTest@3712b94]" name="setUp" is-config="true" duration-ms="22531" started-at="2021-05-21T18:18:17 IST" finished-at="2021-05-21T18:18:40 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyDashboardPageTitleTest()[pri:1, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="verifyDashboardPageTitleTest" duration-ms="28" started-at="2021-05-21T15:43:51 IST" finished-at="2021-05-21T15:43:51 IST">
+        <test-method status="PASS" signature="clickNurseSwitchLocationMenuSPD()[pri:13, instance:com.ort.qa.testcases.SPDDashboardPageTest@3712b94]" name="clickNurseSwitchLocationMenuSPD" duration-ms="4262" started-at="2021-05-21T18:18:40 IST" finished-at="2021-05-21T18:18:44 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyDashboardPageTitleTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="tearDown" is-config="true" duration-ms="3789" started-at="2021-05-21T15:43:51 IST" finished-at="2021-05-21T15:43:54 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="setUp" is-config="true" duration-ms="22445" started-at="2021-05-21T15:43:55 IST" finished-at="2021-05-21T15:44:17 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyMenuOptionVisibility()[pri:2, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="verifyMenuOptionVisibility" duration-ms="2218" started-at="2021-05-21T15:44:17 IST" finished-at="2021-05-21T15:44:19 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyMenuOptionVisibility -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="tearDown" is-config="true" duration-ms="3788" started-at="2021-05-21T15:44:19 IST" finished-at="2021-05-21T15:44:23 IST">
+        </test-method> <!-- clickNurseSwitchLocationMenuSPD -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.SPDDashboardPageTest@3712b94]" name="tearDown" is-config="true" duration-ms="3799" started-at="2021-05-21T18:18:44 IST" finished-at="2021-05-21T18:18:48 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="setUp" is-config="true" duration-ms="21664" started-at="2021-05-21T15:44:23 IST" finished-at="2021-05-21T15:44:45 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyDashboardOptionVisibility()[pri:3, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="verifyDashboardOptionVisibility" duration-ms="2182" started-at="2021-05-21T15:44:45 IST" finished-at="2021-05-21T15:44:47 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDashboardOptionVisibility -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="tearDown" is-config="true" duration-ms="3782" started-at="2021-05-21T15:44:47 IST" finished-at="2021-05-21T15:44:51 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="setUp" is-config="true" duration-ms="19613" started-at="2021-05-21T15:44:51 IST" finished-at="2021-05-21T15:45:10 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="clickCreateCaseDashboard()[pri:4, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="clickCreateCaseDashboard" duration-ms="4110" started-at="2021-05-21T15:45:10 IST" finished-at="2021-05-21T15:45:14 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickCreateCaseDashboard -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="tearDown" is-config="true" duration-ms="3783" started-at="2021-05-21T15:45:14 IST" finished-at="2021-05-21T15:45:18 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="setUp" is-config="true" duration-ms="21713" started-at="2021-05-21T15:45:18 IST" finished-at="2021-05-21T15:45:40 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="clickSearchCaseDashboard()[pri:5, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="clickSearchCaseDashboard" duration-ms="4101" started-at="2021-05-21T15:45:40 IST" finished-at="2021-05-21T15:45:44 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickSearchCaseDashboard -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="tearDown" is-config="true" duration-ms="3795" started-at="2021-05-21T15:45:44 IST" finished-at="2021-05-21T15:45:48 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="setUp" is-config="true" duration-ms="21204" started-at="2021-05-21T15:45:48 IST" finished-at="2021-05-21T15:46:09 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="clickOpenCaseDashboard()[pri:6, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="clickOpenCaseDashboard" duration-ms="4139" started-at="2021-05-21T15:46:09 IST" finished-at="2021-05-21T15:46:13 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickOpenCaseDashboard -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="tearDown" is-config="true" duration-ms="3768" started-at="2021-05-21T15:46:13 IST" finished-at="2021-05-21T15:46:17 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="setUp" is-config="true" duration-ms="21284" started-at="2021-05-21T15:46:17 IST" finished-at="2021-05-21T15:46:38 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="clickORtelligenceDashboard()[pri:7, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="clickORtelligenceDashboard" duration-ms="4128" started-at="2021-05-21T15:46:38 IST" finished-at="2021-05-21T15:46:42 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickORtelligenceDashboard -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="tearDown" is-config="true" duration-ms="3782" started-at="2021-05-21T15:46:42 IST" finished-at="2021-05-21T15:46:46 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="setUp" is-config="true" duration-ms="22223" started-at="2021-05-21T15:46:46 IST" finished-at="2021-05-21T15:47:08 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="clickCreateCaseMenu()[pri:8, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="clickCreateCaseMenu" duration-ms="4112" started-at="2021-05-21T15:47:08 IST" finished-at="2021-05-21T15:47:12 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickCreateCaseMenu -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="tearDown" is-config="true" duration-ms="3793" started-at="2021-05-21T15:47:12 IST" finished-at="2021-05-21T15:47:16 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="setUp" is-config="true" duration-ms="20256" started-at="2021-05-21T15:47:16 IST" finished-at="2021-05-21T15:47:36 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="clickSearchCaseMenu()[pri:9, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="clickSearchCaseMenu" duration-ms="4159" started-at="2021-05-21T15:47:36 IST" finished-at="2021-05-21T15:47:41 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickSearchCaseMenu -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="tearDown" is-config="true" duration-ms="3769" started-at="2021-05-21T15:47:41 IST" finished-at="2021-05-21T15:47:44 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="setUp" is-config="true" duration-ms="21176" started-at="2021-05-21T15:47:44 IST" finished-at="2021-05-21T15:48:06 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="clickOpenCaseMenu()[pri:10, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="clickOpenCaseMenu" duration-ms="4073" started-at="2021-05-21T15:48:06 IST" finished-at="2021-05-21T15:48:10 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickOpenCaseMenu -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="tearDown" is-config="true" duration-ms="3793" started-at="2021-05-21T15:48:10 IST" finished-at="2021-05-21T15:48:13 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="setUp" is-config="true" duration-ms="20021" started-at="2021-05-21T15:48:13 IST" finished-at="2021-05-21T15:48:33 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="clickORtelligenceMenu()[pri:11, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="clickORtelligenceMenu" duration-ms="4111" started-at="2021-05-21T15:48:33 IST" finished-at="2021-05-21T15:48:38 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickORtelligenceMenu -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="tearDown" is-config="true" duration-ms="3785" started-at="2021-05-21T15:48:38 IST" finished-at="2021-05-21T15:48:41 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="setUp" is-config="true" duration-ms="20456" started-at="2021-05-21T15:48:41 IST" finished-at="2021-05-21T15:49:02 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="clickProfileMenu()[pri:12, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="clickProfileMenu" duration-ms="4245" started-at="2021-05-21T15:49:02 IST" finished-at="2021-05-21T15:49:06 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickProfileMenu -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="tearDown" is-config="true" duration-ms="3793" started-at="2021-05-21T15:49:06 IST" finished-at="2021-05-21T15:49:10 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="setUp" is-config="true" duration-ms="20360" started-at="2021-05-21T15:49:10 IST" finished-at="2021-05-21T15:49:30 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="clickNurseSwitchLocationMenu()[pri:13, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="clickNurseSwitchLocationMenu" duration-ms="4266" started-at="2021-05-21T15:49:30 IST" finished-at="2021-05-21T15:49:34 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickNurseSwitchLocationMenu -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="tearDown" is-config="true" duration-ms="3772" started-at="2021-05-21T15:49:34 IST" finished-at="2021-05-21T15:49:38 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="setUp" is-config="true" duration-ms="20986" started-at="2021-05-21T15:49:38 IST" finished-at="2021-05-21T15:49:59 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="clickLogoutMenu()[pri:14, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="clickLogoutMenu" duration-ms="4257" started-at="2021-05-21T15:49:59 IST" finished-at="2021-05-21T15:50:03 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickLogoutMenu -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="tearDown" is-config="true" duration-ms="3764" started-at="2021-05-21T15:50:03 IST" finished-at="2021-05-21T15:50:07 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="setUp" is-config="true" duration-ms="21267" started-at="2021-05-21T15:50:07 IST" finished-at="2021-05-21T15:50:28 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="clickAlertMenu()[pri:15, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="clickAlertMenu" duration-ms="4143" started-at="2021-05-21T15:50:28 IST" finished-at="2021-05-21T15:50:33 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickAlertMenu -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.SurgeonDashboardPageTest@17579e0f]" name="tearDown" is-config="true" duration-ms="3779" started-at="2021-05-21T15:50:33 IST" finished-at="2021-05-21T15:50:36 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.ort.qa.testcases.SurgeonDashboardPageTest -->
+      </class> <!-- com.ort.qa.testcases.SPDDashboardPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
