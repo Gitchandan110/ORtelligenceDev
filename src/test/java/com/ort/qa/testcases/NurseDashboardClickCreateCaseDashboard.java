@@ -53,14 +53,11 @@ public class NurseDashboardClickCreateCaseDashboard extends TestBase
  	}
  
 //	Quit browser
- 	@AfterTest
- 	public void tearDown() throws InterruptedException 
- 	{
- 		Thread.sleep(3000);
- 		driver.quit();
- 	} 
+// 	@AfterTest
+// 	public void tearDown() throws InterruptedException 
+// 	{
+// 		Thread.sleep(3000);
+// 		driver.quit();
+// 	} 
 
 }
-
-
-

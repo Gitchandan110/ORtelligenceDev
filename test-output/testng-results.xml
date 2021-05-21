@@ -2,24 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="29536" started-at="2021-05-20T17:06:28 IST" finished-at="2021-05-20T17:06:57 IST">
+  <suite name="Default suite" duration-ms="72656" started-at="2021-05-20T20:38:22 IST" finished-at="2021-05-20T20:39:35 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="29536" started-at="2021-05-20T17:06:28 IST" finished-at="2021-05-20T17:06:57 IST">
-      <class name="com.ort.qa.testcases.NurseDashboardClickCreateCaseDashboard">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.NurseDashboardClickCreateCaseDashboard@6acdbdf5]" name="setUp" is-config="true" duration-ms="21463" started-at="2021-05-20T17:06:28 IST" finished-at="2021-05-20T17:06:49 IST">
+    <test name="Default test" duration-ms="72656" started-at="2021-05-20T20:38:22 IST" finished-at="2021-05-20T20:39:35 IST">
+      <class name="com.ort.qa.testcases.CreateCaseBasicDetailsTest">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:com.ort.qa.testcases.CreateCaseBasicDetailsTest@167fdd33]" name="Setup" is-config="true" duration-ms="10471" started-at="2021-05-20T20:38:23 IST" finished-at="2021-05-20T20:38:33 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="clickCreateCaseDashboard()[pri:1, instance:com.ort.qa.testcases.NurseDashboardClickCreateCaseDashboard@6acdbdf5]" name="clickCreateCaseDashboard" duration-ms="4102" started-at="2021-05-20T17:06:49 IST" finished-at="2021-05-20T17:06:53 IST">
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="LoginTest()[pri:1, instance:com.ort.qa.testcases.CreateCaseBasicDetailsTest@167fdd33]" name="LoginTest" duration-ms="62129" started-at="2021-05-20T20:38:33 IST" finished-at="2021-05-20T20:39:35 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickCreateCaseDashboard -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.NurseDashboardClickCreateCaseDashboard@6acdbdf5]" name="tearDown" is-config="true" duration-ms="3877" started-at="2021-05-20T17:06:53 IST" finished-at="2021-05-20T17:06:57 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.ort.qa.testcases.NurseDashboardClickCreateCaseDashboard -->
+        </test-method> <!-- LoginTest -->
+      </class> <!-- com.ort.qa.testcases.CreateCaseBasicDetailsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
