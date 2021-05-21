@@ -19,7 +19,7 @@ public class SelectFacilityPiyushTest extends TestBase
 		}
 		
 		@BeforeMethod
-		public void setUp() 
+		public void setUp() throws InterruptedException 
 		{
 			initialization();
 			loginPageTest = new LoginPageTest();

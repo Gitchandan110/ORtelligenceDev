@@ -5,8 +5,9 @@
  * 
  */
 
-/* Role wise elements comparison:
- * 
+/* Role wise elements xpaths comparison:
+ * Menu - Switch location (Nurse)(HCP=Surgeon)
+ * Dashboard - All options (Nurse)(HCP=Surgeon)
  * 
  * 
  * 
@@ -23,7 +24,7 @@ import com.ort.qa.base.TestBase;
 public class NurseDashboardPage extends TestBase
 {
 
- /*	Dashboard
+ /*	Dashboard Nurse ...........................................................................................
  * In Process
  */	
 	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[1]")
@@ -59,7 +60,7 @@ public class NurseDashboardPage extends TestBase
 	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[7]")
 	public WebElement dashboardORtelligence;   
 	
-/*	HCP
+/*	Dashboard HCP ................................................................................
  * Create Case HCP
  */
 	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[1]")
@@ -80,7 +81,7 @@ public class NurseDashboardPage extends TestBase
 	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[4]")
 	public WebElement dashboardORtelligenceHCP;  	
 	
- /*	Menu Bar 
+ /*	Menu Bar .................................................................................................
  * In Process 
  */	
 	@FindBy(xpath="(//a[text()='In-Process'])[1]")

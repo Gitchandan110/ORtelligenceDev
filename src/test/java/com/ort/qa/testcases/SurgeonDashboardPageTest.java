@@ -17,7 +17,7 @@ import com.ort.qa.pages.LoginPage;
 import com.ort.qa.pages.NurseDashboardPage;
 import com.ort.qa.pages.SelectFacilityPage;
 
-public class HCPDashboardPageTest extends TestBase
+public class SurgeonDashboardPageTest extends TestBase
 {
 //	Declaration
 //	LoginPage object - loginPage 
@@ -27,7 +27,7 @@ public class HCPDashboardPageTest extends TestBase
 //   SelectFacilityPage object - selectFacilityPage
 	SelectFacilityPage selectFacilityPage;
 	
-    public HCPDashboardPageTest() 
+    public SurgeonDashboardPageTest() 
     {
     	super();	
     }
@@ -42,7 +42,7 @@ public class HCPDashboardPageTest extends TestBase
  		loginPage = new LoginPage();
  		nurseDashboardPage = new NurseDashboardPage();
  		selectFacilityPage = new SelectFacilityPage();
- 		nurseDashboardPage=loginPage.login(prop.getProperty("usernameHCP"), prop.getProperty("passwordHCP"));  
+ 		nurseDashboardPage=loginPage.login(prop.getProperty("usernameSurgeon"), prop.getProperty("passwordSurgeon"));  
  		Thread.sleep(3000);
  		selectFacilityPage.clickOnDropDown();
  		Thread.sleep(1000);
@@ -56,7 +56,7 @@ public class HCPDashboardPageTest extends TestBase
  	public void verifyDashboardPageTitleTest()
  	{
  		String dashboardPageTitle =nurseDashboardPage.verifyDashboardPageTitle();
-		System.out.println("HCP Dashboard page title is -  "+dashboardPageTitle);  
+		System.out.println("Surgeon Dashboard page title is -  "+dashboardPageTitle);  
 	}
 
 // 	Verification of visibility of different options of Menu
@@ -202,4 +202,3 @@ public class HCPDashboardPageTest extends TestBase
  		driver.quit();
  	}
 }
- 	
