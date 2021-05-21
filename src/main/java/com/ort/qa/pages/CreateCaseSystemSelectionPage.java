@@ -14,19 +14,19 @@ public class CreateCaseSystemSelectionPage extends TestBase
  */ 
 	
 	@FindBy(xpath="(//input[@type='checkbox'])[1]")
-	WebElement checkboxSystem1;
+	public WebElement checkboxSystem1;
 	
  /*	Checkbox 2nd option
  */ 
 	
 	@FindBy(xpath="(//input[@type='checkbox'])[2]")
-	WebElement checkboxSystem2;
+	public WebElement checkboxSystem2;
 
  /*	Back button
  */
 	
 	@FindBy(xpath="//button[text()='Back']")
-	WebElement back;
+	public WebElement back;
 
  /*	Select button
  */
@@ -39,13 +39,13 @@ public class CreateCaseSystemSelectionPage extends TestBase
  */
 	
 	@FindBy(xpath="//a[text()='Click here']")
-	WebElement clickHere;
+	public WebElement clickHere;
 
  /*	Pop-up - Proceed to Cart button
  */
 	
 	@FindBy(xpath="//button[text()='Proceed to Cart']")
-	WebElement proceedToCart;
+	public WebElement proceedToCart;
 	
  /*	Pop-up - Select another Procedure button
  */
@@ -93,7 +93,7 @@ public class CreateCaseSystemSelectionPage extends TestBase
  /* If no system is found
  */
 
-	public void createCaseSystemSelectionNoSystem()
+	public void createCaseSystemSelectionSelectSystem()
 	{
 		
  /*	Click here link to open Confirmation pop-up
