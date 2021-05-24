@@ -1,6 +1,7 @@
 //Nurse Dashboard Page
 package com.ort.qa.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -10,6 +11,11 @@ import com.ort.qa.base.TestBase;
 
 public class NurseDashboardPage extends TestBase
 {
+	
+	public NurseDashboardPage(WebDriver driver) {
+		
+		PageFactory.initElements(driver, this);
+	}
 
  /*	Dashboard
  * In Process
@@ -107,40 +113,40 @@ public class NurseDashboardPage extends TestBase
 	
  /*	Profile
  */
-	
-	@FindBy(xpath="(//a[@class='menu-font'])[7]")
+//	//a[@class='menu-font'])[7]
+	@FindBy(xpath="(//a[text()='Profile'])[1]")
 	public WebElement menuProfile;   
 	
  /*Switch Location
  */
+//	Nurse
+	@FindBy(xpath="(//a[@class='menu-font'])[9]")
+	public WebElement menuNurseSwitchLocatoin; 
 	
-	@FindBy(xpath="(//a[@class='menu-font'])[8]")
-	public WebElement menuSwitchLocatoin;   
+//	HCP
+	@FindBy(xpath="(//a[@class='menu-font'])[6]")
+	public WebElement menuHCPSwitchLocatoin;
 	
  /*Logout
  */
 	
-	@FindBy(xpath="(//a[@class='menu-font'])[9]")
+	@FindBy(xpath="(//a[text()='Logout'])[1]")
 	public WebElement menuLogout;
 
  /*	Alerts 
  */
 	
-	@FindBy(xpath="((//a[text()='Alerts '])[1]")
+	@FindBy(xpath="(//a[text()='Alerts '])[1]")
 	public WebElement menuAlerts;
 	
  /*Initialization
  */
 	
-	public NurseDashboardPage()
-	{ 
-		
-		PageFactory.initElements(driver, this);
-	}
+
 		
  /*	Actions:
  */
-	
+
 	public void NurseDashboard()
 	{
 		dashboardInProcess.click();
@@ -173,12 +179,21 @@ public class NurseDashboardPage extends TestBase
 		
 	}
 	
-	
-	public  void clickOnMenuSwitchLocation() 
+//	Nurse switch location
+	public  void clickOnMenuNurseSwitchLocation() 
 	{
 		Actions action = new Actions(driver);
 		action.moveToElement(menuUserName).build().perform();
-		menuSwitchLocatoin.click();
+		menuNurseSwitchLocatoin.click();
+			
+	}
+	
+//	HCP switch location
+	public  void clickOnMenuHCPSwitchLocation() 
+	{
+		Actions action = new Actions(driver);
+		action.moveToElement(menuUserName).build().perform();
+		menuHCPSwitchLocatoin.click();
 			
 	}
 	

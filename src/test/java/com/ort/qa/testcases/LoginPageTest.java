@@ -35,7 +35,7 @@ public class LoginPageTest extends TestBase{
 		 loginPage = new LoginPage(driver);
 	}
 	
-	@Test(priority=1)
+/*	@Test(priority=1)
 	public void loginPageTiltleTest() {
 		String title=loginPage.validateLoginPageTitle();
 		Assert.assertEquals(title, "ortelligence");
@@ -50,9 +50,9 @@ public class LoginPageTest extends TestBase{
 	}
 	
 	   //this test case is for fetching the multiple username and password from the excel sheet 
-       //we will run this testcase later
+       //we will run this testcase later*/
  
-  	@Test(priority=3,enabled=false,dataProvider="NurseData",dataProviderClass=DataProviderExcel.class)
+  	@Test(priority=3,dataProvider="NurseData",dataProviderClass=DataProviderExcel.class)
   	public void LoginTest(String user,String password) {
   		
   		//LoginPage lpage=new LoginPage();
@@ -62,11 +62,11 @@ public class LoginPageTest extends TestBase{
    	}
    	 
   	
-	@Test(priority=4)
+/*	@Test(priority=4)
 	public  void  loginTest() {
 		selectFacilityPage = loginPage.login1(prop.getProperty("username"), prop.getProperty("password"));
 	
-	}
+	}*/
 
 	@AfterMethod
 	public void tearDown() {

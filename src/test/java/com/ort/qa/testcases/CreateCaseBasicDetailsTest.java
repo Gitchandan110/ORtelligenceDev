@@ -28,7 +28,7 @@ public class CreateCaseBasicDetailsTest
  * Priyanka Driver Location: 
  */
 		
-	System.setProperty("webdriver.chrome.driver","D:\\SELENIUM\\DRIVERS\\chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver","C:\\SeleniumDriver\\chromedriver.exe");
 	wd = new ChromeDriver();
 	wd.get("https://qa.ortelligence.com/#/");
 	wd.manage().window().maximize();
