@@ -253,4 +253,9 @@ public class NurseDashboardPage extends TestBase
 		return driver.getTitle();
 	}
 	
+	public void clickOncreateCase()
+ 	{
+ 		dashboardCreateCase.click();
+ 	}
+	
 }
