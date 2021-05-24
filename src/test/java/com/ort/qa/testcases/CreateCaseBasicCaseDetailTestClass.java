@@ -25,7 +25,7 @@ public class CreateCaseBasicCaseDetailTestClass extends TestBase {
 		}
 	
 	@BeforeMethod
-	public void setUp() {
+	public void setUp() throws InterruptedException {
 		initialization();
 
 		                  loginPage = new LoginPage(driver);
@@ -43,7 +43,7 @@ public class CreateCaseBasicCaseDetailTestClass extends TestBase {
 		selectFacilityPage.clickOnDropDown();
 		selectFacilityPage.clickConfirm();
 		Thread.sleep(5000);
-		nurseDashboardPage.clickOncreateCase();
+		//nurseDashboardPage.clickOncreateCase();
 		createCaseFindPatientPage.createCaseFindPatientData(lastName, firstName, mNR);
 	    createCaseFindPatientPage.clickSearchButton();
 	    Thread.sleep(5000);

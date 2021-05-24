@@ -1,24 +1,23 @@
 package com.ort.qa.testcases;
 
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.ort.qa.base.TestBase;
-import com.ort.qa.pages.CreateCaseFindPatientPage;
+import com.ort.qa.pages.CreateCaseSpecialtyPage;
 import com.ort.qa.pages.LoginPage;
 import com.ort.qa.pages.NurseDashboardPage;
 import com.ort.qa.pages.SelectFacilityPage;
 
-public class SelectFacilityPageTest extends TestBase
+public class CreateCaseSpecialtyTest extends TestBase 
 {
 
-     LoginPage loginPage;
+
+    LoginPage loginPage;
 	 SelectFacilityPage selectFacilityPage;
 	 NurseDashboardPage nurseDashboardPage;
-	 CreateCaseFindPatientPage createCaseFindPatientPage;
-		public SelectFacilityPageTest() 
+	 CreateCaseSpecialtyPage createCaseSpecialtyPage;
+		public CreateCaseSpecialtyTest() 
 		{  
 			super();	                           
 		}
@@ -29,20 +28,18 @@ public class SelectFacilityPageTest extends TestBase
 			           initialization();
 			         loginPage = new LoginPage(driver);
 	      selectFacilityPage = new SelectFacilityPage(driver);
-	    createCaseFindPatientPage = new CreateCaseFindPatientPage(driver);
 	      selectFacilityPage = loginPage.login1(prop.getProperty("username"), prop.getProperty("password"));
-	     
+	      createCaseSpecialtyPage =new CreateCaseSpecialtyPage();
 			
 		}
 		
-	
-		
-		@AfterMethod
-		public void tearDown() 
+		@Test(priority=1)
+		public void createCaseSpecialtyPage()
 		{
-			driver.quit();
+			
+			createCaseSpecialtyPage.clickOnDropDown();
+			createCaseSpecialtyPage.clickOnNext();
+			
+			
 		}
-		
-		
-		
 }

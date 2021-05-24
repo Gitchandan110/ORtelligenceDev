@@ -83,7 +83,7 @@ public class NurseForgotPasswordPage  extends TestBase {
 		enterNewPassword.sendKeys(enpwd);
 		verifyNewPassword.sendKeys(vn);
 		save.click();
-		return new NurseDashboardPage(driver);
+		return new NurseDashboardPage();
 	}
 
 	public NurseForgotPasswordPage resend() {

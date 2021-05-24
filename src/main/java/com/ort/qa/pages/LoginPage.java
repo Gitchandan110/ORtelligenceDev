@@ -130,20 +130,22 @@ public class LoginPage extends TestBase{
 
 	
 			
-	public SelectFacilityPage login1(String un, String pwd){
+	public SelectFacilityPage login1(String un, String pwd) throws InterruptedException{
 
 		username.sendKeys(un);
 		password.sendKeys(pwd);
+		Thread.sleep(2000);
 		signUpBtn.click();
 		return new SelectFacilityPage(driver); 
 	}
 	
-	public NurseDashboardPage login(String un, String pwd){
+	public NurseDashboardPage login(String un, String pwd) throws InterruptedException{
 
 		username.sendKeys(un);
 		password.sendKeys(pwd);
+		Thread.sleep(2000);
 		signUpBtn.click();
-		return new NurseDashboardPage(driver); 
+		return new NurseDashboardPage(); 
 	}
 	
 

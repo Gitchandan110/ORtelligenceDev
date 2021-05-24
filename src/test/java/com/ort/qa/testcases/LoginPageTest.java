@@ -52,8 +52,13 @@ public class LoginPageTest extends TestBase{
 	   //this test case is for fetching the multiple username and password from the excel sheet 
        //we will run this testcase later*/
  
+<<<<<<< HEAD
   	@Test(priority=3,dataProvider="NurseData",dataProviderClass=DataProviderExcel.class)
   	public void LoginTest(String user,String password) {
+=======
+  	@Test(priority=3,enabled=false,dataProvider="NurseData",dataProviderClass=DataProviderExcel.class)
+  	public void LoginTest(String user,String password) throws InterruptedException {
+>>>>>>> eee227a5ab975432e9a993da2b2ce072ce4cdb9e
   		
   		//LoginPage lpage=new LoginPage();
   		loginPage.login(user, password);
@@ -62,8 +67,13 @@ public class LoginPageTest extends TestBase{
    	}
    	 
   	
+<<<<<<< HEAD
 /*	@Test(priority=4)
 	public  void  loginTest() {
+=======
+	@Test(priority=4)
+	public  void  loginTest() throws InterruptedException {
+>>>>>>> eee227a5ab975432e9a993da2b2ce072ce4cdb9e
 		selectFacilityPage = loginPage.login1(prop.getProperty("username"), prop.getProperty("password"));
 	
 	}*/
