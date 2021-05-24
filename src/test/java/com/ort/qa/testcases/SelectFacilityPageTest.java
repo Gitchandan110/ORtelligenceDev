@@ -21,7 +21,7 @@ public class SelectFacilityPageTest extends TestBase
 		}
 		
 		@BeforeMethod
-		public void setUp() 
+		public void setUp() throws InterruptedException 
 		{
 			           initialization();
 			         loginPage = new LoginPage(driver);

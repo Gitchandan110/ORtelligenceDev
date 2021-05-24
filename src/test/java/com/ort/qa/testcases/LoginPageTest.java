@@ -53,7 +53,7 @@ public class LoginPageTest extends TestBase{
        //we will run this testcase later
  
   	@Test(priority=3,enabled=false,dataProvider="NurseData",dataProviderClass=DataProviderExcel.class)
-  	public void LoginTest(String user,String password) {
+  	public void LoginTest(String user,String password) throws InterruptedException {
   		
   		//LoginPage lpage=new LoginPage();
   		loginPage.login(user, password);
@@ -63,7 +63,7 @@ public class LoginPageTest extends TestBase{
    	 
   	
 	@Test(priority=4)
-	public  void  loginTest() {
+	public  void  loginTest() throws InterruptedException {
 		selectFacilityPage = loginPage.login1(prop.getProperty("username"), prop.getProperty("password"));
 	
 	}

@@ -25,12 +25,11 @@ public class CreateCaseSetSelectionTest extends TestBase
 		}
 		
 		@BeforeMethod
-		public void setUp() 
+		public void setUp() throws InterruptedException 
 		{
 			           initialization();
 			         loginPage = new LoginPage(driver);
 	      selectFacilityPage = new SelectFacilityPage(driver);
-	      selectFacilityPage = loginPage.login1(prop.getProperty("username"), prop.getProperty("password"));
 	      nurseDashboardPage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	      createCaseSpecialtyPage = new CreateCaseSpecialtyPage();
 	      createCaseSystemSelectionPage = new CreateCaseSystemSelectionPage();
