@@ -5,6 +5,7 @@
  */
 package com.ort.qa.testcases;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -20,6 +21,7 @@ import com.ort.qa.pages.SelectFacilityPage;
 public class HCPDashboardPageTest extends TestBase
 {
 //	Declaration
+	WebDriver driver;
 //	LoginPage object - loginPage 
 	LoginPage loginPage;
 //	NurseDashboardPage object - nurseDashboardPage
@@ -39,9 +41,9 @@ public class HCPDashboardPageTest extends TestBase
  	public void setUp() throws InterruptedException 
     {
  		initialization();
- 		loginPage = new LoginPage();
+ 		loginPage = new LoginPage(driver);
  		nurseDashboardPage = new NurseDashboardPage();
- 		selectFacilityPage = new SelectFacilityPage();
+ 		selectFacilityPage = new SelectFacilityPage(driver);
  		nurseDashboardPage=loginPage.login(prop.getProperty("usernameHCP"), prop.getProperty("passwordHCP"));  
  		Thread.sleep(3000);
  		selectFacilityPage.clickOnDropDown();

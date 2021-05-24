@@ -1,4 +1,5 @@
 package com.ort.qa.pages;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -11,7 +12,7 @@ public class LoginPage extends TestBase{
  /* we have to use Page Factory-Object Repository
  * Here we will segregate all XPath using @FindBy annotation
  */
-	
+	WebDriver driver;
 	@FindBy(name="username")
 	WebElement username;
 
@@ -46,8 +47,10 @@ public class LoginPage extends TestBase{
  * creating loginpage constructor
  */
 	
-	public LoginPage()
+	public LoginPage(WebDriver dr)
+	
 	{
+		driver=dr;
 		
 
  /* PageFactory is a class and InitElements is method 
@@ -79,7 +82,7 @@ public class LoginPage extends TestBase{
 		password.sendKeys(pwd);
 		Thread.sleep(2000);
 		signUpBtn.click();
-		return new SelectFacilityPage(); 
+		return new SelectFacilityPage(driver); 
 	}
 	
 	public NurseDashboardPage login(String un, String pwd) throws InterruptedException{

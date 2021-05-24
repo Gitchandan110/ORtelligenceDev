@@ -12,8 +12,8 @@ public class CreateCaseProcedureSelectionPage extends TestBase
  /*	Select 1st Option
  */
 	
-	@FindBy(xpath="(//button[text()='Select'])[1]")
-	WebElement selectProcedure1;
+ /* @FindBy(xpath="(//button[text()='Select'])[1]")
+*/	WebElement selectProcedure1;
 	
  /*	Select 2nd Option
  */
@@ -36,21 +36,22 @@ public class CreateCaseProcedureSelectionPage extends TestBase
  *	Select 1st Procedure
  */
 	
-	public CreateCaseProcedureSelectionPage() 
+ 	public CreateCaseProcedureSelectionPage() 
 	{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void createCaseProcedureSelectionOption1() 
-	{
-		selectProcedure1.click();
+ /*	public void createCaseProcedureSelectionOption1() 
+ *	{
+ *	selectProcedure1.click();
 				
-	}
-
- /*	Select 2nd Procedure
+ *	}
+ */
+ 	
+ 	 /*	Select 2nd Procedure
  */
 	
-	public void createCaseProcedureSelectionOption2() 
+	public void  createCaseProcedureSelectionPage() 
 	{
 		selectProcedure2.click();
 				
@@ -63,6 +64,11 @@ public class CreateCaseProcedureSelectionPage extends TestBase
 	{
 		back.click();
 				
+	}
+
+	public static void click() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

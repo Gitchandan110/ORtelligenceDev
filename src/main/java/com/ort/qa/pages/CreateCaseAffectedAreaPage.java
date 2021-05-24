@@ -8,128 +8,484 @@ import com.ort.qa.base.TestBase;
 
 public class CreateCaseAffectedAreaPage extends TestBase
 {
-////	We have to use Page Factory-Object Repository
-////	Here we will segregate all locators using @FindBy annotation
-////	Speciality = Trauma .................................................................................
-////	Clavicle
-//    @FindBy(xpath="//div[@id='selectedBodyPartNameDivId']")
-//	WebElement clavicle;
-//	
-////	Proximal Humerus
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Humerus
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Distal Humerus
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Proximal Forearm
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Forearm
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Wrist
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Pelvis/Acetabulum
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Hip
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Femur
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Distal Femur
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Patella
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Proximal Tibia
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Tibia
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Distal Tibia 
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Ankle
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Foot
-//	@FindBy(xpath="")
-//	WebElement ;
-//
-////	Speciality =  Arthroplasty .................................................................................
-//	
-////	Shoulder
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Elbow
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Hand
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Hip
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Knee
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Ankle
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-//	
-//	
-////	Speciality = Spine .................................................................................
-////	Cervical
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Thoracic
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Lumbar
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Occiput
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Sacrum
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-//
-//	
+
+ /*	x path for Speciality = Trauma.
+ * x path for Hip
+ */
+	
+   @FindBy(xpath="//area[@id='trauma22']")
+   public WebElement hip;
+   
+ /* x path for Femur.
+ */
+
+   @FindBy(xpath="//area[@id='trauma24']")
+   WebElement femur;
+	
+	   
+ /* x path for Distal Femur.
+  * both line have same xpath (22 and24)
+ */
+	
+	@FindBy(xpath="//area[@id='trauma24']")
+	WebElement distalFemur ;
+	
+ /*for Trauma area x path for Patella.
+ */
+
+   @FindBy(xpath="//area[@id='trauma28']")
+   public WebElement patella;
+	   
+	
+ /* x path for Proximal Tibia
+ */
+	
+	@FindBy(xpath="//area[@id='trauma30']")
+	WebElement proximalTibia;
+	
+ /* x path for Tibia
+ */
+	
+	@FindBy(xpath="//area[@id='trauma32']")
+	WebElement tibia ;
+	
+ /* x path for Distal Tibia 
+ */
+	 
+	@FindBy(xpath="//area[@id='trauma34']")
+	WebElement distalTibia ;
+	
+ /* x path for Ankle 
+ */
+
+	@FindBy(xpath="//area[@id='trauma36']")
+	WebElement ankle;
+	
+ /* x path for Foot 
+ */
+
+	@FindBy(xpath="//area[@id='trauma38']")
+	WebElement foot ;
+	
+ /*	x path for HipLeft.
+ */
+		
+	@FindBy(xpath="//area[@id='trauma21']")
+	public WebElement hipLeft;
+	   
+ /*	x path for FemurLeft.
+ */
+		
+	@FindBy(xpath="//area[@id='trauma23']")
+	WebElement femurLeft ;
+		
+ /* x path for PatellaLeft.
+ */
+
+   @FindBy(xpath="//area[@id='trauma27']")
+   public WebElement patellaLeft;
+   
+ /* x path for ProximalTibiaLeft.
+ */
+	
+   @FindBy(xpath="//area[@id='trauma29']")
+   public WebElement proximalTibiaLeft;
+	   
+ /* x path for TibiaLeft
+ */
+   	
+   @FindBy(xpath="//area[@id='trauma31']")
+   WebElement tibiaLeft ;
+   	
+ /* x path for DistalTibiaLeft 
+ */
+   		 
+   @FindBy(xpath="//area[@id='trauma33']")
+   WebElement distalTibiaLeft ;
+   		
+ /* x path for AnkleLeft 
+ */
+
+   @FindBy(xpath="//area[@id='trauma35']")
+   WebElement ankleLeft;
+   		
+	
+ /* x path for FootLEFT 
+ */
+
+	@FindBy(xpath="//area[@id='trauma37']")
+	WebElement footLeft ;
+	
+ /* x path for Right hand
+ * Proximal Humerus 
+ */
+
+	@FindBy(xpath="//area[@id='trauma4']")
+	WebElement proximalHumerus ;
+	
+ /* x path for HumerusRight
+ */
+
+	@FindBy(xpath="//area[@id='trauma6']")
+	WebElement humerusRight ;	
+	
+ /* x path for Distal HumerusRight.
+ */
+		
+	@FindBy(xpath="//area[@id='trauma8']")
+	WebElement distalHumerusRight ;	
+	
+ /* x path for ProximalForeramRight.
+ */
+			
+   @FindBy(xpath="//area[@id='trauma10']")
+   WebElement proximalForeramRight ;	
+		
+ /* x path for ForeramRight.
+ */
+   			
+   @FindBy(xpath="//area[@id='trauma12']")
+   WebElement foreramRight ;	
+    
+ /* x path for WristRight.
+ */
+       			
+   @FindBy(xpath="//area[@id='trauma14']")
+   WebElement wristRight ;	   		
+	
+ /* x path for Left Hand
+ * Proximal Humerus 
+ */  
+    
+   @FindBy(xpath="//area[@id='trauma3']")
+   WebElement proximalHumerusLeft ;  
+    
+ /* x path for HumerusLeft
+ */
+
+   @FindBy(xpath="//area[@id='trauma5']")
+   WebElement humerusLeft ;
+   
+ /* x path for Distal Humerusleft.
+ */
+   		
+   @FindBy(xpath="//area[@id='trauma7']")
+   WebElement distalHumerusLeft ;	
+   
+ /* x path for ProximalForeramLeft.
+ */
+   			
+   @FindBy(xpath="//area[@id='trauma9']")
+   WebElement proximalForeramLeft ;
+   
+ /* x path for ForeramLeft.
+ */
+      			
+   @FindBy(xpath="//area[@id='trauma11']")
+   WebElement foreramLeft ;	
+          
+  /* x path for WristLeft.
+  */
+          			
+   @FindBy(xpath="//area[@id='trauma13']")
+   WebElement wristLeft ;	
+   
+   
+/* x path for Pelvis/AcetabulumRight
+*/
+    			
+   @FindBy(xpath="//area[@id='trauma18']")
+   WebElement pelvisAcetabulumRight;	
+
+ /* x path for Pelvis/AcetabulumLeft
+ */
+       			
+   @FindBy(xpath="//area[@id='trauma17']")
+   WebElement pelvisAcetabulumLeft;	
+  
+  /*	x path for Speciality =  Arthroplasty...........................................................................
+  * x path for HipRight
+  */
+   
+   @FindBy(xpath="//area[@id='arthroplasty7']")
+   public WebElement hipRight;
+   
+   /* x path for Knee
+   */
+   
+   @FindBy(xpath="//area[@id='arthroplasty9']")
+   public WebElement knee;
+   
+   /* x path for Ankle
+   */
+   
+   @FindBy(xpath="//area[@id='arthroplasty11']")
+   public WebElement ankleRight;
+  	 
+   /* x path for KneeLeft
+   */
+   
+   @FindBy(xpath="//area[@id='arthroplasty8']")
+   public WebElement kneeLeft;
+   
+   /* x path for AnkleLeft
+   */
+   
+   @FindBy(xpath="//area[@id='arthroplasty10']")
+   public WebElement ankleLeftAr;
+   
+   /* x path for Right hand
+   * Shoulder
+   */
+   
+   @FindBy(xpath="//area[@id='arthroplasty1']")
+   public WebElement shoulder;
+   
+   /* x path for Elbow
+   */
+  	 
+   @FindBy(xpath="//area[@id='arthroplasty3']")
+   public WebElement elbow;
+   
+   /* x path for  Hand
+   */
+   
+   @FindBy(xpath="//area[@id='arthroplasty5']")
+   public WebElement hand;
+   
+   /* x path for Left hand
+   * Shoulder
+   */
+   
+   @FindBy(xpath="//area[@id='arthroplasty']")
+   public WebElement shoulderLeft;
+   
+   /* x path for ElbowLeft
+   */
+  	 
+   @FindBy(xpath="//area[@id='arthroplasty2']")
+   public WebElement elbowLeft;
+   
+   /* x path for Left Hand
+   */
+   
+   @FindBy(xpath="//area[@id='arthroplasty5']")
+   public WebElement leftHand;
+   
+   /*	x path for Speciality =  Spine...........................................................................
+   * x path for Occiput
+   */
+   
+   @FindBy(xpath="//area[@id='spine8']")
+   public WebElement occiput;
+   
+   /* x path for Cervical
+   */
+   
+   @FindBy(xpath="//area[@id='spine2']")
+   public WebElement cervical;
+   
+
+   /* x path for Thoracic
+   */
+   
+   @FindBy(xpath="//area[@id='spine4']")
+   public WebElement thoracic;
+   
+   /* x path forLumbar
+   */
+   @FindBy(xpath="//area[@id='spine6']")
+   public WebElement lumbar;
+   
+   /* x path for Sacrum
+   */
+   @FindBy(xpath="//area[@id='spine10']")
+   public WebElement sacrum;
+    
+   /* x path for OcciputLeft
+   */
+    
+   @FindBy(xpath="//area[@id='spine7']")
+   public WebElement occiputLeft;
+    
+   /* x path for CervicalLeft
+   */
+    
+   @FindBy(xpath="//area[@id='spine1']")
+   public WebElement cervicalLeft;
+    
+
+   /* x path for Thoracicleft
+   */
+    
+   @FindBy(xpath="//area[@id='spine3']")
+   public WebElement thoracicleft;
+    
+   /* x path forLumbarLeft
+   */
+    
+   @FindBy(xpath="//area[@id='spine5']")
+   public WebElement lumbarLeft;
+     
+   /* x path for SacrumLeft
+   */
+     
+   @FindBy(xpath="//area[@id='spine9']")
+    public WebElement sacrumleft;
+   
+   /*	x path for Speciality = Sports .................................................................................
+    * x path for Shoulder
+    */
+   
+   @FindBy(xpath="//area[@id='sports2']")
+   public WebElement shoulderSp;
+   
+   /* x path for Humerus
+    */
+   
+   @FindBy(xpath="//area[@id='sports4']")
+   public WebElement humerusSp;
+   
+   /* x path for Elbow
+    */
+   
+   @FindBy(xpath="//area[@id='sports6']")
+   public WebElement elbowSp;
+   
+   /* x path for Forearm
+    */
+   
+   @FindBy(xpath="//area[@id='sports8']")
+   public WebElement forearmSp;
+   
+   
+   /* x path for ShoulderLeft
+    */
+   
+   @FindBy(xpath="//area[@id='sports1']")
+   public WebElement shoulderSpLeft;
+   
+   /* x path for Humerus
+    */
+   
+   @FindBy(xpath="//area[@id='sports3']")
+   public WebElement humerusSpLeft;
+   
+   /* x path for ElbowLeft
+    */
+   
+   @FindBy(xpath="//area[@id='sports5']")
+   public WebElement elbowSpLeft;
+   
+   /* x path for ForearmLeft
+    */
+   
+   @FindBy(xpath="//area[@id='sports7']")
+   public WebElement forearmSpLeft;
+   
+   /* x path for Hip
+    */
+   
+   @FindBy(xpath="//area[@id='sports14']")
+   public WebElement hipSp;
+   
+   /* x path for Femur
+    */
+   
+   @FindBy(xpath="//area[@id='sports16']")
+   public WebElement femurSp;
+   
+   /* x path for Knee
+    */
+   
+   @FindBy(xpath="//area[@id='sports18']")
+   public WebElement kneeSp;
+   
+   /* x path for Tibia
+    */
+   
+   @FindBy(xpath="//area[@id='sports20']")
+   public WebElement tibiaSp;
+   
+   /* x path for Ankle
+    */
+   
+   @FindBy(xpath="//area[@id='sports22']")
+   public WebElement ankleSp;
+   
+   /* x path for Foot
+    */
+   
+   @FindBy(xpath="//area[@id='sports24']")
+   public WebElement footSp;
+   
+   /* x path for HipLeft
+    */
+   
+   @FindBy(xpath="//area[@id='sports13']")
+   public WebElement hipSpLeft;
+   
+   /* x path for FemurLeft
+    */
+   
+   @FindBy(xpath="//area[@id='sports15']")
+   public WebElement femurSpLeft;
+   
+   /* x path for KneeLeft
+    */
+   
+   @FindBy(xpath="//area[@id='sports17']")
+   public WebElement kneeSpLeft;
+   
+   /* x path for Tibia
+    */
+   
+   @FindBy(xpath="//area[@id='sports19']")
+   public WebElement tibiaSpLeft;
+   
+   
+   /* x path for AnkleLeft
+    */
+   
+   @FindBy(xpath="//area[@id='sports21']")
+   public WebElement ankleSpLeft;
+   
+   /* x path for Foot
+    */
+   
+   @FindBy(xpath="//area[@id='sports23']")
+   public WebElement footSpLeft;
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+      
+    
+   
+   
+   
+   
+   
+   
+
 ////	Speciality = Sports .................................................................................
 ////	Shoulder
 //	@FindBy(xpath="")
@@ -183,7 +539,112 @@ public class CreateCaseAffectedAreaPage extends TestBase
 	
 	
 	public CreateCaseAffectedAreaPage() 
+	
 	{
 		PageFactory.initElements(driver, this);
+		
+	}
+	
+	public void AffectedAreaTrauma()
+	
+	{
+		 hip.click();
+		 femur.click();
+		 distalFemur.click();
+		 patella.click();
+		 proximalTibia.click();
+		 tibia.click();
+		 distalTibia.click();
+		 ankle.click();
+		 foot.click(); 
+		 hipLeft.click();
+		 femurLeft.click();
+		 patellaLeft.click();
+		 proximalTibiaLeft.click();
+		 tibiaLeft.click();
+		 distalTibiaLeft .click();
+		 ankleLeft.click();
+		 footLeft.click();
+		 proximalHumerus.click();
+		 humerusRight.click();
+		 distalHumerusRight.click();
+		 proximalForeramRight.click();
+		 foreramRight.click();
+		 wristRight.click();
+		 proximalHumerusLeft.click();
+		 humerusLeft.click();
+		 distalHumerusLeft.click();
+		 proximalForeramLeft.click();
+		 foreramLeft.click();
+		 wristLeft.click();
+		 pelvisAcetabulumRight.click();
+		 pelvisAcetabulumLeft.click();
+	}
+	
+	public void AffectedAreaArthroplasty()
+	
+	{
+		hipRight.click();
+		knee.click();
+		ankleRight.click();
+		kneeLeft.click();
+		ankleLeftAr.click();
+		shoulder.click();
+		elbow.click();
+		hand.click();
+		shoulderLeft.click();
+		elbowLeft.click();
+		leftHand.click();
+		
+	}
+	
+    public void AffectedAreaSpine()
+	
+	{
+    	
+    	occiput.click();
+    	cervical.click();
+    	thoracic.click();
+    	lumbar.click();
+    	sacrum.click();
+    	occiputLeft.click();
+    	cervicalLeft.click();
+    	thoracicleft.click();
+    	lumbarLeft.click();
+    	sacrumleft.click();
+	}
+    
+  public void AffectedAreaSports()
+	
+	{
+	  shoulderSp.click();
+	  humerusSp.click();
+	  elbowSp.click();
+	  forearmSp.click();
+	  shoulderSpLeft.click();
+	  humerusSpLeft.click();
+	  elbowSpLeft.click();
+	  forearmSpLeft.click();
+	  hipSp.click();
+	  femurSp.click();
+	  kneeSp.click();
+	  tibiaSp.click();
+	  ankleSp.click();
+	  footSp.click();
+	  hipSpLeft.click();
+	  femurSpLeft.clear();
+	  kneeSpLeft.click();
+	  tibiaSpLeft.click();
+	  ankleSpLeft.click();
+	  footSpLeft.click();
+	}
+	
+	public void Clickonheap()
+	{
+		hip.click();
+		
+		
+		
+		
 	}
 }

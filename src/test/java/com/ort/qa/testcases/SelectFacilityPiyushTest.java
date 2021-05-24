@@ -23,7 +23,7 @@ public class SelectFacilityPiyushTest extends TestBase
 		{
 			initialization();
 			loginPageTest = new LoginPageTest();
-			selectFacilityPage = new SelectFacilityPage();
+			selectFacilityPage = new SelectFacilityPage(driver);
 			loginPageTest.loginTest();
 					 
 		}

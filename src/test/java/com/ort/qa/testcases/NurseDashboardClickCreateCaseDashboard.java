@@ -5,6 +5,7 @@
  */
 package com.ort.qa.testcases;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -36,9 +37,9 @@ public class NurseDashboardClickCreateCaseDashboard extends TestBase
   	public void setUp() throws InterruptedException 
     {
    		initialization();
-   		loginPage = new LoginPage();
+   		loginPage = new LoginPage(driver);
    		nurseDashboardPage = new NurseDashboardPage();
-   		selectFacilityPage = new SelectFacilityPage();
+   		selectFacilityPage = new SelectFacilityPage(driver);
    		nurseDashboardPage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));  
    		Thread.sleep(1000);
    		selectFacilityPage.clickOnDropDown();

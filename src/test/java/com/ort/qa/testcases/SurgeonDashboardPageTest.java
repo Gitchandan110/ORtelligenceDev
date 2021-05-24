@@ -39,9 +39,9 @@ public class SurgeonDashboardPageTest extends TestBase
  	public void setUp() throws InterruptedException 
     {
  		initialization();
- 		loginPage = new LoginPage();
+ 		loginPage = new LoginPage(driver);
  		nurseDashboardPage = new NurseDashboardPage();
- 		selectFacilityPage = new SelectFacilityPage();
+ 		selectFacilityPage = new SelectFacilityPage(driver);
  		nurseDashboardPage=loginPage.login(prop.getProperty("usernameSurgeon"), prop.getProperty("passwordSurgeon"));  
  		Thread.sleep(3000);
  		selectFacilityPage.clickOnDropDown();
