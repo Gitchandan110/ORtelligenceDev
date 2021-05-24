@@ -21,7 +21,6 @@ import com.ort.qa.pages.SelectFacilityPage;
 public class HCPDashboardPageTest extends TestBase
 {
 //	Declaration
-	WebDriver driver;
 //	LoginPage object - loginPage 
 	LoginPage loginPage;
 //	NurseDashboardPage object - nurseDashboardPage

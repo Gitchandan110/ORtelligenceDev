@@ -1,3 +1,11 @@
+/* Modified by Piyush Sadawarti on 24/05/2021
+ * 
+ * 
+ * 
+ * 
+ * 
+ * */
+
 package com.ort.qa.util;
 
 import java.io.File;
@@ -24,11 +32,6 @@ public class ExcelUtility extends TestBase
 	public static String  TESTDATA_SHEET_PATH="E:\\BitBucket\\ortelligence-automation-qa\\src\\test\\resources\\Driver\\ort excel.xls";
 	static Workbook book;
 	static Sheet sheet;
-
-
-	
-
-//	
 
 	public static Object[][] getTestData(String sheetName) {
 		FileInputStream file = null;
@@ -60,8 +63,21 @@ public class ExcelUtility extends TestBase
 		}
 		return data;
 	}
+	
+//	Data provider added by Piyush Sadawarti on 24/05/2021:
+	public void dataProvider(String sheetPath, String sheetName, int row, int cell) throws IOException
+	{
+		File source = new File(sheetPath); 
+		FileInputStream fis = new FileInputStream(source);
+		XSSFWorkbook wb = new XSSFWorkbook(fis);
+		XSSFSheet sheet = wb.getSheet(sheetName);
+		String data = sheet.getRow(row).getCell(cell).getStringCellValue();
+		return;
+	}
+	
 
-	}	
+
+}	
 
 	
 	
