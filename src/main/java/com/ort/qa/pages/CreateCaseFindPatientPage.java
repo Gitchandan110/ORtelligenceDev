@@ -86,9 +86,7 @@ public class CreateCaseFindPatientPage extends TestBase
 		
 	}
 	
-	
-	
-	
+
 	public void clickSearchButton() {
 		search.click();
 	}

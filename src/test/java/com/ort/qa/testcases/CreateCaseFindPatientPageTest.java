@@ -34,7 +34,7 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 		  createCaseFindPatientPage = new CreateCaseFindPatientPage(driver);  
 		  createCaseBasicDetailsPage = new CreateCaseBasicDetailsPage(driver);
 		         selectFacilityPage = loginPage.login1(prop.getProperty("username"), prop.getProperty("password"));
-		         nurseDashboardPage=new NurseDashboardPage(driver);
+		         nurseDashboardPage=new NurseDashboardPage();
 		
 	}
 	

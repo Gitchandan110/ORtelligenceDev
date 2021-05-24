@@ -11,6 +11,9 @@ import com.ort.qa.pages.LoginPage;
 import com.ort.qa.pages.NurseDashboardPage;
 import com.ort.qa.pages.SelectFacilityPage;
 
+ /*	Here in that page i have initialize the following pages: 
+ * Login ,Select facility. NurseDashboard, CreatecaseAffectedarea, createcaseSpecialityPage,createCaseSystemSelection,createCaseSetSelection
+ */
 public class CreateCaseSetSelectionTest extends TestBase 
 { 
 	 LoginPage loginPage;
@@ -36,10 +39,14 @@ public class CreateCaseSetSelectionTest extends TestBase
 	      createCaseSetSelectionPage = new  CreateCaseSetSelectionPage();
 	      
 		}
+		
+ /*	Here we perform the SetSelectionProcess click operation on checkboxSystem1
+ */
+		
 		@Test(priority=1)
 		public void  createCaseSetSelectionProcess() throws InterruptedException 
 		{
-			
+			Thread.sleep(2000);
 			createCaseSystemSelectionPage.checkboxSystem1.click();
 			Thread.sleep(2000);
 			System.out.println("click1");

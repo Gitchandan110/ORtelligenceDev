@@ -43,11 +43,7 @@ public class TestBase {
 			e.printStackTrace();
 		}
 	}   
-<<<<<<< HEAD
-	   //@BeforeMethod
-=======
-//	@BeforeMethod
->>>>>>> eee227a5ab975432e9a993da2b2ce072ce4cdb9e
+	
 	public static void initialization()
 	{
 		

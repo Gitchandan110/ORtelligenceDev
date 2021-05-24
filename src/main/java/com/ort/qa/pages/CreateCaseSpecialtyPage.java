@@ -1,5 +1,6 @@
 package com.ort.qa.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -11,6 +12,7 @@ public class CreateCaseSpecialtyPage extends TestBase
 {
  /* Select Facility Dropdown*
 	 */
+	WebDriver driver;  
 	
 	@FindBy(xpath="//select[@class='form-control ng-pristine ng-invalid ng-touched']")
 	WebElement selectSpecialty;
