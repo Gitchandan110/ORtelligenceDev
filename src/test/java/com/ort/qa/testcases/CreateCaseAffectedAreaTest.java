@@ -23,6 +23,7 @@ public class CreateCaseAffectedAreaTest  extends TestBase
 	LoginPage loginPage;
 	 SelectFacilityPage selectFacilityPage;
 	 NurseDashboardPage nurseDashboardPage;
+	 CreateCaseFindPatientPage  createCaseFindPatientPage;
 	 CreateCaseAffectedAreaPage  createCaseAffectedAreaPage;
 	 CreateCaseSpecialtyPage createCaseSpecialtyPage;
 	 CreateCaseSystemSelectionPage createCaseSystemSelectionPage;
@@ -33,13 +34,16 @@ public class CreateCaseAffectedAreaTest  extends TestBase
 		}
 		
 		@BeforeMethod
-		public void setUp() 
+		public void setUp() throws InterruptedException 
 		{
 			           initialization();
+
 			           loginPage = new LoginPage(driver);
 				         selectFacilityPage = new SelectFacilityPage(driver);
+
+
 	      nurseDashboardPage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-	      createCaseFindPatientPage = new CreateCaseFindPatientPage(); 
+	      createCaseFindPatientPage = new CreateCaseFindPatientPage(driver); 
 	      createCaseAffectedAreaPage = new CreateCaseAffectedAreaPage();
 	      createCaseSpecialtyPage = new CreateCaseSpecialtyPage();
 	      createCaseSystemSelectionPage = new CreateCaseSystemSelectionPage();

@@ -27,11 +27,12 @@ public class CreateCaseProcedureSelectionPageTest extends TestBase
 		}
 		
 		@BeforeMethod
-		public void setUp() 
+		public void setUp() throws InterruptedException 
 		{
 			           initialization();
 			         loginPage = new LoginPage(driver);
 	      selectFacilityPage = new SelectFacilityPage(driver);
+
 	    nurseDashboardPage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	      createCaseSpecialtyPage =new CreateCaseSpecialtyPage();
 	      createCaseProcedureSelectionPage =new com.ort.qa.pages.CreateCaseProcedureSelectionPage();

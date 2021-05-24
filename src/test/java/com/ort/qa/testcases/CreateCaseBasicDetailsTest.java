@@ -25,10 +25,10 @@ public class CreateCaseBasicDetailsTest
 	public void Setup() {
 	
  /*	Piyush Driver Location: D:\\SELENIUM\\DRIVERS\\chromedriver.exe
- * Priyanka Driver Location: 
+ *  Priyanka Driver Location: 
  */
 		
-	System.setProperty("webdriver.chrome.driver","D:\\SELENIUM\\DRIVERS\\chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver","C:\\SeleniumDriver\\chromedriver.exe");
 	wd = new ChromeDriver();
 	wd.get("https://qa.ortelligence.com/#/");
 	wd.manage().window().maximize();
@@ -124,31 +124,33 @@ public class CreateCaseBasicDetailsTest
 		wd.findElement(By.xpath("//select[@id='specialtyId']")).sendKeys(" Trauma");
 		Thread.sleep(3000);
 		
-		/*	Procedure IM Nail Hip / InterTroch / CMN Hip (27245)
-		 */
-		wd.findElement(By.xpath("//input[@id='selectProcedure']")).sendKeys("27244");
-		wd.findElement(By.xpath("//button[@id='ngb-typeahead-0-0']")).click();
-		Thread.sleep(3000);
+//		/*	Procedure IM Nail Hip / InterTroch / CMN Hip (27245)
+//		 */
+//		wd.findElement(By.xpath("//input[@id='selectProcedure']")).sendKeys("27244");
+//		wd.findElement(By.xpath("//button[@id='ngb-typeahead-0-0']")).click();
+//		Thread.sleep(3000);
 		
 		/* Next button
 		 */
 		wd.findElement(By.xpath("//button[text()='Next']")).click();
 		Thread.sleep(3000);
 		
-		/*Opens System selection page with no System
-		 * Click here button
-		 */
-
-		wd.findElement(By.xpath("//a[text()='Click here']")).click();
 		Thread.sleep(3000);
-		/*	Pop-up opens
-		 * Switch to pop-up
-		 * Alert alert = wd.switchTo().alert();
-		 * Thread.sleep(3000);
-		 */
-
-;
-		wd.findElement(By.xpath("//button[text()='Proceed to Cart']")).click();
+		wd.findElement(By.xpath("//area[@id='trauma22']")).click();
+//		/*Opens System selection page with no System
+//		 * Click here button
+//		 */
+//
+//		wd.findElement(By.xpath("//a[text()='Click here']")).click();
+//		Thread.sleep(3000);
+//		/*	Pop-up opens
+//		 * Switch to pop-up
+//		 * Alert alert = wd.switchTo().alert();
+//		 * Thread.sleep(3000);
+//		 */
+//
+//
+//		wd.findElement(By.xpath("//button[text()='Proceed to Cart']")).click();
 	
 	
 	

@@ -34,6 +34,12 @@ public class CreateCaseSetSelectionPage extends TestBase
 	@FindBy(xpath="(//input[@class='form-control textbox-width-height ng-pristine ng-valid ng-touched'])[2]")
 	WebElement holdQuantity ;
 	
+	/* Records display quantity dropdown
+	*/
+
+	@FindBy(xpath="//select[@class='custom-select']")
+	WebElement records;
+	
  /* Search Set text
  */
 	
