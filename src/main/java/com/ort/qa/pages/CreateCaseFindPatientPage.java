@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.ort.qa.base.TestBase;
+import com.ort.qa.util.DropDownHandler;
 
 public class CreateCaseFindPatientPage extends TestBase
 {
@@ -56,6 +57,7 @@ public class CreateCaseFindPatientPage extends TestBase
 	@FindBy(xpath="//button[@name='Select']")
 	WebElement selectPatient;
 	
+	
 
  /*Initialization	
  */
@@ -72,26 +74,31 @@ public class CreateCaseFindPatientPage extends TestBase
 	
  /*Actions : 
  */
+
 	
-	public void createCaseFindPatientData(String lastName, String firstName, String dOB, String mNR) 
+	public void createCaseFindPatientData(String lastName, String firstName, String mNR) 
 	{
 						
 		patientLastName.sendKeys(lastName);
 		patientFirstName.sendKeys(firstName);
-		patientDOB.sendKeys(dOB);
 		patientMRN.sendKeys(mNR);
 		search.click();
 		
 	}
 	
- /*	Select Patient
- */
 	
-	public void createCaseSelectPatient()
+	
+	
+	public void clickSearchButton() {
+		search.click();
+	}
+	
+	
+	public void createCaseSelectPatientButton()
 	{
 		selectPatient.click();
 			
 	}
-		
-
+	
+	
 }

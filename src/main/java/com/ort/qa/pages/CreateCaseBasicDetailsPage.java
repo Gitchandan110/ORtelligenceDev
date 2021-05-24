@@ -1,10 +1,12 @@
 package com.ort.qa.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.ort.qa.base.TestBase;
+import com.ort.qa.util.DropDownHandler;
 
 public class CreateCaseBasicDetailsPage extends TestBase
 {
@@ -13,7 +15,7 @@ public class CreateCaseBasicDetailsPage extends TestBase
  *	Here we will segregate all locators using @FindBy annotation
  *	Surgeon* Dropdown
  */
-
+	WebDriver driver;
 	@FindBy(xpath="//select[@id='surgeon']")
 	WebElement surgeon;
 
@@ -133,13 +135,17 @@ public class CreateCaseBasicDetailsPage extends TestBase
 	/*	 Next Button
 	*/
 	@FindBy(xpath="//button[text()='Next']")
-	WebElement next;		
+	WebElement next;	
+	
+	@FindBy(xpath="//button[text()=' Please select Surgeon ']")
+	WebElement errorMsg;
 
 
 	/*	Actions :
 	*/
-	public CreateCaseBasicDetailsPage() 
+	public CreateCaseBasicDetailsPage(WebDriver dr) 
 	{
+		driver=dr;
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -174,7 +180,39 @@ public class CreateCaseBasicDetailsPage extends TestBase
 		next.click();
 
 	}
+	
+	public void clickOnPatientDropDown() {
+		DropDownHandler dp =new DropDownHandler(driver);
+        dp.SelectUsingVisibleText(surgeon,"Christiana Surgeon");
+	}
+	
+	public boolean checkErrorMessage() {
 
+		if (errorMsg.getText().equals(" Please select Surgeon ")) {
+			System.out.println(" Please select Surgeon ");
+			return true;
+		} else {
 
+			System.out.println("Error msg should be displayed as--' Please select Surgeon '");
+			return false;
+		}
+	}
 
+	
+	public void clickOnPatientLatexAllergyDropDown() {
+		DropDownHandler dp =new DropDownHandler(driver);
+        dp.SelectUsingVisibleText(patientAllergy,"No");
+	}
+	
+	public void clickOnPatientUrgencyDropDown() {
+		DropDownHandler dp =new DropDownHandler(driver);
+        dp.SelectUsingVisibleText(urgency," Critical (Up to 1hr.)");
+	}
+    
+	public void clickOnNextButton() {
+		next.click();
+	}
+	
+	
+	
 }

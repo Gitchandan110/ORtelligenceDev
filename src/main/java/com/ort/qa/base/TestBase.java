@@ -43,7 +43,11 @@ public class TestBase {
 			e.printStackTrace();
 		}
 	}   
+<<<<<<< HEAD
+	   //@BeforeMethod
+=======
 //	@BeforeMethod
+>>>>>>> eee227a5ab975432e9a993da2b2ce072ce4cdb9e
 	public static void initialization()
 	{
 		
@@ -58,7 +62,7 @@ public class TestBase {
 		
 		if(browserName.equals("chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver","D:\\BITBUCKET\\ortelligence-automation-qa\\src\\test\\resources\\Driver\\chromedriver.exe");	     
+			System.setProperty("webdriver.chrome.driver","C:\\SeleniumDriver\\chromedriver.exe");	     
 			driver = new ChromeDriver(); 
 		}
 		else if(browserName.equals("FF"))

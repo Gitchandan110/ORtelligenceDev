@@ -6,6 +6,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.ort.qa.base.TestBase;
 
+
+
+
 public class LoginPage extends TestBase{ 
 		
 
@@ -24,10 +27,23 @@ public class LoginPage extends TestBase{
 
 	@FindBy(xpath="//img[contains(@class,org-logo__image)]")
 	WebElement ortLogo;
+	
+	@FindBy(xpath="//div[text()='Incorrect username or password. Please try again.']")
+	WebElement ErrorMsgForInvalidMail;
 
 	@FindBy(xpath="//a[text()='Forgot Password']")
 	WebElement forgotPassword;
-
+	
+	@FindBy(xpath="//a[text()='Forgot Password link']")
+	WebElement forgotPasswordlink;
+	
+	@FindBy(xpath="//*[@id=\"page-ui-container\"]/div/div/div/div[2]/div[1]/div/div/div/text()") 
+	////div[@class='text-block--overflow-wrap']
+	WebElement passwordResetMsg;
+	
+	@FindBy(id="cancel-button")
+	WebElement clickOnCancleButtonLink;
+	
 	@FindBy(id ="recovery-code")
 	WebElement recoveryCode;  
 
@@ -75,6 +91,44 @@ public class LoginPage extends TestBase{
 	{
 		return ortLogo.isDisplayed();   
 	}
+	
+	public NurseForgotPasswordPage clickOnForgotPasswordLink() {
+		forgotPasswordlink.click();
+		return new NurseForgotPasswordPage();
+	}
+
+	public LoginPage clickOnCancleLink() {
+		clickOnCancleButtonLink.click();
+		return new LoginPage(driver);
+	}
+
+	
+	
+	public boolean checkPasswordResetMsg() {
+		String PasswordResetMsg = passwordResetMsg.getText();
+		if (PasswordResetMsg.equals("Enter your username, and we'll send password reset instructions to your email address.")) {
+			System.out.println("PasswordReset msg- Enter your username, and we'll send password reset instructions to your email address is displayed correctly.");
+			return true;
+		} else {
+		System.out.println("PasswordResetmsg should display as- 'Enter your username, and we'll send password reset instructions to your email address'");
+		return false;
+	}
+	}
+	
+	
+	public boolean checkErrorMessage() {
+
+		if (ErrorMsgForInvalidMail.getText().equals("Incorrect username or password. Please try again.")) {
+			System.out.println("Invalid login Cred entered.");
+			return true;
+		} else {
+
+			System.out.println("Error msg should be displayed as--'Incorrect username or password. Please try again.'");
+			return false;
+		}
+	}
+
+	
 			
 	public SelectFacilityPage login1(String un, String pwd) throws InterruptedException{
 

@@ -32,7 +32,10 @@ public class SelectFacilityPage extends TestBase
 	
 	@FindBy(xpath="(//a[@class='menu-font'])[4]")
 	WebElement createcase;	
-	 
+	
+	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[4]")
+	public WebElement dashboardCreateCase;
+	
 	
  /*  Initialization
  */
@@ -47,11 +50,6 @@ public class SelectFacilityPage extends TestBase
 	
 	/*	Actions : 
 	 */
-	public void clickConfirm()
-	{
-		
-		confirm.click();
-	}
 	
 	
 	public void clickOnDropDown() {
@@ -59,8 +57,17 @@ public class SelectFacilityPage extends TestBase
         dp.SelectUsingVisibleText(facilityDropdown,"Wilmington, DE, 19899 , Wilmington, Delaware, 19899");
 	}
 	
-	
+	public void clickConfirm()
+	{
 		
+		confirm.click();
+	}
+	
+	
+	public void clickOnCreateCase()
+	{
+		dashboardCreateCase.click();
+	}
 	
 	
 }
