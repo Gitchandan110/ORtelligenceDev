@@ -39,11 +39,11 @@ public class CreateCaseAffectedAreaTest  extends TestBase
 			           loginPage = new LoginPage(driver);
 				         selectFacilityPage = new SelectFacilityPage(driver);
 	      nurseDashboardPage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-	      createCaseFindPatientPage = new CreateCaseFindPatientPage(driver); 
-	      createCaseAffectedAreaPage = new CreateCaseAffectedAreaPage(driver);
-	      createCaseSpecialtyPage = new CreateCaseSpecialtyPage(driver);
-	      createCaseSystemSelectionPage = new CreateCaseSystemSelectionPage(driver);
-	      createCaseSetSelectionPage = new  CreateCaseSetSelectionPage(driver);
+	      createCaseFindPatientPage = new CreateCaseFindPatientPage(); 
+	      createCaseAffectedAreaPage = new CreateCaseAffectedAreaPage();
+	      createCaseSpecialtyPage = new CreateCaseSpecialtyPage();
+	      createCaseSystemSelectionPage = new CreateCaseSystemSelectionPage();
+	      createCaseSetSelectionPage = new  CreateCaseSetSelectionPage();
 	      
 			
 		}
