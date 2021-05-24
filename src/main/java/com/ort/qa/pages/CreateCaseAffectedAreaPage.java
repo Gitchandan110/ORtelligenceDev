@@ -1,5 +1,6 @@
 package com.ort.qa.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -12,6 +13,7 @@ public class CreateCaseAffectedAreaPage extends TestBase
  /*	x path for Speciality = Trauma.
  * x path for Hip
  */
+	WebDriver driver;
 	
    @FindBy(xpath="//area[@id='trauma22']")
    public WebElement hip;

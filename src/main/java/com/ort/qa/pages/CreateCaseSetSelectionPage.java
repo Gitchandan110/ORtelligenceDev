@@ -15,9 +15,24 @@ public class CreateCaseSetSelectionPage extends TestBase
  *	Delete set is pending
  *	Records display quantity dropdown
  */
+	/*	click on set Checkbox. 
+	 */
 	
-	@FindBy(xpath="//select[@class='custom-select']")
-	WebElement records;
+	@FindBy(xpath="//input[@class='form-control-input ng-valid ng-dirty ng-touched']")
+	public WebElement  checkbox1;
+	
+	/*	click on Open quantity 
+	 */
+	
+	@FindBy(xpath="//input[@class='form-control textbox-width-height ng-pristine ng-valid ng-touched']")
+	WebElement openQuantity ;
+	
+	/*	click on Hold quantity
+	 */
+	
+
+	@FindBy(xpath="(//input[@class='form-control textbox-width-height ng-pristine ng-valid ng-touched'])[2]")
+	WebElement holdQuantity ;
 	
  /* Search Set text
  */
@@ -47,8 +62,8 @@ public class CreateCaseSetSelectionPage extends TestBase
  /*	Block Anesthesia type	
  */
 	
-		@FindBy(xpath="(//select[@class='form-control ng-untouched ng-pristine ng-valid'])[1]")
-		WebElement blockAnesthesiaType;
+	@FindBy(xpath="(//select[@class='form-control ng-untouched ng-pristine ng-valid'])[1]")
+	WebElement blockAnesthesiaType;
 	
  /*	X-Ray Needed* - Yes checkbox
  */
@@ -148,10 +163,13 @@ public class CreateCaseSetSelectionPage extends TestBase
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void createCaseSetSelection(String recordsOption, String searchSetText, String searchSuppliesText, String anesthesiaOption, String blockAnesthesiaTypeOption, String medicationsText, String sideOption, String positionOption, String positioningCommentText, String instructionsText) 
+	public void createCaseSetSelection( String openQuantityText,String holdQuantityText,  String recordsOption, String searchSetText, String searchSuppliesText, String anesthesiaOption, String blockAnesthesiaTypeOption, String medicationsText, String sideOption, String positionOption, String positioningCommentText, String instructionsText) 
 
 	{
 		
+		checkbox1.click();
+		openQuantity.sendKeys(openQuantityText);
+		holdQuantity.sendKeys(holdQuantityText);
 		records.sendKeys(recordsOption);
 		searchSet.sendKeys(searchSetText);
 		supplies.click();

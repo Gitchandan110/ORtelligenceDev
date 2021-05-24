@@ -9,6 +9,11 @@ import com.ort.qa.pages.LoginPage;
 import com.ort.qa.pages.NurseDashboardPage;
 import com.ort.qa.pages.SelectFacilityPage;
 
+
+ /*	Here in that page i have initialize the following pages: 
+ * Login ,Select facility. NurseDashboard, CreatecaseAffectedarea, createcaseSpecialityPage,createCaseProcedureSelection.
+ */
+
 public class CreateCaseProcedureSelectionPageTest extends TestBase
 {
 	 LoginPage loginPage;
@@ -27,7 +32,6 @@ public class CreateCaseProcedureSelectionPageTest extends TestBase
 			           initialization();
 			         loginPage = new LoginPage(driver);
 	      selectFacilityPage = new SelectFacilityPage(driver);
-	      selectFacilityPage = loginPage.login1(prop.getProperty("username"), prop.getProperty("password"));
 	    nurseDashboardPage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	      createCaseSpecialtyPage =new CreateCaseSpecialtyPage();
 	      createCaseProcedureSelectionPage =new com.ort.qa.pages.CreateCaseProcedureSelectionPage();
