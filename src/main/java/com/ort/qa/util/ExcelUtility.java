@@ -1,5 +1,5 @@
-/* Modified by Piyush Sadawarti on 24/05/2021
- * 
+/* Modified by Piyush Sadawarti on 24/05/2021 - Added Excel data reading method
+ * Modified by Piyush Sadawarti on 24/05/2021 - Removed Excel data reading method
  * 
  * 
  * 
@@ -64,19 +64,6 @@ public class ExcelUtility extends TestBase
 		return data;
 	}
 	
-//	Data provider added by Piyush Sadawarti on 24/05/2021:
-	public void dataProvider(String sheetPath, String sheetName, int row, int cell) throws IOException
-	{
-		File source = new File(sheetPath); 
-		FileInputStream fis = new FileInputStream(source);
-		XSSFWorkbook wb = new XSSFWorkbook(fis);
-		XSSFSheet sheet = wb.getSheet(sheetName);
-		String data = sheet.getRow(row).getCell(cell).getStringCellValue();
-		return;
-	}
-	
-
-
 }	
 
 	

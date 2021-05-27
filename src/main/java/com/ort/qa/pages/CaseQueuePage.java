@@ -2,7 +2,8 @@
  * 
  * 
  * 
- * */
+ */
+
 package com.ort.qa.pages;
 
 import org.openqa.selenium.WebDriver;
@@ -14,10 +15,11 @@ import com.ort.qa.base.TestBase;
 
 public class CaseQueuePage extends TestBase
 {
+	
 //	(multiple Cases, we need to click on the specific Case)
-//	Case number 
+//	Case number in Data Table
 	@FindBy(xpath="(//a[@class='a-pointer'])[1]")
-	WebElement caseNumber;
+	public WebElement caseNumber;
 		
 //	Procedure
 	@FindBy(xpath="(//a[@class='a-pointer'])[2]")
@@ -58,6 +60,15 @@ public class CaseQueuePage extends TestBase
 		PageFactory.initElements(driver, this);
 	}
 	
+//	Click on Case number
+	public void CaseQueueClickOnCaseNumber() throws InterruptedException
+	{
+		Thread.sleep(5000);
+		caseNumber.click();
+		Thread.sleep(2000);
+	}
+	
+//	Information from Data Table
 	public void CaseQueueCaseInformation(String procedureText,String caseDateTimeText,String caseSurgeonText,String caseMNRText,String casePatientNameText,String caseClassText,String caseScheduledStatusText,String caseStatusText)
 	{
 		procedureText = caseProcedure.getText();
