@@ -74,7 +74,7 @@ public class SearchPatientPageTest extends TestBase
     public void searchPatient1() throws InterruptedException, IOException
  	{    	
  		Thread.sleep(2000);
- 		searchPatientPage.SearchPatientData(1);
+ 		searchPatientPage.SearchPatientData("SearchPatient", 1,0,1,2,3,4,5);
  		Thread.sleep(2000);
  	}
     
@@ -83,7 +83,7 @@ public class SearchPatientPageTest extends TestBase
     public void searchPatient2() throws InterruptedException, IOException
  	{    	
  		Thread.sleep(2000);
- 		searchPatientPage.SearchPatientData(2);
+ 		searchPatientPage.SearchPatientData("SearchPatient", 2,0,1,2,3,4,5);
  		Thread.sleep(2000);
  	}
     
@@ -92,7 +92,7 @@ public class SearchPatientPageTest extends TestBase
     public void searchPatient3() throws InterruptedException, IOException
  	{    	
  		Thread.sleep(2000);
- 		searchPatientPage.SearchPatientData(3);
+ 		searchPatientPage.SearchPatientData("SearchPatient", 3,0,1,2,3,4,5);
  		Thread.sleep(2000);
  	}
     
@@ -101,7 +101,7 @@ public class SearchPatientPageTest extends TestBase
     public void searchPatient4() throws InterruptedException, IOException
  	{
     	Thread.sleep(2000);
- 		searchPatientPage.SearchPatientData(4);
+ 		searchPatientPage.SearchPatientData("SearchPatient", 4,0,1,2,3,4,5);
  		Thread.sleep(2000);
  	}
     
@@ -110,7 +110,70 @@ public class SearchPatientPageTest extends TestBase
     public void searchPatient5() throws InterruptedException, IOException
  	{
     	Thread.sleep(2000);
- 		searchPatientPage.SearchPatientData(5);
+ 		searchPatientPage.SearchPatientData("SearchPatient", 5,0,1,2,3,4,5);
+ 		Thread.sleep(2000);
+ 	}
+    
+// 	Search patient
+    @Test(priority=7)
+    public void searchPatient6() throws InterruptedException, IOException
+ 	{
+    	Thread.sleep(2000);
+ 		searchPatientPage.SearchPatientData("SearchPatient", 6,0,1,2,3,4,5);
+ 		Thread.sleep(2000);
+ 	}
+    
+// 	Search patient
+    @Test(priority=8)
+    public void searchPatient7() throws InterruptedException, IOException
+ 	{
+    	Thread.sleep(2000);
+ 		searchPatientPage.SearchPatientData("SearchPatient", 7,0,1,2,3,4,5);
+ 		Thread.sleep(2000);
+ 	}
+    
+// 	Search patient
+    @Test(priority=9)
+    public void searchPatient8() throws InterruptedException, IOException
+ 	{
+    	Thread.sleep(2000);
+ 		searchPatientPage.SearchPatientData("SearchPatient", 8,0,1,2,3,4,5);
+ 		Thread.sleep(2000);
+ 	}
+    
+// 	Search patient
+    @Test(priority=10)
+    public void searchPatient9() throws InterruptedException, IOException
+ 	{
+    	Thread.sleep(2000);
+ 		searchPatientPage.SearchPatientData("SearchPatient", 9,0,1,2,3,4,5);
+ 		Thread.sleep(2000);
+ 	}
+
+// 	Search patient
+    @Test(priority=11)
+    public void searchPatient10() throws InterruptedException, IOException
+ 	{
+    	Thread.sleep(2000);
+ 		searchPatientPage.SearchPatientData("SearchPatient", 10,0,1,2,3,4,5);
+ 		Thread.sleep(2000);
+ 	}
+    
+// 	Search patient
+    @Test(priority=12)
+    public void searchPatient11() throws InterruptedException, IOException
+ 	{
+    	Thread.sleep(2000);
+ 		searchPatientPage.SearchPatientData("SearchPatient", 11,0,1,2,3,4,5);
+ 		Thread.sleep(2000);
+ 	}
+    
+// 	Search patient loop
+    @Test(priority=12)
+    public void searchPatientAll1() throws InterruptedException, IOException
+ 	{
+    	Thread.sleep(2000);
+ 		searchPatientPage.SearchPatientDataAll("SearchPatient",0,1,2,3,4,5);
  		Thread.sleep(2000);
  	}
     
@@ -121,4 +184,5 @@ public class SearchPatientPageTest extends TestBase
  		Thread.sleep(3000);
  		driver.quit();
  	}
-}      
+    
+}

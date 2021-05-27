@@ -18,6 +18,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.ort.qa.base.TestBase;
+import com.ort.qa.util.DropDownHandler;
 import com.ort.qa.util.ExcelDataUtility;
 import com.ort.qa.util.ExcelUtility;
 
@@ -50,6 +51,22 @@ public class SearchPatientPage extends TestBase
 	@FindBy(xpath="//select[@id='specialtyId']")
 	public WebElement speciality;
 	
+//	Spine 
+	@FindBy(xpath="//option[text()=' Spine']")
+	public WebElement specialitySpine;
+	
+//	Arthroplasty
+	@FindBy(xpath="//option[text()=' Arthroplasty']")
+	public WebElement specialityArthroplasty;
+	
+//	Trauma
+	@FindBy(xpath="//option[text()=' Trauma']")
+	public WebElement specialityTrauma;
+	
+//	Sports
+	@FindBy(xpath="//option[text()=' Sports']")
+	public WebElement specialitySports;
+	
 //	Case Number	
 	@FindBy(xpath="//input[@id='caseId']")
 	public WebElement caseNumber;
@@ -65,58 +82,95 @@ public class SearchPatientPage extends TestBase
 		PageFactory.initElements(driver, this);
 	}
 	
-/*	Method SearchPatientData
- * 	Parameter int x - will be used as row of excel sheet
+//	Method to deselect all Specialty. They are all by default selected.
+	public void deselectSpecialty()
+	{
+		specialitySpine.click();
+		specialityArthroplasty.click();
+		specialityTrauma.click();
+		specialitySports.click();
+	}
+	
+/*	........................................................................................................................
+ * 	........................................................................................................................
  */
-	public void SearchPatientData(int x) throws IOException, InterruptedException
+	
+/*	Method SearchPatientData - Specific patient
+ * 	Parameter @ int x - will be used as row of excel sheet
+ * String sheetname
+ * int row
+ * int colLastName
+ * int colFirstname
+ * int colMNR
+ * int colCase
+ * int colDOB
+ * int colSpecialyt
+ * 
+ */
+	public void SearchPatientData(
+			String sheetname, 
+			int row,
+			int colLastName,
+			int colFirstname,
+			int colMNR,
+			int colCase,
+			int colDOB,
+			int colSpecialyt)
+							throws IOException, InterruptedException
 	{
 		
+/*		Sheet name will be fetched from the parameter of SearchPatientData method.
+ * 		Sheet name will be passed as parameter of testDataString and testDataNumeric methods.
+ *		Declare column number for each element, to be used in cell data fetching method.  
+ */
+				
 //		Compare the String values of data fetched from the Excel sheet to a String noData that is equal to 0.
 		String noData = "0";		
 		Thread.sleep(2000);
 		
 //		Use of if-else condition to compare String data with noData. This allows us to bypass empty data cells in Excel  sheet.
 //		Patient Last Name
-		String patientLastNameText = ExcelDataUtility.testDataString("SearchPatient", x, 0); 
-//		Patient Last Name
+//		String patientLastNameText = ExcelDataUtility.testDataString("SearchPatient", row, colLastName); 
+		String patientLastNameText = ExcelDataUtility.testDataString(sheetname, row, colLastName);
+		//		Patient Last Name
 		if (patientLastNameText.equals(noData))
 			{
-				System.out.println("Patient Last Name is: "+patientLastNameText);
+				System.out.println("Patient's Last Name is: "+patientLastNameText);
 			}
 		else
 		{
-			System.out.println("Patient Last Name is: "+patientLastNameText);
+			System.out.println("Patient's Last Name is: "+patientLastNameText);
 			patientLastName.sendKeys(patientLastNameText);
 		}
 
 //		Patient First Name
-		String patientFirstNameText = ExcelDataUtility.testDataString("SearchPatient", x, 1);
+		String patientFirstNameText = ExcelDataUtility.testDataString(sheetname, row, colFirstname);
 //		Patient First Name
 		if (patientFirstNameText.equals(noData))
 		{
-			System.out.println("Patient First Name is: "+patientFirstNameText);
+			System.out.println("Patient's First Name is: "+patientFirstNameText);
 		}
 		else
 		{
-			System.out.println("Patient First Name is: "+patientFirstNameText);
+			System.out.println("Patient's First Name is: "+patientFirstNameText);
 			patientFirstName.sendKeys(patientFirstNameText);
 		}
 		
 //		Patient MNR number
-		String patientMNRText = ExcelDataUtility.testDataNumeric("SearchPatient", x, 2);
+		String patientMNRText = ExcelDataUtility.testDataNumeric(sheetname, row, colMNR);
 //		Patient MNR Number
 		if (patientMNRText.equals(noData))
 		{
-			System.out.println("MNR number is: "+patientMNRText);
+			System.out.println("Patient's MNR number is: "+patientMNRText);
 		}
 		else
 		{
-			System.out.println("MNR number is: "+patientMNRText);
+			System.out.println("Patient's MNR number is: "+patientMNRText);
 			patientMRN.sendKeys(patientMNRText);
 		}
 		
 //		Case Number
-		String caseNumberText = ExcelDataUtility.testDataNumeric("SearchPatient", x, 3);
+		String caseNumberText = ExcelDataUtility.testDataNumeric(sheetname, row, colCase);
 //		Case Number
 		if (caseNumberText.equals(noData))
 		{
@@ -128,19 +182,113 @@ public class SearchPatientPage extends TestBase
 			caseNumber.sendKeys(caseNumberText);
 		}
 	
-////	Patient DOB
-//	String patientDOBText = testDataString("SearchPatient", 1, 4);
-//	patientDOB.sendKeys(patientDOBText);
-		
-////		Case Speciality
-//		String specialityOptionText = testDataNumeric("SearchPatient", 1, 5);
-//		speciality.sendKeys(specialityOptionText);
+//		Patient DOB
+		String patientDOBText = ExcelDataUtility.testDataNumeric(sheetname, row, colDOB);
+//		Patient DOB
+		if (patientDOBText.equals(noData))
+		{
+			System.out.println("Patient's Date of Birth is: "+patientDOBText);
+		}
+		else
+		{
+			System.out.println("Patient's Date of Birth is: "+patientDOBText);
+			patientDOB.sendKeys(patientDOBText);
+		}
 
-		Thread.sleep(2000);
+//		Specialty selection
+//		String objects to compare text with cell data.
+//		Spine
+		String specialitySpine1 = "Spine";
+		String specialitySpine2 = "spine";
+//		Arthroplasty
+		String specialityArthroplasty1 = "Arthroplasty";
+		String specialityArthroplasty2 = "arthroplasty";
+//		Trauma
+		String specialityTrauma1 = "Trauma";
+		String specialityTrauma2 = "trauma";
+//		Sports
+		String specialitySports1 = "Sports";
+		String specialitySports2 = "sports";
+		
+//		Case Speciality
+		String specialityOptionText = ExcelDataUtility.testDataString(sheetname, row, colSpecialyt);
+		if (specialityOptionText.equals(noData))
+		{
+			System.out.println("Speciality is: "+specialityOptionText);
+		}
+//		Spine
+		else if (specialityOptionText.equals(specialitySpine1) || specialityOptionText.equals(specialitySpine2) ) 
+		{
+			deselectSpecialty();
+			System.out.println("Speciality is: "+specialityOptionText);
+			specialitySpine.click();
+		}
+//		Arthroplasty
+		else if (specialityOptionText.equals(specialityArthroplasty1) || specialityOptionText.equals(specialityArthroplasty2) ) 
+		{
+			deselectSpecialty();
+			System.out.println("Speciality is: "+specialityOptionText);
+			specialityArthroplasty.click();
+		}
+//		Trauma
+		else if (specialityOptionText.equals(specialityTrauma1) || specialityOptionText.equals(specialityTrauma2) ) 
+		{
+			deselectSpecialty();
+			System.out.println("Speciality is: "+specialityOptionText);
+			specialityTrauma.click();
+		}
+//		Sports
+		else if (specialityOptionText.equals(specialitySports1) || specialityOptionText.equals(specialitySports2) ) 
+		{
+			deselectSpecialty();
+			System.out.println("Speciality is: "+specialityOptionText);
+			specialitySports.click();
+		}
+		
+		Thread.sleep(5000);
 //		Click on Search button
 		searchPatient.click();
 	}
+/*	.............................................................................................................................	
+ *	.............................................................................................................................
+ */	
 	
+	/*	Method SearchPatientData - loop
+	 * 	Parameter @ int x - will be used as row of excel sheet
+	 * String sheetname
+	 * int row
+	 * int colLastName
+	 * int colFirstname
+	 * int colMNR
+	 * int colCase
+	 * int colDOB
+	 * int colSpecialyt
+	 * 
+	 */
+	public void SearchPatientDataAll(
+				String sheetname, 
+				int colLastName,
+				int colFirstname,
+				int colMNR,
+				int colCase,
+				int colDOB,
+				int colSpecialyt)
+								throws IOException, InterruptedException
+		
+	{
+		
+//		Row count using getRowCount method.
+		int rowCount = ExcelDataUtility.getRowCount(sheetname);
+//		Column count using getColCount method.
+		int colCount = ExcelDataUtility.getColCount(sheetname);
+
+			
+	}
+
+	
+/*	.......................................................................................................................
+ * 	.......................................................................................................................
+ */	
 	public void SearchPatient()
 	{
 		patientLastName.click();
