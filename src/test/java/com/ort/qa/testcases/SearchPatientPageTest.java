@@ -1,5 +1,6 @@
 /* Created by Piyush Sadawarti on 24/05/2021
  * Modified by Piyush Sadawarti on 26/05/2021 - Added Test cases for different Rows from excel sheet.
+ * Modified by Piyush Sadawarti on 27/05/2021 - Added Test cases for different Rows from excel sheet.
  * 
  * 
  */
@@ -54,19 +55,19 @@ public class SearchPatientPageTest extends TestBase
 		Thread.sleep(1000);
  	}
     
-    @Test(priority=1)
-    public void VeriyfSearchPatientFormOptions() throws InterruptedException
- 	{
-    	Thread.sleep(2000);
-    	Assert.assertEquals(true, searchPatientPage.patientLastName.isDisplayed());
- 		Assert.assertEquals(true, searchPatientPage.patientFirstName.isDisplayed());
- 		Assert.assertEquals(true, searchPatientPage.patientDOB.isDisplayed());
- 		Assert.assertEquals(true, searchPatientPage.patientMRN.isDisplayed());
- 		Assert.assertEquals(true, searchPatientPage.caseNumber.isDisplayed());
- 		Assert.assertEquals(true, searchPatientPage.speciality.isDisplayed());
- 		Assert.assertEquals(true, searchPatientPage.searchPatient.isDisplayed());
- 		Thread.sleep(2000);
- 	}
+//    @Test(priority=1)
+//    public void VeriyfSearchPatientFormOptions() throws InterruptedException
+// 	{
+//    	Thread.sleep(2000);
+//    	Assert.assertEquals(true, searchPatientPage.patientLastName.isDisplayed());
+// 		Assert.assertEquals(true, searchPatientPage.patientFirstName.isDisplayed());
+// 		Assert.assertEquals(true, searchPatientPage.patientDOB.isDisplayed());
+// 		Assert.assertEquals(true, searchPatientPage.patientMRN.isDisplayed());
+// 		Assert.assertEquals(true, searchPatientPage.caseNumber.isDisplayed());
+// 		Assert.assertEquals(true, searchPatientPage.speciality.isDisplayed());
+// 		Assert.assertEquals(true, searchPatientPage.searchPatient.isDisplayed());
+// 		Thread.sleep(2000);
+// 	}
    
        
 // 	Search patient
@@ -140,42 +141,42 @@ public class SearchPatientPageTest extends TestBase
  		searchPatientPage.SearchPatientData("SearchPatient", 8,0,1,2,3,4,5);
  		Thread.sleep(2000);
  	}
-    
-// 	Search patient
-    @Test(priority=10)
-    public void searchPatient9() throws InterruptedException, IOException
- 	{
-    	Thread.sleep(2000);
- 		searchPatientPage.SearchPatientData("SearchPatient", 9,0,1,2,3,4,5);
- 		Thread.sleep(2000);
- 	}
-
-// 	Search patient
-    @Test(priority=11)
-    public void searchPatient10() throws InterruptedException, IOException
- 	{
-    	Thread.sleep(2000);
- 		searchPatientPage.SearchPatientData("SearchPatient", 10,0,1,2,3,4,5);
- 		Thread.sleep(2000);
- 	}
-    
-// 	Search patient
-    @Test(priority=12)
-    public void searchPatient11() throws InterruptedException, IOException
- 	{
-    	Thread.sleep(2000);
- 		searchPatientPage.SearchPatientData("SearchPatient", 11,0,1,2,3,4,5);
- 		Thread.sleep(2000);
- 	}
-    
-// 	Search patient loop
-    @Test(priority=12)
-    public void searchPatientAll1() throws InterruptedException, IOException
- 	{
-    	Thread.sleep(2000);
- 		searchPatientPage.SearchPatientDataAll("SearchPatient",0,1,2,3,4,5);
- 		Thread.sleep(2000);
- 	}
+//    
+//// 	Search patient
+//    @Test(priority=10)
+//    public void searchPatient9() throws InterruptedException, IOException
+// 	{
+//    	Thread.sleep(2000);
+// 		searchPatientPage.SearchPatientData("SearchPatient", 9,0,1,2,3,4,5);
+// 		Thread.sleep(2000);
+// 	}
+//
+//// 	Search patient
+//    @Test(priority=11)
+//    public void searchPatient10() throws InterruptedException, IOException
+// 	{
+//    	Thread.sleep(2000);
+// 		searchPatientPage.SearchPatientData("SearchPatient", 10,0,1,2,3,4,5);
+// 		Thread.sleep(2000);
+// 	}
+//    
+//// 	Search patient
+//    @Test(priority=12)
+//    public void searchPatient11() throws InterruptedException, IOException
+// 	{
+//    	Thread.sleep(2000);
+// 		searchPatientPage.SearchPatientData("SearchPatient", 14,0,1,2,3,4,5);
+// 		Thread.sleep(2000);
+// 	}
+//    
+//// 	Search patient loop
+//    @Test(priority=12)
+//    public void searchPatientAll1() throws InterruptedException, IOException
+// 	{
+//    	Thread.sleep(2000);
+// 		searchPatientPage.SearchPatientDataAll("SearchPatient",0,1,2,3,4,5);
+// 		Thread.sleep(2000);
+// 	}
     
 //	Quit browser
  	@AfterMethod

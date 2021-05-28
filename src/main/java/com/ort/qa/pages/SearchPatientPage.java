@@ -1,8 +1,13 @@
 /* Modified by Piyush Sadawarti on 24/05/2021
  * Modified by Piyush Sadawarti on 25/05/2021 - Added testDataString, testDataNumeric.
  * Modified by Piyush Sadawarti on 26/05/2021 - Added conditions to avoid empty cell data.
- * Modified by Piyush Sadawarti on 25/05/2021 - Removed testDataString, testDataNumeric. They are now in ExcelDataUtility.java
- *
+ * Modified by Piyush Sadawarti on 27/05/2021 - Removed testDataString, testDataNumeric. They are now in ExcelDataUtility.java
+ * Modified by Piyush Sadawarti on 27/05/2021 - Added conditions for Specialty and DOB.
+ * Modified by Piyush Sadawarti on 27/05/2021 - Added multiple search patient method. 
+ * 
+ * 
+ * 
+ * 
  */
 
 package com.ort.qa.pages;
@@ -108,7 +113,7 @@ public class SearchPatientPage extends TestBase
  * 
  */
 	public void SearchPatientData(
-			String sheetname, 
+			String sheetName, 
 			int row,
 			int colLastName,
 			int colFirstname,
@@ -129,10 +134,10 @@ public class SearchPatientPage extends TestBase
 		Thread.sleep(2000);
 		
 //		Use of if-else condition to compare String data with noData. This allows us to bypass empty data cells in Excel  sheet.
+
 //		Patient Last Name
-//		String patientLastNameText = ExcelDataUtility.testDataString("SearchPatient", row, colLastName); 
-		String patientLastNameText = ExcelDataUtility.testDataString(sheetname, row, colLastName);
-		//		Patient Last Name
+		String patientLastNameText = ExcelDataUtility.testDataString(sheetName, row, colLastName);
+//		Patient Last Name
 		if (patientLastNameText.equals(noData))
 			{
 				System.out.println("Patient's Last Name is: "+patientLastNameText);
@@ -144,7 +149,7 @@ public class SearchPatientPage extends TestBase
 		}
 
 //		Patient First Name
-		String patientFirstNameText = ExcelDataUtility.testDataString(sheetname, row, colFirstname);
+		String patientFirstNameText = ExcelDataUtility.testDataString(sheetName, row, colFirstname);
 //		Patient First Name
 		if (patientFirstNameText.equals(noData))
 		{
@@ -157,7 +162,7 @@ public class SearchPatientPage extends TestBase
 		}
 		
 //		Patient MNR number
-		String patientMNRText = ExcelDataUtility.testDataNumeric(sheetname, row, colMNR);
+		String patientMNRText = ExcelDataUtility.testDataNumeric(sheetName, row, colMNR);
 //		Patient MNR Number
 		if (patientMNRText.equals(noData))
 		{
@@ -170,7 +175,7 @@ public class SearchPatientPage extends TestBase
 		}
 		
 //		Case Number
-		String caseNumberText = ExcelDataUtility.testDataNumeric(sheetname, row, colCase);
+		String caseNumberText = ExcelDataUtility.testDataNumeric(sheetName, row, colCase);
 //		Case Number
 		if (caseNumberText.equals(noData))
 		{
@@ -183,7 +188,7 @@ public class SearchPatientPage extends TestBase
 		}
 	
 //		Patient DOB
-		String patientDOBText = ExcelDataUtility.testDataNumeric(sheetname, row, colDOB);
+		String patientDOBText = ExcelDataUtility.testDataNumeric(sheetName, row, colDOB);
 //		Patient DOB
 		if (patientDOBText.equals(noData))
 		{
@@ -211,7 +216,7 @@ public class SearchPatientPage extends TestBase
 		String specialitySports2 = "sports";
 		
 //		Case Speciality
-		String specialityOptionText = ExcelDataUtility.testDataString(sheetname, row, colSpecialyt);
+		String specialityOptionText = ExcelDataUtility.testDataString(sheetName, row, colSpecialyt);
 		if (specialityOptionText.equals(noData))
 		{
 			System.out.println("Speciality is: "+specialityOptionText);
@@ -266,7 +271,7 @@ public class SearchPatientPage extends TestBase
 	 * 
 	 */
 	public void SearchPatientDataAll(
-				String sheetname, 
+				String sheetName, 
 				int colLastName,
 				int colFirstname,
 				int colMNR,
@@ -278,13 +283,19 @@ public class SearchPatientPage extends TestBase
 	{
 		
 //		Row count using getRowCount method.
-		int rowCount = ExcelDataUtility.getRowCount(sheetname);
+		int rowCount = ExcelDataUtility.getRowCount(sheetName);
 //		Column count using getColCount method.
-		int colCount = ExcelDataUtility.getColCount(sheetname);
+		int colCount = ExcelDataUtility.getColCount(sheetName);
 
-			
+		for ( int x = 0; x < rowCount; x++ )
+		{
+			SearchPatientData(sheetName, x, colLastName, colFirstname, colMNR, colCase, colDOB, colSpecialyt);
+		}
+		
 	}
 
+	
+	
 	
 /*	.......................................................................................................................
  * 	.......................................................................................................................

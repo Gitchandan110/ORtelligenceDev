@@ -5,7 +5,7 @@
     <classes>
       <class name="com.ort.qa.testcases.SearchPatientPageTest">
         <methods>
-          <include name="searchPatient4"/>
+          <include name="searchPatient1"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
