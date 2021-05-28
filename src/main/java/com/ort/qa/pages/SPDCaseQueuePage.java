@@ -13,36 +13,31 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.ort.qa.base.TestBase;
 
-public class CaseQueuePage extends TestBase
+public class SPDCaseQueuePage extends TestBase
 {
-	
-//	(multiple Cases, we need to click on the specific Case)
-//	Case number in Data Table
-	@FindBy(xpath="(//a[@class='a-pointer'])[1]")
-	public WebElement caseNumber;
-		
+
 //	Procedure
-	@FindBy(xpath="(//a[@class='a-pointer'])[2]")
+	@FindBy(xpath="")
 	WebElement caseProcedure;
 
 //	Surgery Date and Time
-	@FindBy(xpath="(//a[@class='a-pointer'])[3]")
+	@FindBy(xpath="")
 	WebElement caseDateTime;
 	
 //	Surgeon Name 
-	@FindBy(xpath="(//a[@class='a-pointer'])[4]")
+	@FindBy(xpath="")
 	WebElement caseSurgeon;
 	
 //	MNR
-	@FindBy(xpath="(//a[@class='a-pointer'])[5]")
+	@FindBy(xpath="")
 	WebElement caseMNR;
 	
 //	Patient 
-	@FindBy(xpath="(//a[@class='a-pointer'])[6]")
+	@FindBy(xpath="")
 	WebElement casePatientName;
 	
 //	Class 
-	@FindBy(xpath="(//a[@class='a-pointer'])[7]")
+	@FindBy(xpath="")
 	WebElement caseClass;
 	
 //	Scheduled / Un-scheduled 
@@ -55,17 +50,9 @@ public class CaseQueuePage extends TestBase
 		
 //	Actions:
 //	Page factory
-	public CaseQueuePage() 
+	public SPDCaseQueuePage() 
 	{
 		PageFactory.initElements(driver, this);
-	}
-	
-//	Click on Case number
-	public void CaseQueueClickOnCaseNumber() throws InterruptedException
-	{
-		Thread.sleep(5000);
-		caseNumber.click();
-		Thread.sleep(2000);
 	}
 	
 //	Information from Data Table

@@ -1,9 +1,9 @@
-/* Created by Piyush Sadawarti on 26/05/2021
- * Modified by Piyush Sadawarti on 27/05/2021
- * Modified by Piyush Sadawarti on 28/05/2021
+/* Created by Piyush Sadawarti on 28/05/2021
+ * 
  * 
  * 
  */
+
 package com.ort.qa.testcases;
 
 import java.io.IOException;
@@ -14,14 +14,15 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.ort.qa.base.TestBase;
-import com.ort.qa.pages.SPDCaseQueuePage;
 import com.ort.qa.pages.LoginPage;
 import com.ort.qa.pages.NurseDashboardPage;
+import com.ort.qa.pages.SPDCaseQueuePage;
 import com.ort.qa.pages.SearchPatientPage;
 import com.ort.qa.pages.SelectFacilityPage;
 
-public class SPDCaseQueuePageTest extends TestBase
+public class SPDOnHoldPageTest extends TestBase
 {
+	
 //	Declaration
 //	LoginPage object - loginPage 
 	LoginPage loginPage;
@@ -31,17 +32,15 @@ public class SPDCaseQueuePageTest extends TestBase
 	SelectFacilityPage selectFacilityPage;
 //	SearchPatientPage object - SearchPatientPage object
 	SearchPatientPage searchPatientPage;
-//	CaseQueuePage object - caseQueuePage object
-	SPDCaseQueuePage caseQueuePage;	
     
-	public SPDCaseQueuePageTest() 
+	public SPDOnHoldPageTest() 
     {
     	super();	
     }
      
 /*  Initialize different objects
  * 	Perform pre-required tests 
-*/
+ */
     @BeforeMethod
  	public void setUp() throws InterruptedException, IOException 
     {
@@ -56,9 +55,9 @@ public class SPDCaseQueuePageTest extends TestBase
  		Thread.sleep(1000);
 		selectFacilityPage.clickConfirm();
 		Thread.sleep(1000);
-		nurseDashboardPage.dashboardCaseQueueSPD.click();
+		nurseDashboardPage.dashboardOnHold.click();
 		Thread.sleep(1000);
-		searchPatientPage.SearchPatientData("SearchPatient", 12,0,1,2,3,4,5);
+		searchPatientPage.SearchPatientData("SearchPatient", 10,0,1,2,3,4,5);
 		
 	}
     
@@ -70,7 +69,7 @@ public class SPDCaseQueuePageTest extends TestBase
     	Thread.sleep(2000);
     	Assert.assertEquals(true, searchPatientPage.selectCase.isDisplayed());
     	System.out.println(searchPatientPage.selectCase.isDisplayed());
- 		searchPatientPage.selectCase.click();
+    	searchPatientPage.selectCase.click();
  		Thread.sleep(2000);
 // 		searchPatientPage.confirmationPopupClose.click();
 // 		searchPatientPage.confirmationPopupProcedureDetails.click();
@@ -86,4 +85,5 @@ public class SPDCaseQueuePageTest extends TestBase
  		Thread.sleep(2000);
  		driver.quit();
  	}
-}      
+ 	
+}

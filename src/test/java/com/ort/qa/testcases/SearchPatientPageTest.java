@@ -51,23 +51,31 @@ public class SearchPatientPageTest extends TestBase
  		Thread.sleep(1000);
 		selectFacilityPage.clickConfirm();
 		Thread.sleep(1000);
-		nurseDashboardPage.dashboardCaseQueueSPD.click();
+//		nurseDashboardPage.dashboardCaseQueueSPD.click();
+		nurseDashboardPage.dashboardSearchCaseSPD.click();
 		Thread.sleep(1000);
  	}
     
-//    @Test(priority=1)
-//    public void VeriyfSearchPatientFormOptions() throws InterruptedException
-// 	{
-//    	Thread.sleep(2000);
-//    	Assert.assertEquals(true, searchPatientPage.patientLastName.isDisplayed());
-// 		Assert.assertEquals(true, searchPatientPage.patientFirstName.isDisplayed());
-// 		Assert.assertEquals(true, searchPatientPage.patientDOB.isDisplayed());
-// 		Assert.assertEquals(true, searchPatientPage.patientMRN.isDisplayed());
-// 		Assert.assertEquals(true, searchPatientPage.caseNumber.isDisplayed());
-// 		Assert.assertEquals(true, searchPatientPage.speciality.isDisplayed());
-// 		Assert.assertEquals(true, searchPatientPage.searchPatient.isDisplayed());
-// 		Thread.sleep(2000);
-// 	}
+    @Test(priority=1)
+    public void VeriyfSearchPatientFormOptions() throws InterruptedException
+ 	{
+    	Thread.sleep(2000);
+    	Assert.assertEquals(true, searchPatientPage.patientLastName.isDisplayed());
+    	System.out.println(searchPatientPage.patientLastName.isDisplayed());
+ 		Assert.assertEquals(true, searchPatientPage.patientFirstName.isDisplayed());
+ 		System.out.println(searchPatientPage.patientFirstName.isDisplayed());
+ 		Assert.assertEquals(true, searchPatientPage.patientDOB.isDisplayed());
+ 		System.out.println(searchPatientPage.patientDOB.isDisplayed());
+ 		Assert.assertEquals(true, searchPatientPage.patientMRN.isDisplayed());
+ 		System.out.println(searchPatientPage.patientMRN.isDisplayed());
+ 		Assert.assertEquals(true, searchPatientPage.caseNumber.isDisplayed());
+ 		System.out.println(searchPatientPage.caseNumber.isDisplayed());
+ 		Assert.assertEquals(true, searchPatientPage.speciality.isDisplayed());
+ 		System.out.println(searchPatientPage.speciality.isDisplayed());
+ 		Assert.assertEquals(true, searchPatientPage.searchPatient.isDisplayed());
+ 		System.out.println(searchPatientPage.searchPatient.isDisplayed());
+ 		Thread.sleep(2000);
+ 	}
    
        
 // 	Search patient
@@ -174,7 +182,7 @@ public class SearchPatientPageTest extends TestBase
 //    public void searchPatientAll1() throws InterruptedException, IOException
 // 	{
 //    	Thread.sleep(2000);
-// 		searchPatientPage.SearchPatientDataAll("SearchPatient",0,1,2,3,4,5);
+// 		searchPatientPage.SearchPatientDataAll("SearchPatient", 12,0,1,2,3,4,5);
 // 		Thread.sleep(2000);
 // 	}
     

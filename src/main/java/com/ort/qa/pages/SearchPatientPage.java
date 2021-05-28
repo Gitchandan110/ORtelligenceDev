@@ -4,7 +4,7 @@
  * Modified by Piyush Sadawarti on 27/05/2021 - Removed testDataString, testDataNumeric. They are now in ExcelDataUtility.java
  * Modified by Piyush Sadawarti on 27/05/2021 - Added conditions for Specialty and DOB.
  * Modified by Piyush Sadawarti on 27/05/2021 - Added multiple search patient method. 
- * 
+ * Modified by Piyush Sadawarti on 28/05/2021 - Added select patient after search, pop up repository and actions.
  * 
  * 
  * 
@@ -79,13 +79,39 @@ public class SearchPatientPage extends TestBase
 //	Search button	
 	@FindBy(xpath="//button[text()='Search']")
 	public WebElement searchPatient;
-
+	
+//	(multiple Cases, we need to click on the specific Case)
+//	Case - Select case in Data Table
+	@FindBy(xpath="(//a[@class='a-pointer'])[1]")
+	public WebElement selectCase;
+	
 //	Actions:
 //	Initialization
 	public SearchPatientPage() 
 	{
 		PageFactory.initElements(driver, this);
 	}
+	
+//	Click on Case number
+	public void SearchPatientClickOnCaseNumber() throws InterruptedException
+	{
+		selectCase.click();
+		Thread.sleep(2000);
+	}
+	
+//	Confirmation pop-up
+//	Close icon
+	@FindBy(xpath="//div[@class='modal-content'] //button[@class='close']")
+	public WebElement confirmationPopupClose;
+	
+//	Procedure details
+	@FindBy(xpath="//button[text()='Procedure Details']")
+	public WebElement confirmationPopupProcedureDetails;
+	
+//	Cart Details
+	@FindBy(xpath="//button[text()='Cart Details']")
+	public WebElement confirmationPopupCartDetails;
+	
 	
 //	Method to deselect all Specialty. They are all by default selected.
 	public void deselectSpecialty()
@@ -250,7 +276,7 @@ public class SearchPatientPage extends TestBase
 			specialitySports.click();
 		}
 		
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 //		Click on Search button
 		searchPatient.click();
 	}
@@ -308,6 +334,11 @@ public class SearchPatientPage extends TestBase
 		patientMRN.click();
 		caseNumber.click();
 		searchPatient.click();
+		selectCase.click();
+		confirmationPopupClose.click();
+		confirmationPopupProcedureDetails.click();
+		confirmationPopupCartDetails.click();
+		
 	}
 	
 }
