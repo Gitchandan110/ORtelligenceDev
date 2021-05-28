@@ -13,7 +13,7 @@ public class CreateCaseSystemSelectionPage extends TestBase
  /*	System found
  * 	Checkbox 1st option
  */ 
-	WebDriver driver; 
+	//WebDriver driver; 
 	
 	@FindBy(xpath="(//input[@type='checkbox'])[1]")
 	public WebElement checkboxSystem1;
@@ -40,7 +40,7 @@ public class CreateCaseSystemSelectionPage extends TestBase
  *	Click here link to open pop-up
  */
 	
-	@FindBy(xpath="//a[text()='Click here']")
+	@FindBy(xpath="(//button[@class='btn btn-primary'])[2]")
 	public WebElement clickHere;
 
  /*	Pop-up - Proceed to Cart button

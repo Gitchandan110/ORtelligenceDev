@@ -13,10 +13,10 @@ public class CreateCaseAffectedAreaPage extends TestBase
  /*	x path for Speciality = Trauma.
  * x path for Hip
  */
-	WebDriver driver;
+	//WebDriver driver;
 	
    @FindBy(xpath="//area[@id='trauma22']")
-   public WebElement hip;
+public WebElement hip;
    
  /* x path for Femur.
  */
@@ -30,7 +30,7 @@ public class CreateCaseAffectedAreaPage extends TestBase
  */
 	
 	@FindBy(xpath="//area[@id='trauma24']")
-	WebElement distalFemur ;
+	public WebElement distalFemur ;
 	
  /*for Trauma area x path for Patella.
  */

@@ -19,6 +19,7 @@ public class CreateCaseProcedureSelectionPage extends TestBase
  */
 	
 	@FindBy(xpath="(//button[text()='Select'])[2]")
+	public
 	WebElement selectProcedure2;	
 
  /*	Back button

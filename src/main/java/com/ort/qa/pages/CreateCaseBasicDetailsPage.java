@@ -61,9 +61,10 @@ public class CreateCaseBasicDetailsPage extends TestBase
  /* Patient Latex Allergy* dropdown This is auto filled if data is already saved.
  */
 	
-	@FindBy(xpath="(//select[@class='form-control ng-untouched ng-pristine ng-valid'])[3]")
+//	commented original xpath and adding new ones.
+	@FindBy(xpath="//select[@formcontrolname='hasLatexAlergy']")
 	WebElement patientAllergy;
-
+	
  /* Physician Assistant* dropdown
  */
 	
@@ -73,7 +74,7 @@ public class CreateCaseBasicDetailsPage extends TestBase
  /*	Urgency
  */
 	
-	@FindBy(xpath="//select[@id='urgency']")
+	@FindBy(xpath="//select[@formcontrolname='urgency']")
 	WebElement urgency;
 
  /*	Procedure
@@ -206,7 +207,7 @@ public class CreateCaseBasicDetailsPage extends TestBase
 	
 	public void clickOnPatientUrgencyDropDown() {
 		DropDownHandler dp =new DropDownHandler(driver);
-        dp.SelectUsingVisibleText(urgency," Critical (Up to 1hr.)");
+        dp.SelectUsingVisibleText(urgency,"Critical (Up to 1hr.)");
 	}
     
 	public void clickOnNextButton() {
