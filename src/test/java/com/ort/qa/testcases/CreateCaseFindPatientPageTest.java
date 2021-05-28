@@ -82,7 +82,7 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 		selectFacilityPage.clickOnDropDown();
 		selectFacilityPage.clickConfirm();
 		Thread.sleep(5000);
-		//nurseDashboardPage.clickOncreateCase();
+		nurseDashboardPage.dashboardCreateCase.click();
 		createCaseFindPatientPage.createCaseFindPatientData(lastName, firstName, mNR);
 	    createCaseFindPatientPage.clickSearchButton();
 	    Thread.sleep(5000);
