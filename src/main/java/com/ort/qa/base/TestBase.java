@@ -16,7 +16,7 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import com.ort.qa.util.TestUtil;
 import com.ort.qa.util.WebEventListener;
-import com.paulhammant.ngwebdriver.NgWebDriver;
+//import com.paulhammant.ngwebdriver.NgWebDriver;
 //import com.paulhammant.ngwebdriver.NgWebDriver;
 
 
@@ -25,7 +25,7 @@ public class TestBase {
 
 	
 	public static WebDriver driver;
-	NgWebDriver ngWebDriver;
+	//NgWebDriver ngWebDriver;
 	JavascriptExecutor jsDriver;
 	public static Properties prop;
 	public static EventFiringWebDriver e_driver;
