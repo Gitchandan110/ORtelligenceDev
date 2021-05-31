@@ -46,7 +46,7 @@ public class NurseDashboardPageTest extends TestBase
     {
  		initialization();
  		loginPage = new LoginPage(driver);
- 		nurseDashboardPage = new NurseDashboardPage();
+ 		nurseDashboardPage = new NurseDashboardPage(driver);
  		selectFacilityPage = new SelectFacilityPage(driver);
  		nurseDashboardPage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));  
  		Thread.sleep(1000);
@@ -94,10 +94,9 @@ public class NurseDashboardPageTest extends TestBase
  		Assert.assertEquals(true, nurseDashboardPage.dashboardOpenCase.isDisplayed());
  		Assert.assertEquals(true, nurseDashboardPage.dashboardORtelligence.isDisplayed());		 		
  	}		
-    
-//	Dashboard option Click. 	
+    	
 // 	Click on In Process option of Dashboard
- 	@Test(priority=6)
+ 	@Test(priority=4)
  	public void clickInProcessDashboard() throws InterruptedException
  	{
  		Thread.sleep(2000);
@@ -106,7 +105,7 @@ public class NurseDashboardPageTest extends TestBase
  	} 
  	
 // 	Click on On Hold option of Dashboard
- 	@Test(priority=7)
+ 	@Test(priority=5)
  	public void clickOnHoldDashboard() throws InterruptedException
  	{
  		Thread.sleep(2000);
@@ -116,7 +115,7 @@ public class NurseDashboardPageTest extends TestBase
  	} 
  	
 // 	Click on Cart Review option of Dashboard
- 	@Test(priority=8)
+ 	@Test(priority=6)
  	public void clickCartReviewDashboard() throws InterruptedException
  	{
  		Thread.sleep(2000);
@@ -125,7 +124,7 @@ public class NurseDashboardPageTest extends TestBase
  	} 
  	
 // 	Click on Create Case option of Dashboard
- 	@Test(priority=9)
+ 	@Test(priority=7)
  	public void clickCreateCaseDashboard() throws InterruptedException
  	{
  		Thread.sleep(2000);
@@ -134,7 +133,7 @@ public class NurseDashboardPageTest extends TestBase
  	} 
  	
 // 	Click on Search Case option of Dashboard
- 	@Test(priority=10)
+ 	@Test(priority=8)
  	public void clickSearchCaseDashboard() throws InterruptedException
  	{
  		Thread.sleep(2000);
@@ -143,7 +142,7 @@ public class NurseDashboardPageTest extends TestBase
  	} 
  	
 // 	Click on Open Case option of Dashboard
- 	@Test(priority=11)
+ 	@Test(priority=9)
  	public void clickOpenCaseDashboard() throws InterruptedException
  	{
  		Thread.sleep(2000);
@@ -152,7 +151,7 @@ public class NurseDashboardPageTest extends TestBase
  	} 
 
 // 	Click on ORtelligence option of Dashboard
- 	@Test(priority=12)
+ 	@Test(priority=10)
  	public void clickORtelligenceDashboard() throws InterruptedException
  	{
  		Thread.sleep(2000);
@@ -162,7 +161,7 @@ public class NurseDashboardPageTest extends TestBase
  	
 //	Header option Click. 	
 // 	Click on In Process option of Menu
- 	@Test(priority=13)
+ 	@Test(priority=11)
  	public void clickInProcessMenu() throws InterruptedException
  	{
  		Thread.sleep(2000);
@@ -171,7 +170,7 @@ public class NurseDashboardPageTest extends TestBase
  	} 
  	
 // 	Click on On Hold option of Menu
- 	@Test(priority=14)
+ 	@Test(priority=12)
  	public void clickOnHoldMenu() throws InterruptedException
  	{
  		Thread.sleep(2000);
@@ -180,7 +179,7 @@ public class NurseDashboardPageTest extends TestBase
  	} 
  	
 // 	Click on Cart Review option of Menu
- 	@Test(priority=15)
+ 	@Test(priority=13)
  	public void clickCartReviewMenu() throws InterruptedException
  	{
  		Thread.sleep(2000);
@@ -189,7 +188,7 @@ public class NurseDashboardPageTest extends TestBase
  	} 
  	
 // 	Click on Create Case option of Menu
- 	@Test(priority=16)
+ 	@Test(priority=14)
  	public void clickCreateCaseMenu() throws InterruptedException
  	{
  		Thread.sleep(2000);
@@ -198,7 +197,7 @@ public class NurseDashboardPageTest extends TestBase
  	} 
  	
 // 	Click on Search Case option of Menu
- 	@Test(priority=17)
+ 	@Test(priority=15)
  	public void clickSearchCaseMenu() throws InterruptedException
  	{
  		Thread.sleep(2000);
@@ -207,7 +206,7 @@ public class NurseDashboardPageTest extends TestBase
  	} 
  	
 // 	Click on Open Case option of Menu
- 	@Test(priority=18)
+ 	@Test(priority=16)
  	public void clickOpenCaseMenu() throws InterruptedException
  	{
  		Thread.sleep(2000);
@@ -215,7 +214,7 @@ public class NurseDashboardPageTest extends TestBase
  	} 
 
 // 	Click on ORtelligence option of Menu
- 	@Test(priority=19)
+ 	@Test(priority=17)
  	public void clickORtelligenceMenu() throws InterruptedException
  	{
  		Thread.sleep(2000);
@@ -224,7 +223,7 @@ public class NurseDashboardPageTest extends TestBase
  	} 	
 
 // 	Click on Profile option of Menu
- 	@Test(priority=20)
+ 	@Test(priority=18)
  	public void clickProfileMenu() throws InterruptedException
  	{
  		Thread.sleep(2000);
@@ -233,7 +232,7 @@ public class NurseDashboardPageTest extends TestBase
  	}	
  	
 // 	Click on Switch Location option of Menu
- 	@Test(priority=21)
+ 	@Test(priority=19)
  	public void clickNurseSwitchLocationMenu() throws InterruptedException
  	{
  		Thread.sleep(2000);
@@ -242,7 +241,7 @@ public class NurseDashboardPageTest extends TestBase
  	}	
 
 // 	Click on Logout option of Menu
- 	@Test(priority=22)
+ 	@Test(priority=20)
  	public void clickLogoutMenu() throws InterruptedException
  	{
  		Thread.sleep(2000);
@@ -251,7 +250,7 @@ public class NurseDashboardPageTest extends TestBase
  	} 	
  	 	
 // 	Click on Alert option of Menu
- 	@Test(priority=23)
+ 	@Test(priority=21)
  	public void clickAlertMenu() throws InterruptedException
  	{
  		Thread.sleep(2000);

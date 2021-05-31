@@ -37,7 +37,7 @@ public class NurseDashboardClickSearchCaseMenu extends TestBase
     {
    		initialization();
    		loginPage = new LoginPage(driver);
-   		nurseDashboardPage = new NurseDashboardPage();
+   		nurseDashboardPage = new NurseDashboardPage(driver);
    		selectFacilityPage = new SelectFacilityPage(driver);
    		nurseDashboardPage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));  
    		Thread.sleep(1000);

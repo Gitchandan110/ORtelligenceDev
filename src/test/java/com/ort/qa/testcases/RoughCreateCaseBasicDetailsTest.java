@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 import com.ort.qa.base.TestBase;
 import com.ort.qa.pages.CreateCaseBasicDetailsPage;
 
-public class CreateCaseBasicDetailsTest 
+public class RoughCreateCaseBasicDetailsTest 
 {
 	WebDriver wd;
 
@@ -70,7 +70,7 @@ public class CreateCaseBasicDetailsTest
 	
 		wd.findElement(By.name("locationId")).sendKeys("Wilmington, DE, 19899 , Wilmington, Delaware, 19899");
 		Thread.sleep(3000);
-		
+		//ByAngular.
  /*	String confirmButton = "button[contains(text(),'Confirm')]";
  * Confirm button
  */

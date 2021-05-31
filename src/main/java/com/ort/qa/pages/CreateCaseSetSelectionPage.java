@@ -1,21 +1,38 @@
 package com.ort.qa.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.ort.qa.base.TestBase;
+import com.ort.qa.util.DropDownHandler;
 
 public class CreateCaseSetSelectionPage extends TestBase 
 {
+
 	
- /*	Set Checkbox is pending
- *	Open quantity is pending
- *	Hold quantity is pending
- *	Delete set is pending
- *	Records display quantity dropdown
+ /*	click on set Checkbox. 
  */
 	
+	@FindBy(xpath="/html/body/app-root/app-full-layout/div[1]/app-create-case/app-addsets/form/div[1]/div[2]/div/table/tbody/tr[2]/td[1]/fieldset")
+	WebElement  checkbox1;
+	
+	/*	click on Open quantity 
+	 */
+	
+	@FindBy(xpath="/html/body/app-root/app-full-layout/div[1]/app-create-case/app-addsets/form/div[1]/div[2]/div/table/tbody/tr[2]/td[3]/input")
+	WebElement openQuantity ;
+	
+	/*	click on Hold quantity
+	 */
+	
+
+	@FindBy(xpath="(//input[@class='form-control textbox-width-height ng-pristine ng-valid ng-touched'])[2]")
+	WebElement holdQuantity ;
+	
+	/* Records display quantity dropdown
+	*/
 	@FindBy(xpath="//select[@class='custom-select']")
 	WebElement records;
 	
@@ -47,8 +64,8 @@ public class CreateCaseSetSelectionPage extends TestBase
  /*	Block Anesthesia type	
  */
 	
-		@FindBy(xpath="(//select[@class='form-control ng-untouched ng-pristine ng-valid'])[1]")
-		WebElement blockAnesthesiaType;
+	@FindBy(xpath="(//select[@class='form-control ng-untouched ng-pristine ng-valid'])[1]")
+	WebElement blockAnesthesiaType;
 	
  /*	X-Ray Needed* - Yes checkbox
  */
@@ -77,7 +94,7 @@ public class CreateCaseSetSelectionPage extends TestBase
  /*	Position* dropdown
  */
 	
-	@FindBy(xpath="(//select[@class='form-control ng-untouched ng-pristine ng-valid'])[4]")
+	@FindBy(xpath="/html/body/app-root/app-full-layout/div[1]/app-create-case/app-addsets/form/div[8]/div[2]/select")
 	WebElement position;
 	
  /*	Positioning Comments text
@@ -122,7 +139,7 @@ public class CreateCaseSetSelectionPage extends TestBase
  */
 	
 	@FindBy(xpath="//button[text()='Create']")
-	WebElement create;	
+	public WebElement create;	
 	
  /*	Confirmation pop-up
  * 	Ok button 
@@ -148,10 +165,13 @@ public class CreateCaseSetSelectionPage extends TestBase
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void createCaseSetSelection(String recordsOption, String searchSetText, String searchSuppliesText, String anesthesiaOption, String blockAnesthesiaTypeOption, String medicationsText, String sideOption, String positionOption, String positioningCommentText, String instructionsText) 
+	public void createCaseSetSelection( String openQuantityText,String holdQuantityText,  String recordsOption, String searchSetText, String searchSuppliesText, String anesthesiaOption, String blockAnesthesiaTypeOption, String medicationsText, String sideOption, String positionOption, String positioningCommentText, String instructionsText) 
 
 	{
 		
+		checkbox1.click();
+		openQuantity.sendKeys(openQuantityText);
+		holdQuantity.sendKeys(holdQuantityText);
 		records.sendKeys(recordsOption);
 		searchSet.sendKeys(searchSetText);
 		supplies.click();
@@ -169,16 +189,49 @@ public class CreateCaseSetSelectionPage extends TestBase
 				
 	}
 	
+	/*	click on checkbox.
+	*/
 
- /*	Back to previous sub-module
+	public void createCaseSetSelectioncheckbox()
+	{
+		
+			checkbox1.click();
+    }
+		
+	/*	OpenQuantity 
+	*/
+		 
+	public void createCaseOpenQuantity() 
+	{
+	openQuantity.sendKeys("2");
+				
+	}		
+	
+ /*	SelectSideDropdoown
  */
 
-
-	public void createCaseSetSelectionBack()
+	public void createCaseSetSelectionDropdown()
 	{
-		back.click();
+		DropDownHandler dp =new DropDownHandler(driver);
+        dp.SelectUsingVisibleText(side,"Bilateral");
 	}
 	
+  /*	SelectPositionDropdoown
+  */
+
+	public void createCaseSetPositionDropdown()
+	{
+		DropDownHandler dp =new DropDownHandler(driver);
+	    dp.SelectUsingVisibleText( position,"Beach Chair");
+	}
+	
+ /*	SelectPositionDropdoown
+ */
+
+	public void createCaseClickOnCreate()
+	{
+	 create.click();
+	}
 
  /*	Remove Procedure button
  */
@@ -189,11 +242,9 @@ public class CreateCaseSetSelectionPage extends TestBase
 		removeProcedure.click();
 		
 	}
-	
 
  /*	Remove Procedure - Procedure details pop-up
  */
-	
 
 	public void createCaseProcedureDetailsPopup()
 
@@ -202,7 +253,6 @@ public class CreateCaseSetSelectionPage extends TestBase
 		closePopupIcon.click();
 		
 	}
-	
 
  /*	Confirmation Pop-up 
  */
@@ -215,5 +265,8 @@ public class CreateCaseSetSelectionPage extends TestBase
 			
 	}
 	
-	
+ /*	OpenQuantity 
+ */
+	 
+		
 }

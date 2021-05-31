@@ -38,8 +38,8 @@ public class CreateCaseSystemSelectionPage extends TestBase
  *	Click here link to open pop-up
  */
 	
-	@FindBy(xpath="//a[text()='Click here']")
-	public WebElement clickHere;
+	@FindBy(xpath="(//button[@class='btn btn-primary'])[2]")
+	public WebElement clickOnSelectButton;
 
  /*	Pop-up - Proceed to Cart button
  */
@@ -99,7 +99,7 @@ public class CreateCaseSystemSelectionPage extends TestBase
  /*	Click here link to open Confirmation pop-up
  */ 
 		
-		clickHere.click();
+		clickOnSelectButton.click();
 		
  /* Confirmation pop-up will open.
  */

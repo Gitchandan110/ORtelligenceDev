@@ -28,7 +28,7 @@ public class CreateCaseSpecialtyTest extends TestBase
 			           initialization();
 			         loginPage = new LoginPage(driver);
 	      selectFacilityPage = new SelectFacilityPage(driver);
-	      selectFacilityPage = loginPage.login1(prop.getProperty("username"), prop.getProperty("password"));
+	      nurseDashboardPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	      createCaseSpecialtyPage =new CreateCaseSpecialtyPage();
 			
 		}

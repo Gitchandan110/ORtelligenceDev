@@ -42,6 +42,7 @@ public class NurseDashboardPage extends TestBase
 	
 // 	Dashboard Nurse ..............................................................................................
 //  In Process Nurse
+	WebDriver driver;
  	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[1]")
 	public WebElement dashboardInProcess;   
 	
@@ -163,45 +164,14 @@ public class NurseDashboardPage extends TestBase
 	
  /*Initialization
  */	
-	public NurseDashboardPage()
+	public NurseDashboardPage(WebDriver dr)
 	{ 
+		driver=dr;
 		PageFactory.initElements(driver, this);
 	}
 		
- /*	Actions:
- */	
-	public void NurseDashboard()
-	{
-//		Nurse
-		dashboardInProcess.click();
-		dashboardOnHold.click();
-		dashboardCartReview.click();
-		dashboardCreateCase.click();
-		dashboardSearchCase.click();
-		dashboardOpenCase.click();
-		dashboardORtelligence.click();
-		menuInProcess.click();
-		menuOnHold.click();
-		menuCartReview.click();
-		menuCreateCase.click();
-		menuSearchCase.click();
-		menuOpenCase.click();
-		menuORtelligence.click();
-		menuAlerts.click();
-		
-//		SPD
-		menuCaseQueueSPD.click();
-		dashboardSearchCaseSPD.click();
-		dashboardCaseQueueSPD.click();
-		
-//		HCP
-		dashboardCreateCaseHCP.click();
-		dashboardSearchCaseHCP.click();
-		dashboardOpenCaseHCP.click();
-		dashboardORtelligenceHCP.click();
-		
-	}
-	
+//	Actions:
+ 	
 //	Profile - Nurse .....................................................................................
 //	Click on Profile button method
 	public  void clickOnMenuProfile() 

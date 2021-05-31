@@ -1,9 +1,11 @@
 package com.ort.qa.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import com.ort.qa.base.TestBase;
 import com.ort.qa.util.DropDownHandler;
@@ -38,7 +40,7 @@ public class CreateCaseBasicDetailsPage extends TestBase
 
 	@FindBy(xpath="//i[@class='fa fa-plus padding-plus-layout cursor-pointer']")
 	WebElement secondSergeonPlusIcon;
-
+    //XPATH CHANGED BY PRIYANKA
 
  /*	Second Surgeon dropdown
  */
@@ -49,38 +51,47 @@ public class CreateCaseBasicDetailsPage extends TestBase
  /*Surgeon Latex Allergy* dropdown . This is auto filled if data is already saved.
  */
 	
-	@FindBy(xpath="(//select[@class='form-control ng-untouched ng-pristine ng-invalid'])[1]") 
+	@FindBy(xpath="//select[@formcontrolname='surgeonHasLatexAlergy']") 
 	WebElement surgeonAllergy;
+	
+/* XPATH WRITTEN BY PIYUSH :(//select[@class='form-control ng-untouched ng-pristine ng-invalid'])[1]
+* CHANGED BY PRIYANKA ://select[@formcontrolname='surgeonHasLatexAlergy']
+*/
 
  /*	2nd Surg. Latex Allergy* dropdown This is auto filled if data is already saved.
  */
 	
-	@FindBy(xpath="(//select[@class='form-control ng-untouched ng-pristine ng-invalid'])[2]")
+	@FindBy(xpath="(//select[@formcontrolname='secondSurgeonHasLatexAlergy']")
 	WebElement secondSurgeonAllergy;
-
+//XPATH CHANGED BY PRIYANKA
+	
  /* Patient Latex Allergy* dropdown This is auto filled if data is already saved.
  */
 	
-	@FindBy(xpath="(//select[@class='form-control ng-untouched ng-pristine ng-valid'])[3]")
+	@FindBy(xpath="//select[@formcontrolname='hasLatexAlergy']")
 	WebElement patientAllergy;
-
+	//CHANGED THE XPATH WRITTEN BY PIYUSH ://select[@class='form-control ng-untouched ng-pristine ng-invalid'])[2] 
+	// CHANGED BY PRIYANKA ://select[@formcontrolname='hasLatexAlergy']
+	
  /* Physician Assistant* dropdown
  */
 	
-	@FindBy(xpath="(//select[@class='form-control ng-untouched ng-pristine ng-valid'])[4]")
+	@FindBy(xpath="//select[@formcontrolname='physicianAssistant']")
 	WebElement physicianAssistant;
-
+//XPATH CHANGED BY PRIYANKA
  /*	Urgency
  */
 	
-	@FindBy(xpath="//select[@id='urgency']")
+	@FindBy(xpath="//select[@formcontrolname='urgency']")
 	WebElement urgency;
+//Changed the xpath written by Piyush
 
  /*	Procedure
  */
 	
 	@FindBy(xpath="//input[@id='selectProcedure']")
-	WebElement procedure;
+	 WebElement procedure;
+//XPATH CHANGED BY PRIYANKA
 
  /*	Specialty
  */
@@ -139,7 +150,7 @@ public class CreateCaseBasicDetailsPage extends TestBase
 	
 	@FindBy(xpath="//button[text()=' Please select Surgeon ']")
 	WebElement errorMsg;
-
+////div[@class='text-danger']
 
 	/*	Actions :
 	*/
@@ -158,6 +169,13 @@ public class CreateCaseBasicDetailsPage extends TestBase
 	public void basicDetails(String surgeonName, String surgeonPreferenceCard, String secondSurgeonName, String surgeonAllergyOption, String secondSurgeonAllergyOption, String patientAllergyOption, String physicianAssistantOption, String urgencyOption, String procedureOption, String speciaityOption, String surgeryDateTimeText, String notesText, String diagnosisCodeText)
 
 	{
+		Select select = new Select(driver.findElement(By.name("surgeon")));
+		select.selectByVisibleText(surgeonName);
+		
+		Select select1 = new Select(driver.findElement(By.name("hasLatexAlergy")));
+		select1.selectByVisibleText(patientAllergyOption);
+		
+		
 		surgeon.sendKeys(surgeonName);
 		preferenceCard.sendKeys(surgeonPreferenceCard);
 		quickPick.click();
@@ -206,11 +224,24 @@ public class CreateCaseBasicDetailsPage extends TestBase
 	
 	public void clickOnPatientUrgencyDropDown() {
 		DropDownHandler dp =new DropDownHandler(driver);
-        dp.SelectUsingVisibleText(urgency," Critical (Up to 1hr.)");
+        dp.SelectUsingVisibleText(urgency,"Critical (Up to 1hr.)");
 	}
     
 	public void clickOnNextButton() {
 		next.click();
+	}
+	
+	
+	
+	public void clickOnProcedure() {
+		//procedure.click();
+		procedure.sendKeys("IM Nail Hip / InterTroch / CMN Hip (27245)");
+	}
+	
+
+	public void clickOnPreferenceCard() {
+		preferenceCard.click();
+		
 	}
 	
 	

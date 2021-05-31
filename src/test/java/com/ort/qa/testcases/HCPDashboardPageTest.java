@@ -21,7 +21,7 @@ import com.ort.qa.pages.SelectFacilityPage;
 public class HCPDashboardPageTest extends TestBase
 {
 //	Declaration
-	WebDriver driver;
+
 //	LoginPage object - loginPage 
 	LoginPage loginPage;
 //	NurseDashboardPage object - nurseDashboardPage
@@ -42,7 +42,7 @@ public class HCPDashboardPageTest extends TestBase
     {
  		initialization();
  		loginPage = new LoginPage(driver);
- 		nurseDashboardPage = new NurseDashboardPage();
+ 		nurseDashboardPage = new NurseDashboardPage(driver);
  		selectFacilityPage = new SelectFacilityPage(driver);
  		nurseDashboardPage=loginPage.login(prop.getProperty("usernameHCP"), prop.getProperty("passwordHCP"));  
  		Thread.sleep(3000);

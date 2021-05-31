@@ -56,7 +56,7 @@ public class CreateCaseSystemSelectionTest extends TestBase
 		public void  createCaseSystemSelectionSelectSystem() throws InterruptedException 
 		{
 			
-			createCaseSystemSelectionPage.clickHere.click();
+			createCaseSystemSelectionPage.clickOnSelectButton.click();
 			Thread.sleep(3000);
 			System.out.println("click3");
 		}
