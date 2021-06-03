@@ -3,14 +3,27 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ort.qa.testcases.LoginPageTest">
+      <class name="com.ort.qa.testcases.HCPDashboardPageTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="validateInvalidLoginCredentials"/>
+          <include name="clickProfileMenu"/>
           <include name="setUp"/>
-          <include name="ortLogoImageTest"/>
+          <include name="clickSearchCaseDashboard"/>
+          <include name="verifyMenuOptionVisibility"/>
+          <include name="clickOpenCaseMenu"/>
+          <include name="clickCreateCaseDashboard"/>
+          <include name="clickOpenCaseDashboard"/>
+          <include name="verifyDashboardOptionVisibility"/>
+          <include name="clickORtelligenceMenu"/>
+          <include name="clickSearchCaseMenu"/>
+          <include name="clickLogoutMenu"/>
+          <include name="clickNurseSwitchLocationMenu"/>
+          <include name="clickCreateCaseMenu"/>
+          <include name="tearDown"/>
+          <include name="verifyDashboardPageTitleTest"/>
+          <include name="clickAlertMenu"/>
+          <include name="clickORtelligenceDashboard"/>
         </methods>
-      </class> <!-- com.ort.qa.testcases.LoginPageTest -->
+      </class> <!-- com.ort.qa.testcases.HCPDashboardPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

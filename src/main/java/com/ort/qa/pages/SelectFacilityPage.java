@@ -54,7 +54,7 @@ public class SelectFacilityPage extends TestBase
 	
 	public void clickOnDropDown() {
 		DropDownHandler dp =new DropDownHandler(driver);
-        dp.SelectUsingVisibleText(facilityDropdown,"Wilmington, DE, 19899 , Wilmington, Delaware, 19899");
+        dp.selectUsingVisibleText(facilityDropdown,"Wilmington, DE, 19899 , Wilmington, Delaware, 19899");
 	}
 	
 	public void clickOnCreateCase()

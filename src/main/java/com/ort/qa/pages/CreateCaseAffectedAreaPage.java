@@ -531,7 +531,7 @@ public class CreateCaseAffectedAreaPage extends TestBase
 		
 	}
 	
-	public void Clickonhip()
+	public void clickOnhip()
 	{
 		hip.click();
 		

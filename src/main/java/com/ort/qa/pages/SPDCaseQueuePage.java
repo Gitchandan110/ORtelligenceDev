@@ -5,6 +5,8 @@
  * */
 package com.ort.qa.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -57,17 +59,24 @@ public class SPDCaseQueuePage extends TestBase
 		PageFactory.initElements(driver, this);
 	}
 	
+	
+//commented the method as it was not used: 03/06/2021
 //	Information from Data Table
-	public void CaseQueueCaseInformation(String procedureText,String caseDateTimeText,String caseSurgeonText,String caseMNRText,String casePatientNameText,String caseClassText,String caseScheduledStatusText,String caseStatusText)
+/*	
+	public void caseQueueCaseInformation(String procedureText,String caseDateTimeText,String caseSurgeonText,String caseMNRText,String casePatientNameText,String caseClassText,String caseScheduledStatusText,String caseStatusText)
 	{
 		procedureText = caseProcedure.getText();
 		System.out.println("Procedure details are: "+procedureText);
+		
 		caseDateTimeText = caseDateTime.getText();
 		System.out.println("Surgery date and time details are: "+caseDateTimeText);
+		
 		caseSurgeonText = caseSurgeon.getText();
 		System.out.println(" details are: "+caseSurgeonText);
+		
 		caseMNRText = caseMNR.getText();
 		System.out.println(" details are: "+caseMNRText);
+		
 		casePatientNameText = casePatientName.getText();
 		System.out.println(" details are: "+casePatientNameText);
 		caseClassText = caseClass.getText();
@@ -77,7 +86,7 @@ public class SPDCaseQueuePage extends TestBase
 		caseStatusText = caseStatus.getText();
 		System.out.println(" details are: "+caseStatusText);
 	}
-
+*/
 	
 	
 	

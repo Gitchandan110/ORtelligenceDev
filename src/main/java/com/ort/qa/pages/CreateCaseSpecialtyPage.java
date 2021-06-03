@@ -43,7 +43,7 @@ public class CreateCaseSpecialtyPage extends TestBase
 	
 	public void clickOnDropDown() {
 		DropDownHandler ds =new DropDownHandler(driver);
-		 ds.SelectUsingVisibleText(selectSpecialty,"Trauma");
+		 ds.selectUsingVisibleText(selectSpecialty,"Trauma");
 	
 	}
 	public void clickOnNext()

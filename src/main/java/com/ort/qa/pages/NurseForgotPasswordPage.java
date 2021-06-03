@@ -9,7 +9,7 @@ import com.ort.qa.base.TestBase;
 public class NurseForgotPasswordPage  extends TestBase {
 	
 	@FindBy(xpath="//img[@class='org-logo__image']")
-	WebElement ORtLogo;
+	WebElement ortLogo;
 
 	@FindBy(id ="username")//username for forgot password
 	WebElement username;
@@ -17,20 +17,12 @@ public class NurseForgotPasswordPage  extends TestBase {
 	@FindBy(xpath="//a[text()='Forgot Password']")//For forgot Password
 	WebElement forgotPassword;
 
- /* @FindBy(xpath="//img[@class='org-logo__image']")//Logo for next page.
- * WebElement ORtLogo1;
- */
-	
 	@FindBy(id ="username")//username for forgot password
 	WebElement usernameReset;
 
 	@FindBy(xpath="//button[text()='Submit']")//submit button password
 	WebElement submit;
 
-  /*@FindBy(xpath="//img[@class='org-logo__image']")//Logo for page 2
-  *WebElement ORtLogo2;
-  */
-	
 	@FindBy(id ="recovery-code")
 	WebElement recoveryCode;
 
@@ -46,7 +38,7 @@ public class NurseForgotPasswordPage  extends TestBase {
 	@FindBy(xpath="//a[@href='#']")
 	WebElement resend;
 
-	public void ForgotPasswordPage(){                           
+	public NurseForgotPasswordPage(){                           
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -54,7 +46,7 @@ public class NurseForgotPasswordPage  extends TestBase {
  */
 	
 	public boolean validateORtLogo() {
-		return ORtLogo.isDisplayed(); 
+		return ortLogo.isDisplayed(); 
 		
 	}
 	public NurseForgotPasswordPage username(String un) {

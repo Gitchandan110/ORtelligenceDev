@@ -213,7 +213,7 @@ public class CreateCaseSetSelectionPage extends TestBase
 	public void createCaseSetSelectionDropdown()
 	{
 		DropDownHandler dp =new DropDownHandler(driver);
-        dp.SelectUsingVisibleText(side,"Bilateral");
+        dp.selectUsingVisibleText(side,"Bilateral");
 	}
 	
   /*	SelectPositionDropdoown
@@ -222,7 +222,7 @@ public class CreateCaseSetSelectionPage extends TestBase
 	public void createCaseSetPositionDropdown()
 	{
 		DropDownHandler dp =new DropDownHandler(driver);
-	    dp.SelectUsingVisibleText( position,"Beach Chair");
+	    dp.selectUsingVisibleText( position,"Beach Chair");
 	}
 	
  /*	SelectPositionDropdoown

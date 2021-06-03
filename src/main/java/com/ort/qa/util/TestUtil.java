@@ -32,7 +32,7 @@ public class TestUtil extends TestBase
 		FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + System.currentTimeMillis() + ".png"));
 	}
 	
-	public static void scrollEndofthePage(WebDriver driver) throws Exception{
+	public static void scrollEndofthePage(WebDriver driver) {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");

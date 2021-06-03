@@ -165,43 +165,11 @@ public class CreateCaseBasicDetailsPage extends TestBase
 	* Verify DOB -  pending
     * Verify MNR#
     */
-	
-	public void basicDetails(String surgeonName, String surgeonPreferenceCard, String secondSurgeonName, String surgeonAllergyOption, String secondSurgeonAllergyOption, String patientAllergyOption, String physicianAssistantOption, String urgencyOption, String procedureOption, String speciaityOption, String surgeryDateTimeText, String notesText, String diagnosisCodeText)
+	//Deleted basicDetails Method as it was not useful: 03/06/2021 
 
-	{
-		Select select = new Select(driver.findElement(By.name("surgeon")));
-		select.selectByVisibleText(surgeonName);
-		
-		Select select1 = new Select(driver.findElement(By.name("hasLatexAlergy")));
-		select1.selectByVisibleText(patientAllergyOption);
-		
-		
-		surgeon.sendKeys(surgeonName);
-		preferenceCard.sendKeys(surgeonPreferenceCard);
-		quickPick.click();
-		secondSergeonPlusIcon.click();
-		secondSurgeon.sendKeys(secondSurgeonName);
-		surgeonAllergy.sendKeys(surgeonAllergyOption);
-		secondSurgeonAllergy.sendKeys(secondSurgeonAllergyOption);
-		patientAllergy.sendKeys(patientAllergyOption);
-		physicianAssistant.sendKeys(physicianAssistantOption);
-		urgency.sendKeys(urgencyOption);
-		procedure.sendKeys(procedureOption);
-		speciaity.sendKeys(speciaityOption);
-		surgeryDateTime.sendKeys(surgeryDateTimeText);
-		surgeryDateTimeCalenderIcon.click();
-		notes.sendKeys(notesText);
-		diagnosisCode.sendKeys(diagnosisCodeText);
-		diagnosisCodeSearch.click();
-		uploadImagePhoto.click();
-		uploadImageBrowse.click();
-		next.click();
-
-	}
-	
 	public void clickOnPatientDropDown() {
 		DropDownHandler dp =new DropDownHandler(driver);
-        dp.SelectUsingVisibleText(surgeon,"Christiana Surgeon");
+        dp.selectUsingVisibleText(surgeon,"Christiana Surgeon");
 	}
 	
 	public boolean checkErrorMessage() {
@@ -219,12 +187,12 @@ public class CreateCaseBasicDetailsPage extends TestBase
 	
 	public void clickOnPatientLatexAllergyDropDown() {
 		DropDownHandler dp =new DropDownHandler(driver);
-        dp.SelectUsingVisibleText(patientAllergy,"No");
+        dp.selectUsingVisibleText(patientAllergy,"No");
 	}
 	
 	public void clickOnPatientUrgencyDropDown() {
 		DropDownHandler dp =new DropDownHandler(driver);
-        dp.SelectUsingVisibleText(urgency,"Critical (Up to 1hr.)");
+        dp.selectUsingVisibleText(urgency,"Critical (Up to 1hr.)");
 	}
     
 	public void clickOnNextButton() {
@@ -234,7 +202,6 @@ public class CreateCaseBasicDetailsPage extends TestBase
 	
 	
 	public void clickOnProcedure() {
-		//procedure.click();
 		procedure.sendKeys("IM Nail Hip / InterTroch / CMN Hip (27245)");
 	}
 	

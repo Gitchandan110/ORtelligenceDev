@@ -228,4 +228,64 @@ public class NurseDashboardPage extends TestBase
  		dashboardCreateCase.click();
  	}
 	
+	
+	//created method to verify visibility all the menu options on NurseDashboardPage:Priyanka:03/06/2021
+	public boolean verifyMenuOptionsOnNurseDashboard() {
+		menuInProcess.isDisplayed();
+		menuOnHold.isDisplayed();
+		menuCartReview.isDisplayed();
+		menuCreateCase.isDisplayed();
+		menuSearchCase.isDisplayed();
+		menuOpenCase.isDisplayed();
+		menuORtelligence.isDisplayed();
+		menuUserName.isDisplayed();
+		return menuAlerts.isDisplayed();
+	}
+	//created method to verify visibility of all the Dasboard options on NurseDashboardPage:Priyanka:03/06/2021
+	public boolean verifyDashboardOptionsOnNurseDashboard() {
+		
+		dashboardInProcess.isDisplayed();
+		dashboardOnHold.isDisplayed();
+		dashboardCartReview.isDisplayed();
+		dashboardCreateCase.isDisplayed();
+		dashboardSearchCase.isDisplayed();
+		dashboardOpenCase.isDisplayed();
+		return dashboardORtelligence.isDisplayed();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//created this method to verify all menu options of HCP Dashboard Page
+	//And deleted verifyMenuOptionVisibility testcase and written new testcase ussing AssertTrue
+	
+	public boolean verifyAllMenuOptions() 
+	{
+		 menuCreateCase.isDisplayed(); 
+	     menuSearchCase.isDisplayed();
+	     menuOpenCase.isDisplayed();
+	     menuORtelligence.isDisplayed();
+	     menuUserName.isDisplayed();
+	    return menuAlerts.isDisplayed();
+	}
+	
+	public boolean verifyDashboardOptions() 
+	{
+		dashboardCreateCaseHCP.isDisplayed();
+		dashboardSearchCaseHCP.isDisplayed();
+		dashboardOpenCaseHCP.isDisplayed();
+		return dashboardORtelligenceHCP.isDisplayed();
+		
+	    
+	}
+	
+	
 }
