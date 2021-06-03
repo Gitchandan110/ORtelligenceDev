@@ -5,17 +5,11 @@ package com.ort.qa.testcases;
 
 import java.util.concurrent.TimeUnit;
 
-import javax.security.auth.callback.ConfirmationCallback;
-
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import com.ort.qa.base.TestBase;
-import com.ort.qa.pages.CreateCaseBasicDetailsPage;
 
 public class RoughCreateCaseBasicDetailsTest 
 {

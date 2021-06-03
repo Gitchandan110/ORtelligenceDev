@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 import com.ort.qa.base.TestBase;
 import com.ort.qa.pages.LoginPage;
 import com.ort.qa.pages.NurseDashboardPage;
-import com.ort.qa.pages.SPDCaseQueuePage;
+
 import com.ort.qa.pages.SearchPatientPage;
 import com.ort.qa.pages.SelectFacilityPage;
 

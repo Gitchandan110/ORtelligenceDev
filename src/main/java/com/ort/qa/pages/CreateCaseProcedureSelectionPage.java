@@ -66,11 +66,6 @@ public class CreateCaseProcedureSelectionPage extends TestBase
 				
 	}
 
-	public static void click() {
-		// TODO Auto-generated method stub
-		
-	}
-	
 	
 
 }

@@ -244,6 +244,8 @@ public class CreateCaseBasicDetailsPage extends TestBase
 		
 	}
 	
-	
+	public void notesByDoctor() {
+		notes.sendKeys("Do not Drink Water before one hour of operation");
+	}
 	
 }

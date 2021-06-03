@@ -58,7 +58,7 @@ public class SPDCaseQueuePageTest extends TestBase
 		Thread.sleep(1000);
 		nurseDashboardPage.dashboardCaseQueueSPD.click();
 		Thread.sleep(1000);
-		searchPatientPage.SearchPatientData("SearchPatient", 12,0,1,2,3,4,5);
+		searchPatientPage.SearchPatientData("SearchPatient", 16,0,1,2,3,4,5);
 		
 	}
     

@@ -12,6 +12,10 @@ public class CreateCaseSystemSelectionPage extends TestBase
  /*	System found
  * 	Checkbox 1st option
  */ 
+
+	
+	@FindBy(xpath="(//input[@type='checkbox'])")
+	public WebElement checkBoxElement;
 	
 	@FindBy(xpath="(//input[@type='checkbox'])[1]")
 	public WebElement checkboxSystem1;
@@ -103,6 +107,7 @@ public class CreateCaseSystemSelectionPage extends TestBase
 		
  /* Confirmation pop-up will open.
  */
+		
 						
 	}
 	

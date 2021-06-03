@@ -1,7 +1,10 @@
 package com.ort.qa.testcases;
 
-import org.testng.annotations.AfterMethod;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.ort.qa.base.TestBase;
@@ -34,14 +37,15 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 		super();	                           
 		}
 
-	@BeforeMethod
+	@BeforeTest
+	
 	public void setUp() throws InterruptedException {
 		initialization();
 
 		                  loginPage = new LoginPage(driver);
 		         selectFacilityPage = new SelectFacilityPage(driver);
 		  createCaseFindPatientPage = new CreateCaseFindPatientPage(driver);  
-		  createCaseBasicDetailsPage = new CreateCaseBasicDetailsPage(driver);
+		 createCaseBasicDetailsPage = new CreateCaseBasicDetailsPage(driver);
 		  nurseDashboardPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 		         nurseDashboardPage=new NurseDashboardPage(driver);
 		         createCaseAffectedAreaPage= new CreateCaseAffectedAreaPage();
@@ -49,21 +53,96 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 		         createCaseSystemSelectionPage = new CreateCaseSystemSelectionPage();
 		 	      createCaseSetSelectionPage = new  CreateCaseSetSelectionPage();
 		         selectFacilityPage.clickOnDropDown();
-		  		Thread.sleep(1000);
 		 		selectFacilityPage.clickConfirm();
 		 		nurseDashboardPage.clickOncreateCase();
+		 		
 	}
 	
+	//@AfterTest
+	public void tearDown() throws InterruptedException {
+		//Thread.sleep(1000);
+		driver.quit();
+	}
 	
 	@Test(priority=1,dataProvider="PatientData",dataProviderClass=DataProviderExcel.class)
 	public void createCaseFindPatientPageTest(String lastName, String firstName, String mNR) throws InterruptedException 
 	{
 		
 		createCaseFindPatientPage.createCaseFindPatientData(lastName, firstName, mNR);
-		Thread.sleep(5000);
-	    createCaseFindPatientPage.clickSearchButton();
-	    Thread.sleep(1000);
-	    createCaseFindPatientPage.createCaseSelectPatientButton();
+		//Thread.sleep(5000);
+	}
+	
+	@Test(priority=2)
+	public void clickOnButton() throws InterruptedException {
+		  Thread.sleep(1000);
+		createCaseFindPatientPage.clickSearchButton();
+	  
+	}
+	
+	@Test(priority=3)
+	public void clickOnPatientButton() throws InterruptedException {
+		  Thread.sleep(2000);	
+		  createCaseFindPatientPage.createCaseSelectPatientButton();
+		    
+	}
+	
+	@Test(priority=4)
+	public void clickOnPatientDropDownButton() throws InterruptedException {
+		Thread.sleep(2000);
+		 createCaseBasicDetailsPage.clickOnPatientDropDown();
+			Thread.sleep(2000);
+		 createCaseBasicDetailsPage.clickOnPatientLatexAllergyDropDown();
+			Thread.sleep(2000);
+		 createCaseBasicDetailsPage.clickOnPatientUrgencyDropDown();
+	}
+	
+	@Test(priority=5)
+	public void notesByDoctors() {
+		createCaseBasicDetailsPage.notesByDoctor();
+	}
+	
+	@Test(priority=6)
+	public void clickOnNextButton() throws InterruptedException {
+		Thread.sleep(2000);
+		  createCaseBasicDetailsPage.clickOnNextButton();
+	}
+	
+	
+	@Test(priority=7)
+	public void clickOnHip() {
+		createCaseAffectedAreaPage.Clickonhip();
+	}
+	
+	@Test(priority=8)
+	public void clickOnProcedure() {
+	    createCaseProcedureSelectionPage.selectProcedure2.click();
+	}
+	
+	
+	@Test(priority=9)
+	public void clickOnCheckBox() throws InterruptedException {
+		createCaseSystemSelectionPage.checkboxSystem1.click();
+		 createCaseSystemSelectionPage.checkboxSystem2.click();
+		 createCaseSystemSelectionPage.clickOnSelectButton.click();
+		 createCaseSystemSelectionPage.proceedToCart.click();
+		 createCaseSetSelectionPage.createCaseSetSelectioncheckbox();
+		    Thread.sleep(3000);
+		    createCaseSetSelectionPage.createCaseOpenQuantity(); 
+		    Thread.sleep(2000);
+		    createCaseSetSelectionPage.createCaseSetSelectionDropdown();
+		    Thread.sleep(2000);
+		    createCaseSetSelectionPage.createCaseSetPositionDropdown();
+		    Thread.sleep(2000);
+		    createCaseSetSelectionPage.create.click();
+		    		} 
+
+	
+	
+	
+	 
+	//@Test(priority=5)
+	//    public void 
+	/*    createCaseFindPatientPage.createCaseSelectPatientButton();
 	    Thread.sleep(2000);
 	   
 	    createCaseBasicDetailsPage.clickOnPatientDropDown();
@@ -170,13 +249,13 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 	    createCaseAffectedAreaPage.Clickonhip();
 	    //createCaseAffectedAreaPage.hip.click();
 	}
-
+*/
 	
 
 	
 	// @AfterMethod
-	public void tearDown() {
-		driver.quit();
-	 }
+	//public void tearDown() {
+	//	driver.quit();
+	// }
 
 }

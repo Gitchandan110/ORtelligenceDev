@@ -48,7 +48,19 @@ public class LoginPageTest extends TestBase{
 		Assert.assertTrue(flag);     
 		//if flag is true ur assertion will be passed otherwise it will fail
 	}
-	
+    
+   @Test(priority=3)
+   public void validateInvalidLoginCredentials() {
+		//loginPage.signUpBtn.click();
+		Assert.assertTrue(loginPage.checkErrorMessage());
+	   
+   }
+   
+   @Test(priority=4)
+   public void validateForgotPasswordLink() {
+	   
+   }
+   
 	   //this test case is for fetching the multiple username and password from the excel sheet 
        //we will run this testcase later, used enabled=false as it will not run*/
  

@@ -13,7 +13,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 
-
 import com.ort.qa.util.TestUtil;
 import com.ort.qa.util.WebEventListener;
 //import com.paulhammant.ngwebdriver.NgWebDriver;
@@ -87,12 +86,13 @@ public class TestBase {
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		
-	
+		
 		
 		
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+	driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		
+
 		/*reading the property file to get URL
 		 */
 	    driver.get(prop.getProperty("url")); 
