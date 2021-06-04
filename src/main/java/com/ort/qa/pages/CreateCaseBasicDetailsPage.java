@@ -1,9 +1,11 @@
 package com.ort.qa.pages;
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
 
 import com.ort.qa.base.TestBase;
 import com.ort.qa.util.DropDownHandler;
@@ -38,7 +40,7 @@ public class CreateCaseBasicDetailsPage extends TestBase
 
 	@FindBy(xpath="//i[@class='fa fa-plus padding-plus-layout cursor-pointer']")
 	WebElement secondSergeonPlusIcon;
-
+    //XPATH CHANGED BY PRIYANKA
 
  /*	Second Surgeon dropdown
  */
@@ -49,38 +51,47 @@ public class CreateCaseBasicDetailsPage extends TestBase
  /*Surgeon Latex Allergy* dropdown . This is auto filled if data is already saved.
  */
 	
-	@FindBy(xpath="(//select[@class='form-control ng-untouched ng-pristine ng-invalid'])[1]") 
+	@FindBy(xpath="//select[@formcontrolname='surgeonHasLatexAlergy']") 
 	WebElement surgeonAllergy;
+	
+/* XPATH WRITTEN BY PIYUSH :(//select[@class='form-control ng-untouched ng-pristine ng-invalid'])[1]
+* CHANGED BY PRIYANKA ://select[@formcontrolname='surgeonHasLatexAlergy']
+*/
 
  /*	2nd Surg. Latex Allergy* dropdown This is auto filled if data is already saved.
  */
 	
-	@FindBy(xpath="(//select[@class='form-control ng-untouched ng-pristine ng-invalid'])[2]")
+	@FindBy(xpath="(//select[@formcontrolname='secondSurgeonHasLatexAlergy']")
 	WebElement secondSurgeonAllergy;
-
+//XPATH CHANGED BY PRIYANKA
+	
  /* Patient Latex Allergy* dropdown This is auto filled if data is already saved.
  */
 	
-	@FindBy(xpath="(//select[@class='form-control ng-untouched ng-pristine ng-valid'])[3]")
+	@FindBy(xpath="//select[@formcontrolname='hasLatexAlergy']")
 	WebElement patientAllergy;
-
+	//CHANGED THE XPATH WRITTEN BY PIYUSH ://select[@class='form-control ng-untouched ng-pristine ng-invalid'])[2] 
+	// CHANGED BY PRIYANKA ://select[@formcontrolname='hasLatexAlergy']
+	
  /* Physician Assistant* dropdown
  */
 	
-	@FindBy(xpath="(//select[@class='form-control ng-untouched ng-pristine ng-valid'])[4]")
+	@FindBy(xpath="//select[@formcontrolname='physicianAssistant']")
 	WebElement physicianAssistant;
-
+//XPATH CHANGED BY PRIYANKA
  /*	Urgency
  */
 	
-	@FindBy(xpath="//select[@id='urgency']")
+	@FindBy(xpath="//select[@formcontrolname='urgency']")
 	WebElement urgency;
+//Changed the xpath written by Piyush
 
  /*	Procedure
  */
 	
 	@FindBy(xpath="//input[@id='selectProcedure']")
-	WebElement procedure;
+	 WebElement procedure;
+//XPATH CHANGED BY PRIYANKA
 
  /*	Specialty
  */
@@ -139,7 +150,7 @@ public class CreateCaseBasicDetailsPage extends TestBase
 	
 	@FindBy(xpath="//button[text()=' Please select Surgeon ']")
 	WebElement errorMsg;
-
+////div[@class='text-danger']
 
 	/*	Actions :
 	*/
@@ -154,36 +165,11 @@ public class CreateCaseBasicDetailsPage extends TestBase
 	* Verify DOB -  pending
     * Verify MNR#
     */
-	
-	public void basicDetails(String surgeonName, String surgeonPreferenceCard, String secondSurgeonName, String surgeonAllergyOption, String secondSurgeonAllergyOption, String patientAllergyOption, String physicianAssistantOption, String urgencyOption, String procedureOption, String speciaityOption, String surgeryDateTimeText, String notesText, String diagnosisCodeText)
+	//Deleted basicDetails Method as it was not useful: 03/06/2021 
 
-	{
-		surgeon.sendKeys(surgeonName);
-		preferenceCard.sendKeys(surgeonPreferenceCard);
-		quickPick.click();
-		secondSergeonPlusIcon.click();
-		secondSurgeon.sendKeys(secondSurgeonName);
-		surgeonAllergy.sendKeys(surgeonAllergyOption);
-		secondSurgeonAllergy.sendKeys(secondSurgeonAllergyOption);
-		patientAllergy.sendKeys(patientAllergyOption);
-		physicianAssistant.sendKeys(physicianAssistantOption);
-		urgency.sendKeys(urgencyOption);
-		procedure.sendKeys(procedureOption);
-		speciaity.sendKeys(speciaityOption);
-		surgeryDateTime.sendKeys(surgeryDateTimeText);
-		surgeryDateTimeCalenderIcon.click();
-		notes.sendKeys(notesText);
-		diagnosisCode.sendKeys(diagnosisCodeText);
-		diagnosisCodeSearch.click();
-		uploadImagePhoto.click();
-		uploadImageBrowse.click();
-		next.click();
-
-	}
-	
 	public void clickOnPatientDropDown() {
 		DropDownHandler dp =new DropDownHandler(driver);
-        dp.SelectUsingVisibleText(surgeon,"Christiana Surgeon");
+        dp.selectUsingVisibleText(surgeon,"Christiana Surgeon");
 	}
 	
 	public boolean checkErrorMessage() {
@@ -201,12 +187,12 @@ public class CreateCaseBasicDetailsPage extends TestBase
 	
 	public void clickOnPatientLatexAllergyDropDown() {
 		DropDownHandler dp =new DropDownHandler(driver);
-        dp.SelectUsingVisibleText(patientAllergy,"No");
+        dp.selectUsingVisibleText(patientAllergy,"No");
 	}
 	
 	public void clickOnPatientUrgencyDropDown() {
 		DropDownHandler dp =new DropDownHandler(driver);
-        dp.SelectUsingVisibleText(urgency," Critical (Up to 1hr.)");
+        dp.selectUsingVisibleText(urgency,"Critical (Up to 1hr.)");
 	}
     
 	public void clickOnNextButton() {
@@ -214,5 +200,19 @@ public class CreateCaseBasicDetailsPage extends TestBase
 	}
 	
 	
+	
+	public void clickOnProcedure() {
+		procedure.sendKeys("IM Nail Hip / InterTroch / CMN Hip (27245)");
+	}
+	
+
+	public void clickOnPreferenceCard() {
+		preferenceCard.click();
+		
+	}
+	
+	public void notesByDoctor() {
+		notes.sendKeys("Do not Drink Water before one hour of operation");
+	}
 	
 }

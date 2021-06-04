@@ -1,6 +1,5 @@
 package com.ort.qa.pages;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -13,7 +12,10 @@ public class CreateCaseSystemSelectionPage extends TestBase
  /*	System found
  * 	Checkbox 1st option
  */ 
-	WebDriver driver; 
+
+	
+	@FindBy(xpath="(//input[@type='checkbox'])")
+	public WebElement checkBoxElement;
 	
 	@FindBy(xpath="(//input[@type='checkbox'])[1]")
 	public WebElement checkboxSystem1;
@@ -40,8 +42,8 @@ public class CreateCaseSystemSelectionPage extends TestBase
  *	Click here link to open pop-up
  */
 	
-	@FindBy(xpath="//a[text()='Click here']")
-	public WebElement clickHere;
+	@FindBy(xpath="(//button[@class='btn btn-primary'])[2]")
+	public WebElement clickOnSelectButton;
 
  /*	Pop-up - Proceed to Cart button
  */
@@ -101,10 +103,11 @@ public class CreateCaseSystemSelectionPage extends TestBase
  /*	Click here link to open Confirmation pop-up
  */ 
 		
-		clickHere.click();
+		clickOnSelectButton.click();
 		
  /* Confirmation pop-up will open.
  */
+		
 						
 	}
 	

@@ -35,7 +35,7 @@ public class LoginPageTest extends TestBase{
 		 loginPage = new LoginPage(driver);
 	}
 	
-/*	@Test(priority=1)
+	@Test(priority=1)
 	public void loginPageTiltleTest() {
 		String title=loginPage.validateLoginPageTitle();
 		Assert.assertEquals(title, "ortelligence");
@@ -48,22 +48,20 @@ public class LoginPageTest extends TestBase{
 		Assert.assertTrue(flag);     
 		//if flag is true ur assertion will be passed otherwise it will fail
 	}
-	
+    
+   
+   
+    
 	   //this test case is for fetching the multiple username and password from the excel sheet 
-       //we will run this testcase later*/
- 
-
+       //we will run this testcase later, used enabled=false as it will not run*/
   	@Test(priority=3,enabled=false,dataProvider="NurseData",dataProviderClass=DataProviderExcel.class)
   	public void LoginTest(String user,String password) throws InterruptedException {
-
-  		
   		//LoginPage lpage=new LoginPage();
   		loginPage.login(user, password);
-  		
   		//dashboardPage =loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
    	}
    	 
-  	
+  
 	@AfterMethod
 	public void tearDown() {
 		driver.quit();

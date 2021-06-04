@@ -40,7 +40,7 @@ public class SurgeonDashboardPageTest extends TestBase
     {
  		initialization();
  		loginPage = new LoginPage(driver);
- 		nurseDashboardPage = new NurseDashboardPage();
+ 		nurseDashboardPage = new NurseDashboardPage(driver);
  		selectFacilityPage = new SelectFacilityPage(driver);
  		nurseDashboardPage=loginPage.login(prop.getProperty("usernameSurgeon"), prop.getProperty("passwordSurgeon"));  
  		Thread.sleep(3000);

@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.ort.qa.base.TestBase;
-import com.ort.qa.util.DropDownHandler;
+
 
 public class CreateCaseFindPatientPage extends TestBase
 {
@@ -86,7 +86,9 @@ public class CreateCaseFindPatientPage extends TestBase
 		
 	}
 	
+	
 
+	
 	public void clickSearchButton() {
 		search.click();
 	}
@@ -97,6 +99,37 @@ public class CreateCaseFindPatientPage extends TestBase
 		selectPatient.click();
 			
 	}
+
+	
+	//Below method is to select the checkbox if it is not selected already
+	public void selectTheCheckbox(WebElement element) {
+		try {
+            if (element.isSelected()) {
+               System.out.println("Checkbox: " + element + "is already selected");
+            } else {
+            	// Select the checkbox
+                element.click();
+            }
+        } catch (Exception e) {
+        	System.out.println("Unable to select the checkbox: " + element);
+        }
+		
+	}
+	
+	//Below method is to De-select the checkbox if it is already selected
+	public void deSelectTheCheckbox(WebElement element) {
+		try {
+            if (element.isSelected()) {
+            	//De-select the checkbox
+                element.click();
+            } else {
+            	System.out.println("Checkbox: "+element+"is already deselected");
+            }
+        } catch (Exception e) {
+        	System.out.println("Unable to deselect checkbox: "+element);
+        }
+		}
+	
 	
 	
 }

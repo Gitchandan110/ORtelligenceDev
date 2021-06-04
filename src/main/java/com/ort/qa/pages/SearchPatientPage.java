@@ -12,20 +12,14 @@
 
 package com.ort.qa.pages;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.ort.qa.base.TestBase;
-import com.ort.qa.util.DropDownHandler;
 import com.ort.qa.util.ExcelDataUtility;
-import com.ort.qa.util.ExcelUtility;
 
 public class SearchPatientPage extends TestBase
 {
@@ -93,7 +87,7 @@ public class SearchPatientPage extends TestBase
 	}
 	
 //	Click on Case number
-	public void SearchPatientClickOnCaseNumber() throws InterruptedException
+	public void searchPatientClickOnCaseNumber() throws InterruptedException
 	{
 		selectCase.click();
 		Thread.sleep(2000);
@@ -340,5 +334,7 @@ public class SearchPatientPage extends TestBase
 		confirmationPopupCartDetails.click();
 		
 	}
+	
+	
 	
 }

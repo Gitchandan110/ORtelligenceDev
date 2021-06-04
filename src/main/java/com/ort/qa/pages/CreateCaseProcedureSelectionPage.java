@@ -12,14 +12,14 @@ public class CreateCaseProcedureSelectionPage extends TestBase
  /*	Select 1st Option
  */
 	
- /* @FindBy(xpath="(//button[text()='Select'])[1]")
-*/	WebElement selectProcedure1;
+    @FindBy(xpath="(//button[text()='Select'])[1]")
+	WebElement selectProcedure1;
 	
  /*	Select 2nd Option
  */
 	
 	@FindBy(xpath="(//button[text()='Select'])[2]")
-	WebElement selectProcedure2;	
+	public WebElement selectProcedure2;	
 
  /*	Back button
  */
@@ -66,11 +66,6 @@ public class CreateCaseProcedureSelectionPage extends TestBase
 				
 	}
 
-	public static void click() {
-		// TODO Auto-generated method stub
-		
-	}
-	
 	
 
 }

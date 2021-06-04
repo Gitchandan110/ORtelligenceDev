@@ -22,7 +22,7 @@ public class ExcelDataUtility
 	
 	static XSSFWorkbook wb;
 //	Excel Workbook Path
-	public static String excelPath = "D:\\BITBUCKET\\ortelligence-automation-qa\\src\\test\\resources\\Driver\\ort_excel.xlsx";
+	public static String excelPath = "E:\\BitBucket\\ortelligence-automation-qa\\src\\test\\resources\\Driver\\ort_excel.xlsx";
 	
 	static XSSFSheet sheet;
 	public ExcelDataUtility(String excelPath, String sheetName)
