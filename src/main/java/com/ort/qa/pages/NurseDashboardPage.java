@@ -253,17 +253,6 @@ public class NurseDashboardPage extends TestBase
 		return dashboardORtelligence.isDisplayed();
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	//created this method to verify all menu options of HCP Dashboard Page
 	//And deleted verifyMenuOptionVisibility testcase and written new testcase ussing AssertTrue
 	
@@ -284,8 +273,10 @@ public class NurseDashboardPage extends TestBase
 		dashboardOpenCaseHCP.isDisplayed();
 		return dashboardORtelligenceHCP.isDisplayed();
 		
-	    
 	}
+	
+	
+	
 	
 	
 }

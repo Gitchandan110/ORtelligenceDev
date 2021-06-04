@@ -87,7 +87,7 @@ public class SearchPatientPage extends TestBase
 	}
 	
 //	Click on Case number
-	public void SearchPatientClickOnCaseNumber() throws InterruptedException
+	public void searchPatientClickOnCaseNumber() throws InterruptedException
 	{
 		selectCase.click();
 		Thread.sleep(2000);
@@ -334,5 +334,7 @@ public class SearchPatientPage extends TestBase
 		confirmationPopupCartDetails.click();
 		
 	}
+	
+	
 	
 }

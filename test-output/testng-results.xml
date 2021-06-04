@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="14" total="15" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30297" started-at="2021-06-03T11:25:39Z" finished-at="2021-06-03T11:26:10Z">
+  <suite name="Default suite" duration-ms="22030" started-at="2021-06-04T04:53:58Z" finished-at="2021-06-04T04:54:20Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="30297" started-at="2021-06-03T11:25:39Z" finished-at="2021-06-03T11:26:10Z">
+    <test name="Default test" duration-ms="22030" started-at="2021-06-04T04:53:58Z" finished-at="2021-06-04T04:54:20Z">
       <class name="com.ort.qa.testcases.HCPDashboardPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.HCPDashboardPageTest@6eebc39e]" name="setUp" is-config="true" duration-ms="25916" started-at="2021-06-03T11:25:39Z" finished-at="2021-06-03T11:26:05Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.HCPDashboardPageTest@6eebc39e]" name="setUp" is-config="true" duration-ms="20722" started-at="2021-06-04T04:53:58Z" finished-at="2021-06-04T04:54:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="clickORtelligenceMenu()[pri:11, instance:com.ort.qa.testcases.HCPDashboardPageTest@6eebc39e]" name="clickORtelligenceMenu" duration-ms="115" started-at="2021-06-03T11:26:05Z" finished-at="2021-06-03T11:26:05Z">
+        <test-method status="PASS" signature="clickNurseSwitchLocationMenu()[pri:13, instance:com.ort.qa.testcases.HCPDashboardPageTest@6eebc39e]" name="clickNurseSwitchLocationMenu" duration-ms="321" started-at="2021-06-04T04:54:19Z" finished-at="2021-06-04T04:54:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickORtelligenceMenu -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.HCPDashboardPageTest@6eebc39e]" name="tearDown" is-config="true" duration-ms="4227" started-at="2021-06-03T11:26:05Z" finished-at="2021-06-03T11:26:10Z">
+        </test-method> <!-- clickNurseSwitchLocationMenu -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.HCPDashboardPageTest@6eebc39e]" name="tearDown" is-config="true" duration-ms="929" started-at="2021-06-04T04:54:19Z" finished-at="2021-06-04T04:54:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

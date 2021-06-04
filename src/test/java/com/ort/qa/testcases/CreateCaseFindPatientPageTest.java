@@ -81,7 +81,7 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 	
 	@Test(priority=3)
 	public void clickOnPatientButton() throws InterruptedException {
-		  Thread.sleep(2000);	
+	      Thread.sleep(2000);	
 		  createCaseFindPatientPage.createCaseSelectPatientButton();
 		    
 	}

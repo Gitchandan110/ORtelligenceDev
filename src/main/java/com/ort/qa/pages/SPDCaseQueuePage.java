@@ -5,8 +5,6 @@
  * */
 package com.ort.qa.pages;
 
-import java.util.List;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -60,7 +58,7 @@ public class SPDCaseQueuePage extends TestBase
 	}
 	
 	
-//commented the method as it was not used: 03/06/2021
+//commented the method as it was not used:Priyanka 03/06/2021
 //	Information from Data Table
 /*	
 	public void caseQueueCaseInformation(String procedureText,String caseDateTimeText,String caseSurgeonText,String caseMNRText,String casePatientNameText,String caseClassText,String caseScheduledStatusText,String caseStatusText)

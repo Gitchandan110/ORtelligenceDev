@@ -26,7 +26,7 @@ public class ExcelUtility extends TestBase
 
 	
 
-//	
+	
 
 	public static Object[][] getTestData(String sheetName) {
 		FileInputStream file = null;
@@ -53,43 +53,6 @@ public class ExcelUtility extends TestBase
 		}
 		return data;
 	}
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	}	
