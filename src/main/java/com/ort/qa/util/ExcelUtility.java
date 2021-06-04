@@ -1,3 +1,12 @@
+/* Created by Priyanka Pawar
+ * Modified by Piyush Sadawarti on 24/05/2021 - Added Excel data reading method
+ * Modified by Piyush Sadawarti on 24/05/2021 - Removed Excel data reading method
+ * 
+ * 
+ * 
+ * 
+ * */
+
 package com.ort.qa.util;
 
 import java.io.File;
@@ -24,11 +33,6 @@ public class ExcelUtility extends TestBase
 	public static String  TESTDATA_SHEET_PATH="E:\\BitBucket\\ortelligence-automation-qa\\src\\test\\resources\\Driver\\ort excel.xls";
 	static Workbook book;
 	static Sheet sheet;
-
-
-	
-
-//	
 
 	public static Object[][] getTestData(String sheetName) {
 		FileInputStream file = null;
@@ -60,8 +64,8 @@ public class ExcelUtility extends TestBase
 		}
 		return data;
 	}
-
-	}	
+	
+}	
 
 	
 	

@@ -6,11 +6,11 @@
  */
 
 /* Role wise elements xpaths comparison:
- * We are considering the xpaths of all element of Nurse as base.
+ * We are considering the xpaths of all element of Nurse as base/default.
  * If any element has different xpath then its element is created under the respective role.
  * 
  * Nurse:
- * All Elements (Nurse)
+ * All Elements (Nurse - On Hold, Cart Review, Create Case, Search Case, Open Case, ORtelligence)
  * ..........................................................
  * HCP:
  * Menu = Nurse (Switch Location = HCP)
@@ -24,7 +24,7 @@
  *  
  * 
  * 
- * */
+ */
 
 //Nurse Dashboard Page
 package com.ort.qa.pages;
