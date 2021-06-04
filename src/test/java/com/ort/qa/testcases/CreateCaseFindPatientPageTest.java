@@ -4,6 +4,7 @@ package com.ort.qa.testcases;
 
 
 
+
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -135,50 +136,6 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 		    Thread.sleep(2000);
 		    createCaseSetSelectionPage.create.click();
 		    		} 
-
-	
-	
-	
-	 
-	//@Test(priority=5)
-	//    public void 
-	/*    createCaseFindPatientPage.createCaseSelectPatientButton();
-	    Thread.sleep(2000);
-	   
-	    createCaseBasicDetailsPage.clickOnPatientDropDown();
-	    Thread.sleep(5000);
-	    createCaseBasicDetailsPage.clickOnPatientLatexAllergyDropDown();
-	    Thread.sleep(5000);
-	    createCaseBasicDetailsPage.clickOnPatientUrgencyDropDown();
-	    Thread.sleep(5000);
-	    createCaseBasicDetailsPage.clickOnNextButton();
-	    Thread.sleep(5000);
-	    createCaseAffectedAreaPage.Clickonhip();
-	    Thread.sleep(5000);
-	    createCaseProcedureSelectionPage.selectProcedure2.click();
-	    createCaseSystemSelectionPage.checkboxSystem1.click();
-	  	Thread.sleep(2000);
-	
-	    createCaseSystemSelectionPage.checkboxSystem2.click();
-	    Thread.sleep(5000);
-	    
-	    createCaseSystemSelectionPage.clickOnSelectButton.click();
-	    Thread.sleep(3000);
-	    	
-	    createCaseSystemSelectionPage.proceedToCart.click();
-	    Thread.sleep(5000);
-	    
-	    createCaseSetSelectionPage.createCaseSetSelectioncheckbox();
-	    Thread.sleep(3000);
-	    createCaseSetSelectionPage.createCaseOpenQuantity(); 
-	    Thread.sleep(2000);
-	    createCaseSetSelectionPage.createCaseSetSelectionDropdown();
-	    Thread.sleep(2000);
-	    createCaseSetSelectionPage.createCaseSetPositionDropdown();
-	    Thread.sleep(2000);
-	    createCaseSetSelectionPage.create.click();
-	    		} 
-	    
 	
 	
 	
@@ -204,7 +161,11 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 	
 	
 	
-	@Test(priority=2,dataProvider="PatientData",dataProviderClass=DataProviderExcel.class)
+	
+	
+	
+	
+	/*@Test(priority=2,dataProvider="PatientData",dataProviderClass=DataProviderExcel.class)
 	public void ProcedureSelection(String lastName, String firstName, String mNR) throws InterruptedException 
 	{
 		createCaseFindPatientPage.createCaseFindPatientData(lastName, firstName, mNR);
@@ -223,7 +184,7 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 	    
 	    createCaseBasicDetailsPage.clickOnNextButton();
 	    Thread.sleep(5000);
-	    createCaseAffectedAreaPage.Clickonhip();
+	    createCaseAffectedAreaPage.clickOnhip();
 	}
 	
 	@Test(priority=3,dataProvider="PatientData",dataProviderClass=DataProviderExcel.class)
@@ -246,16 +207,13 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 	    
 	    createCaseBasicDetailsPage.clickOnNextButton();
 	    Thread.sleep(5000);
-	    createCaseAffectedAreaPage.Clickonhip();
+	    createCaseAffectedAreaPage.clickOnhip();
 	    //createCaseAffectedAreaPage.hip.click();
-	}
-*/
+	}*/
+
 	
 
 	
-	// @AfterMethod
-	//public void tearDown() {
-	//	driver.quit();
-	// }
+	
 
 }
