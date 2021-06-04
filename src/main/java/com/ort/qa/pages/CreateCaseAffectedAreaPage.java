@@ -1,6 +1,5 @@
 package com.ort.qa.pages;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -13,10 +12,16 @@ public class CreateCaseAffectedAreaPage extends TestBase
  /*	x path for Speciality = Trauma.
  * x path for Hip
  */
-	WebDriver driver;
 	
    @FindBy(xpath="//area[@id='trauma22']")
-   public WebElement hip;
+    WebElement hip;
+   
+   /* x path for Clavicle
+    * written by Priyanka
+   */ 
+   
+   @FindBy(xpath="//area[@id='trauma2']")
+   public WebElement clavicle;
    
  /* x path for Femur.
  */
@@ -27,9 +32,11 @@ public class CreateCaseAffectedAreaPage extends TestBase
 	   
  /* x path for Distal Femur.
   * both line have same xpath (22 and24)
+  * changed xpath: xpath written by Saurabh:  @FindBy(xpath="//area[@id='trauma24']")
+  * xpath written by Priyanka:  @FindBy(xpath="//area[@id='trauma26']"
  */
 	
-	@FindBy(xpath="//area[@id='trauma24']")
+	@FindBy(xpath="//area[@id='trauma26']")
 	WebElement distalFemur ;
 	
  /*for Trauma area x path for Patella.
@@ -212,6 +219,12 @@ public class CreateCaseAffectedAreaPage extends TestBase
    @FindBy(xpath="//area[@id='arthroplasty7']")
    public WebElement hipRight;
    
+   /* x path for HipRight
+    * Added by Priyanka
+   */
+   
+   @FindBy(xpath="//area[@id='arthroplasty6']")
+   public WebElement hipLeftArthroplasty;
    /* x path for Knee
    */
    
@@ -458,35 +471,6 @@ public class CreateCaseAffectedAreaPage extends TestBase
    @FindBy(xpath="//area[@id='sports23']")
    public WebElement footSpLeft;
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-  
-      
-    
-   
-   
-   
-   
-   
-   
 
 ////	Speciality = Sports .................................................................................
 ////	Shoulder
@@ -547,101 +531,7 @@ public class CreateCaseAffectedAreaPage extends TestBase
 		
 	}
 	
-	public void AffectedAreaTrauma()
-	
-	{
-		 hip.click();
-		 femur.click();
-		 distalFemur.click();
-		 patella.click();
-		 proximalTibia.click();
-		 tibia.click();
-		 distalTibia.click();
-		 ankle.click();
-		 foot.click(); 
-		 hipLeft.click();
-		 femurLeft.click();
-		 patellaLeft.click();
-		 proximalTibiaLeft.click();
-		 tibiaLeft.click();
-		 distalTibiaLeft .click();
-		 ankleLeft.click();
-		 footLeft.click();
-		 proximalHumerus.click();
-		 humerusRight.click();
-		 distalHumerusRight.click();
-		 proximalForeramRight.click();
-		 foreramRight.click();
-		 wristRight.click();
-		 proximalHumerusLeft.click();
-		 humerusLeft.click();
-		 distalHumerusLeft.click();
-		 proximalForeramLeft.click();
-		 foreramLeft.click();
-		 wristLeft.click();
-		 pelvisAcetabulumRight.click();
-		 pelvisAcetabulumLeft.click();
-	}
-	
-	public void AffectedAreaArthroplasty()
-	
-	{
-		hipRight.click();
-		knee.click();
-		ankleRight.click();
-		kneeLeft.click();
-		ankleLeftAr.click();
-		shoulder.click();
-		elbow.click();
-		hand.click();
-		shoulderLeft.click();
-		elbowLeft.click();
-		leftHand.click();
-		
-	}
-	
-    public void AffectedAreaSpine()
-	
-	{
-    	
-    	occiput.click();
-    	cervical.click();
-    	thoracic.click();
-    	lumbar.click();
-    	sacrum.click();
-    	occiputLeft.click();
-    	cervicalLeft.click();
-    	thoracicleft.click();
-    	lumbarLeft.click();
-    	sacrumleft.click();
-	}
-    
-  public void AffectedAreaSports()
-	
-	{
-	  shoulderSp.click();
-	  humerusSp.click();
-	  elbowSp.click();
-	  forearmSp.click();
-	  shoulderSpLeft.click();
-	  humerusSpLeft.click();
-	  elbowSpLeft.click();
-	  forearmSpLeft.click();
-	  hipSp.click();
-	  femurSp.click();
-	  kneeSp.click();
-	  tibiaSp.click();
-	  ankleSp.click();
-	  footSp.click();
-	  hipSpLeft.click();
-	  femurSpLeft.clear();
-	  kneeSpLeft.click();
-	  tibiaSpLeft.click();
-	  ankleSpLeft.click();
-	  footSpLeft.click();
-	}
-	
-	public void Clickonheap()
+	public void clickOnhip()
 	{
 		hip.click();
 		

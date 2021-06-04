@@ -1,8 +1,3 @@
-/* Created by Piyush Sadawarti on 21/5/2021
- * 
- * 
- * 
- */
 package com.ort.qa.testcases;
 
 import org.testng.Assert;
@@ -38,7 +33,7 @@ public class SPDDashboardPageTest extends TestBase
     {
  		initialization();
  		loginPage = new LoginPage(driver);
- 		nurseDashboardPage = new NurseDashboardPage();
+ 		nurseDashboardPage = new NurseDashboardPage(driver);
  		selectFacilityPage = new SelectFacilityPage(driver);
  		nurseDashboardPage=loginPage.login(prop.getProperty("usernameSPD"), prop.getProperty("passwordSPD"));  
  		Thread.sleep(1000);

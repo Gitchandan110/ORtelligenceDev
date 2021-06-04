@@ -1,6 +1,6 @@
 package com.ort.qa.testcases;
 
-import org.testng.Assert;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -29,13 +29,21 @@ public class SelectFacilityPageTest extends TestBase
 			           initialization();
 			         loginPage = new LoginPage(driver);
 	      selectFacilityPage = new SelectFacilityPage(driver);
-	    createCaseFindPatientPage = new CreateCaseFindPatientPage(driver);
-	      selectFacilityPage = loginPage.login1(prop.getProperty("username"), prop.getProperty("password"));
+	      createCaseFindPatientPage = new CreateCaseFindPatientPage(driver);
+	      nurseDashboardPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	     
 			
 		}
 		
-	
+	@Test(priority=1)
+	public void selectFacilityFromDropdown() throws InterruptedException {
+	selectFacilityPage.clickOnDropDown();
+	selectFacilityPage.clickConfirm();
+	Thread.sleep(2000);
+		
+		
+	}
+		
 		
 		@AfterMethod
 		public void tearDown() 

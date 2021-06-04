@@ -84,81 +84,86 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 		System.out.println("Found Element By : " + by.toString());
 	}
 
-	/*
-	 * non overridden methods of WebListener class
-	 */
-	public void beforeScript(String script, WebDriver driver) {
-	}
-
-	public void afterScript(String script, WebDriver driver) {
-	}
-
 	public void beforeAlertAccept(WebDriver driver) {
-	
 
+		
 	}
 
 	public void afterAlertAccept(WebDriver driver) {
 
-
+		
 	}
 
 	public void afterAlertDismiss(WebDriver driver) {
 
+		
 	}
 
 	public void beforeAlertDismiss(WebDriver driver) {
 
-
+		
 	}
 
 	public void beforeNavigateRefresh(WebDriver driver) {
 
+		
 	}
 
 	public void afterNavigateRefresh(WebDriver driver) {
 
+		
 	}
 
 	public void beforeChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
 
+		
 	}
 
 	public void afterChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
 
-
-	}
-
-	public <X> void afterGetScreenshotAs(OutputType<X> arg0, X arg1) {
-		// TODO Auto-generated method stub
 		
 	}
 
-	public void afterGetText(WebElement arg0, WebDriver arg1, String arg2) {
-		// TODO Auto-generated method stub
+	public void beforeScript(String script, WebDriver driver) {
+
 		
 	}
 
-	public void afterSwitchToWindow(String arg0, WebDriver arg1) {
-		// TODO Auto-generated method stub
+	public void afterScript(String script, WebDriver driver) {
+
 		
 	}
 
-	public <X> void beforeGetScreenshotAs(OutputType<X> arg0) {
-		// TODO Auto-generated method stub
+	public void beforeSwitchToWindow(String windowName, WebDriver driver) {
+
 		
 	}
 
-	public void beforeGetText(WebElement arg0, WebDriver arg1) {
-		// TODO Auto-generated method stub
+	public void afterSwitchToWindow(String windowName, WebDriver driver) {
+
 		
 	}
 
-	public void beforeSwitchToWindow(String arg0, WebDriver arg1) {
-		// TODO Auto-generated method stub
+	public <X> void beforeGetScreenshotAs(OutputType<X> target) {
+
 		
 	}
 
+	public <X> void afterGetScreenshotAs(OutputType<X> target, X screenshot) {
 
+		
+	}
+
+	public void beforeGetText(WebElement element, WebDriver driver) {
+
+		
+	}
+
+	public void afterGetText(WebElement element, WebDriver driver, String text) {
+
+		
+	}
+
+	
 
 }

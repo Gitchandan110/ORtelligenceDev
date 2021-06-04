@@ -47,7 +47,7 @@ public class SPDCaseQueuePageTest extends TestBase
     {
  		initialization();
  		loginPage = new LoginPage(driver);
- 		nurseDashboardPage = new NurseDashboardPage();
+ 		nurseDashboardPage = new NurseDashboardPage(driver);
  		selectFacilityPage = new SelectFacilityPage(driver);
  		searchPatientPage = new SearchPatientPage();
  		nurseDashboardPage=loginPage.login(prop.getProperty("usernameSPD"), prop.getProperty("passwordSPD"));  
@@ -58,7 +58,7 @@ public class SPDCaseQueuePageTest extends TestBase
 		Thread.sleep(1000);
 		nurseDashboardPage.dashboardCaseQueueSPD.click();
 		Thread.sleep(1000);
-		searchPatientPage.SearchPatientData("SearchPatient", 12,0,1,2,3,4,5);
+		searchPatientPage.SearchPatientData("SearchPatient", 16,0,1,2,3,4,5);
 		
 	}
     
@@ -74,7 +74,7 @@ public class SPDCaseQueuePageTest extends TestBase
  		Thread.sleep(2000);
 // 		searchPatientPage.confirmationPopupClose.click();
 // 		searchPatientPage.confirmationPopupProcedureDetails.click();
- 		searchPatientPage.confirmationPopupCartDetails.click();
+ //		searchPatientPage.confirmationPopupCartDetails.click();
  		Thread.sleep(5000);
  		
  	}

@@ -1,3 +1,6 @@
+//changed the method name to comply with naming convention:03/06/2021
+
+
 package com.ort.qa.util;
 
 import java.util.LinkedList;
@@ -14,7 +17,7 @@ public class DropDownHandler extends TestBase {
 	public DropDownHandler(WebDriver driver) {
 	}
 
-	public static void SelectUsingVisibleValue(WebElement element, String visibleValue) {
+	public static void selectUsingVisibleValue(WebElement element, String visibleValue) {
 	Select select = new Select(element);
 	select.selectByVisibleText(visibleValue);
 	}
@@ -24,12 +27,12 @@ public class DropDownHandler extends TestBase {
 	return value;
 	}
 
-	public void SelectUsingIndex(WebElement element, int index) {
+	public void selectUsingIndex(WebElement element, int index) {
 	Select select = new Select(element);
 	select.selectByIndex(index);
 	}
 
-	public void SelectUsingVisibleText(WebElement element, String text) {
+	public void selectUsingVisibleText(WebElement element, String text) {
 	Select select = new Select(element);
 	select.selectByVisibleText(text);
 
