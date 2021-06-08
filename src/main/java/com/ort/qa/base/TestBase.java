@@ -97,16 +97,7 @@ public class TestBase {
 	    
 	   	
 	}
-	
-//	System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
-//	WebDriver d = new ChromeDriver();
-//	NgWebDriver ngdriver = new NgWebDriver((JavascriptExecutor) d);
-//	ngdriver.waitForAngularRequestsToFinish();
-	
-	//OR
-	
-	//NgWebDriver ngWebDriver = new NgWebDriver(driver);
-	//ngWebDriver.waitForAngularRequestsToFinish();
+
 	
 	
 	

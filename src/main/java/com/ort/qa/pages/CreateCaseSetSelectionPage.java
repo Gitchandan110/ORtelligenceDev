@@ -199,11 +199,13 @@ public class CreateCaseSetSelectionPage extends TestBase
     }
 		
 	/*	OpenQuantity 
+	 * added openQuantity.clear : Priyanka
 	*/
 		 
 	public void createCaseOpenQuantity() 
 	{
-	openQuantity.sendKeys("2");
+		openQuantity.clear();
+	    openQuantity.sendKeys("2");
 				
 	}		
 	

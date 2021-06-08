@@ -74,7 +74,7 @@ public class SPDCaseQueuePageTest extends TestBase
  		Thread.sleep(2000);
 // 		searchPatientPage.confirmationPopupClose.click();
 // 		searchPatientPage.confirmationPopupProcedureDetails.click();
- //		searchPatientPage.confirmationPopupCartDetails.click();
+//		searchPatientPage.confirmationPopupCartDetails.click();
  		Thread.sleep(5000);
  		
  	}

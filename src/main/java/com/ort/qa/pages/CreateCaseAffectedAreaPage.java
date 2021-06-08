@@ -1,5 +1,6 @@
 package com.ort.qa.pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -472,55 +473,53 @@ public class CreateCaseAffectedAreaPage extends TestBase
    public WebElement footSpLeft;
    
 
-////	Speciality = Sports .................................................................................
-////	Shoulder
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
+//	Speciality = Sports .................................................................................
+//	Shoulder
+	@FindBy(xpath="//area[@id='sports2']")
+	WebElement shoulderSpRight;
+	
 ////	Humerus
-//	@FindBy(xpath="")
-//	WebElement ;
+	@FindBy(xpath="//area[@id='sports4']")
+	 WebElement humerusSpRight ;
 //	
-////	Elbow
-//	@FindBy(xpath="")
-//	WebElement ;
+//	Elbow
+	@FindBy(xpath="//area[@id='sports6']")
+	WebElement elbowSpRight ;
 //	
 ////	Forearm
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Wrist/Hand
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Hip
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Femur
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Knee
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Tibia
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
+	@FindBy(xpath="//area[@id='sports8']")
+	WebElement forearmSpRight;
+	
+//	Wrist/Hand-------pending
+
+	
+//	Hip
+	@FindBy(xpath="//area[@id='sports14']")
+	WebElement hipSpRight ;
+	
+//	Femur
+	@FindBy(xpath="//area[@id='sports16']")
+	WebElement femurSpRight ;
+	
+//	Knee
+	@FindBy(xpath="//area[@id='sports18']")
+	WebElement kneeSpRight;
+	
+//	Tibia
+	@FindBy(xpath="//area[@id='sports20']")
+	WebElement tibiaSpRight;
+	
 ////	Ankle
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	Foot
-//	@FindBy(xpath="")
-//	WebElement ;
-//	
-////	...........................................................................................................
-////	Back
-//	@FindBy(xpath="")
-////	WebElement ;	
+	@FindBy(xpath="//area[@id='sports22']")
+	WebElement ankleSpRight ;
+	
+//	Foot
+	@FindBy(xpath="//area[@id='sports24']")
+	WebElement footSpRight ;
+	
+
+//	Back-------pending
+
 	
 	
 	
@@ -533,10 +532,16 @@ public class CreateCaseAffectedAreaPage extends TestBase
 	
 	public void clickOnhip()
 	{
-		hip.click();
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("arguments[0].click()", hip);
+		
 		
 		
 		
 		
 	}
+
+
+
+
 }

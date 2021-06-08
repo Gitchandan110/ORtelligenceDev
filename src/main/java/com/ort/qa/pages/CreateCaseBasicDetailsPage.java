@@ -169,7 +169,7 @@ public class CreateCaseBasicDetailsPage extends TestBase
 
 	public void clickOnPatientDropDown() {
 		DropDownHandler dp =new DropDownHandler(driver);
-        dp.selectUsingVisibleText(surgeon,"Christiana Surgeon");
+        dp.selectUsingVisibleText(surgeon,"Christiana surgeon");
 	}
 	
 	public boolean checkErrorMessage() {
@@ -195,6 +195,11 @@ public class CreateCaseBasicDetailsPage extends TestBase
         dp.selectUsingVisibleText(urgency,"Critical (Up to 1hr.)");
 	}
     
+	public void clickOnSpecialityDropDown() {
+		DropDownHandler dp = new DropDownHandler(driver);
+		dp.selectUsingVisibleText(speciaity,  "Trauma");
+	}
+	
 	public void clickOnNextButton() {
 		next.click();
 	}
@@ -212,7 +217,7 @@ public class CreateCaseBasicDetailsPage extends TestBase
 	}
 	
 	public void notesByDoctor() {
-		notes.sendKeys("Do not Drink Water before one hour of operation");
+		notes.sendKeys("Do not Drink Water before one hour of Surgery");
 	}
 	
 }
