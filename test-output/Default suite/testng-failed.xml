@@ -5,7 +5,7 @@
     <classes>
       <class name="com.ort.qa.testcases.CreateCaseFindPatientPageTest">
         <methods>
-          <include name="createCaseFindPatientLongFlowTest" invocation-numbers="2"/>
+          <include name="createCaseFindPatientLongFlowTest" invocation-numbers="1 2 3"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>

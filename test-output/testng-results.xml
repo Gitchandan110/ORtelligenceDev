@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="7" total="11" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="294305" started-at="2021-06-08T08:23:16Z" finished-at="2021-06-08T08:28:11Z">
+  <suite name="Default suite" duration-ms="306597" started-at="2021-06-08T12:08:03Z" finished-at="2021-06-08T12:13:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="294305" started-at="2021-06-08T08:23:16Z" finished-at="2021-06-08T08:28:11Z">
+    <test name="Default test" duration-ms="306597" started-at="2021-06-08T12:08:03Z" finished-at="2021-06-08T12:13:10Z">
       <class name="com.ort.qa.testcases.CreateCaseFindPatientPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="setUp" is-config="true" duration-ms="24940" started-at="2021-06-08T08:23:17Z" finished-at="2021-06-08T08:23:42Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="setUp" is-config="true" duration-ms="30194" started-at="2021-06-08T12:08:04Z" finished-at="2021-06-08T12:08:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="createCaseFindPatientLongFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="createCaseFindPatientLongFlowTest" duration-ms="50331" started-at="2021-06-08T08:23:42Z" data-provider="LongFlow" finished-at="2021-06-08T08:24:32Z">
+        <test-method status="PASS" signature="createCaseFindPatientLongFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="createCaseFindPatientLongFlowTest" duration-ms="47402" started-at="2021-06-08T12:08:34Z" data-provider="LongFlow" finished-at="2021-06-08T12:09:22Z">
           <params>
             <param index="0">
               <value>
@@ -57,15 +57,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createCaseFindPatientLongFlowTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="tearDown" is-config="true" duration-ms="939" started-at="2021-06-08T08:24:32Z" finished-at="2021-06-08T08:24:33Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="tearDown" is-config="true" duration-ms="1090" started-at="2021-06-08T12:09:22Z" finished-at="2021-06-08T12:09:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="setUp" is-config="true" duration-ms="20074" started-at="2021-06-08T08:24:33Z" finished-at="2021-06-08T08:24:53Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="setUp" is-config="true" duration-ms="37662" started-at="2021-06-08T12:09:23Z" finished-at="2021-06-08T12:10:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="createCaseFindPatientLongFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="createCaseFindPatientLongFlowTest" duration-ms="50157" started-at="2021-06-08T08:24:53Z" data-provider="LongFlow" finished-at="2021-06-08T08:25:44Z">
+        <test-method status="PASS" signature="createCaseFindPatientLongFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="createCaseFindPatientLongFlowTest" duration-ms="47644" started-at="2021-06-08T12:10:00Z" data-provider="LongFlow" finished-at="2021-06-08T12:10:48Z">
           <params>
             <param index="0">
               <value>
@@ -111,15 +111,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createCaseFindPatientLongFlowTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="tearDown" is-config="true" duration-ms="975" started-at="2021-06-08T08:25:44Z" finished-at="2021-06-08T08:25:45Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="tearDown" is-config="true" duration-ms="959" started-at="2021-06-08T12:10:48Z" finished-at="2021-06-08T12:10:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="setUp" is-config="true" duration-ms="21595" started-at="2021-06-08T08:25:45Z" finished-at="2021-06-08T08:26:06Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="setUp" is-config="true" duration-ms="22426" started-at="2021-06-08T12:10:49Z" finished-at="2021-06-08T12:11:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="createCaseFindPatientLongFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="createCaseFindPatientLongFlowTest" duration-ms="50143" started-at="2021-06-08T08:26:06Z" data-provider="LongFlow" finished-at="2021-06-08T08:26:56Z">
+        <test-method status="PASS" signature="createCaseFindPatientLongFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="createCaseFindPatientLongFlowTest" duration-ms="47465" started-at="2021-06-08T12:11:12Z" data-provider="LongFlow" finished-at="2021-06-08T12:11:59Z">
           <params>
             <param index="0">
               <value>
@@ -165,15 +165,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createCaseFindPatientLongFlowTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="tearDown" is-config="true" duration-ms="884" started-at="2021-06-08T08:26:56Z" finished-at="2021-06-08T08:26:57Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="tearDown" is-config="true" duration-ms="872" started-at="2021-06-08T12:11:59Z" finished-at="2021-06-08T12:12:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="setUp" is-config="true" duration-ms="22154" started-at="2021-06-08T08:26:57Z" finished-at="2021-06-08T08:27:19Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="setUp" is-config="true" duration-ms="22057" started-at="2021-06-08T12:12:00Z" finished-at="2021-06-08T12:12:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="createCaseFindPatientLongFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="createCaseFindPatientLongFlowTest" duration-ms="50465" started-at="2021-06-08T08:27:19Z" data-provider="LongFlow" finished-at="2021-06-08T08:28:10Z">
+        <test-method status="PASS" signature="createCaseFindPatientLongFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="createCaseFindPatientLongFlowTest" duration-ms="47264" started-at="2021-06-08T12:12:22Z" data-provider="LongFlow" finished-at="2021-06-08T12:13:09Z">
           <params>
             <param index="0">
               <value>
@@ -219,7 +219,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createCaseFindPatientLongFlowTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="tearDown" is-config="true" duration-ms="911" started-at="2021-06-08T08:28:10Z" finished-at="2021-06-08T08:28:11Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="tearDown" is-config="true" duration-ms="788" started-at="2021-06-08T12:13:09Z" finished-at="2021-06-08T12:13:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

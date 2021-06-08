@@ -103,9 +103,8 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 		    createCaseSetSelectionPage.createCaseSetSelectionDropdown();
 		    Thread.sleep(1000);
 		    createCaseSetSelectionPage.createCaseSetPositionDropdown();
-		    Thread.sleep(2000);
+		    Thread.sleep(1000);
 		    createCaseSetSelectionPage.create.click();
-		    Thread.sleep(2000);
 		 
 	}
 	
