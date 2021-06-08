@@ -5,6 +5,9 @@ package com.ort.qa.testcases;
 
 
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -38,7 +41,7 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 		super();	                           
 		}
 
-	@BeforeTest
+	@BeforeMethod
 	
 	public void setUp() throws InterruptedException {
 		initialization();
@@ -53,87 +56,118 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 		         createCaseProcedureSelectionPage =new CreateCaseProcedureSelectionPage();
 		         createCaseSystemSelectionPage = new CreateCaseSystemSelectionPage();
 		 	      createCaseSetSelectionPage = new  CreateCaseSetSelectionPage();
+		 		 Thread.sleep(1000);
 		         selectFacilityPage.clickOnDropDown();
+		    	 Thread.sleep(1000);
 		 		selectFacilityPage.clickConfirm();
+		 		 Thread.sleep(1000);
 		 		nurseDashboardPage.clickOncreateCase();
 		 		
 	}
 	
-	//@AfterTest
+	@AfterMethod
 	public void tearDown() throws InterruptedException {
-		//Thread.sleep(1000);
 		driver.quit();
 	}
 	
-	@Test(priority=1,dataProvider="PatientData",dataProviderClass=DataProviderExcel.class)
+/*	@Test(priority=1,enabled=false,dataProvider="PatientData",dataProviderClass=DataProviderExcel.class)
 	public void createCaseFindPatientPageTest(String lastName, String firstName, String mNR) throws InterruptedException 
 	{
-		
+	
 		createCaseFindPatientPage.createCaseFindPatientData(lastName, firstName, mNR);
-		//Thread.sleep(5000);
+		 Thread.sleep(3000);
+	}*/
+	
+	@Test(priority=2, dataProvider="LongFlow",dataProviderClass=DataProviderExcel.class)
+	public void createCaseFindPatientLongFlowTest( String lastName, String firstName, String mNR ,  String sname, String urgencyName, String patientAllergy, String speciality, String notesBySurgeon) throws InterruptedException 
+	{
+		 Thread.sleep(3000);
+		createCaseFindPatientPage.createCaseFindPatientLongFlowData(lastName,firstName, mNR, sname, urgencyName, patientAllergy,speciality,notesBySurgeon   );
+		 Thread.sleep(3000);
+		 createCaseAffectedAreaPage.clickOnhip();
+		 Thread.sleep(5000);
+		 createCaseProcedureSelectionPage.selectProcedure2.click();
+		 Thread.sleep(3000);
+		 createCaseSystemSelectionPage.checkboxSystem1.click();
+		 Thread.sleep(3000);
+		 createCaseSystemSelectionPage.checkboxSystem2.click();
+		 Thread.sleep(1000);
+		 createCaseSystemSelectionPage.clickOnSelectButton.click();
+		 Thread.sleep(1000);
+		 createCaseSystemSelectionPage.proceedToCart.click();
+		 Thread.sleep(1000);
+		 createCaseSetSelectionPage.createCaseSetSelectioncheckbox();
+		  
+		    createCaseSetSelectionPage.createCaseOpenQuantity(); 
+		    Thread.sleep(1000);
+		    createCaseSetSelectionPage.createCaseSetSelectionDropdown();
+		    Thread.sleep(1000);
+		    createCaseSetSelectionPage.createCaseSetPositionDropdown();
+		    Thread.sleep(2000);
+		    createCaseSetSelectionPage.create.click();
+		    Thread.sleep(2000);
+		 
 	}
 	
-	@Test(priority=2)
-	public void clickOnButton() throws InterruptedException {
-		  Thread.sleep(1000);
-		createCaseFindPatientPage.clickSearchButton();
-	  
-	}
 	
-	@Test(priority=3)
-	public void clickOnPatientButton() throws InterruptedException {
-	      Thread.sleep(2000);	
+	@Test(priority=3,enabled=false)
+	public void clickOnPatientButton() throws InterruptedException {	
 		  createCaseFindPatientPage.createCaseSelectPatientButton();
-		    
+			 Thread.sleep(1000); 
 	}
 	
-	@Test(priority=4)
+	@Test(priority=4,enabled=false)
 	public void clickOnPatientDropDownButton() throws InterruptedException {
-		Thread.sleep(2000);
+	
 		 createCaseBasicDetailsPage.clickOnPatientDropDown();
-			Thread.sleep(2000);
+		 Thread.sleep(1000);
 		 createCaseBasicDetailsPage.clickOnPatientLatexAllergyDropDown();
-			Thread.sleep(2000);
+		 Thread.sleep(1000);
 		 createCaseBasicDetailsPage.clickOnPatientUrgencyDropDown();
+		 Thread.sleep(1000);
+		 createCaseBasicDetailsPage.clickOnSpecialityDropDown();
 	}
 	
-	@Test(priority=5)
+	@Test(priority=5,enabled=false)
 	public void notesByDoctors() {
 		createCaseBasicDetailsPage.notesByDoctor();
 	}
 	
-	@Test(priority=6)
+	@Test(priority=6,enabled=false)
 	public void clickOnNextButton() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		  createCaseBasicDetailsPage.clickOnNextButton();
 	}
 	
 	
-	@Test(priority=7)
+	@Test(priority=7,enabled=false)
 	public void clickOnHip() {
 		createCaseAffectedAreaPage.clickOnhip();
 	}
 	
-	@Test(priority=8)
-	public void clickOnProcedure() {
+	@Test(priority=8,enabled=false)
+	public void clickOnProcedure() throws InterruptedException {
+		Thread.sleep(1000);
 	    createCaseProcedureSelectionPage.selectProcedure2.click();
 	}
 	
 	
-	@Test(priority=9)
+	@Test(priority=9,enabled=false)
 	public void clickOnCheckBox() throws InterruptedException {
 		createCaseSystemSelectionPage.checkboxSystem1.click();
 		 createCaseSystemSelectionPage.checkboxSystem2.click();
+		 Thread.sleep(1000);
 		 createCaseSystemSelectionPage.clickOnSelectButton.click();
 		 createCaseSystemSelectionPage.proceedToCart.click();
+		 Thread.sleep(1000);
 		 createCaseSetSelectionPage.createCaseSetSelectioncheckbox();
-		    Thread.sleep(3000);
+		  
 		    createCaseSetSelectionPage.createCaseOpenQuantity(); 
-		    Thread.sleep(2000);
+		    Thread.sleep(1000);
 		    createCaseSetSelectionPage.createCaseSetSelectionDropdown();
-		    Thread.sleep(2000);
+		    Thread.sleep(1000);
 		    createCaseSetSelectionPage.createCaseSetPositionDropdown();
-		    Thread.sleep(2000);
+		    Thread.sleep(1000);
 		    createCaseSetSelectionPage.create.click();
 		    		} 
 	

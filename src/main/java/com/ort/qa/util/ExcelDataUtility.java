@@ -17,8 +17,12 @@ import java.io.FileInputStream;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class ExcelDataUtility 
-{
+import com.ort.qa.base.TestBase;
+
+public class ExcelDataUtility extends TestBase{
+	
+
+
 	
 	static XSSFWorkbook wb;
 //	Excel Workbook Path

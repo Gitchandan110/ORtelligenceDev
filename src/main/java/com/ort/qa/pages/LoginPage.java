@@ -38,7 +38,6 @@ public class LoginPage extends TestBase{
 	WebElement forgotPasswordlink;
 	
 	@FindBy(xpath="//*[@id=\"page-ui-container\"]/div/div/div/div[2]/div[1]/div/div/div/text()") 
-	////div[@class='text-block--overflow-wrap']
 	WebElement passwordResetMsg;
 	
 	@FindBy(id="cancel-button")

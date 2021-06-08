@@ -1,25 +1,229 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="14" total="15" passed="1">
+<testng-results skipped="0" failed="0" ignored="7" total="11" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22030" started-at="2021-06-04T04:53:58Z" finished-at="2021-06-04T04:54:20Z">
+  <suite name="Default suite" duration-ms="294305" started-at="2021-06-08T08:23:16Z" finished-at="2021-06-08T08:28:11Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22030" started-at="2021-06-04T04:53:58Z" finished-at="2021-06-04T04:54:20Z">
-      <class name="com.ort.qa.testcases.HCPDashboardPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.HCPDashboardPageTest@6eebc39e]" name="setUp" is-config="true" duration-ms="20722" started-at="2021-06-04T04:53:58Z" finished-at="2021-06-04T04:54:19Z">
+    <test name="Default test" duration-ms="294305" started-at="2021-06-08T08:23:16Z" finished-at="2021-06-08T08:28:11Z">
+      <class name="com.ort.qa.testcases.CreateCaseFindPatientPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="setUp" is-config="true" duration-ms="24940" started-at="2021-06-08T08:23:17Z" finished-at="2021-06-08T08:23:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="clickNurseSwitchLocationMenu()[pri:13, instance:com.ort.qa.testcases.HCPDashboardPageTest@6eebc39e]" name="clickNurseSwitchLocationMenu" duration-ms="321" started-at="2021-06-04T04:54:19Z" finished-at="2021-06-04T04:54:19Z">
+        <test-method status="PASS" signature="createCaseFindPatientLongFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="createCaseFindPatientLongFlowTest" duration-ms="50331" started-at="2021-06-08T08:23:42Z" data-provider="LongFlow" finished-at="2021-06-08T08:24:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sharma]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Vikas]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[646464]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Christiana surgeon ]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Critical (Up to 1hr.)]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Trauma]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Do not drink water one hour before Surgery]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickNurseSwitchLocationMenu -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.HCPDashboardPageTest@6eebc39e]" name="tearDown" is-config="true" duration-ms="929" started-at="2021-06-04T04:54:19Z" finished-at="2021-06-04T04:54:20Z">
+        </test-method> <!-- createCaseFindPatientLongFlowTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="tearDown" is-config="true" duration-ms="939" started-at="2021-06-08T08:24:32Z" finished-at="2021-06-08T08:24:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.ort.qa.testcases.HCPDashboardPageTest -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="setUp" is-config="true" duration-ms="20074" started-at="2021-06-08T08:24:33Z" finished-at="2021-06-08T08:24:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="createCaseFindPatientLongFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="createCaseFindPatientLongFlowTest" duration-ms="50157" started-at="2021-06-08T08:24:53Z" data-provider="LongFlow" finished-at="2021-06-08T08:25:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sharma]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[V]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[646464]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Christiana surgeon ]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Normal (Up to 48hrs.) ]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Trauma]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Do not drink water one hour before Surgery]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createCaseFindPatientLongFlowTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="tearDown" is-config="true" duration-ms="975" started-at="2021-06-08T08:25:44Z" finished-at="2021-06-08T08:25:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="setUp" is-config="true" duration-ms="21595" started-at="2021-06-08T08:25:45Z" finished-at="2021-06-08T08:26:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="createCaseFindPatientLongFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="createCaseFindPatientLongFlowTest" duration-ms="50143" started-at="2021-06-08T08:26:06Z" data-provider="LongFlow" finished-at="2021-06-08T08:26:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[S]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[V]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[646464]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Christiana hcp]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Normal (Up to 48hrs.) ]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Trauma]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Do not drink water one hour before Surgery]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createCaseFindPatientLongFlowTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="tearDown" is-config="true" duration-ms="884" started-at="2021-06-08T08:26:56Z" finished-at="2021-06-08T08:26:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="setUp" is-config="true" duration-ms="22154" started-at="2021-06-08T08:26:57Z" finished-at="2021-06-08T08:27:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="createCaseFindPatientLongFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="createCaseFindPatientLongFlowTest" duration-ms="50465" started-at="2021-06-08T08:27:19Z" data-provider="LongFlow" finished-at="2021-06-08T08:28:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sharma]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Vikas]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[646464]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Christiana 44_Test ]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Urgent (Up to 8hrs.) ]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Trauma]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Do not drink water one hour before Surgery]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createCaseFindPatientLongFlowTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="tearDown" is-config="true" duration-ms="911" started-at="2021-06-08T08:28:10Z" finished-at="2021-06-08T08:28:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.ort.qa.testcases.CreateCaseFindPatientPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

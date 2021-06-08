@@ -52,6 +52,19 @@ public class DataProviderExcel extends TestBase {
 		return data;
 		
 	}
+	
+	@DataProvider(name = "LongFlow")
+	public Object[][] FindPatientDataLongFlow() throws IOException, NoSuchMethodException, SecurityException {
+
+		Object[][] data = null;
+
+		data = getData(System.getProperty("user.dir") + "\\src\\test\\resources\\Driver\\ort_excel.xlsx",
+				"LongFlow");
+
+		return data;
+		
+	}
+	
 
 	/*
 	 * Supplying data for a test method.
