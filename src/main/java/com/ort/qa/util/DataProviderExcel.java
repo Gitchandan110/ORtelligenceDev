@@ -19,44 +19,26 @@ public class DataProviderExcel extends TestBase {
 	static XSSFRow row = null;
 	static XSSFCell cell = null;
 
-	/*
-	 * public Method m;
-	 */
-
+	
 	@DataProvider(name = "NurseData")
 	public static Object[][] LoginNurse() throws IOException, NoSuchMethodException, SecurityException {
 
 		Object[][] data = null;
-
-		/*
-		 * if(m.getName().equalsIgnoreCase("loginWithValidTest") {
-		 */
-
-		data = getData(System.getProperty("user.dir") + "\\src\\test\\resources\\Driver\\ort_excel.xlsx", "NurseData");
+    	data = getData(System.getProperty("user.dir") + "\\src\\test\\resources\\Driver\\ort_excel.xlsx", "NurseData");
 		System.out.println(data);
 		return data;
-		/*
-		 * } return data;
-		 */
+	
 	}
 
 	@DataProvider(name = "surgeonData")
 	public static Object[][] LoginSurgeon() throws IOException, NoSuchMethodException, SecurityException {
 
 		Object[][] data = null;
-
-		/*
-		 * if(m.getName().equalsIgnoreCase("loginWithValidTest")) {
-		 */
-
 		data = getData(System.getProperty("user.dir") + "\\src\\test\\resources\\Driver\\ort_excel.xlsx",
 				"SurgeonData");
 
 		return data;
-		/*
-		 * } return data;
-		 */
-
+		
 	}
 
 	@DataProvider(name = "PatientData")
@@ -64,18 +46,25 @@ public class DataProviderExcel extends TestBase {
 
 		Object[][] data = null;
 
-		/*
-		 * if(m.getName().equalsIgnoreCase("loginWithValidTest")) {
-		 */
-
 		data = getData(System.getProperty("user.dir") + "\\src\\test\\resources\\Driver\\ort_excel.xlsx",
 				"PatientData");
 
 		return data;
-		/*
-		 * } return data;
-		 */
+		
 	}
+	
+	@DataProvider(name = "LongFlow")
+	public Object[][] FindPatientDataLongFlow() throws IOException, NoSuchMethodException, SecurityException {
+
+		Object[][] data = null;
+
+		data = getData(System.getProperty("user.dir") + "\\src\\test\\resources\\Driver\\ort_excel.xlsx",
+				"LongFlow");
+
+		return data;
+		
+	}
+	
 
 	/*
 	 * Supplying data for a test method.

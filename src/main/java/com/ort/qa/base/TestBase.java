@@ -6,26 +6,28 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
-import org.testng.annotations.BeforeMethod;
+
 
 import com.ort.qa.util.TestUtil;
 import com.ort.qa.util.WebEventListener;
 
 
+
 public class TestBase {
 	
-	public static WebDriver driver;
+
+	
+	public static  WebDriver driver;
 	public static Properties prop;
 	public static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
 	
-   
-	
-	
+
 	public TestBase()
 	{
 		try 
@@ -42,8 +44,10 @@ public class TestBase {
 		{
 			e.printStackTrace();
 		}
+		
+		
 	}   
-	
+
 	public static void initialization()
 	{
 		
@@ -58,14 +62,16 @@ public class TestBase {
 		
 		if(browserName.equals("chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver","D:\\BITBUCKET\\ortelligence-automation-qa\\src\\test\\resources\\Driver\\chromedriver.exe");	     
+			System.setProperty("webdriver.chrome.driver","C:\\SeleniumDriver\\chromedriver.exe");	     
 			driver = new ChromeDriver(); 
 		}
 		else if(browserName.equals("FF"))
 		{
 			System.setProperty("webdriver.gecko.driver", "");	
 			driver = new FirefoxDriver(); 
-		}	
+		}
+		
+		
 	
 		e_driver = new EventFiringWebDriver(driver);
 		
@@ -75,15 +81,24 @@ public class TestBase {
 		e_driver.register(eventListener);
 		driver = e_driver;
 		
-	    driver.manage().window().maximize();
+		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		
+		
+		
+		
+		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+	    driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+		
+
 		/*reading the property file to get URL
 		 */
 	    driver.get(prop.getProperty("url")); 
 	    
 	   	
 	}
+
+	
+	
+	
 }

@@ -6,11 +6,11 @@
  */
 
 /* Role wise elements xpaths comparison:
- * We are considering the xpaths of all element of Nurse as base/default.
+ * We are considering the xpaths of all element of Nurse as base.
  * If any element has different xpath then its element is created under the respective role.
  * 
  * Nurse:
- * All Elements (Nurse - On Hold, Cart Review, Create Case, Search Case, Open Case, ORtelligence)
+ * All Elements (Nurse)
  * ..........................................................
  * HCP:
  * Menu = Nurse (Switch Location = HCP)
@@ -24,7 +24,7 @@
  *  
  * 
  * 
- */
+ * */
 
 //Nurse Dashboard Page
 package com.ort.qa.pages;
@@ -42,6 +42,7 @@ public class NurseDashboardPage extends TestBase
 	
 // 	Dashboard Nurse ..............................................................................................
 //  In Process Nurse
+	WebDriver driver;
  	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[1]")
 	public WebElement dashboardInProcess;   
 	
@@ -163,45 +164,14 @@ public class NurseDashboardPage extends TestBase
 	
  /*Initialization
  */	
-	public NurseDashboardPage()
+	public NurseDashboardPage(WebDriver dr)
 	{ 
+		driver=dr;
 		PageFactory.initElements(driver, this);
 	}
 		
- /*	Actions:
- */	
-	public void NurseDashboard()
-	{
-//		Nurse
-		dashboardInProcess.click();
-		dashboardOnHold.click();
-		dashboardCartReview.click();
-		dashboardCreateCase.click();
-		dashboardSearchCase.click();
-		dashboardOpenCase.click();
-		dashboardORtelligence.click();
-		menuInProcess.click();
-		menuOnHold.click();
-		menuCartReview.click();
-		menuCreateCase.click();
-		menuSearchCase.click();
-		menuOpenCase.click();
-		menuORtelligence.click();
-		menuAlerts.click();
-		
-//		SPD
-		menuCaseQueueSPD.click();
-		dashboardSearchCaseSPD.click();
-		dashboardCaseQueueSPD.click();
-		
-//		HCP
-		dashboardCreateCaseHCP.click();
-		dashboardSearchCaseHCP.click();
-		dashboardOpenCaseHCP.click();
-		dashboardORtelligenceHCP.click();
-		
-	}
-	
+//	Actions:
+ 	
 //	Profile - Nurse .....................................................................................
 //	Click on Profile button method
 	public  void clickOnMenuProfile() 
@@ -252,5 +222,61 @@ public class NurseDashboardPage extends TestBase
 	{  
 		return driver.getTitle();
 	}
+	
+	public void clickOncreateCase()
+ 	{
+ 		dashboardCreateCase.click();
+ 	}
+	
+	
+	//created method to verify visibility all the menu options on NurseDashboardPage:Priyanka:03/06/2021
+	public boolean verifyMenuOptionsOnNurseDashboard() {
+		menuInProcess.isDisplayed();
+		menuOnHold.isDisplayed();
+		menuCartReview.isDisplayed();
+		menuCreateCase.isDisplayed();
+		menuSearchCase.isDisplayed();
+		menuOpenCase.isDisplayed();
+		menuORtelligence.isDisplayed();
+		menuUserName.isDisplayed();
+		return menuAlerts.isDisplayed();
+	}
+	//created method to verify visibility of all the Dasboard options on NurseDashboardPage:Priyanka:03/06/2021
+	public boolean verifyDashboardOptionsOnNurseDashboard() {
+		
+		dashboardInProcess.isDisplayed();
+		dashboardOnHold.isDisplayed();
+		dashboardCartReview.isDisplayed();
+		dashboardCreateCase.isDisplayed();
+		dashboardSearchCase.isDisplayed();
+		dashboardOpenCase.isDisplayed();
+		return dashboardORtelligence.isDisplayed();
+	}
+	
+	//created this method to verify all menu options of HCP Dashboard Page
+	//And deleted verifyMenuOptionVisibility testcase and written new testcase ussing AssertTrue
+	
+	public boolean verifyAllMenuOptions() 
+	{
+		 menuCreateCase.isDisplayed(); 
+	     menuSearchCase.isDisplayed();
+	     menuOpenCase.isDisplayed();
+	     menuORtelligence.isDisplayed();
+	     menuUserName.isDisplayed();
+	    return menuAlerts.isDisplayed();
+	}
+	
+	public boolean verifyDashboardOptions() 
+	{
+		dashboardCreateCaseHCP.isDisplayed();
+		dashboardSearchCaseHCP.isDisplayed();
+		dashboardOpenCaseHCP.isDisplayed();
+		return dashboardORtelligenceHCP.isDisplayed();
+		
+	}
+	
+	
+	
+	
 	
 }

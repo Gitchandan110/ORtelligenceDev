@@ -17,12 +17,16 @@ import java.io.FileInputStream;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class ExcelDataUtility 
-{
+import com.ort.qa.base.TestBase;
+
+public class ExcelDataUtility extends TestBase{
+	
+
+
 	
 	static XSSFWorkbook wb;
 //	Excel Workbook Path
-	public static String excelPath = "D:\\BITBUCKET\\ortelligence-automation-qa\\src\\test\\resources\\Driver\\ort_excel.xlsx";
+	public static String excelPath = "E:\\BitBucket\\ortelligence-automation-qa\\src\\test\\resources\\Driver\\ort_excel.xlsx";
 	
 	static XSSFSheet sheet;
 	public ExcelDataUtility(String excelPath, String sheetName)

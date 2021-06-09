@@ -29,7 +29,7 @@ public class LoginPage extends TestBase{
 	WebElement ortLogo;
 	
 	@FindBy(xpath="//div[text()='Incorrect username or password. Please try again.']")
-	WebElement ErrorMsgForInvalidMail;
+	WebElement errorMsgForInvalidMail;
 
 	@FindBy(xpath="//a[text()='Forgot Password']")
 	WebElement forgotPassword;
@@ -38,7 +38,6 @@ public class LoginPage extends TestBase{
 	WebElement forgotPasswordlink;
 	
 	@FindBy(xpath="//*[@id=\"page-ui-container\"]/div/div/div/div[2]/div[1]/div/div/div/text()") 
-	////div[@class='text-block--overflow-wrap']
 	WebElement passwordResetMsg;
 	
 	@FindBy(id="cancel-button")
@@ -77,8 +76,8 @@ public class LoginPage extends TestBase{
 		PageFactory.initElements(driver, this);                                              
 	}
 
- /* Actions:
- */
+    // Actions:
+
 	
 	public String validateLoginPageTitle(){
 		return driver.getTitle();
@@ -105,8 +104,8 @@ public class LoginPage extends TestBase{
 	
 	
 	public boolean checkPasswordResetMsg() {
-		String PasswordResetMsg = passwordResetMsg.getText();
-		if (PasswordResetMsg.equals("Enter your username, and we'll send password reset instructions to your email address.")) {
+		String verifyPasswordResetMsg = passwordResetMsg.getText();
+		if (verifyPasswordResetMsg.equals("Enter your username, and we'll send password reset instructions to your email address.")) {
 			System.out.println("PasswordReset msg- Enter your username, and we'll send password reset instructions to your email address is displayed correctly.");
 			return true;
 		} else {
@@ -118,7 +117,7 @@ public class LoginPage extends TestBase{
 	
 	public boolean checkErrorMessage() {
 
-		if (ErrorMsgForInvalidMail.getText().equals("Incorrect username or password. Please try again.")) {
+		if (errorMsgForInvalidMail.getText().equals("Incorrect username or password. Please try again.")) {
 			System.out.println("Invalid login Cred entered.");
 			return true;
 		} else {
@@ -128,28 +127,28 @@ public class LoginPage extends TestBase{
 		}
 	}
 
-	
-			
-	public SelectFacilityPage login1(String un, String pwd) throws InterruptedException{
-
-		username.sendKeys(un);
-		password.sendKeys(pwd);
-		Thread.sleep(2000);
-		signUpBtn.click();
-		return new SelectFacilityPage(driver); 
-	}
-	
 	public NurseDashboardPage login(String un, String pwd) throws InterruptedException{
 
 		username.sendKeys(un);
 		password.sendKeys(pwd);
 		Thread.sleep(2000);
 		signUpBtn.click();
-		return new NurseDashboardPage(); 
+		return new NurseDashboardPage(driver); 
 	}
 	
 
 }
+
+
+//deleted SelectFacilityPage login1 method: 03/06/2021
+
+
+
+
+
+
+
+
 
 
 

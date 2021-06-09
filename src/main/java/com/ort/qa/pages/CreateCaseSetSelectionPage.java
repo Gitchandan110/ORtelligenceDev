@@ -1,30 +1,27 @@
 package com.ort.qa.pages;
 
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.ort.qa.base.TestBase;
+import com.ort.qa.util.DropDownHandler;
 
 public class CreateCaseSetSelectionPage extends TestBase 
 {
+
 	
- /*	Set Checkbox is pending
- *	Open quantity is pending
- *	Hold quantity is pending
- *	Delete set is pending
- *	Records display quantity dropdown
+ /*	click on set Checkbox. 
  */
-	/*	click on set Checkbox. 
-	 */
 	
-	@FindBy(xpath="//input[@class='form-control-input ng-valid ng-dirty ng-touched']")
-	public WebElement  checkbox1;
+	@FindBy(xpath="/html/body/app-root/app-full-layout/div[1]/app-create-case/app-addsets/form/div[1]/div[2]/div/table/tbody/tr[2]/td[1]/fieldset")
+	WebElement  checkbox1;
 	
 	/*	click on Open quantity 
 	 */
 	
-	@FindBy(xpath="//input[@class='form-control textbox-width-height ng-pristine ng-valid ng-touched']")
+	@FindBy(xpath="/html/body/app-root/app-full-layout/div[1]/app-create-case/app-addsets/form/div[1]/div[2]/div/table/tbody/tr[2]/td[3]/input")
 	WebElement openQuantity ;
 	
 	/*	click on Hold quantity
@@ -36,7 +33,6 @@ public class CreateCaseSetSelectionPage extends TestBase
 	
 	/* Records display quantity dropdown
 	*/
-
 	@FindBy(xpath="//select[@class='custom-select']")
 	WebElement records;
 	
@@ -98,7 +94,7 @@ public class CreateCaseSetSelectionPage extends TestBase
  /*	Position* dropdown
  */
 	
-	@FindBy(xpath="(//select[@class='form-control ng-untouched ng-pristine ng-valid'])[4]")
+	@FindBy(xpath="/html/body/app-root/app-full-layout/div[1]/app-create-case/app-addsets/form/div[8]/div[2]/select")
 	WebElement position;
 	
  /*	Positioning Comments text
@@ -143,7 +139,7 @@ public class CreateCaseSetSelectionPage extends TestBase
  */
 	
 	@FindBy(xpath="//button[text()='Create']")
-	WebElement create;	
+	public WebElement create;	
 	
  /*	Confirmation pop-up
  * 	Ok button 
@@ -193,16 +189,51 @@ public class CreateCaseSetSelectionPage extends TestBase
 				
 	}
 	
+	/*	click on checkbox.
+	*/
 
- /*	Back to previous sub-module
+	public void createCaseSetSelectioncheckbox()
+	{
+		
+			checkbox1.click();
+    }
+		
+	/*	OpenQuantity 
+	 * added openQuantity.clear : Priyanka
+	*/
+		 
+	public void createCaseOpenQuantity() 
+	{
+		openQuantity.clear();
+	    openQuantity.sendKeys("2");
+				
+	}		
+	
+ /*	SelectSideDropdoown
  */
 
-
-	public void createCaseSetSelectionBack()
+	public void createCaseSetSelectionDropdown()
 	{
-		back.click();
+		DropDownHandler dp =new DropDownHandler(driver);
+        dp.selectUsingVisibleText(side,"Bilateral");
 	}
 	
+  /*	SelectPositionDropdoown
+  */
+
+	public void createCaseSetPositionDropdown()
+	{
+		DropDownHandler dp =new DropDownHandler(driver);
+	    dp.selectUsingVisibleText( position,"Beach Chair");
+	}
+	
+ /*	SelectPositionDropdoown
+ */
+
+	public void createCaseClickOnCreate()
+	{
+	 create.click();
+	}
 
  /*	Remove Procedure button
  */
@@ -213,11 +244,9 @@ public class CreateCaseSetSelectionPage extends TestBase
 		removeProcedure.click();
 		
 	}
-	
 
  /*	Remove Procedure - Procedure details pop-up
  */
-	
 
 	public void createCaseProcedureDetailsPopup()
 
@@ -226,7 +255,6 @@ public class CreateCaseSetSelectionPage extends TestBase
 		closePopupIcon.click();
 		
 	}
-	
 
  /*	Confirmation Pop-up 
  */
@@ -239,5 +267,8 @@ public class CreateCaseSetSelectionPage extends TestBase
 			
 	}
 	
-	
+ /*	OpenQuantity 
+ */
+	 
+		
 }

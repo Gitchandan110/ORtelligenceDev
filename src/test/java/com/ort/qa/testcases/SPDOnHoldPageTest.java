@@ -46,7 +46,7 @@ public class SPDOnHoldPageTest extends TestBase
     {
  		initialization();
  		loginPage = new LoginPage(driver);
- 		nurseDashboardPage = new NurseDashboardPage();
+ 		nurseDashboardPage = new NurseDashboardPage(driver);
  		selectFacilityPage = new SelectFacilityPage(driver);
  		searchPatientPage = new SearchPatientPage();
  		nurseDashboardPage=loginPage.login(prop.getProperty("usernameSPD"), prop.getProperty("passwordSPD"));  

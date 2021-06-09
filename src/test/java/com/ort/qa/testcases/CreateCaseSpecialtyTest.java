@@ -28,18 +28,18 @@ public class CreateCaseSpecialtyTest extends TestBase
 			           initialization();
 			         loginPage = new LoginPage(driver);
 	      selectFacilityPage = new SelectFacilityPage(driver);
-	      nurseDashboardPage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+	      nurseDashboardPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	      createCaseSpecialtyPage =new CreateCaseSpecialtyPage();
 			
 		}
 		
 		@Test(priority=1)
-		public void createCaseSpecialtyPage() throws InterruptedException
+		public void createCaseSpecialtyPage()
 		{
-			Thread.sleep(3000);	
+			
 			createCaseSpecialtyPage.clickOnDropDown();
 			createCaseSpecialtyPage.clickOnNext();
-			Thread.sleep(3000);
+			
 			
 		}
 }
