@@ -27,11 +27,21 @@ public class CreateCaseProcedureSelectionPage extends TestBase
 	@FindBy(xpath="//button[text()='Back']")
 	WebElement back;
 	
- /*	Procedure not found exception	
- *	@FindBy(xpath="")
- *	WebElement ;	
- */
-	
+	 /*	Select Procedure 27245.
+	 */
+
+ 
+ 	@FindBy(xpath="(//button[@class='btn btn-primary'])[15]")
+ 	WebElement selectProcedure ;	
+ 
+
+ 	/*	Select another Proceed to cart.
+	 */
+
+ 	@FindBy(xpath="//button[text()='Select another Procedure']")
+ 	WebElement selectAnotherProceedToCart;	
+ 
+ 	
  /*	Actions:
  *	Select 1st Procedure
  */
@@ -41,21 +51,22 @@ public class CreateCaseProcedureSelectionPage extends TestBase
 		PageFactory.initElements(driver, this);
 	}
 	
- /*	public void createCaseProcedureSelectionOption1() 
- *	{
- *	selectProcedure1.click();
+ 	public void createCaseProcedureSelectionOption() 
+ 	{
+ 		selectProcedure1.click();
 				
- *	}
- */
+ 	}
  	
- 	 /*	Select 2nd Procedure
- */
+
+	 /*	Select 2nd Procedure
+*/
 	
 	public void  createCaseProcedureSelectionPage() 
 	{
 		selectProcedure2.click();
 				
 	}
+	
 	
  /*	Redirect user to previous sub-module
  */
@@ -65,7 +76,20 @@ public class CreateCaseProcedureSelectionPage extends TestBase
 		back.click();
 				
 	}
-
+ 
+ 	public void createCaseProcedureToCardOption() 
+ 	{
+ 	selectProcedure.click();
+				
+ 	}
+ 
+ 	public void createCaseSelectAnotherProcedureToCardOption() 
+ 	{
+ 		selectAnotherProceedToCart.click();
+				
+ 	}
+ 
+ 
 	
 
 }
