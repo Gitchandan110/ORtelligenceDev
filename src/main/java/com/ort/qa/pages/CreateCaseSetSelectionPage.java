@@ -192,11 +192,21 @@ public class CreateCaseSetSelectionPage extends TestBase
 	/*	click on checkbox.
 	*/
 
-	public void createCaseSetSelectioncheckbox()
-	{
-		
-			checkbox1.click();
-    }
+	public void createCaseSetSelectioncheckbox() {
+
+		// checkbox1.click();
+		try {
+			if (checkbox1.isDisplayed()) {
+
+				checkbox1.click();
+			}
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+
+	}
 		
 	/*	OpenQuantity 
 	 * added openQuantity.clear : Priyanka

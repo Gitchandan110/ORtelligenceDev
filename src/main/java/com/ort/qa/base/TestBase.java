@@ -93,6 +93,7 @@ public class TestBase {
 
 		/*reading the property file to get URL
 		 */
+
 	    driver.get(prop.getProperty("url")); 
 	    
 	   	

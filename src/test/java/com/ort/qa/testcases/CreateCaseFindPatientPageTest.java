@@ -50,6 +50,7 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 		         selectFacilityPage = new SelectFacilityPage(driver);
 		  createCaseFindPatientPage = new CreateCaseFindPatientPage(driver);  
 		 createCaseBasicDetailsPage = new CreateCaseBasicDetailsPage(driver);
+		
 		  nurseDashboardPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 		         nurseDashboardPage=new NurseDashboardPage(driver);
 		         createCaseAffectedAreaPage= new CreateCaseAffectedAreaPage();
@@ -96,7 +97,7 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 		 Thread.sleep(1000);
 		 createCaseSystemSelectionPage.proceedToCart.click();
 		 Thread.sleep(1000);
-		 createCaseSetSelectionPage.createCaseSetSelectioncheckbox();
+		// createCaseSetSelectionPage.createCaseSetSelectioncheckbox();
 		  
 		    createCaseSetSelectionPage.createCaseOpenQuantity(); 
 		    Thread.sleep(1000);

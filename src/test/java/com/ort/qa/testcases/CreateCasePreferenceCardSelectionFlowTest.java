@@ -28,8 +28,7 @@ public class CreateCasePreferenceCardSelectionFlowTest extends TestBase {
     CreateCaseAffectedAreaPage createCaseAffectedAreaPage;
     CreateCaseProcedureSelectionPage createCaseProcedureSelectionPage;
     CreateCaseSystemSelectionPage createCaseSystemSelectionPage;
-	 CreateCaseSetSelectionPage  createCaseSetSelectionPage;
-	//String sheetName = "ProcedureSelection";
+	CreateCaseSetSelectionPage  createCaseSetSelectionPage;
 	
 	
 	public CreateCasePreferenceCardSelectionFlowTest() {  
@@ -42,16 +41,17 @@ public class CreateCasePreferenceCardSelectionFlowTest extends TestBase {
 	public void setUp() throws InterruptedException {
 		initialization();
 
-		                  loginPage = new LoginPage(driver);
-		         selectFacilityPage = new SelectFacilityPage(driver);
-		  createCaseFindPatientPage = new CreateCaseFindPatientPage(driver);  
-		 createCaseBasicDetailsPage = new CreateCaseBasicDetailsPage(driver);
-		  nurseDashboardPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-		         nurseDashboardPage=new NurseDashboardPage(driver);
-		         createCaseAffectedAreaPage= new CreateCaseAffectedAreaPage();
-		         createCaseProcedureSelectionPage =new CreateCaseProcedureSelectionPage();
-		         createCaseSystemSelectionPage = new CreateCaseSystemSelectionPage();
-		 	      createCaseSetSelectionPage = new  CreateCaseSetSelectionPage();
+		                    loginPage = new LoginPage(driver);
+		           selectFacilityPage = new SelectFacilityPage(driver);
+		    createCaseFindPatientPage = new CreateCaseFindPatientPage(driver);  
+		   createCaseBasicDetailsPage = new CreateCaseBasicDetailsPage(driver);
+		           nurseDashboardPage = new NurseDashboardPage(driver);
+		   createCaseAffectedAreaPage = new CreateCaseAffectedAreaPage();
+	 createCaseProcedureSelectionPage = new CreateCaseProcedureSelectionPage();
+	    createCaseSystemSelectionPage = new CreateCaseSystemSelectionPage();
+		   createCaseSetSelectionPage = new  CreateCaseSetSelectionPage();
+    nurseDashboardPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		 	      
 		 		 Thread.sleep(1000);
 		         selectFacilityPage.clickOnDropDown();
 		    	 Thread.sleep(1000);
@@ -70,17 +70,16 @@ public class CreateCasePreferenceCardSelectionFlowTest extends TestBase {
 		
 		 createCaseSystemSelectionPage.proceedToCart.click();
 		 Thread.sleep(1000);
-		
-		
+	
 		 createCaseSetSelectionPage.createCaseSetSelectioncheckbox();
 		  
-		    createCaseSetSelectionPage.createCaseOpenQuantity(); 
+		 createCaseSetSelectionPage.createCaseOpenQuantity(); 
 		    Thread.sleep(1000);
-		    createCaseSetSelectionPage.createCaseSetSelectionDropdown();
+		 createCaseSetSelectionPage.createCaseSetSelectionDropdown();
 		    Thread.sleep(1000);
-		    createCaseSetSelectionPage.createCaseSetPositionDropdown();
+		 createCaseSetSelectionPage.createCaseSetPositionDropdown();
 		    Thread.sleep(1000);
-		    createCaseSetSelectionPage.create.click();
+		  createCaseSetSelectionPage.create.click();
 		 
 	}
 	
