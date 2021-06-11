@@ -76,6 +76,15 @@ public class CreateCaseFindPatientPage extends TestBase
 	@FindBy(xpath="//textarea[@id='notesbydoctor']")
 	WebElement notes;
 	
+	@FindBy(xpath="//input[@id='selectProcedure']")
+	 WebElement procedure;
+	
+	@FindBy(xpath="//select[@id='preferenceCard']")
+	WebElement preferenceCard;
+	
+	@FindBy(xpath="//button[text()='Quick Pick']")
+	WebElement quickPick;
+	
  /*Initialization	
  */
 	
@@ -128,6 +137,7 @@ public class CreateCaseFindPatientPage extends TestBase
 		Thread.sleep(3000);
 		speciaity.sendKeys(speciality);
 		Thread.sleep(3000);
+		
 		notes.sendKeys(notesBySurgeon);
 		
 		//notes.sendkeys(notesBySurgeon);
@@ -140,11 +150,89 @@ public class CreateCaseFindPatientPage extends TestBase
 		
 	}
 	
+	
+	public void createCaseProcedureSelectionFlowData(String lastName, String firstName, String mNR,String sname, String urgencyName, String patientAlllergy,String speciality, String procedureSelection) throws InterruptedException 
+	{
+		patientLastName.sendKeys(lastName);
+		Thread.sleep(2000);
+		patientFirstName.sendKeys(firstName);
+		Thread.sleep(2000);
+		patientMRN.sendKeys(mNR);
+		Thread.sleep(2000);
+        search.click();
+        Thread.sleep(2000);
+		selectPatient.click();
+		Thread.sleep(2000);
+		surgeon.sendKeys(sname);
+		Thread.sleep(2000);
+		urgency.sendKeys(urgencyName);
+		Thread.sleep(2000);
+		patientAllergy.sendKeys(patientAlllergy);
+		Thread.sleep(3000);
+		speciaity.sendKeys(speciality);
+		Thread.sleep(3000);
+		
+		procedure.sendKeys(procedureSelection);
+		//procedure.equals(procedureSelection);
+		procedure.getText();
+		procedure.isSelected();
+		procedure.click();
+		Thread.sleep(3000);
+		
+		
+		
+		
+		//notes.sendkeys(notesBySurgeon);
+        next.click();
+        
+	
+	}
+	
+
+	public void createCasePreferenceCardData(String lastName, String firstName, String mNR,String sname, String urgencyName, String patientAlllergy,String speciality,  String preferenceCardflow) throws InterruptedException 
+	{
+		patientLastName.sendKeys(lastName);
+		Thread.sleep(2000);
+		patientFirstName.sendKeys(firstName);
+		Thread.sleep(2000);
+		patientMRN.sendKeys(mNR);
+		Thread.sleep(2000);
+        search.click();
+        Thread.sleep(2000);
+		selectPatient.click();
+		Thread.sleep(2000);
+		surgeon.sendKeys(sname);
+		Thread.sleep(2000);
+		urgency.sendKeys(urgencyName);
+		Thread.sleep(2000);
+		patientAllergy.sendKeys(patientAlllergy);
+		Thread.sleep(3000);
+		speciaity.sendKeys(speciality);
+		Thread.sleep(3000);
+		
+		
+		preferenceCard.sendKeys(preferenceCardflow);
+		quickPick.click();
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	
-	//public void clickSearchButton() {
-	//	search.click();
-	//}
+	public void clickSearchButton() {
+		search.click();
+	}
 	
 	
   /*  public void createCaseSelectPatientButton()

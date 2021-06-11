@@ -65,6 +65,31 @@ public class DataProviderExcel extends TestBase {
 		
 	}
 	
+	@DataProvider(name = "ProcedureSelectionFlow")
+	public Object[][] FindPatientDataProcedureSelectionFlow() throws IOException, NoSuchMethodException, SecurityException {
+
+		Object[][] data = null;
+
+		data = getData(System.getProperty("user.dir") + "\\src\\test\\resources\\Driver\\ort_excel.xlsx",
+				"ProcedureSelectionFlow");
+
+		return data;
+		
+	}
+	
+	@DataProvider(name = "PreferenceCardSelectionFlow")
+	public Object[][] FindPatientPreferenceCardSelectionFlow() throws IOException, NoSuchMethodException, SecurityException {
+
+		Object[][] data = null;
+
+		data = getData(System.getProperty("user.dir") + "\\src\\test\\resources\\Driver\\ort_excel.xlsx",
+				"PreferenceCardSelectionFlow");
+
+		return data;
+		
+	}
+	
+	
 
 	/*
 	 * Supplying data for a test method.

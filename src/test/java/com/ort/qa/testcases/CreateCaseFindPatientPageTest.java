@@ -33,7 +33,7 @@ public class CreateCaseFindPatientPageTest extends TestBase {
     CreateCaseProcedureSelectionPage createCaseProcedureSelectionPage;
     CreateCaseSystemSelectionPage createCaseSystemSelectionPage;
 	 CreateCaseSetSelectionPage  createCaseSetSelectionPage;
-	String sheetName = "PatientData";
+	//String sheetName = "PatientData";
 	
 	
 	public CreateCaseFindPatientPageTest() {  
@@ -50,6 +50,7 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 		         selectFacilityPage = new SelectFacilityPage(driver);
 		  createCaseFindPatientPage = new CreateCaseFindPatientPage(driver);  
 		 createCaseBasicDetailsPage = new CreateCaseBasicDetailsPage(driver);
+		
 		  nurseDashboardPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 		         nurseDashboardPage=new NurseDashboardPage(driver);
 		         createCaseAffectedAreaPage= new CreateCaseAffectedAreaPage();
@@ -70,7 +71,7 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 		driver.quit();
 	}
 	
-/*	@Test(priority=1,enabled=false,dataProvider="PatientData",dataProviderClass=DataProviderExcel.class)
+	/*@Test(priority=1,dataProvider="PatientData",dataProviderClass=DataProviderExcel.class)
 	public void createCaseFindPatientPageTest(String lastName, String firstName, String mNR) throws InterruptedException 
 	{
 	
@@ -96,7 +97,7 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 		 Thread.sleep(1000);
 		 createCaseSystemSelectionPage.proceedToCart.click();
 		 Thread.sleep(1000);
-		 createCaseSetSelectionPage.createCaseSetSelectioncheckbox();
+		// createCaseSetSelectionPage.createCaseSetSelectioncheckbox();
 		  
 		    createCaseSetSelectionPage.createCaseOpenQuantity(); 
 		    Thread.sleep(1000);
@@ -173,35 +174,11 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	/*@Test(priority=2,dataProvider="PatientData",dataProviderClass=DataProviderExcel.class)
+/*	@Test(priority=2,dataProvider="PatientData",dataProviderClass=DataProviderExcel.class)
 	public void ProcedureSelection(String lastName, String firstName, String mNR) throws InterruptedException 
 	{
 		createCaseFindPatientPage.createCaseFindPatientData(lastName, firstName, mNR);
+	    Thread.sleep(5000);
 	    createCaseFindPatientPage.clickSearchButton();
 	    Thread.sleep(5000);
 	   
@@ -220,7 +197,7 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 	    createCaseAffectedAreaPage.clickOnhip();
 	}
 	
-	@Test(priority=3,dataProvider="PatientData",dataProviderClass=DataProviderExcel.class)
+	@Test(priority=3,enabled=false,dataProvider="PatientData",dataProviderClass=DataProviderExcel.class)
 	public void PreferenceCard(String lastName, String firstName, String mNR) throws InterruptedException 
 	{
 		
@@ -236,14 +213,14 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 	    Thread.sleep(5000);
 	    createCaseBasicDetailsPage.clickOnPatientUrgencyDropDown();
 	    Thread.sleep(5000);
-	   // createCaseBasicDetailsPage.clickOnPreference();
+	   // createCaseBasicDetailsPage.clickOnPreferenceCard();
 	    
 	    createCaseBasicDetailsPage.clickOnNextButton();
 	    Thread.sleep(5000);
 	    createCaseAffectedAreaPage.clickOnhip();
 	    //createCaseAffectedAreaPage.hip.click();
-	}*/
-
+	}
+*/
 	
 
 	
