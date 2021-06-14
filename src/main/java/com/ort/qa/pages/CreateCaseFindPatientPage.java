@@ -1,6 +1,7 @@
 package com.ort.qa.pages;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -137,17 +138,10 @@ public class CreateCaseFindPatientPage extends TestBase
 		Thread.sleep(3000);
 		speciaity.sendKeys(speciality);
 		Thread.sleep(3000);
-		
 		notes.sendKeys(notesBySurgeon);
-		
-		//notes.sendkeys(notesBySurgeon);
         next.click();
         
-         
-        
-        
-      // driver.close();
-		
+     
 	}
 	
 	
@@ -173,19 +167,14 @@ public class CreateCaseFindPatientPage extends TestBase
 		Thread.sleep(3000);
 		
 		procedure.sendKeys(procedureSelection);
-		//procedure.equals(procedureSelection);
-		procedure.getText();
-		procedure.isSelected();
-		procedure.click();
 		Thread.sleep(3000);
-		
-		
-		
-		
-		//notes.sendkeys(notesBySurgeon);
-        next.click();
-        
-	
+		procedure.sendKeys(Keys.EQUALS);
+		Thread.sleep(3000);
+	   // procedure.click();
+		procedure.sendKeys(Keys.ENTER);
+		Thread.sleep(3000);
+		 next.click();
+       	
 	}
 	
 
@@ -209,37 +198,17 @@ public class CreateCaseFindPatientPage extends TestBase
 		Thread.sleep(3000);
 		speciaity.sendKeys(speciality);
 		Thread.sleep(3000);
-		
-		
 		preferenceCard.sendKeys(preferenceCardflow);
 		quickPick.click();
+	
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 	
 	public void clickSearchButton() {
 		search.click();
 	}
 	
-	
-  /*  public void createCaseSelectPatientButton()
-	{
-		selectPatient.click();
-			
-	}*/
 
 	public void createCaseSelectPatientButton() {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;

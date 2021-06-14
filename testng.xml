@@ -8,8 +8,9 @@
 
   <test thread-count="5" name="Ortelligence Application Test Cases">
     <classes>
-      <class name="com.ort.qa.testcases.LoginPageTest"/>
-      
+    
+       <class name="com.ort.qa.testcases.CreateCaseFindPatientPageTest"/>
+       <class name="com.ort.qa.testcases.CreateCasePreferenceCardSelectionFlowTest"/>
       
     </classes>
   </test> <!-- Test -->

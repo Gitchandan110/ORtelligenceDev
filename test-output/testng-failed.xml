@@ -3,13 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ort.qa.testcases.CreateCaseFindPatientPageTest">
+      <class name="com.ort.qa.testcases.CreateCaseProcedureSelectionFlowTest">
         <methods>
-          <include name="createCaseFindPatientLongFlowTest"/>
-          <include name="tearDown"/>
+          <include name="createCaseProcedureSelectionFlowTest"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.ort.qa.testcases.CreateCaseFindPatientPageTest -->
+      </class> <!-- com.ort.qa.testcases.CreateCaseProcedureSelectionFlowTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

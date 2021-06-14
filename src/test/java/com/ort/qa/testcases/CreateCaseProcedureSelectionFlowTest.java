@@ -44,11 +44,11 @@ public class CreateCaseProcedureSelectionFlowTest extends TestBase {
 		  createCaseFindPatientPage = new CreateCaseFindPatientPage(driver);  
 		 createCaseBasicDetailsPage = new CreateCaseBasicDetailsPage(driver);
 		  nurseDashboardPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-		         nurseDashboardPage=new NurseDashboardPage(driver);
-		         createCaseAffectedAreaPage= new CreateCaseAffectedAreaPage();
-		         createCaseProcedureSelectionPage =new CreateCaseProcedureSelectionPage();
-		         createCaseSystemSelectionPage = new CreateCaseSystemSelectionPage();
-		 	      createCaseSetSelectionPage = new  CreateCaseSetSelectionPage();
+		         nurseDashboardPage = new NurseDashboardPage(driver);
+		 createCaseAffectedAreaPage = new CreateCaseAffectedAreaPage();
+   createCaseProcedureSelectionPage = new CreateCaseProcedureSelectionPage();
+      createCaseSystemSelectionPage = new CreateCaseSystemSelectionPage();
+		 createCaseSetSelectionPage = new  CreateCaseSetSelectionPage();
 		 		 Thread.sleep(1000);
 		         selectFacilityPage.clickOnDropDown();
 		    	 Thread.sleep(1000);
@@ -66,25 +66,26 @@ public class CreateCaseProcedureSelectionFlowTest extends TestBase {
 		 Thread.sleep(3000);
 		// createCaseAffectedAreaPage.clickOnhip();
 		// Thread.sleep(5000);
-		 createCaseProcedureSelectionPage.selectProcedure2.click();
+		// createCaseProcedureSelectionPage.selectProcedure2.click();
+		// Thread.sleep(3000);
+		 
+		 createCaseSystemSelectionPage.createCaseSystemSelectionOption1();
 		 Thread.sleep(3000);
-		 createCaseSystemSelectionPage.checkboxSystem1.click();
-		 Thread.sleep(3000);
-		 createCaseSystemSelectionPage.checkboxSystem2.click();
-		 Thread.sleep(1000);
+		// createCaseSystemSelectionPage.checkboxSystem2.click();
+		 //Thread.sleep(1000);
 		 createCaseSystemSelectionPage.clickOnSelectButton.click();
 		 Thread.sleep(1000);
 		 createCaseSystemSelectionPage.proceedToCart.click();
 		 Thread.sleep(1000);
 		 createCaseSetSelectionPage.createCaseSetSelectioncheckbox();
 		  
-		    createCaseSetSelectionPage.createCaseOpenQuantity(); 
-		    Thread.sleep(1000);
-		    createCaseSetSelectionPage.createCaseSetSelectionDropdown();
-		    Thread.sleep(1000);
-		    createCaseSetSelectionPage.createCaseSetPositionDropdown();
-		    Thread.sleep(1000);
-		    createCaseSetSelectionPage.create.click();
+		 createCaseSetSelectionPage.createCaseOpenQuantity(); 
+		  Thread.sleep(1000);
+		 createCaseSetSelectionPage.createCaseSetSelectionDropdown();
+		  Thread.sleep(1000);
+		 createCaseSetSelectionPage.createCaseSetPositionDropdown();
+		  Thread.sleep(1000);
+		 createCaseSetSelectionPage.create.click();
 		 
 	}
 	

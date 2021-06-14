@@ -75,13 +75,31 @@ public class CreateCaseSystemSelectionPage extends TestBase
  /*	Select 1st system 
  */
 	
-	public void createCaseSystemSelectionOption1()
+	
 
-	{
-		checkboxSystem1.click();
-		select.click();
-				
+	
+	public void createCaseSystemSelectionOption1() {
+		try {
+			if (checkboxSystem1.isDisplayed()) {
+				checkboxSystem1.click();
+				if (checkboxSystem2.isDisplayed()) {
+					checkboxSystem2.click();
+					}
+			}
+		}
+		catch (Exception e) {
+
+				e.printStackTrace();
+			}
+			
+		
 	}
+	
+	
+		//checkboxSystem1.click();
+		//select.click();
+				
+	//}
 
 
  /*	Select 2nd System	

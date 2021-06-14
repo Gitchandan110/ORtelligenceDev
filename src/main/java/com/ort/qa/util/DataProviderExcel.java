@@ -21,7 +21,7 @@ public class DataProviderExcel extends TestBase {
 
 	
 	@DataProvider(name = "NurseData")
-	public static Object[][] LoginNurse() throws IOException, NoSuchMethodException, SecurityException {
+	public static Object[][] loginNurse() throws IOException, NoSuchMethodException, SecurityException {
 
 		Object[][] data = null;
     	data = getData(System.getProperty("user.dir") + "\\src\\test\\resources\\Driver\\ort_excel.xlsx", "NurseData");
@@ -31,7 +31,7 @@ public class DataProviderExcel extends TestBase {
 	}
 
 	@DataProvider(name = "surgeonData")
-	public static Object[][] LoginSurgeon() throws IOException, NoSuchMethodException, SecurityException {
+	public static Object[][] loginSurgeon() throws IOException, NoSuchMethodException, SecurityException {
 
 		Object[][] data = null;
 		data = getData(System.getProperty("user.dir") + "\\src\\test\\resources\\Driver\\ort_excel.xlsx",
@@ -42,7 +42,7 @@ public class DataProviderExcel extends TestBase {
 	}
 
 	@DataProvider(name = "PatientData")
-	public Object[][] FindPatientData() throws IOException, NoSuchMethodException, SecurityException {
+	public Object[][] findPatientData() throws IOException, NoSuchMethodException, SecurityException {
 
 		Object[][] data = null;
 
@@ -54,7 +54,7 @@ public class DataProviderExcel extends TestBase {
 	}
 	
 	@DataProvider(name = "LongFlow")
-	public Object[][] FindPatientDataLongFlow() throws IOException, NoSuchMethodException, SecurityException {
+	public Object[][] findPatientDataLongFlow() throws IOException, NoSuchMethodException, SecurityException {
 
 		Object[][] data = null;
 
@@ -66,7 +66,7 @@ public class DataProviderExcel extends TestBase {
 	}
 	
 	@DataProvider(name = "ProcedureSelectionFlow")
-	public Object[][] FindPatientDataProcedureSelectionFlow() throws IOException, NoSuchMethodException, SecurityException {
+	public Object[][] findPatientDataProcedureSelectionFlow() throws IOException, NoSuchMethodException, SecurityException {
 
 		Object[][] data = null;
 
@@ -78,7 +78,7 @@ public class DataProviderExcel extends TestBase {
 	}
 	
 	@DataProvider(name = "PreferenceCardSelectionFlow")
-	public Object[][] FindPatientPreferenceCardSelectionFlow() throws IOException, NoSuchMethodException, SecurityException {
+	public Object[][] findPatientPreferenceCardSelectionFlow() throws IOException, NoSuchMethodException, SecurityException {
 
 		Object[][] data = null;
 
@@ -141,8 +141,16 @@ public class DataProviderExcel extends TestBase {
 		
 	}
 
-	/*
-	 * Function will always used as below. It returns the data from a cell - No need
-	 * to make any changes
-	 */
+	/* if (cell == null) {
+         celldata = " ";
+     } else {
+         celldata = cell.getStringCellValue();
+     }*/
+	
+	
+	
+	
+	
+	
+	
 }
