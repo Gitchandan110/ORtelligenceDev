@@ -153,6 +153,10 @@ public class CreateCaseSetSelectionPage extends TestBase
 	@FindBy(xpath="//a[text()='Click here']']")
 	WebElement clickHere;
 
+	
+	@FindBy(xpath="//select[@id='cptCodePreference']")
+	WebElement cptCodeCheck;
+	
 
  /*	Actions:
  *	Basic set and other details
@@ -189,12 +193,27 @@ public class CreateCaseSetSelectionPage extends TestBase
 				
 	}
 	
+	
+	public void createCaseCptCodeBox() {
+		try {
+			if (cptCodeCheck.isDisplayed()) {
+				cptCodeCheck.sendKeys("27132");
+			}
+		}
+		catch (Exception e) {
+
+				e.printStackTrace();
+			}
+			
+		
+	}
+	
+	
 	/*	click on checkbox.
 	*/
 
 	public void createCaseSetSelectioncheckbox() {
 
-		// checkbox1.click();
 		try {
 			if (checkbox1.isDisplayed()) {
 

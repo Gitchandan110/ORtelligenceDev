@@ -65,9 +65,11 @@ public class CreateCasePreferenceCardSelectionFlowTest extends TestBase {
 	public void createCasePreferenceCardFlowTest( String lastName, String firstName, String mNR ,  String sname, String urgencyName, String patientAllergy, String speciality, String preferenceCardflow) throws InterruptedException 
 	{
 		 Thread.sleep(3000);
+	
 		createCaseFindPatientPage.createCasePreferenceCardData(lastName,firstName, mNR, sname, urgencyName, patientAllergy,speciality,preferenceCardflow   );
 		 Thread.sleep(3000);
 		
+		 createCaseSetSelectionPage.createCaseCptCodeBox();
 		 createCaseSystemSelectionPage.proceedToCart.click();
 		 Thread.sleep(1000);
 	
@@ -80,6 +82,7 @@ public class CreateCasePreferenceCardSelectionFlowTest extends TestBase {
 		 createCaseSetSelectionPage.createCaseSetPositionDropdown();
 		    Thread.sleep(1000);
 		  createCaseSetSelectionPage.create.click();
+		  
 		 
 	}
 	

@@ -32,7 +32,7 @@ public class CreateCaseProcedureSelectionPage extends TestBase
 
  
  	@FindBy(xpath="(//button[@class='btn btn-primary'])[15]")
- 	WebElement selectProcedure ;	
+ 	WebElement selectProceduree ;	
  
 
  	/*	Select another Proceed to cart.
@@ -79,7 +79,7 @@ public class CreateCaseProcedureSelectionPage extends TestBase
  
  	public void createCaseProcedureToCardOption() 
  	{
- 	selectProcedure.click();
+ 	selectProceduree.click();
 				
  	}
  

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="7" total="11" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="285559" started-at="2021-06-11T09:49:15Z" finished-at="2021-06-11T09:54:01Z">
+  <suite name="Default suite" duration-ms="310455" started-at="2021-06-14T06:45:28Z" finished-at="2021-06-14T06:50:38Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="285559" started-at="2021-06-11T09:49:15Z" finished-at="2021-06-11T09:54:01Z">
-      <class name="com.ort.qa.testcases.CreateCaseFindPatientPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="setUp" is-config="true" duration-ms="23832" started-at="2021-06-11T09:49:16Z" finished-at="2021-06-11T09:49:40Z">
+    <test name="Default test" duration-ms="310455" started-at="2021-06-14T06:45:28Z" finished-at="2021-06-14T06:50:38Z">
+      <class name="com.ort.qa.testcases.CreateCaseProcedureSelectionFlowTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CreateCaseProcedureSelectionFlowTest@204f30ec]" name="setUp" is-config="true" duration-ms="30204" started-at="2021-06-14T06:45:29Z" finished-at="2021-06-14T06:45:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="createCaseFindPatientLongFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="createCaseFindPatientLongFlowTest" duration-ms="46803" started-at="2021-06-11T09:49:40Z" data-provider="LongFlow" finished-at="2021-06-11T09:50:27Z">
+        <test-method status="PASS" signature="createCaseProcedureSelectionFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.ort.qa.testcases.CreateCaseProcedureSelectionFlowTest@204f30ec]" name="createCaseProcedureSelectionFlowTest" duration-ms="48050" started-at="2021-06-14T06:45:59Z" data-provider="ProcedureSelectionFlow" finished-at="2021-06-14T06:46:47Z">
           <params>
             <param index="0">
               <value>
@@ -50,22 +50,18 @@
             </param>
             <param index="7">
               <value>
-                <![CDATA[Do not drink water one hour before Surgery]]>
+                <![CDATA[IM Nail Hip / InterTroch / CMN Hip (27245)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createCaseFindPatientLongFlowTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="tearDown" is-config="true" duration-ms="863" started-at="2021-06-11T09:50:27Z" finished-at="2021-06-11T09:50:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="setUp" is-config="true" duration-ms="25613" started-at="2021-06-11T09:50:28Z" finished-at="2021-06-11T09:50:53Z">
+        </test-method> <!-- createCaseProcedureSelectionFlowTest -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CreateCaseProcedureSelectionFlowTest@204f30ec]" name="setUp" is-config="true" duration-ms="26023" started-at="2021-06-14T06:46:47Z" finished-at="2021-06-14T06:47:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="createCaseFindPatientLongFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="createCaseFindPatientLongFlowTest" duration-ms="46744" started-at="2021-06-11T09:50:53Z" data-provider="LongFlow" finished-at="2021-06-11T09:51:40Z">
+        <test-method status="PASS" signature="createCaseProcedureSelectionFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.ort.qa.testcases.CreateCaseProcedureSelectionFlowTest@204f30ec]" name="createCaseProcedureSelectionFlowTest" duration-ms="58328" started-at="2021-06-14T06:47:13Z" data-provider="ProcedureSelectionFlow" finished-at="2021-06-14T06:48:11Z">
           <params>
             <param index="0">
               <value>
@@ -104,22 +100,18 @@
             </param>
             <param index="7">
               <value>
-                <![CDATA[Do not drink water one hour before Surgery]]>
+                <![CDATA[ExFix Distal Femur/ Exfix Femoral Shaft(20692+27500)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createCaseFindPatientLongFlowTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="tearDown" is-config="true" duration-ms="1015" started-at="2021-06-11T09:51:40Z" finished-at="2021-06-11T09:51:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="setUp" is-config="true" duration-ms="24531" started-at="2021-06-11T09:51:41Z" finished-at="2021-06-11T09:52:06Z">
+        </test-method> <!-- createCaseProcedureSelectionFlowTest -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CreateCaseProcedureSelectionFlowTest@204f30ec]" name="setUp" is-config="true" duration-ms="25818" started-at="2021-06-14T06:48:11Z" finished-at="2021-06-14T06:48:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="createCaseFindPatientLongFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="createCaseFindPatientLongFlowTest" duration-ms="46655" started-at="2021-06-11T09:52:06Z" data-provider="LongFlow" finished-at="2021-06-11T09:52:52Z">
+        <test-method status="PASS" signature="createCaseProcedureSelectionFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.ort.qa.testcases.CreateCaseProcedureSelectionFlowTest@204f30ec]" name="createCaseProcedureSelectionFlowTest" duration-ms="47398" started-at="2021-06-14T06:48:37Z" data-provider="ProcedureSelectionFlow" finished-at="2021-06-14T06:49:24Z">
           <params>
             <param index="0">
               <value>
@@ -158,22 +150,18 @@
             </param>
             <param index="7">
               <value>
-                <![CDATA[Do not drink water one hour before Surgery]]>
+                <![CDATA[IM Nail Hip / InterTroch / CMN Hip(27245)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createCaseFindPatientLongFlowTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="tearDown" is-config="true" duration-ms="954" started-at="2021-06-11T09:52:52Z" finished-at="2021-06-11T09:52:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="setUp" is-config="true" duration-ms="20229" started-at="2021-06-11T09:52:53Z" finished-at="2021-06-11T09:53:14Z">
+        </test-method> <!-- createCaseProcedureSelectionFlowTest -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CreateCaseProcedureSelectionFlowTest@204f30ec]" name="setUp" is-config="true" duration-ms="25922" started-at="2021-06-14T06:49:24Z" finished-at="2021-06-14T06:49:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="createCaseFindPatientLongFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="createCaseFindPatientLongFlowTest" duration-ms="46565" started-at="2021-06-11T09:53:14Z" data-provider="LongFlow" finished-at="2021-06-11T09:54:00Z">
+        <test-method status="PASS" signature="createCaseProcedureSelectionFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.ort.qa.testcases.CreateCaseProcedureSelectionFlowTest@204f30ec]" name="createCaseProcedureSelectionFlowTest" duration-ms="48051" started-at="2021-06-14T06:49:50Z" data-provider="ProcedureSelectionFlow" finished-at="2021-06-14T06:50:38Z">
           <params>
             <param index="0">
               <value>
@@ -212,18 +200,14 @@
             </param>
             <param index="7">
               <value>
-                <![CDATA[Do not drink water one hour before Surgery]]>
+                <![CDATA[IM Nail Hip / InterTroch / CMN Hip(27245)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createCaseFindPatientLongFlowTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.CreateCaseFindPatientPageTest@754ba872]" name="tearDown" is-config="true" duration-ms="821" started-at="2021-06-11T09:54:00Z" finished-at="2021-06-11T09:54:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.ort.qa.testcases.CreateCaseFindPatientPageTest -->
+        </test-method> <!-- createCaseProcedureSelectionFlowTest -->
+      </class> <!-- com.ort.qa.testcases.CreateCaseProcedureSelectionFlowTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
