@@ -140,7 +140,7 @@ public class CreateCaseFindPatientPage extends TestBase
 		Thread.sleep(3000);
 		notes.sendKeys(notesBySurgeon);
         next.click();
-        
+       
      
 	}
 	

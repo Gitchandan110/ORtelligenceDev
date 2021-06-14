@@ -83,16 +83,19 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 	public void createCaseFindPatientLongFlowTest( String lastName, String firstName, String mNR ,  String sname, String urgencyName, String patientAllergy, String speciality, String notesBySurgeon) throws InterruptedException 
 	{
 		 Thread.sleep(3000);
-		createCaseFindPatientPage.createCaseFindPatientLongFlowData(lastName,firstName, mNR, sname, urgencyName, patientAllergy,speciality,notesBySurgeon   );
+		createCaseFindPatientPage.createCaseFindPatientLongFlowData(lastName,firstName, mNR, sname, urgencyName, patientAllergy,speciality,notesBySurgeon  );
 		 Thread.sleep(3000);
 		 createCaseAffectedAreaPage.clickOnhip();
 		 Thread.sleep(5000);
 		 createCaseProcedureSelectionPage.selectProcedure2.click();
 		 Thread.sleep(3000);
-		 createCaseSystemSelectionPage.checkboxSystem1.click();
+		 createCaseSystemSelectionPage.createCaseSystemSelectionOption1();
 		 Thread.sleep(3000);
-		 createCaseSystemSelectionPage.checkboxSystem2.click();
-		 Thread.sleep(1000);
+		 
+		 //createCaseSystemSelectionPage.checkboxSystem1.click();
+		 //Thread.sleep(3000);
+		// createCaseSystemSelectionPage.checkboxSystem2.click();
+		 //Thread.sleep(1000);
 		 createCaseSystemSelectionPage.clickOnSelectButton.click();
 		 Thread.sleep(1000);
 		 createCaseSystemSelectionPage.proceedToCart.click();
