@@ -18,7 +18,13 @@ public class CreateCaseFindPatientPage extends TestBase
  *Last Name 
  */
 	WebDriver driver;
-
+	CreateCaseAffectedAreaPage createCaseAffectedAreaPage;
+	CreateCaseProcedureSelectionPage createCaseProcedureSelectionPage;
+	CreateCaseSystemSelectionPage createCaseSystemSelectionPage;
+	CreateCaseSetSelectionPage createCaseSetSelectionPage;
+	
+	
+	
 	@FindBy(xpath="//input[@id='lastName']")
 	WebElement patientLastName;
 	
@@ -95,6 +101,10 @@ public class CreateCaseFindPatientPage extends TestBase
 	@FindBy(xpath="//select[@formcontrolname='positionSide']")
 	WebElement positionSide;
 	
+	@FindBy(xpath="//select[@formcontrolname='positionSide']")
+	WebElement systemPosition;
+	
+	
 	@FindBy(xpath="//textarea[@formcontrolname='positioning_information']")
 	WebElement positioningInformation;
 	
@@ -108,6 +118,10 @@ public class CreateCaseFindPatientPage extends TestBase
 	{	
 		driver=dr;
 		PageFactory.initElements(driver, this);
+		 createCaseAffectedAreaPage= new CreateCaseAffectedAreaPage();
+		 createCaseProcedureSelectionPage= new CreateCaseProcedureSelectionPage();
+			createCaseSystemSelectionPage= new CreateCaseSystemSelectionPage();
+			createCaseSetSelectionPage= new CreateCaseSetSelectionPage();
 	}	
 
  /*	User needs to Select the Patient from the list of Patients
@@ -182,28 +196,35 @@ public class CreateCaseFindPatientPage extends TestBase
 		speciaity.sendKeys(speciality);
 		Thread.sleep(3000);
 		notes.sendKeys(notesBySurgeon);
+		Thread.sleep(3000);
         next.click();
-       // createCaseAffectedAreaPage.clickOnhip();
-	
+        Thread.sleep(3000);
+        createCaseAffectedAreaPage.clickOnhip();
+        Thread.sleep(3000);
+        createCaseProcedureSelectionPage.selectProcedure2.click();
+		 Thread.sleep(3000);
+		 createCaseSystemSelectionPage.createCaseSystemSelectionOption1();
+		 Thread.sleep(3000);	 
+		 createCaseSystemSelectionPage.clickOnSelectButton.click();
+		 Thread.sleep(1000);
+		 createCaseSystemSelectionPage.proceedToCart.click();
+		 Thread.sleep(1000);
+		 createCaseSetSelectionPage.createCaseOpenQuantity(); 
+		 Thread.sleep(1000);
+		 anestesiaRequests.sendKeys(AnasthesiaRequest);
+		 Thread.sleep(1000);
+		 medications.sendKeys(Medications);
+		 Thread.sleep(1000);
+		 positionSide.sendKeys(Side);
+		 Thread.sleep(1000);
+		 systemPosition.sendKeys(Position);
+		 Thread.sleep(1000);
+		 positioningInformation.sendKeys(PositioningComments);
+		 Thread.sleep(1000);
+		 instructions.sendKeys(Instructions);
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	
 	public void createCaseProcedureSelectionFlowData(String lastName, String firstName, String mNR,String surgeonName, String urgencyName, String patientAlllergy,String speciality, String procedureSelection) throws InterruptedException 

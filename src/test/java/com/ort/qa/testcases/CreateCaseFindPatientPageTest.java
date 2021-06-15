@@ -64,7 +64,7 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 		 		
 	}
 	
-	@AfterMethod
+	//@AfterMethod
 	public void tearDown() throws InterruptedException {
 		driver.quit();
 	}
@@ -111,23 +111,9 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 		 Thread.sleep(3000);
 		createCaseFindPatientPage.createCaseFindPatientLongFlowData(lastName,firstName, mNR, sname, urgencyName, patientAllergy,speciality,notesBySurgeon,AnasthesiaRequest, Medications, Side, Position, PositioningComments, Instructions );
 		 Thread.sleep(3000);
-		 createCaseAffectedAreaPage.clickOnhip();
-		 Thread.sleep(3000);
-		 createCaseProcedureSelectionPage.selectProcedure2.click();
-		 Thread.sleep(3000);
-		 createCaseSystemSelectionPage.createCaseSystemSelectionOption1();
-		 Thread.sleep(3000);	 
-		 createCaseSystemSelectionPage.clickOnSelectButton.click();
-		 Thread.sleep(1000);
-		 createCaseSystemSelectionPage.proceedToCart.click();
-		 Thread.sleep(1000);
-		 createCaseSetSelectionPage.createCaseOpenQuantity(); 
-		 Thread.sleep(1000);
-		 createCaseSetSelectionPage.createCaseSetSelectionDropdown();
-		 Thread.sleep(1000);
-		 createCaseSetSelectionPage.createCaseSetPositionDropdown();
-		 Thread.sleep(1000);
+		 
 		 createCaseSetSelectionPage.create.click();
+		  
 	
 	}
 	
