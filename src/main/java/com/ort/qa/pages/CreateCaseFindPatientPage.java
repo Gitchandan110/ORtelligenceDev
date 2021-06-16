@@ -174,7 +174,7 @@ public class CreateCaseFindPatientPage extends TestBase
 	}*/
 	
 	
-	public void createCaseFindPatientLongFlowData(String lastName, String firstName, String mNR,String sname, String urgencyName, String patientAlllergy,String speciality, 
+	public void createCaseFindPatientLongFlowData(String Status,String lastName, String firstName, String mNR,String sname, String urgencyName, String patientAlllergy,String speciality, 
 			String notesBySurgeon, String AnasthesiaRequest, String Medications, String Side, String Position, String PositioningComments, String Instructions) throws InterruptedException 
 	{
 		patientLastName.sendKeys(lastName);
@@ -227,7 +227,7 @@ public class CreateCaseFindPatientPage extends TestBase
 
 	
 	
-	public void createCaseProcedureSelectionFlowData(String lastName, String firstName, String mNR,String surgeonName, String urgencyName, String patientAlllergy,String speciality, String procedureSelection) throws InterruptedException 
+	public void createCaseProcedureSelectionFlowData(String Status, String lastName, String firstName, String mNR,String surgeonName, String urgencyName, String patientAlllergy,String speciality, String procedureSelection) throws InterruptedException 
 	{
 		patientLastName.sendKeys(lastName);
 		Thread.sleep(2000);
@@ -260,7 +260,7 @@ public class CreateCaseFindPatientPage extends TestBase
 	}
 	
 
-	public void createCasePreferenceCardData(String lastName, String firstName, String mNR,String sname, String urgencyName, String patientAlllergy,String speciality,  String preferenceCardflow) throws InterruptedException 
+	public void createCasePreferenceCardData(String Status, String lastName, String firstName, String mNR,String sname, String urgencyName, String patientAlllergy,String speciality,  String preferenceCardflow) throws InterruptedException 
 	{
 		patientLastName.sendKeys(lastName);
 		Thread.sleep(2000);

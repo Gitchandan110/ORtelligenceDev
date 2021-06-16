@@ -59,10 +59,10 @@ public class CreateCaseProcedureSelectionFlowTest extends TestBase {
 	}		
 	
 	@Test(priority=1, dataProvider="ProcedureSelectionFlow",dataProviderClass=DataProviderExcel.class)
-	public void createCaseProcedureSelectionFlowTest( String lastName, String firstName, String mNR ,  String sname, String urgencyName, String patientAllergy, String speciality,String procedureSelection) throws InterruptedException 
+	public void createCaseProcedureSelectionFlowTest( String Status, String lastName, String firstName, String mNR ,  String sname, String urgencyName, String patientAllergy, String speciality,String procedureSelection) throws InterruptedException 
 	{
 		 Thread.sleep(3000);
-		createCaseFindPatientPage.createCaseProcedureSelectionFlowData(lastName,firstName, mNR, sname, urgencyName, patientAllergy,speciality, procedureSelection   );
+		createCaseFindPatientPage.createCaseProcedureSelectionFlowData(Status,lastName,firstName, mNR, sname, urgencyName, patientAllergy,speciality, procedureSelection   );
 		 Thread.sleep(3000);
 		// createCaseAffectedAreaPage.clickOnhip();
 		// Thread.sleep(5000);

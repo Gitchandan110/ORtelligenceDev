@@ -105,11 +105,11 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 	
 	
 	@Test(priority=2, dataProvider="LongFlow",dataProviderClass=DataProviderExcel.class)
-	public void createCaseFindPatientLongFlowTest( String lastName, String firstName, String mNR ,  String sname, String urgencyName, String patientAllergy, String speciality, String notesBySurgeon, 
+	public void createCaseFindPatientLongFlowTest(String Status, String lastName, String firstName, String mNR ,  String sname, String urgencyName, String patientAllergy, String speciality, String notesBySurgeon, 
 			String AnasthesiaRequest, String Medications,String Side, String Position, String PositioningComments, String Instructions) throws InterruptedException 
 	{
 		 Thread.sleep(3000);
-		createCaseFindPatientPage.createCaseFindPatientLongFlowData(lastName,firstName, mNR, sname, urgencyName, patientAllergy,speciality,notesBySurgeon,AnasthesiaRequest, Medications, Side, Position, PositioningComments, Instructions );
+		createCaseFindPatientPage.createCaseFindPatientLongFlowData(Status,lastName,firstName, mNR, sname, urgencyName, patientAllergy,speciality,notesBySurgeon,AnasthesiaRequest, Medications, Side, Position, PositioningComments, Instructions );
 		 Thread.sleep(3000);
 		 
 		 createCaseSetSelectionPage.create.click();
