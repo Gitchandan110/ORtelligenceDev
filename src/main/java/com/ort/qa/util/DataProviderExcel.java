@@ -30,16 +30,27 @@ public class DataProviderExcel extends TestBase {
 	
 	}
 
-	@DataProvider(name = "surgeonData")
+	@DataProvider(name = "LoginUsers")
 	public static Object[][] loginSurgeon() throws IOException, NoSuchMethodException, SecurityException {
 
 		Object[][] data = null;
 		data = getData(System.getProperty("user.dir") + "\\src\\test\\resources\\Driver\\ort_excel.xlsx",
-				"SurgeonData");
+				"LoginUsers");
 
 		return data;
 		
 	}
+	@DataProvider(name = "SearchCaseFlow")
+	public static Object[][] SearchCases() throws IOException, NoSuchMethodException, SecurityException {
+
+		Object[][] data = null;
+		data = getData(System.getProperty("user.dir") + "\\src\\test\\resources\\Driver\\ort_excel.xlsx",
+				"SearchCaseFlow");
+
+		return data;
+		
+	}
+
 
 	@DataProvider(name = "PatientData")
 	public Object[][] findPatientData() throws IOException, NoSuchMethodException, SecurityException {

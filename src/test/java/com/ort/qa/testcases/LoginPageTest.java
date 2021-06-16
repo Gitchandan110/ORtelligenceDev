@@ -54,7 +54,7 @@ public class LoginPageTest extends TestBase{
     
 	   //this test case is for fetching the multiple username and password from the excel sheet 
        //we will run this testcase later, used enabled=false as it will not run*/
-  	@Test(priority=3,enabled=false,dataProvider="NurseData",dataProviderClass=DataProviderExcel.class)
+  	@Test(priority=3,enabled=false, dataProvider="NurseData",dataProviderClass=DataProviderExcel.class)
   	public void LoginTest(String user,String password) throws InterruptedException {
   		//LoginPage lpage=new LoginPage();
   		loginPage.login(user, password);

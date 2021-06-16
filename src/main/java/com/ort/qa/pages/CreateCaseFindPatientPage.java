@@ -18,7 +18,13 @@ public class CreateCaseFindPatientPage extends TestBase
  *Last Name 
  */
 	WebDriver driver;
-
+	CreateCaseAffectedAreaPage createCaseAffectedAreaPage;
+	CreateCaseProcedureSelectionPage createCaseProcedureSelectionPage;
+	CreateCaseSystemSelectionPage createCaseSystemSelectionPage;
+	CreateCaseSetSelectionPage createCaseSetSelectionPage;
+	
+	
+	
 	@FindBy(xpath="//input[@id='lastName']")
 	WebElement patientLastName;
 	
@@ -86,6 +92,25 @@ public class CreateCaseFindPatientPage extends TestBase
 	@FindBy(xpath="//button[text()='Quick Pick']")
 	WebElement quickPick;
 	
+	@FindBy(xpath="//select[@formcontrolname='anestesiaRequests']")
+	WebElement anestesiaRequests;
+	
+	@FindBy(xpath="//textarea[@formcontrolname='medications']")
+	WebElement medications;
+	
+	@FindBy(xpath="//select[@formcontrolname='positionSide']")
+	WebElement positionSide;
+	
+	@FindBy(xpath="//select[@formcontrolname='positionSide']")
+	WebElement systemPosition;
+	
+	
+	@FindBy(xpath="//textarea[@formcontrolname='positioning_information']")
+	WebElement positioningInformation;
+	
+	@FindBy(xpath="//textarea[@formcontrolname='instructions']")
+	WebElement instructions;
+	
  /*Initialization	
  */
 	
@@ -93,6 +118,10 @@ public class CreateCaseFindPatientPage extends TestBase
 	{	
 		driver=dr;
 		PageFactory.initElements(driver, this);
+		 createCaseAffectedAreaPage= new CreateCaseAffectedAreaPage();
+		 createCaseProcedureSelectionPage= new CreateCaseProcedureSelectionPage();
+			createCaseSystemSelectionPage= new CreateCaseSystemSelectionPage();
+			createCaseSetSelectionPage= new CreateCaseSetSelectionPage();
 	}	
 
  /*	User needs to Select the Patient from the list of Patients
@@ -118,7 +147,7 @@ public class CreateCaseFindPatientPage extends TestBase
 	
 
 	
-	public void createCaseFindPatientLongFlowData(String lastName, String firstName, String mNR,String sname, String urgencyName, String patientAlllergy,String speciality, String notesBySurgeon) throws InterruptedException 
+/*	public void createCaseFindPatientLongFlowData(String lastName, String firstName, String mNR,String sname, String urgencyName, String patientAlllergy,String speciality, String notesBySurgeon) throws InterruptedException 
 	{
 		patientLastName.sendKeys(lastName);
 		Thread.sleep(2000);
@@ -140,12 +169,13 @@ public class CreateCaseFindPatientPage extends TestBase
 		Thread.sleep(3000);
 		notes.sendKeys(notesBySurgeon);
         next.click();
-        
+       
      
-	}
+	}*/
 	
 	
-	public void createCaseProcedureSelectionFlowData(String lastName, String firstName, String mNR,String sname, String urgencyName, String patientAlllergy,String speciality, String procedureSelection) throws InterruptedException 
+	public void createCaseFindPatientLongFlowData(String lastName, String firstName, String mNR,String sname, String urgencyName, String patientAlllergy,String speciality, 
+			String notesBySurgeon, String AnasthesiaRequest, String Medications, String Side, String Position, String PositioningComments, String Instructions) throws InterruptedException 
 	{
 		patientLastName.sendKeys(lastName);
 		Thread.sleep(2000);
@@ -158,6 +188,58 @@ public class CreateCaseFindPatientPage extends TestBase
 		selectPatient.click();
 		Thread.sleep(2000);
 		surgeon.sendKeys(sname);
+		Thread.sleep(2000);
+		urgency.sendKeys(urgencyName);
+		Thread.sleep(2000);
+		patientAllergy.sendKeys(patientAlllergy);
+		Thread.sleep(3000);
+		speciaity.sendKeys(speciality);
+		Thread.sleep(3000);
+		notes.sendKeys(notesBySurgeon);
+		Thread.sleep(3000);
+        next.click();
+        Thread.sleep(3000);
+        createCaseAffectedAreaPage.clickOnhip();
+        Thread.sleep(3000);
+        createCaseProcedureSelectionPage.selectProcedure2.click();
+		 Thread.sleep(3000);
+		 createCaseSystemSelectionPage.createCaseSystemSelectionOption1();
+		 Thread.sleep(3000);	 
+		 createCaseSystemSelectionPage.clickOnSelectButton.click();
+		 Thread.sleep(1000);
+		 createCaseSystemSelectionPage.proceedToCart.click();
+		 Thread.sleep(1000);
+		 createCaseSetSelectionPage.createCaseOpenQuantity(); 
+		 Thread.sleep(1000);
+		 anestesiaRequests.sendKeys(AnasthesiaRequest);
+		 Thread.sleep(1000);
+		 medications.sendKeys(Medications);
+		 Thread.sleep(1000);
+		 positionSide.sendKeys(Side);
+		 Thread.sleep(1000);
+		 systemPosition.sendKeys(Position);
+		 Thread.sleep(1000);
+		 positioningInformation.sendKeys(PositioningComments);
+		 Thread.sleep(1000);
+		 instructions.sendKeys(Instructions);
+	}
+	
+
+	
+	
+	public void createCaseProcedureSelectionFlowData(String lastName, String firstName, String mNR,String surgeonName, String urgencyName, String patientAlllergy,String speciality, String procedureSelection) throws InterruptedException 
+	{
+		patientLastName.sendKeys(lastName);
+		Thread.sleep(2000);
+		patientFirstName.sendKeys(firstName);
+		Thread.sleep(2000);
+		patientMRN.sendKeys(mNR);
+		Thread.sleep(2000);
+        search.click();
+        Thread.sleep(2000);
+		selectPatient.click();
+		Thread.sleep(2000);
+		surgeon.sendKeys(surgeonName);
 		Thread.sleep(2000);
 		urgency.sendKeys(urgencyName);
 		Thread.sleep(2000);
