@@ -120,36 +120,61 @@ public class DataProviderExcel extends TestBase {
 		 * Find number of rows in excel file
 		 */
 
-		int rowCount = excelSheet.getLastRowNum()- excelSheet.getFirstRowNum()+1;
+		int rowCount = excelSheet.getLastRowNum() - excelSheet.getFirstRowNum() + 1;
 		int colCount = excelSheet.getRow(0).getLastCellNum();
-
-		System.out.println(rowCount);
-		System.out.println(colCount);
-	
-		 
-		 
-		 Object data[][] = new Object[rowCount-1][colCount];
-		 
-		 for (int rNum = 1;rNum<rowCount; rNum++) {                                                   
-			 
-			 
-			 for (int cNum = 0; cNum < colCount; cNum++) {
-		 
-	int index = excelWorkbook.getSheetIndex(SheetName); 
-	excelSheet =excelWorkbook.getSheetAt(index);
-	
-	// row = excelSheet.getRow(rNum - 1); 
-	row = excelSheet.getRow(rNum); 
-	
-	cell =row.getCell(cNum); 
-	cell.setCellType(CellType.STRING);
-	System.out.println(cell.getStringCellValue());
-	data[rNum - 1][cNum] = cell.getStringCellValue(); //Yoursheet name? 
-			 } 
-			
-			 } 
-		 return data;
+		int rowCheckCount = 1;
 		
+		for (int rNum = 1; rNum < rowCount; rNum++) {
+
+			for (int cNum = 0; cNum < colCount; cNum++) {
+
+				int index = excelWorkbook.getSheetIndex(SheetName);
+				excelSheet = excelWorkbook.getSheetAt(index);
+
+				// row = excelSheet.getRow(rNum - 1);
+				row = excelSheet.getRow(rNum);
+
+				cell = row.getCell(cNum);
+				cell.setCellType(CellType.STRING);
+				if(cell.getStringCellValue().equalsIgnoreCase("Active")) {
+					rowCheckCount++;
+				}
+			}
+		}
+		
+		
+
+		System.out.println(rowCount+"::::::::rowCheckCount::::::"+rowCheckCount);
+		System.out.println(colCount);
+
+		Object data[][] = new Object[rowCheckCount - 1][colCount];
+		int rowCheckCountRow =0;
+		Boolean activeFlag= false;
+		for (int rNum = 1; rNum < rowCount; rNum++) {
+			activeFlag = false;
+			for (int cNum = 0; cNum < colCount; cNum++) {
+
+				int index = excelWorkbook.getSheetIndex(SheetName);
+				excelSheet = excelWorkbook.getSheetAt(index);
+
+				// row = excelSheet.getRow(rNum - 1);
+				row = excelSheet.getRow(rNum);
+
+				cell = row.getCell(cNum);
+				cell.setCellType(CellType.STRING);
+				if(cell.getStringCellValue().equalsIgnoreCase("Active")) {
+					activeFlag = true;
+					rowCheckCountRow++;
+				}
+				if(activeFlag) {
+					System.out.println(rowCheckCountRow+":::Inside::2::>>>>>>>>>>"+cell.getStringCellValue());
+					data[rowCheckCountRow - 1][cNum] = cell.getStringCellValue(); // Yoursheet name?
+				}
+			}
+		}
+		System.out.println("::::data:::"+data.length);
+		return data;
+
 	}
 
 	/* if (cell == null) {
@@ -158,6 +183,20 @@ public class DataProviderExcel extends TestBase {
          celldata = cell.getStringCellValue();
      }*/
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
 	
 	
 	

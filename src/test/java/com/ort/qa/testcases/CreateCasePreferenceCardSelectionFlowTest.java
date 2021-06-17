@@ -62,11 +62,11 @@ public class CreateCasePreferenceCardSelectionFlowTest extends TestBase {
 	}		
 	
 	@Test(priority=1, dataProvider="PreferenceCardSelectionFlow",dataProviderClass=DataProviderExcel.class)
-	public void createCasePreferenceCardFlowTest( String lastName, String firstName, String mNR ,  String surgeonName, String urgencyName, String patientAllergy, String speciality, String preferenceCardflow) throws InterruptedException 
+	public void createCasePreferenceCardFlowTest( String Status, String lastName, String firstName, String mNR ,  String surgeonName, String urgencyName, String patientAllergy, String speciality, String preferenceCardflow) throws InterruptedException 
 	{
 		 Thread.sleep(3000);
 	
-		createCaseFindPatientPage.createCasePreferenceCardData(lastName,firstName, mNR, surgeonName, urgencyName, patientAllergy,speciality,preferenceCardflow   );
+		createCaseFindPatientPage.createCasePreferenceCardData(Status,lastName,firstName, mNR, surgeonName, urgencyName, patientAllergy,speciality,preferenceCardflow   );
 		 Thread.sleep(3000);
 		
 		 createCaseSetSelectionPage.createCaseCptCodeBox();
