@@ -51,6 +51,18 @@ public class DataProviderExcel extends TestBase {
 		
 	}
 
+	@DataProvider(name = "SearchCaseFlow2")
+	public static Object[][] SearchCasesflow() throws IOException, NoSuchMethodException, SecurityException {
+
+		Object[][] data = null;
+		data = getData(System.getProperty("user.dir") + "\\src\\test\\resources\\Driver\\ort_excel.xlsx",
+				"SearchCaseFlow2");
+
+		return data;
+		
+	}
+	
+	
 
 	@DataProvider(name = "PatientData")
 	public Object[][] findPatientData() throws IOException, NoSuchMethodException, SecurityException {
