@@ -75,7 +75,9 @@ public class CreateCaseFindPatientPageTest extends TestBase {
 		 createCaseSetSelectionPage.create.click();
 		 searchCaseFlowPage.okButton.click();
 		 //searchCaseFlowPage.searchCaseLink.click();
-	
+		 //searchCaseFlowPage.searchCaseLink.click();
+		 
+		 
 	}
 	
 	
