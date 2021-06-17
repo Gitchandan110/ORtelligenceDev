@@ -101,7 +101,7 @@ public class CreateCaseFindPatientPage extends TestBase
 	@FindBy(xpath="//select[@formcontrolname='positionSide']")
 	WebElement positionSide;
 	
-	@FindBy(xpath="//select[@formcontrolname='positionSide']")
+	@FindBy(xpath="//select[@formcontrolname='systemPosition']")
 	WebElement systemPosition;
 	
 	
@@ -132,7 +132,7 @@ public class CreateCaseFindPatientPage extends TestBase
  */
 
 	
-/*	public void createCaseFindPatientData(String lastName, String firstName, String mNR) 
+/*	public void createCaseSearchPatientData(String lastName, String firstName, String mNR) 
 	{
 						
 		patientLastName.sendKeys(lastName);

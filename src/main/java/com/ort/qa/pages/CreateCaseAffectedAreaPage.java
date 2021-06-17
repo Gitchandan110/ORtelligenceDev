@@ -142,6 +142,8 @@ public class CreateCaseAffectedAreaPage extends TestBase
  /* x path for Distal HumerusRight.
  */
 		
+	
+	
 	@FindBy(xpath="//area[@id='trauma8']")
 	WebElement distalHumerusRight ;	
 	

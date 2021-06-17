@@ -26,10 +26,11 @@ public class SearchCaseFlowPageTest extends TestBase {
 	}
 	
 	@Test(priority=1, dataProvider="SearchCaseFlow",dataProviderClass=DataProviderExcel.class)
-	public void SearchCasesTest(String userRoleLoginId, String userRolePassword, String facilitySelection,String lastName, String firstName, String MRN, String speciality, String caseNumber) throws InterruptedException {
+	public void SearchCasesTest(String Status,String userRoleLoginId, String userRolePassword, String facilitySelection,String lastName, String firstName, String MRN, String speciality, String caseNumber) throws InterruptedException {
 	 Thread.sleep(3000);
-	 searchCaseFlowPage.userSearchCase(userRoleLoginId, userRolePassword, facilitySelection, lastName,firstName, MRN, speciality,caseNumber);
+	 searchCaseFlowPage.userSearchCase(Status, userRoleLoginId, userRolePassword, facilitySelection, lastName,firstName, MRN, speciality,caseNumber);
 	 Thread.sleep(3000);
+	 searchCaseFlowPage.okButton.click();
 	 userRoleLoginPage.clickOnMenuLogout();
 	}
 

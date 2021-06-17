@@ -55,7 +55,8 @@ public class SearchCaseFlowPage extends TestBase{
 	@FindBy(xpath="//select[@id='facilityName']")
 	public WebElement facilityName;
 	
-
+	@FindBy(xpath="//Button[contains(text(),'Ok')]")
+	public WebElement okButton;
 	
 	
 	
@@ -66,7 +67,7 @@ public  SearchCaseFlowPage(WebDriver dr)
 		PageFactory.initElements(driver, this);  
 	}
 	
-public void userSearchCase(String userRoleLoginId, String userRolePassword, String facilitySelection,String lastName, String firstName, String MRN, String speciality, String caseNumber) throws InterruptedException 
+public void userSearchCase(String Status, String userRoleLoginId, String userRolePassword, String facilitySelection,String lastName, String firstName, String MRN, String speciality, String caseNumber) throws InterruptedException 
 {
 	username.sendKeys(userRoleLoginId);
 	Thread.sleep(2000);
@@ -108,5 +109,46 @@ public void userSearchCase(String userRoleLoginId, String userRolePassword, Stri
 	
 	
 }
+
+
+
+public void userSearchCase2(String lastName, String firstName, String MRN, String speciality, String caseNumber) throws InterruptedException 
+{
+	
+	
+	searchCaseLink.click();
+	Thread.sleep(2000);
+	
+	patientLastName.sendKeys(lastName);
+	Thread.sleep(2000);
+	
+	patientFirstName.sendKeys(firstName);
+	Thread.sleep(2000);
+	
+	patientMRN.sendKeys(MRN);
+	Thread.sleep(2000);
+	
+	specialitySelection.sendKeys(speciality);
+	Thread.sleep(2000);
+	
+	caseNumbers.sendKeys(caseNumber);
+	Thread.sleep(2000);
+	
+	
+	search.click();
+	//facilityName.sendKeys(facility);
+	//Thread.sleep(2000);
+	
+	
+}
+
+
+
+
+
+
+
+
+
 }
 
