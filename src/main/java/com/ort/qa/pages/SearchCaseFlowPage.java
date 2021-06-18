@@ -112,35 +112,9 @@ public void userSearchCase(String Status, String userRoleLoginId, String userRol
 
 
 
-public void userSearchCase2(String lastName, String firstName, String MRN, String speciality, String caseNumber) throws InterruptedException 
-{
+
 	
-	
-	searchCaseLink.click();
-	Thread.sleep(2000);
-	
-	patientLastName.sendKeys(lastName);
-	Thread.sleep(2000);
-	
-	patientFirstName.sendKeys(firstName);
-	Thread.sleep(2000);
-	
-	patientMRN.sendKeys(MRN);
-	Thread.sleep(2000);
-	
-	specialitySelection.sendKeys(speciality);
-	Thread.sleep(2000);
-	
-	caseNumbers.sendKeys(caseNumber);
-	Thread.sleep(2000);
-	
-	
-	search.click();
-	//facilityName.sendKeys(facility);
-	//Thread.sleep(2000);
-	
-	
-}
+
 
 
 

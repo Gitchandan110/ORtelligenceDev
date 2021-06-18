@@ -62,26 +62,15 @@ public class CreateCasePreferenceCardSelectionFlowTest extends TestBase {
 	}		
 	
 	@Test(priority=1, dataProvider="PreferenceCardSelectionFlow",dataProviderClass=DataProviderExcel.class)
-	public void createCasePreferenceCardFlowTest( String Status, String lastName, String firstName, String mNR ,  String surgeonName, String urgencyName, String patientAllergy, String speciality, String preferenceCardflow) throws InterruptedException 
+	public void createCasePreferenceCardFlowTest(String Status, String lastName, String firstName, String MNR,String SurgeonName, String UrgencyName, String patientAlllergy,String Speciality,String PhysicianAssistant, String NotesBySurgeon, String PreferenceCardSelection,
+			String AnesthesiaRequest, String Medications,  String  Side, String Position,   String PositioningComments, String Instructions) throws InterruptedException 
 	{
 		 Thread.sleep(3000);
 	
-		createCaseFindPatientPage.createCasePreferenceCardData(Status,lastName,firstName, mNR, surgeonName, urgencyName, patientAllergy,speciality,preferenceCardflow   );
+		createCaseFindPatientPage.createCasePreferenceCardData(Status,lastName,firstName, MNR, SurgeonName, UrgencyName, patientAlllergy,Speciality,PhysicianAssistant, NotesBySurgeon, PreferenceCardSelection,
+				AnesthesiaRequest, Medications, Side, Position, PositioningComments, Instructions   );
 		 Thread.sleep(3000);
-		
-		 createCaseSetSelectionPage.createCaseCptCodeBox();
-		 Thread.sleep(1000);
-		 createCaseSystemSelectionPage.proceedToCart.click();
-		 Thread.sleep(1000);
 	
-		 createCaseSetSelectionPage.createCaseSetSelectioncheckbox();
-		 Thread.sleep(1000);
-		 createCaseSetSelectionPage.createCaseOpenQuantity(); 
-		    Thread.sleep(1000);
-		 createCaseSetSelectionPage.createCaseSetSelectionDropdown();
-		    Thread.sleep(1000);
-		 createCaseSetSelectionPage.createCaseSetPositionDropdown();
-		    Thread.sleep(1000);
 		  createCaseSetSelectionPage.create.click();
 		  
 		 

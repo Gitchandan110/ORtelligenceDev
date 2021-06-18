@@ -22,10 +22,7 @@ public class DropDownHandler extends TestBase {
 	select.selectByVisibleText(visibleValue);
 	}
 
-	public String getSelectedValue(WebElement element) {
-	String value = new Select(element).getFirstSelectedOption().getText();
-	return value;
-	}
+	
 
 	public void selectUsingIndex(WebElement element, int index) {
 	Select select = new Select(element);
