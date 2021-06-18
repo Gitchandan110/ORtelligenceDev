@@ -83,6 +83,9 @@ public class CreateCaseFindPatientPage extends TestBase
 	@FindBy(xpath="//textarea[@id='notesbydoctor']")
 	WebElement notes;
 	
+	@FindBy(xpath="//select[@formcontrolname='physicianAssistant']")
+	WebElement physicianAssistant;
+	
 	@FindBy(xpath="//input[@id='selectProcedure']")
 	 WebElement procedure;
 	
@@ -260,28 +263,55 @@ public class CreateCaseFindPatientPage extends TestBase
 	}
 	
 
-	public void createCasePreferenceCardData(String Status, String lastName, String firstName, String mNR,String sname, String urgencyName, String patientAlllergy,String speciality,  String preferenceCardflow) throws InterruptedException 
+	public void createCasePreferenceCardData(String Status, String lastName, String firstName, String MNR,String SurgeonName, String UrgencyName, String patientAlllergy,String Speciality,String PhysicianAssistant, String NotesBySurgeon, String PreferenceCardSelection,
+			String AnesthesiaRequest, String Medications,  String  Side, String Position,   String PositioningComments, String Instructions) throws InterruptedException 
 	{
 		patientLastName.sendKeys(lastName);
 		Thread.sleep(2000);
 		patientFirstName.sendKeys(firstName);
 		Thread.sleep(2000);
-		patientMRN.sendKeys(mNR);
+		patientMRN.sendKeys(MNR);
 		Thread.sleep(2000);
         search.click();
         Thread.sleep(2000);
 		selectPatient.click();
 		Thread.sleep(2000);
-		surgeon.sendKeys(sname);
+		surgeon.sendKeys(SurgeonName);
 		Thread.sleep(2000);
-		urgency.sendKeys(urgencyName);
+		urgency.sendKeys(UrgencyName);
 		Thread.sleep(2000);
 		patientAllergy.sendKeys(patientAlllergy);
 		Thread.sleep(3000);
-		speciaity.sendKeys(speciality);
+		speciaity.sendKeys(Speciality);
 		Thread.sleep(3000);
-		preferenceCard.sendKeys(preferenceCardflow);
+		physicianAssistant.sendKeys(PhysicianAssistant);
+		Thread.sleep(3000);
+		notes.sendKeys(NotesBySurgeon);
+		Thread.sleep(3000);
+		preferenceCard.sendKeys(PreferenceCardSelection);
+		Thread.sleep(3000);
 		quickPick.click();
+		 Thread.sleep(1000);
+	    createCaseSetSelectionPage.createCaseCptCodeBox();
+		 Thread.sleep(1000);
+	     createCaseSystemSelectionPage.proceedToCart.click();
+		 Thread.sleep(1000);
+		 createCaseSetSelectionPage.createCaseSetSelectioncheckbox();
+		 Thread.sleep(1000);
+		 createCaseSetSelectionPage.createCaseOpenQuantity(); 
+		 Thread.sleep(1000);
+		 anestesiaRequests.sendKeys(AnesthesiaRequest);
+		 Thread.sleep(1000);
+		 medications.sendKeys(Medications);
+		 Thread.sleep(1000);
+		 positionSide.sendKeys(Side);
+		 Thread.sleep(1000);
+		 systemPosition.sendKeys(Position);
+		 Thread.sleep(1000);
+		 positioningInformation.sendKeys(PositioningComments);
+		 Thread.sleep(1000);
+		 instructions.sendKeys(Instructions);
+		    
 	
 		
 	}
