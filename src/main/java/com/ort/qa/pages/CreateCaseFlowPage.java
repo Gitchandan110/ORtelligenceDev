@@ -15,9 +15,8 @@ public class CreateCaseFlowPage extends RepositoryPages
 {
 
 
- /*	Mandatory to Use any of the 4 provided options
- *Last Name 
- */
+
+ 
 	WebDriver driver;
 	CreateCaseAffectedAreaPage createCaseAffectedAreaPage;
 	CreateCaseProcedureSelectionPage createCaseProcedureSelectionPage;
@@ -30,15 +29,17 @@ public class CreateCaseFlowPage extends RepositoryPages
  /*Initialization	
  */
 	
-	public CreateCaseFlowPage(WebDriver dr) 
+  public CreateCaseFlowPage(WebDriver dr) 
 	{	
 		driver=dr;
 		PageFactory.initElements(driver, this);
 		 createCaseAffectedAreaPage= new CreateCaseAffectedAreaPage();
 		 createCaseProcedureSelectionPage= new CreateCaseProcedureSelectionPage();
-			createCaseSystemSelectionPage= new CreateCaseSystemSelectionPage();
-			createCaseSetSelectionPage= new CreateCaseSetSelectionPage();
+		 createCaseSystemSelectionPage= new CreateCaseSystemSelectionPage();
+		 createCaseSetSelectionPage= new CreateCaseSetSelectionPage();
 	}	
+	
+	
 
  /*	User needs to Select the Patient from the list of Patients
  *	page ignition is also present
@@ -90,6 +91,11 @@ public class CreateCaseFlowPage extends RepositoryPages
 	}*/
 	
 	
+
+
+
+
+
 	public void createCaseFindPatientLongFlowData(String Status,String lastName, String firstName, String mNR,String sname, String urgencyName, String patientAlllergy,String speciality, 
 			String notesBySurgeon, String AnasthesiaRequest, String Medications, String Side, String Position, String PositioningComments, String Instructions) throws InterruptedException 
 	{
@@ -144,7 +150,7 @@ public class CreateCaseFlowPage extends RepositoryPages
 	
 	
 	public void createCaseProcedureSelectionFlowData(String Status, String lastName, String firstName, String mNR,String surgeonName, String urgencyName, String patientAlllergy,String speciality, String procedureSelection,
-			String AnasthesiaRequest, String Medications, String Side, String Position, String PositioningComments, String Instructions ) throws InterruptedException 
+		String OpenQuantity,	String AnasthesiaRequest, String Medications, String Side, String Position, String PositioningComments, String Instructions ) throws InterruptedException 
 	{
 		patientLastName.sendKeys(lastName);
 		Thread.sleep(2000);
@@ -185,6 +191,9 @@ public class CreateCaseFlowPage extends RepositoryPages
 		 createCaseSetSelectionPage.createCaseSetSelectioncheckbox();
 		 Thread.sleep(1000);
 		 createCaseSetSelectionPage.createCaseOpenQuantity(); 
+		 Thread.sleep(1000);
+		 openQuantity.clear();
+		 openQuantity.sendKeys(OpenQuantity);
 		 Thread.sleep(1000);
 		 anestesiaRequests.sendKeys(AnasthesiaRequest);
 		 Thread.sleep(1000);

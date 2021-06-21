@@ -36,10 +36,10 @@ public class CreateCaseFlowPageTest extends TestBase {
 
 		                  loginPage = new LoginPage(driver);
 		         selectFacilityPage = new SelectFacilityPage(driver);
-		  createCaseFlowPage = new CreateCaseFlowPage(driver);  
-		 searchCaseFlowPage= new SearchCaseFlowPage(driver);
-			 nurseDashboardPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-		         nurseDashboardPage=new NurseDashboardPage(driver);
+		         createCaseFlowPage = new CreateCaseFlowPage(driver);  
+	           	 searchCaseFlowPage = new SearchCaseFlowPage(driver);
+			     nurseDashboardPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		         nurseDashboardPage = new NurseDashboardPage(driver);
 		 	     createCaseSetSelectionPage = new  CreateCaseSetSelectionPage();
 		 		 Thread.sleep(1000);
 		         selectFacilityPage.clickOnDropDown();
@@ -93,11 +93,11 @@ public class CreateCaseFlowPageTest extends TestBase {
 	 
 	@Test(priority=3, dataProvider="ProcedureSelectionFlow",dataProviderClass=DataProviderExcel.class)
 	public void createCaseProcedureSelectionFlowTest( String Status, String lastName, String firstName, String mNR ,  String sname, String urgencyName, String patientAllergy, String speciality,String procedureSelection,
-			String AnasthesiaRequest, String Medications, String Side, String Position, String PositioningComments, String Instructions) throws InterruptedException 
+		String OpenQuantity,String AnasthesiaRequest, String Medications, String Side, String Position, String PositioningComments, String Instructions) throws InterruptedException 
 	{
 		 Thread.sleep(3000);
 		createCaseFlowPage.createCaseProcedureSelectionFlowData(Status,lastName,firstName, mNR, sname, urgencyName, patientAllergy,speciality, procedureSelection,
-				 AnasthesiaRequest,  Medications, Side, Position,  PositioningComments,  Instructions);
+		OpenQuantity, AnasthesiaRequest,  Medications, Side, Position,  PositioningComments,  Instructions);
 		 Thread.sleep(3000);
 		
 		 createCaseSetSelectionPage.create.click();

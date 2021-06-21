@@ -1,13 +1,21 @@
 package com.ort.qa.util;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import com.ort.qa.base.TestBase;
+import com.ort.qa.pages.CreateCaseAffectedAreaPage;
+import com.ort.qa.pages.CreateCaseProcedureSelectionPage;
+import com.ort.qa.pages.CreateCaseSetSelectionPage;
+import com.ort.qa.pages.CreateCaseSystemSelectionPage;
 
 public class RepositoryPages extends TestBase {
 	
-		
+
+	
+	
 //Login Page xpath
 		
 		@FindBy(name="username")
@@ -110,7 +118,8 @@ public class RepositoryPages extends TestBase {
 			@FindBy(xpath="//button[@name='Select']")
 			protected	WebElement selectPatient;
 			
-	//Create Case Xpaths
+			
+//Create Case Xpaths
 			
 			//select surgeon on create case
 			@FindBy(xpath="//select[@formcontrolname='surgeon']")
@@ -119,6 +128,31 @@ public class RepositoryPages extends TestBase {
 			//Patient Latex Allergy
 			@FindBy(xpath="//select[@formcontrolname='hasLatexAlergy']")
 			protected WebElement patientAllergy;
+			
+			//SECOND SURGEON PLUS ICON
+			@FindBy(xpath="//i[@class='fa fa-plus padding-plus-layout cursor-pointer']")
+			WebElement secondSergeonPlusIcon;
+			
+			//Second Surgeon field
+			@FindBy(xpath="//select[@id='surgeonPlus']")
+			WebElement secondSurgeon;
+			
+			//Surgeon Latex allergy
+			@FindBy(xpath="//select[@formcontrolname='surgeonHasLatexAlergy']") 
+			WebElement surgeonAllergy;
+			
+			//second surgeon Latex Allergy
+			@FindBy(xpath="(//select[@formcontrolname='secondSurgeonHasLatexAlergy']")
+			WebElement secondSurgeonAllergy;
+			
+			//Surgery Date and Time
+			//Text Field is generally auto filled based upon Urgency but User can manually enter data 
+			@FindBy(xpath="//input[@class='form-control ng-untouched ng-pristine ng-invalid']")
+			WebElement surgeryDateTime;
+			
+			//Surgery Date/Time* Calendar
+			@FindBy(xpath="//span[@class='input-group-append']")
+			WebElement surgeryDateTimeCalenderIcon;
 			
 			//select urgency on create case page
 			@FindBy(xpath="//select[@formcontrolname='urgency']")
@@ -140,15 +174,39 @@ public class RepositoryPages extends TestBase {
 			@FindBy(xpath="//select[@formcontrolname='physicianAssistant']")
 			protected WebElement physicianAssistant;
 			
-			//
+			//Select Prcedure field
 			@FindBy(xpath="//input[@id='selectProcedure']")
 			protected WebElement procedure;
 			
+			//Preference Card Field
 			@FindBy(xpath="//select[@id='preferenceCard']")
 			protected	WebElement preferenceCard;
 			
+			//QuickPick Button 
 			@FindBy(xpath="//button[text()='Quick Pick']")
 			protected WebElement quickPick;
+			
+			//Diagnosis Code field
+			@FindBy(xpath="//input[@id='diagnosisCodes']")
+			WebElement diagnosisCode;
+			
+			//Diagnosis Code Search(Search ICD 10 Codes) Button
+			@FindBy(xpath="//a[text()='Search ICD 10 Codes']")
+			WebElement diagnosisCodeSearch;
+			
+			//upload Image photo label
+			@FindBy(xpath="//label[@id='upload-drop-zone']")
+			WebElement uploadImagePhoto;
+
+			//upload Image browse label
+			@FindBy(xpath="//div[@class='upload-drop-zone'] //label[@class='cursor-pointer' and @for='uploadImage']")
+			WebElement uploadImageBrowse;	
+	
+			//Error Msg Field if surgeon field is blank while creating case
+			@FindBy(xpath="//button[text()=' Please select Surgeon ']")
+			protected WebElement errorMsg;
+			
+			
 			
  //Create Cart Page xpath			
 			//Anesthesia requests
@@ -175,8 +233,10 @@ public class RepositoryPages extends TestBase {
 			@FindBy(xpath="//textarea[@formcontrolname='instructions']")
 			protected WebElement instructions;
 			
-
+			@FindBy(xpath="/html/body/app-root/app-full-layout/div[1]/app-create-case/app-addsets/form/div[1]/div[2]/div/table/tbody/tr[2]/td[3]/input")
+			protected WebElement openQuantity ;
 			
+		
 			
 	}
 
