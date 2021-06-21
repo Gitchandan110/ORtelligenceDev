@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ort.qa.testcases.CreateCasePreferenceCardSelectionFlowTest">
+      <class name="com.ort.qa.testcases.CreateCaseFlowPageTest">
         <methods>
+          <include name="createCaseProcedureSelectionFlowTest" invocation-numbers="0 1"/>
           <include name="setUp"/>
-          <include name="createCasePreferenceCardFlowTest"/>
         </methods>
-      </class> <!-- com.ort.qa.testcases.CreateCasePreferenceCardSelectionFlowTest -->
+      </class> <!-- com.ort.qa.testcases.CreateCaseFlowPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

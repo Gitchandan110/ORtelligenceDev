@@ -5,55 +5,19 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.ort.qa.base.TestBase;
+import com.ort.qa.util.RepositoryPages;
 
 
 
 
-public class LoginPage extends TestBase{ 
+public class LoginPage extends RepositoryPages{ 
 		
 
  /* we have to use Page Factory-Object Repository
  * Here we will segregate all XPath using @FindBy annotation
  */
 	WebDriver driver;
-	@FindBy(name="username")
-	WebElement username;
-
-	@FindBy(name="password")
-	WebElement password;
-
-	@FindBy(xpath="//*[@id=\"page-ui-container\"]/div/div/div/div[2]/div[1]/div/form/div[3]/button")  
-	WebElement signUpBtn;
-
-	@FindBy(xpath="//img[contains(@class,org-logo__image)]")
-	WebElement ortLogo;
 	
-	@FindBy(xpath="//div[text()='Incorrect username or password. Please try again.']")
-	WebElement errorMsgForInvalidMail;
-
-	@FindBy(xpath="//a[text()='Forgot Password']")
-	WebElement forgotPassword;
-	
-	@FindBy(xpath="//a[text()='Forgot Password link']")
-	WebElement forgotPasswordlink;
-	
-	@FindBy(xpath="//*[@id=\"page-ui-container\"]/div/div/div/div[2]/div[1]/div/div/div/text()") 
-	WebElement passwordResetMsg;
-	
-	@FindBy(id="cancel-button")
-	WebElement clickOnCancleButtonLink;
-	
-	@FindBy(id ="recovery-code")
-	WebElement recoveryCode;  
-
-	@FindBy(id ="new") 
-	WebElement enterNewPassword; 
-
-	@FindBy(id ="verify")
-	WebElement verifyNewPassword;
-
-	@FindBy(xpath="//button[@type='submit']")
-	WebElement save;
 	
  /*
  * using @FindBy annotation we have created different WebElements of login page

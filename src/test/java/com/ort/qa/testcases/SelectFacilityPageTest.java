@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.ort.qa.base.TestBase;
-import com.ort.qa.pages.CreateCaseFindPatientPage;
+import com.ort.qa.pages.CreateCaseFlowPage;
 import com.ort.qa.pages.LoginPage;
 import com.ort.qa.pages.NurseDashboardPage;
 import com.ort.qa.pages.SelectFacilityPage;
@@ -17,7 +17,7 @@ public class SelectFacilityPageTest extends TestBase
      LoginPage loginPage;
 	 SelectFacilityPage selectFacilityPage;
 	 NurseDashboardPage nurseDashboardPage;
-	 CreateCaseFindPatientPage createCaseFindPatientPage;
+	 CreateCaseFlowPage createCaseFindPatientPage;
 		public SelectFacilityPageTest() 
 		{  
 			super();	                           
@@ -29,7 +29,7 @@ public class SelectFacilityPageTest extends TestBase
 			           initialization();
 			         loginPage = new LoginPage(driver);
 	      selectFacilityPage = new SelectFacilityPage(driver);
-	      createCaseFindPatientPage = new CreateCaseFindPatientPage(driver);
+	      createCaseFindPatientPage = new CreateCaseFlowPage(driver);
 	      nurseDashboardPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	     
 			

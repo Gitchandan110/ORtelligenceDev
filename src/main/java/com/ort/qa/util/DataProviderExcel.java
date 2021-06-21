@@ -21,7 +21,7 @@ public class DataProviderExcel extends TestBase {
 
 	
 	@DataProvider(name = "NurseData")
-	public static Object[][] loginNurse() throws IOException, NoSuchMethodException, SecurityException {
+	public static Object[][] loginNurse() throws IOException,  SecurityException {
 
 		Object[][] data = null;
     	data = getData(System.getProperty("user.dir") + "\\src\\test\\resources\\Driver\\ort_excel.xlsx", "NurseData");
@@ -31,7 +31,7 @@ public class DataProviderExcel extends TestBase {
 	}
 
 	@DataProvider(name = "LoginUsers")
-	public static Object[][] loginSurgeon() throws IOException, NoSuchMethodException, SecurityException {
+	public static Object[][] loginSurgeon() throws IOException,  SecurityException {
 
 		Object[][] data = null;
 		data = getData(System.getProperty("user.dir") + "\\src\\test\\resources\\Driver\\ort_excel.xlsx",
@@ -41,7 +41,7 @@ public class DataProviderExcel extends TestBase {
 		
 	}
 	@DataProvider(name = "SearchCaseFlow")
-	public static Object[][] SearchCases() throws IOException, NoSuchMethodException, SecurityException {
+	public static Object[][] searchCases() throws IOException, SecurityException {
 
 		Object[][] data = null;
 		data = getData(System.getProperty("user.dir") + "\\src\\test\\resources\\Driver\\ort_excel.xlsx",
@@ -52,7 +52,7 @@ public class DataProviderExcel extends TestBase {
 	}
 
 	@DataProvider(name = "SearchCaseFlow2")
-	public static Object[][] SearchCasesflow() throws IOException, NoSuchMethodException, SecurityException {
+	public static Object[][] searchCasesflow() throws IOException,  SecurityException {
 
 		Object[][] data = null;
 		data = getData(System.getProperty("user.dir") + "\\src\\test\\resources\\Driver\\ort_excel.xlsx",
@@ -65,7 +65,7 @@ public class DataProviderExcel extends TestBase {
 	
 
 	@DataProvider(name = "PatientData")
-	public Object[][] findPatientData() throws IOException, NoSuchMethodException, SecurityException {
+	public Object[][] findPatientData() throws IOException,  SecurityException {
 
 		Object[][] data = null;
 
@@ -77,7 +77,7 @@ public class DataProviderExcel extends TestBase {
 	}
 	
 	@DataProvider(name = "LongFlow")
-	public Object[][] findPatientDataLongFlow() throws IOException, NoSuchMethodException, SecurityException {
+	public Object[][] findPatientDataLongFlow() throws IOException,  SecurityException {
 
 		Object[][] data = null;
 
@@ -89,7 +89,7 @@ public class DataProviderExcel extends TestBase {
 	}
 	
 	@DataProvider(name = "ProcedureSelectionFlow")
-	public Object[][] findPatientDataProcedureSelectionFlow() throws IOException, NoSuchMethodException, SecurityException {
+	public Object[][] findPatientDataProcedureSelectionFlow() throws IOException,  SecurityException {
 
 		Object[][] data = null;
 
@@ -101,7 +101,7 @@ public class DataProviderExcel extends TestBase {
 	}
 	
 	@DataProvider(name = "PreferenceCardSelectionFlow")
-	public Object[][] findPatientPreferenceCardSelectionFlow() throws IOException, NoSuchMethodException, SecurityException {
+	public Object[][] findPatientPreferenceCardSelectionFlow() throws IOException,  SecurityException {
 
 		Object[][] data = null;
 
@@ -118,15 +118,15 @@ public class DataProviderExcel extends TestBase {
 	 * Supplying data for a test method.
 	 */
 
-	public static Object[][] getData(String FilePath, String SheetName) throws IOException {
-		FileInputStream fis = new FileInputStream(FilePath); // Your .xlsx file name along with path
+	public static Object[][] getData(String filePath, String sheetName) throws IOException {
+		FileInputStream fis = new FileInputStream(filePath); // Your .xlsx file name along with path
 		excelWorkbook = new XSSFWorkbook(fis);
 
 		/*
 		 * Read sheet inside the workbook by its name
 		 */
 
-		excelSheet = excelWorkbook.getSheet(SheetName);
+		excelSheet = excelWorkbook.getSheet(sheetName);
 
 		/*
 		 * Find number of rows in excel file
@@ -140,7 +140,7 @@ public class DataProviderExcel extends TestBase {
 
 			for (int cNum = 0; cNum < colCount; cNum++) {
 
-				int index = excelWorkbook.getSheetIndex(SheetName);
+				int index = excelWorkbook.getSheetIndex(sheetName);
 				excelSheet = excelWorkbook.getSheetAt(index);
 
 				// row = excelSheet.getRow(rNum - 1);
@@ -166,7 +166,7 @@ public class DataProviderExcel extends TestBase {
 			activeFlag = false;
 			for (int cNum = 0; cNum < colCount; cNum++) {
 
-				int index = excelWorkbook.getSheetIndex(SheetName);
+				int index = excelWorkbook.getSheetIndex(sheetName);
 				excelSheet = excelWorkbook.getSheetAt(index);
 
 				// row = excelSheet.getRow(rNum - 1);

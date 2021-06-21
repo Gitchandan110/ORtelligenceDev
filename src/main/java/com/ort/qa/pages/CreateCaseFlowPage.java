@@ -4,13 +4,14 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+
 import org.openqa.selenium.support.PageFactory;
 
-import com.ort.qa.base.TestBase;
+
+import com.ort.qa.util.RepositoryPages;
 
 
-public class CreateCaseFindPatientPage extends TestBase
+public class CreateCaseFlowPage extends RepositoryPages
 {
 
 
@@ -25,99 +26,11 @@ public class CreateCaseFindPatientPage extends TestBase
 	
 	
 	
-	@FindBy(xpath="//input[@id='lastName']")
-	WebElement patientLastName;
-	
- /*	First Name
- */
-	
-	@FindBy(xpath="//input[@id='firstName']")
-	WebElement patientFirstName;
-
- /*	Date of Birth text field	
- */
-	
-	@FindBy(xpath="//input[@id='dob']")
-	WebElement patientDOB;
-
- /*	Date of Birth Calendar icon
- */ 
-	
-	@FindBy(xpath="//span[@class='date-picker-icon']")
-	WebElement patientDOBIcon;
-	
- /*	MRN# Number	
- */
-	
-	@FindBy(xpath="//input[@id='mrn']")
-	WebElement patientMRN;
-	
- /*Search button	
- */
-	
-	@FindBy(xpath="//button[text()='Search']")
-	WebElement search;
-	
- /*	Select Patient
- */
-	
-	@FindBy(xpath="//button[@name='Select']")
-	WebElement selectPatient;
-	
-	@FindBy(xpath="//select[@formcontrolname='surgeon']")
-	WebElement surgeon;
-
-	
-	@FindBy(xpath="//select[@formcontrolname='hasLatexAlergy']")
-	WebElement patientAllergy;
-	
-	@FindBy(xpath="//select[@formcontrolname='urgency']")
-	WebElement urgency;
-	
-	@FindBy(xpath="//select[@id='specialtyId']")
-	WebElement speciaity;
-	
-	@FindBy(xpath="//button[text()='Next']")
-	WebElement next;
-	
-	@FindBy(xpath="//textarea[@id='notesbydoctor']")
-	WebElement notes;
-	
-	@FindBy(xpath="//select[@formcontrolname='physicianAssistant']")
-	WebElement physicianAssistant;
-	
-	@FindBy(xpath="//input[@id='selectProcedure']")
-	 WebElement procedure;
-	
-	@FindBy(xpath="//select[@id='preferenceCard']")
-	WebElement preferenceCard;
-	
-	@FindBy(xpath="//button[text()='Quick Pick']")
-	WebElement quickPick;
-	
-	@FindBy(xpath="//select[@formcontrolname='anestesiaRequests']")
-	WebElement anestesiaRequests;
-	
-	@FindBy(xpath="//textarea[@formcontrolname='medications']")
-	WebElement medications;
-	
-	@FindBy(xpath="//select[@formcontrolname='positionSide']")
-	WebElement positionSide;
-	
-	@FindBy(xpath="//select[@formcontrolname='systemPosition']")
-	WebElement systemPosition;
-	
-	
-	@FindBy(xpath="//textarea[@formcontrolname='positioning_information']")
-	WebElement positioningInformation;
-	
-	@FindBy(xpath="//textarea[@formcontrolname='instructions']")
-	WebElement instructions;
 	
  /*Initialization	
  */
 	
-	public CreateCaseFindPatientPage(WebDriver dr) 
+	public CreateCaseFlowPage(WebDriver dr) 
 	{	
 		driver=dr;
 		PageFactory.initElements(driver, this);
@@ -230,7 +143,8 @@ public class CreateCaseFindPatientPage extends TestBase
 
 	
 	
-	public void createCaseProcedureSelectionFlowData(String Status, String lastName, String firstName, String mNR,String surgeonName, String urgencyName, String patientAlllergy,String speciality, String procedureSelection) throws InterruptedException 
+	public void createCaseProcedureSelectionFlowData(String Status, String lastName, String firstName, String mNR,String surgeonName, String urgencyName, String patientAlllergy,String speciality, String procedureSelection,
+			String AnasthesiaRequest, String Medications, String Side, String Position, String PositioningComments, String Instructions ) throws InterruptedException 
 	{
 		patientLastName.sendKeys(lastName);
 		Thread.sleep(2000);
@@ -241,9 +155,9 @@ public class CreateCaseFindPatientPage extends TestBase
         search.click();
         Thread.sleep(2000);
 		selectPatient.click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		surgeon.sendKeys(surgeonName);
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		urgency.sendKeys(urgencyName);
 		Thread.sleep(2000);
 		patientAllergy.sendKeys(patientAlllergy);
@@ -259,7 +173,31 @@ public class CreateCaseFindPatientPage extends TestBase
 		procedure.sendKeys(Keys.ENTER);
 		Thread.sleep(3000);
 		 next.click();
-       	
+			Thread.sleep(3000);
+		// createCaseProcedureSelectionPage.selectProcedure2.click();
+		// Thread.sleep(3000);
+		 createCaseSystemSelectionPage.createCaseSystemSelectionOption1();
+		 Thread.sleep(3000);	 
+		 createCaseSystemSelectionPage.clickOnSelectButton.click();
+		 Thread.sleep(1000);
+		 createCaseSystemSelectionPage.proceedToCart.click();
+		 Thread.sleep(1000);
+		 createCaseSetSelectionPage.createCaseSetSelectioncheckbox();
+		 Thread.sleep(1000);
+		 createCaseSetSelectionPage.createCaseOpenQuantity(); 
+		 Thread.sleep(1000);
+		 anestesiaRequests.sendKeys(AnasthesiaRequest);
+		 Thread.sleep(1000);
+		 medications.sendKeys(Medications);
+		 Thread.sleep(1000);
+		 positionSide.sendKeys(Side);
+		 Thread.sleep(1000);
+		 systemPosition.sendKeys(Position);
+		 Thread.sleep(1000);
+		 positioningInformation.sendKeys(PositioningComments);
+		 Thread.sleep(1000);
+		 instructions.sendKeys(Instructions);
+		 
 	}
 	
 
