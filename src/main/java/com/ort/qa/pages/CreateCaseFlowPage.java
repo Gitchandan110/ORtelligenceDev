@@ -278,35 +278,33 @@ public class CreateCaseFlowPage extends RepositoryPages
 	}
 	
 	
-	//Below method is to select the checkbox if it is not selected already
-	public void selectTheCheckbox(WebElement element) {
-		try {
-            if (element.isSelected()) {
-               System.out.println("Checkbox: " + element + "is already selected");
-            } else {
-            	// Select the checkbox
-                element.click();
-            }
-        } catch (Exception e) {
-        	System.out.println("Unable to select the checkbox: " + element);
-        }
+	public void userSearchCases(String Status, String lastName, String firstName, String MRN, String speciality, String caseNumber) throws InterruptedException 
+	{
+		
+		
+		patientLastName.sendKeys(lastName);
+		Thread.sleep(2000);
+		
+		patientFirstName.sendKeys(firstName);
+		Thread.sleep(2000);
+		
+		patientMRN.sendKeys(MRN);
+		Thread.sleep(2000);
+		
+		specialitySelection.sendKeys(speciality);
+		Thread.sleep(2000);
+		
+		caseNumbers.sendKeys(caseNumber);
+		Thread.sleep(2000);
+		
+		
+		search.click();
+		//facilityName.sendKeys(facility);
+		//Thread.sleep(2000);
+		
 		
 	}
-	
-	//Below method is to De-select the checkbox if it is already selected
-	public void deSelectTheCheckbox(WebElement element) {
-		try {
-            if (element.isSelected()) {
-            	//De-select the checkbox
-                element.click();
-            } else {
-            	System.out.println("Checkbox: "+element+"is already deselected");
-            }
-        } catch (Exception e) {
-        	System.out.println("Unable to deselect checkbox: "+element);
-        }
-		}
-	
+
 	
 	
 }

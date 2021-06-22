@@ -51,12 +51,12 @@ public class DataProviderExcel extends TestBase {
 		
 	}
 
-	@DataProvider(name = "SearchCaseFlow2")
+	@DataProvider(name = "OpenCases")
 	public static Object[][] searchCasesflow() throws IOException,  SecurityException {
 
 		Object[][] data = null;
 		data = getData(System.getProperty("user.dir") + "\\src\\test\\resources\\Driver\\ort_excel.xlsx",
-				"SearchCaseFlow2");
+				"OpenCases");
 
 		return data;
 		
