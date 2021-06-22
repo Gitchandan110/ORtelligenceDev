@@ -1,25 +1,533 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="45743" started-at="2021-06-21T12:14:24Z" finished-at="2021-06-21T12:15:09Z">
+  <suite name="Default suite" duration-ms="435068" started-at="2021-06-22T04:11:47Z" finished-at="2021-06-22T04:19:02Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="45743" started-at="2021-06-21T12:14:24Z" finished-at="2021-06-21T12:15:09Z">
-      <class name="com.ort.qa.testcases.SPDCaseQueuePageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.SPDCaseQueuePageTest@204f30ec]" name="setUp" is-config="true" duration-ms="33632" started-at="2021-06-21T12:14:24Z" finished-at="2021-06-21T12:14:57Z">
+    <test name="Default test" duration-ms="435068" started-at="2021-06-22T04:11:47Z" finished-at="2021-06-22T04:19:02Z">
+      <class name="com.ort.qa.testcases.CreateCaseFlowPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CreateCaseFlowPageTest@204f30ec]" name="setUp" is-config="true" duration-ms="27413" started-at="2021-06-22T04:11:47Z" finished-at="2021-06-22T04:12:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="searchPatient()[pri:1, instance:com.ort.qa.testcases.SPDCaseQueuePageTest@204f30ec]" name="searchPatient" duration-ms="9233" started-at="2021-06-21T12:14:57Z" finished-at="2021-06-21T12:15:07Z">
+        <test-method status="PASS" signature="createCaseFindPatientLongFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.ort.qa.testcases.CreateCaseFlowPageTest@204f30ec]" name="createCaseFindPatientLongFlowTest" duration-ms="54983" started-at="2021-06-22T04:12:15Z" data-provider="LongFlow" finished-at="2021-06-22T04:13:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Active]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Sharma]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Vikas]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[646464]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Christiana surgeon ]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Critical (Up to 1hr.)]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Trauma]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Do not drink water one hour before Surgery]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Local]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Bilateral]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Bleach Chair]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[No Comments]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[No Instructions]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchPatient -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ort.qa.testcases.SPDCaseQueuePageTest@204f30ec]" name="tearDown" is-config="true" duration-ms="2838" started-at="2021-06-21T12:15:07Z" finished-at="2021-06-21T12:15:09Z">
+        </test-method> <!-- createCaseFindPatientLongFlowTest -->
+        <test-method status="PASS" signature="createCaseFindPatientLongFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.ort.qa.testcases.CreateCaseFlowPageTest@204f30ec]" name="createCaseFindPatientLongFlowTest" duration-ms="55029" started-at="2021-06-22T04:13:10Z" data-provider="LongFlow" finished-at="2021-06-22T04:14:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Active]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Sharma]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Vikas]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[646464]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Christiana 44_Test ]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Urgent (Up to 8hrs.) ]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Trauma]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Do not drink water one hour before Surgery]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[General]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Right]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Bleach Chair]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[No Comments]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[No Instructions]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.ort.qa.testcases.SPDCaseQueuePageTest -->
+        </test-method> <!-- createCaseFindPatientLongFlowTest -->
+        <test-method status="PASS" signature="createCasePreferenceCardFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.ort.qa.testcases.CreateCaseFlowPageTest@204f30ec]" name="createCasePreferenceCardFlowTest" duration-ms="91128" started-at="2021-06-22T04:14:05Z" data-provider="PreferenceCardSelectionFlow" finished-at="2021-06-22T04:15:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Active]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Sharma]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Vikas]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[646464]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Michael J. Principe ]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Critical (Up to 1hr.)]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Trauma]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[ARTHRODESIS (FUSION) ANKLE W/WO GRAFT]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[General]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Left]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Beach Chair]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createCasePreferenceCardFlowTest -->
+        <test-method status="PASS" signature="createCasePreferenceCardFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.ort.qa.testcases.CreateCaseFlowPageTest@204f30ec]" name="createCasePreferenceCardFlowTest" duration-ms="74820" started-at="2021-06-22T04:15:36Z" data-provider="PreferenceCardSelectionFlow" finished-at="2021-06-22T04:16:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Active]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Sharma]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[V]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[646464]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Eric T. Johnson]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Normal (Up to 48hrs.) ]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Trauma]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[EXTERNAL FIXATOR SMALL APPLICATION]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[MAC]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Left]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Supine]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createCasePreferenceCardFlowTest -->
+        <test-method status="PASS" signature="createCaseProcedureSelectionFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.ort.qa.testcases.CreateCaseFlowPageTest@204f30ec]" name="createCaseProcedureSelectionFlowTest" duration-ms="60813" started-at="2021-06-22T04:16:51Z" data-provider="ProcedureSelectionFlow" finished-at="2021-06-22T04:17:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Active]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Sharma]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Vikas]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[646464]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Christiana surgeon ]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Critical (Up to 1hr.)]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Trauma]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[IM Nail Hip / InterTroch / CMN Hip (27245)]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[3,2]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[General]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Left]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Beach Chair]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createCaseProcedureSelectionFlowTest -->
+        <test-method status="PASS" signature="createCaseProcedureSelectionFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.ort.qa.testcases.CreateCaseFlowPageTest@204f30ec]" name="createCaseProcedureSelectionFlowTest" duration-ms="69575" started-at="2021-06-22T04:17:52Z" data-provider="ProcedureSelectionFlow" finished-at="2021-06-22T04:19:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Active]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Sharma]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Vikas]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[646464]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Christiana 44_Test ]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Urgent (Up to 8hrs.) ]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Trauma]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[IM Nail Hip / InterTroch / CMN Hip(27245)]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[3,4,3,2]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[N/A]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Right]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Prone]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createCaseProcedureSelectionFlowTest -->
+      </class> <!-- com.ort.qa.testcases.CreateCaseFlowPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
