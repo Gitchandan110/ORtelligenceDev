@@ -1,6 +1,7 @@
 package com.ort.qa.pages;
 
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -235,7 +236,7 @@ public class CreateCaseSetSelectionPage extends TestBase
 	{
 		openQuantity.clear();
 	    openQuantity.sendKeys("2");
-				
+	   
 	}		
 	
  /*	SelectSideDropdoown

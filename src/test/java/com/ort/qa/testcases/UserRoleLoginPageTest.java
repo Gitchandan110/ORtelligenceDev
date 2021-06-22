@@ -25,9 +25,9 @@ public void setUp() {
 }
 
 @Test(priority=1, dataProvider="LoginUsers",dataProviderClass=DataProviderExcel.class)
-	public void UserRoleLoginTest(String userRoleLoginId,String userRolePassword, String facilitySelection) throws InterruptedException {
+	public void UserRoleLoginTest(String status, String userRoleLoginId,String userRolePassword, String facilitySelection) throws InterruptedException {
 	 Thread.sleep(3000);
-	userRoleLoginPage.userRoleLogin(userRoleLoginId, userRolePassword, facilitySelection);
+	userRoleLoginPage.userRoleLogin(status,userRoleLoginId, userRolePassword, facilitySelection);
 	 Thread.sleep(3000);
 	userRoleLoginPage.clickOnMenuLogout();
 	}

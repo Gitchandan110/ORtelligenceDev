@@ -73,7 +73,7 @@ public class CreateCaseProcedureSelectionPage extends TestBase
 	
 	public void createCaseProcedureSelectionBack() 
 	{
-		back.click();
+	back.click();
 				
 	}
  

@@ -9,33 +9,16 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.ort.qa.base.TestBase;
 import com.ort.qa.util.DropDownHandler;
+import com.ort.qa.util.RepositoryPages;
 
 
 
-public class SelectFacilityPage extends TestBase
+public class SelectFacilityPage extends RepositoryPages
 {
 
 	WebDriver driver;
 	
- /*	Select Facility Dropdown*
- */
-	
-	@FindBy(xpath="//select[@name='locationId']")
-	WebElement facilityDropdown;
-
- /*	Confirm button
- */
-	
-	@FindBy(xpath="//button[text()='Confirm']")
-	WebElement confirm;	
-	 
-	
-	@FindBy(xpath="(//a[@class='menu-font'])[4]")
-	WebElement createcase;	
-	
-	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[4]")
-	public WebElement dashboardCreateCase;
-	
+ 
 	
  /*  Initialization
  */

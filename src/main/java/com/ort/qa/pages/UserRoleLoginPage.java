@@ -6,25 +6,11 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.ort.qa.base.TestBase;
 
-public class UserRoleLoginPage extends TestBase {
-	
-	
-	@FindBy(name="username")
-	WebElement username;
+import com.ort.qa.util.RepositoryPages;
 
-	@FindBy(name="password")
-	WebElement password;
+public class UserRoleLoginPage extends RepositoryPages {
 	
-	@FindBy(xpath="//*[@id=\"page-ui-container\"]/div/div/div/div[2]/div[1]/div/form/div[3]/button")  
-	WebElement signUpBtn;
-	
-	@FindBy(xpath="//select[@name='locationId']")
-	WebElement facilityDropdown;
-	
-	@FindBy(xpath="//button[text()='Confirm']")
-	WebElement confirm;	
 	
 	@FindBy(xpath="//li[@class='dropdown user-menu pl-sm-0']")
 	public WebElement menuUserName; 
@@ -40,7 +26,7 @@ public  UserRoleLoginPage(WebDriver dr)
 		PageFactory.initElements(driver, this);  
 	}
 	
-public void userRoleLogin(String userRoleLoginId, String userRolePassword, String facilitySelection) throws InterruptedException 
+public void userRoleLogin(String status,String userRoleLoginId, String userRolePassword, String facilitySelection) throws InterruptedException 
 {
 	username.sendKeys(userRoleLoginId);
 	Thread.sleep(2000);

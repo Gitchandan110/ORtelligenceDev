@@ -60,7 +60,7 @@ public class ProfilePage extends TestBase {
 	
 //Actions:
       
- 	public ProfilePage click1() {//Link click for Forgot Password
+ 	public ProfilePage click1() {//Link click for Forgot Passwor
  	profile.click();
  	return new ProfilePage();
   }

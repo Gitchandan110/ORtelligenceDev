@@ -96,10 +96,7 @@ public class CreateCaseSystemSelectionPage extends TestBase
 	}
 	
 	
-		//checkboxSystem1.click();
-		//select.click();
-				
-	//}
+		
 
 
  /*	Select 2nd System	

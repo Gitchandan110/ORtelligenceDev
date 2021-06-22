@@ -36,15 +36,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.ort.qa.base.TestBase;
+import com.ort.qa.util.RepositoryPages;
 
-public class NurseDashboardPage extends TestBase
+public class NurseDashboardPage extends RepositoryPages
 {
 	
 // 	Dashboard Nurse ..............................................................................................
 //  In Process Nurse
 	WebDriver driver;
- 	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[1]")
-	public WebElement dashboardInProcess;   
+ 	 
 	
 //  On Hold Nurse
  	@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[2]")
@@ -98,9 +98,7 @@ public class NurseDashboardPage extends TestBase
 	
 	
 // 	Menu Bar ......................................................................................................
-// 	In Process 
-	@FindBy(xpath="(//a[text()='In-Process'])[1]")
-	public WebElement menuInProcess;   
+  
 	
 //  On Hold
  	@FindBy(xpath="(//a[text()='On-Hold'])[1]")
