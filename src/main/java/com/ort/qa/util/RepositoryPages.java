@@ -112,13 +112,17 @@ public class RepositoryPages extends TestBase {
 			
 		    //Search button	On Find Patient Page
 			@FindBy(xpath="//button[text()='Search']")
-			protected  WebElement search;
+			public  WebElement search;
 			
 		    //	Select Patient Button on Find Patient Page
 			@FindBy(xpath="//button[@name='Select']")
 			protected	WebElement selectPatient;
 			
+			@FindBy(xpath="//select[@id='specialtyId']")
+			public WebElement specialitySelection;
 			
+			@FindBy(xpath="//input[@id='caseId']")
+			public WebElement caseNumbers;
 //Create Case Xpaths
 			
 			//select surgeon on create case

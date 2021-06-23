@@ -10,6 +10,7 @@ import com.ort.qa.pages.CreateCaseFlowPage;
 import com.ort.qa.pages.CreateCaseSetSelectionPage;
 import com.ort.qa.pages.LoginPage;
 import com.ort.qa.pages.NurseDashboardPage;
+import com.ort.qa.pages.OpenCasesPage;
 import com.ort.qa.pages.SearchCaseFlowPage;
 import com.ort.qa.pages.SearchPatientPage;
 import com.ort.qa.pages.SelectFacilityPage;
@@ -22,7 +23,7 @@ public class CreateCaseFlowPageTest extends TestBase {
     NurseDashboardPage nurseDashboardPage;
 	CreateCaseSetSelectionPage  createCaseSetSelectionPage;
 	SearchCaseFlowPage searchCaseFlowPage;
-	
+	OpenCasesPage openCasesPage;
 	
 	public CreateCaseFlowPageTest() {  
 		
@@ -40,6 +41,7 @@ public class CreateCaseFlowPageTest extends TestBase {
 	           	 searchCaseFlowPage = new SearchCaseFlowPage(driver);
 			     nurseDashboardPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 		         nurseDashboardPage = new NurseDashboardPage(driver);
+		         openCasesPage = new OpenCasesPage();
 		 	     createCaseSetSelectionPage = new  CreateCaseSetSelectionPage();
 		 		 Thread.sleep(1000);
 		         selectFacilityPage.clickOnDropDown();
@@ -72,6 +74,7 @@ public class CreateCaseFlowPageTest extends TestBase {
 		 
 	}
 	
+ 
 	//Preference Card Flow
 	
 	@Test(priority=2, dataProvider="PreferenceCardSelectionFlow",dataProviderClass=DataProviderExcel.class)
@@ -104,7 +107,70 @@ public class CreateCaseFlowPageTest extends TestBase {
 		 searchCaseFlowPage.okButton.click();
 	}
 	
+	//Click On search CaseLink 
+	@Test(priority=4)
+	public void clickOnSearchCasesLink()
+	{
+		nurseDashboardPage.menuSearchCase.click();
+	}
+	
+	// Search case flow: Need to make one sheet for search case. Temporarily using open case sheet just to check the flow
+	@Test(priority=5, dataProvider="OpenCases",dataProviderClass=DataProviderExcel.class)
+	public void userSearchCases(String Status, String lastName, String firstName, String MRN, String Speciality, String CaseNumber) throws InterruptedException 
+	{
+		Thread.sleep(3000);
+		   createCaseFlowPage.userSearchCases (Status,lastName,firstName, MRN, Speciality, CaseNumber);
+			 Thread.sleep(3000);
+			openCasesPage.search.click();
+	}
 	
 	
+	//Click on opn case link
+	   @Test(priority=6)
+	    public void clickOnOpenCases()
+	    {
+	    	nurseDashboardPage.clickOnOpenCaseLink();
+	    }
+		
+		//check Open case flow
+		@Test(priority=7, dataProvider="OpenCases",dataProviderClass=DataProviderExcel.class)
+		public void openCases(String Status, String lastName, String firstName, String MRN, String Speciality, String CaseNumber ) throws InterruptedException 
+		{
+			 Thread.sleep(3000);
+		   openCasesPage.userOpenCases (Status,lastName,firstName, MRN, Speciality, CaseNumber);
+			 Thread.sleep(3000);
+			openCasesPage.search.click();
+			  
+		}
+		
+		@Test(priority=7)
+		public void clickOnCartReview()
+		{
+			nurseDashboardPage.menuCartReview.click();
+		}
+		
+		@Test(priority=8, dataProvider="OpenCases",dataProviderClass=DataProviderExcel.class)
+		public void CartReviewCases(String Status, String lastName, String firstName, String MRN, String Speciality, String CaseNumber) throws InterruptedException 
+		{
+			Thread.sleep(3000);
+			   createCaseFlowPage.userSearchCases (Status,lastName,firstName, MRN, Speciality, CaseNumber);
+				 Thread.sleep(3000);
+				openCasesPage.search.click();
+		}
+	
+		@Test(priority=9)
+		public void clickOnORreadyLink() 
+		{
+			nurseDashboardPage.menuORtelligence.click();
+		}
+		
+		@Test(priority=10, dataProvider="OpenCases",dataProviderClass=DataProviderExcel.class)
+		public void ORreadyCases(String Status, String lastName, String firstName, String MRN, String Speciality, String CaseNumber) throws InterruptedException 
+		{
+			Thread.sleep(3000);
+			   createCaseFlowPage.userSearchCases (Status,lastName,firstName, MRN, Speciality, CaseNumber);
+				 Thread.sleep(3000);
+				openCasesPage.search.click();
+		}
 
 }

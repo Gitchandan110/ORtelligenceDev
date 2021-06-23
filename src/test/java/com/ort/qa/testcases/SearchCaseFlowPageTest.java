@@ -1,6 +1,7 @@
 package com.ort.qa.testcases;
 
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.ort.qa.base.TestBase;
