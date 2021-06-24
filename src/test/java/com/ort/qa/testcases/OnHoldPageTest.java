@@ -5,34 +5,33 @@ import org.testng.annotations.Test;
 
 import com.ort.qa.base.TestBase;
 import com.ort.qa.pages.CartReviewPage;
-
 import com.ort.qa.pages.CreateCaseSetSelectionPage;
 import com.ort.qa.pages.LoginPage;
 import com.ort.qa.pages.NurseDashboardPage;
+import com.ort.qa.pages.OnHoldPage;
 import com.ort.qa.pages.SelectFacilityPage;
 import com.ort.qa.util.DataProviderExcel;
 
-public class CartReviewPageTest extends TestBase {
+public class OnHoldPageTest extends TestBase {
 	
 	LoginPage loginPage;
 	SelectFacilityPage selectFacilityPage;
     NurseDashboardPage nurseDashboardPage;
 	CreateCaseSetSelectionPage  createCaseSetSelectionPage;
-	CartReviewPage cartReviewPage;
-	
-public CartReviewPageTest() {  
+	OnHoldPage onHoldPage;
+
+public OnHoldPageTest() {  
 		
 		super();	                           
 		}
-
-
+	
 @BeforeTest
 
 public void setUp() throws InterruptedException {
 	initialization();
 	loginPage = new LoginPage(driver);
     selectFacilityPage = new SelectFacilityPage(driver); 
-  	 cartReviewPage = new CartReviewPage(driver);
+  	onHoldPage = new OnHoldPage(driver);
      nurseDashboardPage = loginPage.login(prop.getProperty("superUsername"), prop.getProperty("superPassword"));
     nurseDashboardPage = new NurseDashboardPage(driver);
 	 Thread.sleep(1000);
@@ -49,11 +48,11 @@ public void setUp() throws InterruptedException {
 public void openCases(String Status, String lastName, String firstName, String MRN, String Speciality, String CaseNumber ) throws InterruptedException 
 {
 	 Thread.sleep(3000);
-	 cartReviewPage.checkCartReview (Status,lastName,firstName, MRN, Speciality);
+	onHoldPage.checkOnHold (Status,lastName,firstName, MRN, Speciality);
 	 Thread.sleep(3000);
-	 cartReviewPage.search.click();
+	onHoldPage.search.click();
 
 
 }
+	
 }
-
