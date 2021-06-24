@@ -158,7 +158,8 @@ public class NurseDashboardPage extends RepositoryPages
 	@FindBy(xpath="(//a[@class='menu-font'])[6]")
 	public WebElement menuSwitchLocatoinSPD;
 	
-	
+	@FindBy(xpath="(//a[@class='menu-font'])[9]")
+	public WebElement caseQueueLink;
 	
  /*Initialization
  */	
@@ -279,6 +280,10 @@ public class NurseDashboardPage extends RepositoryPages
 		return new OpenCasesPage();
 	}
 	
-	
+	public OpenCasesPage clickOnCaseQueueLink()
+	{
+		caseQueueLink.click();
+		return new OpenCasesPage();
+	}
 	
 }

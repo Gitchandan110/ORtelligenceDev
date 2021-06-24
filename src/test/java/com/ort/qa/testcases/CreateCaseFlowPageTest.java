@@ -143,14 +143,17 @@ public class CreateCaseFlowPageTest extends TestBase {
 			  
 		}
 		
+		
+		//click on Cart Review link
 		@Test(priority=7)
 		public void clickOnCartReview()
 		{
 			nurseDashboardPage.menuCartReview.click();
 		}
 		
+		// Check Cart Review Cases
 		@Test(priority=8, dataProvider="OpenCases",dataProviderClass=DataProviderExcel.class)
-		public void CartReviewCases(String Status, String lastName, String firstName, String MRN, String Speciality, String CaseNumber) throws InterruptedException 
+		public void cartReviewCases(String Status, String lastName, String firstName, String MRN, String Speciality, String CaseNumber) throws InterruptedException 
 		{
 			Thread.sleep(3000);
 			   createCaseFlowPage.userSearchCases (Status,lastName,firstName, MRN, Speciality, CaseNumber);
@@ -158,19 +161,54 @@ public class CreateCaseFlowPageTest extends TestBase {
 				openCasesPage.search.click();
 		}
 	
+		//Click on OR-Ready Link
 		@Test(priority=9)
 		public void clickOnORreadyLink() 
 		{
 			nurseDashboardPage.menuORtelligence.click();
 		}
 		
+		//Check OR-Ready Cases
 		@Test(priority=10, dataProvider="OpenCases",dataProviderClass=DataProviderExcel.class)
-		public void ORreadyCases(String Status, String lastName, String firstName, String MRN, String Speciality, String CaseNumber) throws InterruptedException 
+		public void oRreadyCases(String Status, String lastName, String firstName, String MRN, String Speciality, String CaseNumber) throws InterruptedException 
 		{
 			Thread.sleep(3000);
 			   createCaseFlowPage.userSearchCases (Status,lastName,firstName, MRN, Speciality, CaseNumber);
 				 Thread.sleep(3000);
 				openCasesPage.search.click();
 		}
-
+		
+		
+		//click on On-Progress Link
+		@Test(priority=11)
+		public void clickOnInProgressLink() 
+		{
+			nurseDashboardPage.menuInProcess.click();
+		}
+		
+		@Test(priority=12, dataProvider="OpenCases",dataProviderClass=DataProviderExcel.class)
+		public void inProgressCases(String Status, String lastName, String firstName, String MRN, String Speciality, String CaseNumber) throws InterruptedException 
+		{
+			Thread.sleep(3000);
+			   createCaseFlowPage.userSearchCases (Status,lastName,firstName, MRN, Speciality, CaseNumber);
+				 Thread.sleep(3000);
+				openCasesPage.search.click();
+		}
+		
+		@Test(priority=13)
+		public void clickOnOnHoldLink()
+		{
+			nurseDashboardPage.menuOnHold.click();
+		}
+		
+		@Test(priority=14, dataProvider="OpenCases",dataProviderClass=DataProviderExcel.class)
+		public void onHoldCases(String Status, String lastName, String firstName, String MRN, String Speciality, String CaseNumber) throws InterruptedException 
+		{
+			Thread.sleep(3000);
+			   createCaseFlowPage.userSearchCases (Status,lastName,firstName, MRN, Speciality, CaseNumber);
+				 Thread.sleep(3000);
+				openCasesPage.search.click();
+		}
+		
+		
 }
