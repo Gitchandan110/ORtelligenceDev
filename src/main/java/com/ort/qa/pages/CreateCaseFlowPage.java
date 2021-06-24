@@ -19,10 +19,10 @@ public class CreateCaseFlowPage extends RepositoryPages
  
 	WebDriver driver;
 	CreateCaseAffectedAreaPage createCaseAffectedAreaPage;
-	CreateCaseProcedureSelectionPage createCaseProcedureSelectionPage;
+	//CreateCaseProcedureSelectionPage createCaseProcedureSelectionPage;
 	CreateCaseSystemSelectionPage createCaseSystemSelectionPage;
 	CreateCaseSetSelectionPage createCaseSetSelectionPage;
-	
+	CreateCaseFlowPage createCaseFlowPage;
 	
 	
 	
@@ -34,67 +34,12 @@ public class CreateCaseFlowPage extends RepositoryPages
 		driver=dr;
 		PageFactory.initElements(driver, this);
 		 createCaseAffectedAreaPage= new CreateCaseAffectedAreaPage();
-		 createCaseProcedureSelectionPage= new CreateCaseProcedureSelectionPage();
 		 createCaseSystemSelectionPage= new CreateCaseSystemSelectionPage();
 		 createCaseSetSelectionPage= new CreateCaseSetSelectionPage();
+		 createCaseFlowPage = new CreateCaseFlowPage(driver);
 	}	
 	
 	
-
- /*	User needs to Select the Patient from the list of Patients
- *	page ignition is also present
- */
-	
- /*Actions : 
- */
-
-	
-/*	public void createCaseSearchPatientData(String lastName, String firstName, String mNR) 
-	{
-						
-		patientLastName.sendKeys(lastName);
-		patientFirstName.sendKeys(firstName);
-		patientMRN.sendKeys(mNR);
-		search.click();
-	    
-		selectPatient.click();
-		
-	}*/
-	
-	
-
-	
-/*	public void createCaseFindPatientLongFlowData(String lastName, String firstName, String mNR,String sname, String urgencyName, String patientAlllergy,String speciality, String notesBySurgeon) throws InterruptedException 
-	{
-		patientLastName.sendKeys(lastName);
-		Thread.sleep(2000);
-		patientFirstName.sendKeys(firstName);
-		Thread.sleep(2000);
-		patientMRN.sendKeys(mNR);
-		Thread.sleep(2000);
-        search.click();
-        Thread.sleep(2000);
-		selectPatient.click();
-		Thread.sleep(2000);
-		surgeon.sendKeys(sname);
-		Thread.sleep(2000);
-		urgency.sendKeys(urgencyName);
-		Thread.sleep(2000);
-		patientAllergy.sendKeys(patientAlllergy);
-		Thread.sleep(3000);
-		speciaity.sendKeys(speciality);
-		Thread.sleep(3000);
-		notes.sendKeys(notesBySurgeon);
-        next.click();
-       
-     
-	}*/
-	
-	
-
-
-
-
 
 	public void createCaseFindPatientLongFlowData(String Status,String lastName, String firstName, String mNR,String sname, String urgencyName, String patientAlllergy,String speciality, 
 			String notesBySurgeon, String AnasthesiaRequest, String Medications, String Side, String Position, String PositioningComments, String Instructions) throws InterruptedException 
@@ -123,7 +68,7 @@ public class CreateCaseFlowPage extends RepositoryPages
         Thread.sleep(3000);
         createCaseAffectedAreaPage.clickOnhip();
         Thread.sleep(3000);
-        createCaseProcedureSelectionPage.selectProcedure2.click();
+        createCaseFlowPage.selectProceduree.click();
 		 Thread.sleep(3000);
 		 createCaseSystemSelectionPage.createCaseSystemSelectionOption1();
 		 Thread.sleep(3000);	 
@@ -262,8 +207,21 @@ public class CreateCaseFlowPage extends RepositoryPages
 	
 		
 	}
-
+    //Select the 27245 procedure
+	public void  createCaseProcedureSelection() 
+	{
+		selectProceduree.click();
+				
+	}
 	
+	//Click on back button
+	public void createCaseProcedureSelectionBack() 
+	{
+	back.click();
+				
+	}
+	
+   
 	public void clickSearchButton() {
 		search.click();
 	}
