@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="63211" started-at="2021-06-24T08:48:35Z" finished-at="2021-06-24T08:49:38Z">
+  <suite name="Default suite" duration-ms="55286" started-at="2021-06-24T12:52:27Z" finished-at="2021-06-24T12:53:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="63211" started-at="2021-06-24T08:48:35Z" finished-at="2021-06-24T08:49:38Z">
-      <class name="com.ort.qa.testcases.CaseQueuePageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CaseQueuePageTest@204f30ec]" name="setUp" is-config="true" duration-ms="32441" started-at="2021-06-24T08:48:35Z" finished-at="2021-06-24T08:49:07Z">
+    <test name="Default test" duration-ms="55286" started-at="2021-06-24T12:52:27Z" finished-at="2021-06-24T12:53:23Z">
+      <class name="com.ort.qa.testcases.CartReviewPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CartReviewPageTest@204f30ec]" name="setUp" is-config="true" duration-ms="24671" started-at="2021-06-24T12:52:27Z" finished-at="2021-06-24T12:52:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="openCases(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.ort.qa.testcases.CaseQueuePageTest@204f30ec]" name="openCases" duration-ms="14908" started-at="2021-06-24T08:49:08Z" data-provider="OpenCases" finished-at="2021-06-24T08:49:23Z">
+        <test-method status="PASS" signature="openCases(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.ort.qa.testcases.CartReviewPageTest@204f30ec]" name="openCases" duration-ms="14883" started-at="2021-06-24T12:52:53Z" data-provider="OpenCases" finished-at="2021-06-24T12:53:08Z">
           <params>
             <param index="0">
               <value>
@@ -47,7 +47,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openCases -->
-        <test-method status="PASS" signature="openCases(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.ort.qa.testcases.CaseQueuePageTest@204f30ec]" name="openCases" duration-ms="14954" started-at="2021-06-24T08:49:23Z" data-provider="OpenCases" finished-at="2021-06-24T08:49:38Z">
+        <test-method status="PASS" signature="openCases(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.ort.qa.testcases.CartReviewPageTest@204f30ec]" name="openCases" duration-ms="14776" started-at="2021-06-24T12:53:08Z" data-provider="OpenCases" finished-at="2021-06-24T12:53:23Z">
           <params>
             <param index="0">
               <value>
@@ -61,7 +61,7 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[Vikash]]>
+                <![CDATA[V]]>
               </value>
             </param>
             <param index="3">
@@ -83,7 +83,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openCases -->
-      </class> <!-- com.ort.qa.testcases.CaseQueuePageTest -->
+      </class> <!-- com.ort.qa.testcases.CartReviewPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -286,4 +286,10 @@ public class NurseDashboardPage extends RepositoryPages
 		return new OpenCasesPage();
 	}
 	
+	public CartReviewPage clickOnCartReviewLink()
+	{
+		menuCartReview.click();
+		return new  CartReviewPage(driver);
+	}
+	
 }

@@ -85,7 +85,9 @@ public class RepositoryPages extends TestBase {
 			@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[1]")
 			public WebElement dashboardInProcess;  
 			
-			
+			//Cart Review Link
+			@FindBy(xpath="(//a[text()='Cart Review'])[1]")
+			public WebElement menuCartReview;
 			
 			
 //Find Patient Page
