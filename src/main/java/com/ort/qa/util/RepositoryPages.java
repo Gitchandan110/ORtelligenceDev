@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.ort.qa.base.TestBase;
 import com.ort.qa.pages.CreateCaseAffectedAreaPage;
-import com.ort.qa.pages.CreateCaseProcedureSelectionPage;
+
 import com.ort.qa.pages.CreateCaseSetSelectionPage;
 import com.ort.qa.pages.CreateCaseSystemSelectionPage;
 
@@ -123,6 +123,8 @@ public class RepositoryPages extends TestBase {
 			
 			@FindBy(xpath="//input[@id='caseId']")
 			public WebElement caseNumbers;
+			
+			
 //Create Case Xpaths
 			
 			//select surgeon on create case
@@ -209,6 +211,20 @@ public class RepositoryPages extends TestBase {
 			//Error Msg Field if surgeon field is blank while creating case
 			@FindBy(xpath="//button[text()=' Please select Surgeon ']")
 			protected WebElement errorMsg;
+			
+//Procedure Selection Page Xpath
+			
+			//Select Button 27245
+			@FindBy(xpath="(//button[@class='btn btn-primary'])[15]")
+		 	protected WebElement selectProceduree ;
+			
+			//Click on Back Button
+			@FindBy(xpath="//button[text()='Back']")
+			protected WebElement back;
+			
+
+		 	@FindBy(xpath="//button[text()='Select another Procedure']")
+		 	WebElement selectAnotherProceedToCart;	
 			
 			
 			

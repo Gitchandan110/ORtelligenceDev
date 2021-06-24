@@ -239,6 +239,10 @@ public class CreateCaseSetSelectionPage extends TestBase
 	   
 	}		
 	
+	public void createCaseHoldQuantity()
+	{
+		holdQuantity.sendKeys("2");
+	}
  /*	SelectSideDropdoown
  */
 
