@@ -3,12 +3,26 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ort.qa.testcases.CaseQueuePageTest">
+      <class name="com.ort.qa.testcases.CreateCaseFlowPageTest">
         <methods>
-          <include name="openCases"/>
+          <include name="createCaseProcedureSelectionFlowTest"/>
+          <include name="clickOnCartReview"/>
+          <include name="clickOnInProgressLink"/>
+          <include name="createCasePreferenceCardFlowTest"/>
+          <include name="clickOnSearchCasesLink"/>
+          <include name="inProgressCases"/>
+          <include name="clickOnOpenCases"/>
           <include name="setUp"/>
+          <include name="clickOnOnHoldLink"/>
+          <include name="onHoldCases"/>
+          <include name="userSearchCases"/>
+          <include name="clickOnORreadyLink"/>
+          <include name="openCases"/>
+          <include name="cartReviewCases"/>
+          <include name="oRreadyCases"/>
+          <include name="createCaseFindPatientLongFlowTest"/>
         </methods>
-      </class> <!-- com.ort.qa.testcases.CaseQueuePageTest -->
+      </class> <!-- com.ort.qa.testcases.CreateCaseFlowPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -216,9 +216,12 @@ public class RepositoryPages extends TestBase {
 			
 //Procedure Selection Page Xpath
 			
+			@FindBy(xpath="(//button[text()='Select'])[15]")
+			public WebElement selectProcedure2;
+			
 			//Select Button 27245
 			@FindBy(xpath="(//button[@class='btn btn-primary'])[15]")
-		 	protected WebElement selectProceduree ;
+			public WebElement selectProceduree ;
 			
 			//Click on Back Button
 			@FindBy(xpath="//button[text()='Back']")
