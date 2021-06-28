@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ort.qa.testcases.CaseQueuePageTest">
+      <class name="com.ort.qa.testcases.ORReadyPageTest">
         <methods>
-          <include name="clickOnConfirmCartButton"/>
           <include name="setUp"/>
+          <include name="openCases" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.ort.qa.testcases.CaseQueuePageTest -->
+      </class> <!-- com.ort.qa.testcases.ORReadyPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

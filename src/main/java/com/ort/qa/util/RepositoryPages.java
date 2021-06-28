@@ -89,6 +89,11 @@ public class RepositoryPages extends TestBase {
 			@FindBy(xpath="(//a[text()='Cart Review'])[1]")
 			public WebElement menuCartReview;
 			
+			//ORReady link
+			@FindBy(xpath="(//a[text()='ORtelligence'])[1]")
+			//@FindBy(xpath="//a[@class='menu-font menu-active']")
+			protected WebElement menuORReadyLink;
+			
 			
 //Find Patient Page
 			
