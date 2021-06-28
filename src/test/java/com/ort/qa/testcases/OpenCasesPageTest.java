@@ -1,5 +1,6 @@
 package com.ort.qa.testcases;
 
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -57,7 +58,7 @@ public class OpenCasesPageTest extends TestBase {
 	   openCasesPage.userOpenCases (Status,lastName,firstName, MRN, Speciality, CaseNumber);
 		 Thread.sleep(3000);
 		openCasesPage.search.click();
-		
+		openCasesPage.caseNumberLink.click();
 		
 		 
 		 

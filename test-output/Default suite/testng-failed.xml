@@ -5,22 +5,8 @@
     <classes>
       <class name="com.ort.qa.testcases.CreateCaseFlowPageTest">
         <methods>
-          <include name="createCaseProcedureSelectionFlowTest"/>
-          <include name="clickOnCartReview"/>
-          <include name="clickOnInProgressLink"/>
-          <include name="createCasePreferenceCardFlowTest"/>
-          <include name="clickOnSearchCasesLink"/>
-          <include name="inProgressCases"/>
-          <include name="clickOnOpenCases"/>
-          <include name="setUp"/>
-          <include name="clickOnOnHoldLink"/>
-          <include name="onHoldCases"/>
-          <include name="userSearchCases"/>
-          <include name="clickOnORreadyLink"/>
           <include name="openCases"/>
-          <include name="cartReviewCases"/>
-          <include name="oRreadyCases"/>
-          <include name="createCaseFindPatientLongFlowTest"/>
+          <include name="setUp"/>
         </methods>
       </class> <!-- com.ort.qa.testcases.CreateCaseFlowPageTest -->
     </classes>

@@ -70,7 +70,7 @@ public class CreateCaseFlowPage extends RepositoryPages
         Thread.sleep(3000);
         createCaseAffectedAreaPage.clickOnhip();
         Thread.sleep(5000);
-        createCaseProcedureSelectionPage.selectProcedure2.click();
+        createCaseProcedureSelectionPage.createCaseProcedureSelection();
 		 Thread.sleep(3000);
 		 createCaseSystemSelectionPage.createCaseSystemSelectionOption1();
 		 Thread.sleep(3000);	 

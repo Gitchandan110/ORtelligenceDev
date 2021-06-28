@@ -56,7 +56,8 @@ public CaseQueuePageTest() {
 	   caseQueuePage.checkCaseQueue (Status,lastName,firstName, MRN, Speciality);
 		 Thread.sleep(3000);
 		 caseQueuePage.search.click();
-		
+		 Thread.sleep(3000);
+		 caseQueuePage.caseNumberLink.click();
 	
 	}
 	

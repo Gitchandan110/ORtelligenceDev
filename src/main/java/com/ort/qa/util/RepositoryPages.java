@@ -126,6 +126,10 @@ public class RepositoryPages extends TestBase {
 			@FindBy(xpath="//input[@id='caseId']")
 			public WebElement caseNumbers;
 			
+			//@FindBy(xpath="//parent::td[@class='border-right' and @scope='row']//a[@class='a-pointer']")
+			@FindBy(xpath="(//a[@class='a-pointer'])[1]")
+			public WebElement caseNumberLink;
+			
 			
 //Create Case Xpaths
 			
