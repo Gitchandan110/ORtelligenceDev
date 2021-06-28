@@ -127,7 +127,7 @@ public class RepositoryPages extends TestBase {
 			public WebElement caseNumbers;
 			
 			//@FindBy(xpath="//parent::td[@class='border-right' and @scope='row']//a[@class='a-pointer']")
-			@FindBy(xpath="//parent::td[@class='border-right' and @scope='row']//a[@class='a-pointer']")
+			@FindBy(xpath="//a[@class='a-pointer']")
 			public WebElement caseNumberLink;
 			
 			
@@ -280,6 +280,11 @@ public class RepositoryPages extends TestBase {
 			
 			@FindBy(xpath="//button[contains(text(),'Update')]")
 			protected WebElement updateButton;
+			
+//SuperUser CaseQueue Page
+			
+			@FindBy(xpath="//button[contains(text(),'Confirm Cart')]")
+			protected WebElement confirmCartButton;
 	}
 
 

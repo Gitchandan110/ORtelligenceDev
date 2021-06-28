@@ -61,6 +61,23 @@ public CaseQueuePageTest() {
 	
 	}
 	
+
+	//Click on Cart Details Button on Confirmation Popup
+	@Test(priority=3)
+	public void clickOnCartDetalisButton() 
+	{
+		caseQueuePage.clickOnCartDetails();
+	}
+	
+	
+	//Click on Update Button
+	@Test(priority=4)
+	public void clickOnConfirmCartButton() throws InterruptedException
+	{
+		caseQueuePage.clickOnConfirmCartButton();
+	}
+	
+	
 	
 }
 

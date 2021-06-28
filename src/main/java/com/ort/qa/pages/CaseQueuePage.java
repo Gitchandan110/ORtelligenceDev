@@ -29,4 +29,33 @@ public class CaseQueuePage extends  RepositoryPages {
 		specialitySelection.sendKeys(Speciality);
 		Thread.sleep(2000);
 	}
+	
+	//click on the Procedure Details Button on Confirmation Popup
+		public void clickOnProcedureDetails()
+		{
+			procedureDetailsButton.click();
+		}
+		
+		//click on the Cart Details Button on the confirmation PopUp
+		public void clickOnCartDetails()
+		{
+			cartDetailsButton.click();
+		}
+		
+		//Click on the back Button on View Cases Page After clicking on Procedure Details Button 
+		public void clickOnBackButton() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			backButton.click();
+		}
+		
+		//click on confirm cart Button on create Cart Page After clicking on Cart Details Button
+		public void clickOnConfirmCartButton() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			confirmCartButton.click();
+		}
+		
+	
+	
 }
