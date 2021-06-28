@@ -32,7 +32,7 @@ public class SearchCaseFlowPageTest extends TestBase {
 	 searchCaseFlowPage.userSearchCase(Status, userRoleLoginId, userRolePassword, facilitySelection, lastName,firstName, MRN, speciality,caseNumber);
 	 Thread.sleep(3000);
 	 searchCaseFlowPage.okButton.click();
-	 userRoleLoginPage.clickOnMenuLogout();
+	 //userRoleLoginPage.clickOnMenuLogout();
 	}
 
 	

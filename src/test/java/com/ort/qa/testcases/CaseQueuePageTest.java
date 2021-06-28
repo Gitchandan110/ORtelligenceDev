@@ -18,7 +18,6 @@ public class CaseQueuePageTest extends TestBase {
 	
 	LoginPage loginPage;
 	SelectFacilityPage selectFacilityPage;
-	CreateCaseFlowPage createCaseFlowPage; 
     NurseDashboardPage nurseDashboardPage;
 	CreateCaseSetSelectionPage  createCaseSetSelectionPage;
 	SearchCaseFlowPage searchCaseFlowPage;
@@ -34,8 +33,7 @@ public CaseQueuePageTest() {
 	public void setUp() throws InterruptedException {
 		initialization();
 		loginPage = new LoginPage(driver);
-        selectFacilityPage = new SelectFacilityPage(driver);
-        createCaseFlowPage = new CreateCaseFlowPage(driver);  
+        selectFacilityPage = new SelectFacilityPage(driver); 
       	 searchCaseFlowPage = new SearchCaseFlowPage(driver);
       	 caseQueuePage = new CaseQueuePage(driver);
 	     nurseDashboardPage = loginPage.login(prop.getProperty("superUsername"), prop.getProperty("superPassword"));
@@ -58,7 +56,8 @@ public CaseQueuePageTest() {
 	   caseQueuePage.checkCaseQueue (Status,lastName,firstName, MRN, Speciality);
 		 Thread.sleep(3000);
 		 caseQueuePage.search.click();
-		
+		 Thread.sleep(3000);
+		 caseQueuePage.caseNumberLink.click();
 	
 	}
 	

@@ -19,10 +19,10 @@ public class CreateCaseFlowPage extends RepositoryPages
  
 	WebDriver driver;
 	CreateCaseAffectedAreaPage createCaseAffectedAreaPage;
-	//CreateCaseProcedureSelectionPage createCaseProcedureSelectionPage;
+	CreateCaseProcedureSelectionPage createCaseProcedureSelectionPage;
 	CreateCaseSystemSelectionPage createCaseSystemSelectionPage;
 	CreateCaseSetSelectionPage createCaseSetSelectionPage;
-	CreateCaseFlowPage createCaseFlowPage;
+	//CreateCaseFlowPage createCaseFlowPage;
 	
 	
 	
@@ -36,7 +36,9 @@ public class CreateCaseFlowPage extends RepositoryPages
 		 createCaseAffectedAreaPage= new CreateCaseAffectedAreaPage();
 		 createCaseSystemSelectionPage= new CreateCaseSystemSelectionPage();
 		 createCaseSetSelectionPage= new CreateCaseSetSelectionPage();
-		 createCaseFlowPage = new CreateCaseFlowPage(driver);
+		 createCaseProcedureSelectionPage = new CreateCaseProcedureSelectionPage();
+		 //createCaseFlowPage = new CreateCaseFlowPage(driver);
+		
 	}	
 	
 	
@@ -67,8 +69,8 @@ public class CreateCaseFlowPage extends RepositoryPages
         next.click();
         Thread.sleep(3000);
         createCaseAffectedAreaPage.clickOnhip();
-        Thread.sleep(3000);
-        createCaseFlowPage.selectProceduree.click();
+        Thread.sleep(5000);
+        createCaseProcedureSelectionPage.createCaseProcedureSelection();
 		 Thread.sleep(3000);
 		 createCaseSystemSelectionPage.createCaseSystemSelectionOption1();
 		 Thread.sleep(3000);	 
@@ -207,19 +209,7 @@ public class CreateCaseFlowPage extends RepositoryPages
 	
 		
 	}
-    //Select the 27245 procedure
-	public void  createCaseProcedureSelection() 
-	{
-		selectProceduree.click();
-				
-	}
-	
-	//Click on back button
-	public void createCaseProcedureSelectionBack() 
-	{
-	back.click();
-				
-	}
+ 
 	
    
 	public void clickSearchButton() {

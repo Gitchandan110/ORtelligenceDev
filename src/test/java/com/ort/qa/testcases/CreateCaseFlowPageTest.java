@@ -77,7 +77,7 @@ public class CreateCaseFlowPageTest extends TestBase {
  
 	//Preference Card Flow
 	
-	@Test(priority=2, dataProvider="PreferenceCardSelectionFlow",dataProviderClass=DataProviderExcel.class)
+	//@Test(priority=2, dataProvider="PreferenceCardSelectionFlow",dataProviderClass=DataProviderExcel.class)
 	public void createCasePreferenceCardFlowTest(String Status, String lastName, String firstName, String MNR,String SurgeonName, String UrgencyName, String patientAlllergy,String Speciality,String PhysicianAssistant, String NotesBySurgeon, String PreferenceCardSelection,
 			String AnesthesiaRequest, String Medications,  String  Side, String Position,   String PositioningComments, String Instructions) throws InterruptedException 
 	{
@@ -94,7 +94,7 @@ public class CreateCaseFlowPageTest extends TestBase {
 	
 	//Procedure Flow
 	 
-	@Test(priority=3, dataProvider="ProcedureSelectionFlow",dataProviderClass=DataProviderExcel.class)
+	//@Test(priority=3, dataProvider="ProcedureSelectionFlow",dataProviderClass=DataProviderExcel.class)
 	public void createCaseProcedureSelectionFlowTest( String Status, String lastName, String firstName, String mNR ,  String sname, String urgencyName, String patientAllergy, String speciality,String procedureSelection,
 		String OpenQuantity,String AnasthesiaRequest, String Medications, String Side, String Position, String PositioningComments, String Instructions) throws InterruptedException 
 	{
@@ -137,7 +137,7 @@ public class CreateCaseFlowPageTest extends TestBase {
 		public void openCases(String Status, String lastName, String firstName, String MRN, String Speciality, String CaseNumber ) throws InterruptedException 
 		{
 			 Thread.sleep(3000);
-		   openCasesPage.userOpenCases (Status,lastName,firstName, MRN, Speciality, CaseNumber);
+		   openCasesPage.userOpenCases1 (Status,lastName,firstName, MRN, Speciality);
 			 Thread.sleep(3000);
 			openCasesPage.search.click();
 			  

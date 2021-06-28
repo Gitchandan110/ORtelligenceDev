@@ -99,8 +99,8 @@ public void userSearchCase(String Status, String userRoleLoginId, String userRol
 	specialitySelection.sendKeys(speciality);
 	Thread.sleep(2000);
 	
-	caseNumbers.sendKeys(caseNumber);
-	Thread.sleep(2000);
+	//caseNumbers.sendKeys(caseNumber);
+	//Thread.sleep(2000);
 	
 	
 	search.click();

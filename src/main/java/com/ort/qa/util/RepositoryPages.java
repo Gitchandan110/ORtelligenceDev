@@ -85,7 +85,9 @@ public class RepositoryPages extends TestBase {
 			@FindBy(xpath="(//div[@class='rcorners3 border border-primary flexchild pointer-div'])[1]")
 			public WebElement dashboardInProcess;  
 			
-			
+			//Cart Review Link
+			@FindBy(xpath="(//a[text()='Cart Review'])[1]")
+			public WebElement menuCartReview;
 			
 			
 //Find Patient Page
@@ -123,6 +125,10 @@ public class RepositoryPages extends TestBase {
 			
 			@FindBy(xpath="//input[@id='caseId']")
 			public WebElement caseNumbers;
+			
+			//@FindBy(xpath="//parent::td[@class='border-right' and @scope='row']//a[@class='a-pointer']")
+			@FindBy(xpath="(//a[@class='a-pointer'])[1]")
+			public WebElement caseNumberLink;
 			
 			
 //Create Case Xpaths
@@ -214,9 +220,12 @@ public class RepositoryPages extends TestBase {
 			
 //Procedure Selection Page Xpath
 			
+			@FindBy(xpath="(//button[text()='Select'])[15]")
+			public WebElement selectProcedure2;
+			
 			//Select Button 27245
 			@FindBy(xpath="(//button[@class='btn btn-primary'])[15]")
-		 	protected WebElement selectProceduree ;
+			public WebElement selectProceduree ;
 			
 			//Click on Back Button
 			@FindBy(xpath="//button[text()='Back']")
