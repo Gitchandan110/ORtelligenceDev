@@ -137,10 +137,11 @@ public class CreateCaseFlowPageTest extends TestBase {
 		public void openCases(String Status, String lastName, String firstName, String MRN, String Speciality, String CaseNumber ) throws InterruptedException 
 		{
 			 Thread.sleep(3000);
-		   openCasesPage.userOpenCases1 (Status,lastName,firstName, MRN, Speciality);
+		   openCasesPage.userOpenCases (Status,lastName,firstName, MRN, Speciality,CaseNumber);
 			 Thread.sleep(3000);
 			openCasesPage.search.click();
-			  
+			Thread.sleep(3000);
+			openCasesPage.caseNumberLink.click();
 		}
 		
 		

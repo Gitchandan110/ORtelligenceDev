@@ -30,6 +30,7 @@ public class OpenCasesPageTest extends TestBase {
 
 	@BeforeTest
 	
+	
 	public void setUp() throws InterruptedException {
 		initialization();
 
@@ -45,9 +46,10 @@ public class OpenCasesPageTest extends TestBase {
 		         selectFacilityPage.clickOnDropDown();
 		    	 Thread.sleep(1000);
 		 		 selectFacilityPage.clickConfirm();
-		 		 Thread.sleep(1000);
+		 		 Thread.sleep(2000);
 		 		 nurseDashboardPage.clickOnOpenCaseLink();
 		 		
+		 		 
 	}
 
 	
@@ -58,11 +60,39 @@ public class OpenCasesPageTest extends TestBase {
 	   openCasesPage.userOpenCases (Status,lastName,firstName, MRN, Speciality, CaseNumber);
 		 Thread.sleep(3000);
 		openCasesPage.search.click();
-		openCasesPage.caseNumberLink.click();
-		
-		 
-		 
+		 Thread.sleep(3000);
+		openCasesPage.clickOnCaseNumberLink();
+		Thread.sleep(3000);
+		openCasesPage.clickOnProcedureDetails();
+		Thread.sleep(3000);
+		openCasesPage.clickOnBackButton();
+		Thread.sleep(3000);	 
 	}
+	
+	//CLICK ON THE FIRST lINK
+	
+	@Test(priority=2)
+	public void clickOnCaseLink()
+	{
+		openCasesPage.clickOnCaseNumberLink();
+	}
+	
+	
+	//Click on Cart Details Button on Confirmation Popup
+	@Test(priority=3)
+	public void clickOnCartDetalisButton() 
+	{
+		openCasesPage.clickOnCartDetails();
+	}
+	
+	
+	//Click on Update Button
+	@Test(priority=4)
+	public void clickOnUpDateButton() throws InterruptedException
+	{
+		openCasesPage.clickOnUpdateButton();
+	}
+	
 	
 
 }

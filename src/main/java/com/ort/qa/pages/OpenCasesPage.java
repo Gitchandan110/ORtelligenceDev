@@ -14,6 +14,7 @@ public class OpenCasesPage extends RepositoryPages {
 	public OpenCasesPage() {
 		PageFactory.initElements(driver, this);
 	}
+	
 	//WITH CASE NUMBEER
 	public void userOpenCases(String Status, String lastName, String firstName, String MRN, String Speciality, String CaseNumber ) throws InterruptedException
 	
@@ -32,14 +33,48 @@ public class OpenCasesPage extends RepositoryPages {
 		
 		caseNumbers.sendKeys(CaseNumber);
 		Thread.sleep(2000);
-		
-		
+			
 		
 	}
 	
-	//WITHOUT CASE NUMBER
+	//Click on the case number link
+	public void clickOnCaseNumberLink()
+	{
+		caseNumberLink.click();
+	}
 	
-public void userOpenCases1(String Status, String lastName, String firstName, String MRN, String Speciality ) throws InterruptedException
+	
+	//click on the Procedure Details Button on Confirmation Popup
+	public void clickOnProcedureDetails()
+	{
+		procedureDetailsButton.click();
+	}
+	
+	//clcick on the Cart Details Button on the confirmation PopUp
+	public void clickOnCartDetails()
+	{
+		cartDetailsButton.click();
+	}
+	
+	//Click on the back Button on View Cases Page After clicking on Procedure Details Button 
+	public void clickOnBackButton() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		backButton.click();
+	}
+	
+	//click on Update Button on create Cart Page After clicking on Cart Details Button
+	public void clickOnUpdateButton() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		updateButton.click();
+	}
+	
+	
+	
+	//WITHOUT CASE NUMBER
+/*	
+  public void userOpenCases1(String Status, String lastName, String firstName, String MRN, String Speciality ) throws InterruptedException
 	
 	{
 		patientLastName.sendKeys(lastName);
@@ -57,5 +92,5 @@ public void userOpenCases1(String Status, String lastName, String firstName, Str
 		
 		
 		
-	}
+	}*/
 }

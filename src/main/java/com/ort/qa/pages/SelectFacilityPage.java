@@ -36,20 +36,57 @@ public class SelectFacilityPage extends RepositoryPages
 	
 	
 	public void clickOnDropDown() {
+		
+		try {
+			if (facilityDropdown.isDisplayed()) {
+		
 		DropDownHandler dp =new DropDownHandler(driver);
         dp.selectUsingVisibleText(facilityDropdown,"Wilmington, DE, 19899 , Wilmington, Delaware, 19899");
+	}}
+		catch (Exception e) {
+
+			e.printStackTrace();
+		}	
 	}
+	/*try {
+			if (cptCodeCheck.isDisplayed()) {
+				cptCodeCheck.sendKeys("27132");
+			}
+		}
+		catch (Exception e) {
+
+				e.printStackTrace();
+			}
+			*/
+	
+	
+	
+	
+	
+	
+	
 	
 	public void clickOnCreateCase()
 	{
+		
 		dashboardCreateCase.click();
 	}
 	
 	
 	public void clickConfirm()
 	{
+		try {
+			if (confirm.isDisplayed()) {
+				confirm.click();;
+			}
+		}
+		catch (Exception e) {
+
+				e.printStackTrace();
+			}
 		
-		confirm.click();
+		
+		//confirm.click();
 	}
 	
 	

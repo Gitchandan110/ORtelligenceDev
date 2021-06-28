@@ -274,10 +274,10 @@ public class NurseDashboardPage extends RepositoryPages
 		
 	}
 	
-	public OpenCasesPage clickOnOpenCaseLink()
+	public void clickOnOpenCaseLink()
 	{
 		menuOpenCase.click();
-		return new OpenCasesPage();
+		//return new OpenCasesPage();
 	}
 	
 	public OpenCasesPage clickOnCaseQueueLink()

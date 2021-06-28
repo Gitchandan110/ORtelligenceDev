@@ -18,7 +18,7 @@ public class SearchCaseFlowPageTest extends TestBase {
 		super();	                           
 		}
 
-	@BeforeMethod
+	@BeforeTest
 	public void setUp() {
 		initialization();
 
@@ -31,10 +31,32 @@ public class SearchCaseFlowPageTest extends TestBase {
 	 Thread.sleep(3000);
 	 searchCaseFlowPage.userSearchCase(Status, userRoleLoginId, userRolePassword, facilitySelection, lastName,firstName, MRN, speciality,caseNumber);
 	 Thread.sleep(3000);
-	 searchCaseFlowPage.okButton.click();
+	 searchCaseFlowPage.search.click();
 	 //userRoleLoginPage.clickOnMenuLogout();
 	}
 
+	@Test(priority=2)
+	public void clickOnCaseLink()
+	{
+		searchCaseFlowPage.clickOnCaseNumberLink();
+	}
+	
+	
+	//Click on Cart Details Button on Confirmation Popup
+	@Test(priority=3)
+	public void clickOnCartDetalisButton() 
+	{
+		searchCaseFlowPage.clickOnCartDetails();
+	}
+	
+	
+	//Click on Update Button
+	@Test(priority=4)
+	public void clickOnUpDateButton() throws InterruptedException
+	{
+		searchCaseFlowPage.clickOnUpdateButton();
+	}
+	
 	
 	
 	

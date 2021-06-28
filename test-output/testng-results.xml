@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="13" passed="13">
+<testng-results skipped="0" failed="1" ignored="0" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="185917" started-at="2021-06-25T12:10:47Z" finished-at="2021-06-25T12:13:53Z">
+  <suite name="Default suite" duration-ms="50082" started-at="2021-06-28T11:19:26Z" finished-at="2021-06-28T11:20:16Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="185917" started-at="2021-06-25T12:10:47Z" finished-at="2021-06-25T12:13:53Z">
-      <class name="com.ort.qa.testcases.CreateCaseFlowPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.CreateCaseFlowPageTest@e25b2fe]" name="setUp" is-config="true" duration-ms="26458" started-at="2021-06-25T12:10:47Z" finished-at="2021-06-25T12:11:14Z">
+    <test name="Default test" duration-ms="50082" started-at="2021-06-28T11:19:26Z" finished-at="2021-06-28T11:20:16Z">
+      <class name="com.ort.qa.testcases.SearchCaseFlowPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ort.qa.testcases.SearchCaseFlowPageTest@204f30ec]" name="setUp" is-config="true" duration-ms="9838" started-at="2021-06-28T11:19:26Z" finished-at="2021-06-28T11:19:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="createCaseFindPatientLongFlowTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.ort.qa.testcases.CreateCaseFlowPageTest@e25b2fe]" name="createCaseFindPatientLongFlowTest" duration-ms="57225" started-at="2021-06-25T12:11:15Z" data-provider="LongFlow" finished-at="2021-06-25T12:12:12Z">
+        <test-method status="PASS" signature="SearchCasesTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.ort.qa.testcases.SearchCaseFlowPageTest@204f30ec]" name="SearchCasesTest" duration-ms="32884" started-at="2021-06-28T11:19:37Z" data-provider="SearchCaseFlow" finished-at="2021-06-28T11:20:10Z">
           <params>
             <param index="0">
               <value>
@@ -20,32 +20,32 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[Sharma]]>
+                <![CDATA[Christiana_nurse@mailinator.com]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[Vikas]]>
+                <![CDATA[ORT@54321]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[646464]]>
+                <![CDATA[Wilmington, DE, 19899 , Wilmington, Delaware, 19899]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[Christiana surgeon ]]>
+                <![CDATA[sharma]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[Critical (Up to 1hr.)]]>
+                <![CDATA[vikas]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[Yes]]>
+                <![CDATA[646464]]>
               </value>
             </param>
             <param index="7">
@@ -55,284 +55,99 @@
             </param>
             <param index="8">
               <value>
-                <![CDATA[Do not drink water one hour before Surgery]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[Local]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[NO]]>
-              </value>
-            </param>
-            <param index="11">
-              <value>
-                <![CDATA[Bilateral]]>
-              </value>
-            </param>
-            <param index="12">
-              <value>
-                <![CDATA[Bleach Chair]]>
-              </value>
-            </param>
-            <param index="13">
-              <value>
-                <![CDATA[No Comments]]>
-              </value>
-            </param>
-            <param index="14">
-              <value>
-                <![CDATA[No Instructions]]>
+                <![CDATA[510]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createCaseFindPatientLongFlowTest -->
-        <test-method status="PASS" signature="clickOnSearchCasesLink()[pri:4, instance:com.ort.qa.testcases.CreateCaseFlowPageTest@e25b2fe]" name="clickOnSearchCasesLink" duration-ms="94" started-at="2021-06-25T12:12:12Z" finished-at="2021-06-25T12:12:12Z">
+        </test-method> <!-- SearchCasesTest -->
+        <test-method status="PASS" signature="clickOnCaseLink()[pri:2, instance:com.ort.qa.testcases.SearchCaseFlowPageTest@204f30ec]" name="clickOnCaseLink" duration-ms="82" started-at="2021-06-28T11:20:10Z" finished-at="2021-06-28T11:20:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnSearchCasesLink -->
-        <test-method status="PASS" signature="userSearchCases(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:5, instance:com.ort.qa.testcases.CreateCaseFlowPageTest@e25b2fe]" name="userSearchCases" duration-ms="16939" started-at="2021-06-25T12:12:12Z" data-provider="OpenCases" finished-at="2021-06-25T12:12:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Active]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Sharma]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Vikash]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[646464]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Trauma]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[619]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- clickOnCaseLink -->
+        <test-method status="PASS" signature="clickOnCartDetalisButton()[pri:3, instance:com.ort.qa.testcases.SearchCaseFlowPageTest@204f30ec]" name="clickOnCartDetalisButton" duration-ms="98" started-at="2021-06-28T11:20:10Z" finished-at="2021-06-28T11:20:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- userSearchCases -->
-        <test-method status="PASS" signature="clickOnOpenCases()[pri:6, instance:com.ort.qa.testcases.CreateCaseFlowPageTest@e25b2fe]" name="clickOnOpenCases" duration-ms="93" started-at="2021-06-25T12:12:29Z" finished-at="2021-06-25T12:12:29Z">
+        </test-method> <!-- clickOnCartDetalisButton -->
+        <test-method status="FAIL" signature="clickOnUpDateButton()[pri:4, instance:com.ort.qa.testcases.SearchCaseFlowPageTest@204f30ec]" name="clickOnUpDateButton" duration-ms="6329" started-at="2021-06-28T11:20:10Z" finished-at="2021-06-28T11:20:16Z">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <button _ngcontent-c24="" class="btn btn-primary" type="button">...</button> is not clickable at point (769, 618). Other element would receive the click: <div _ngcontent-c1="" id="spinner">...</div>
+  (Session info: chrome=91.0.4472.114)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'DESKTOP-B8QHPPA', ip: '192.168.1.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.114, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\Priyanka\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55981}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ed378da39db9187d2a1ac6335598a51d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button _ngcontent-c24="" class="btn btn-primary" type="button">...</button> is not clickable at point (769, 618). Other element would receive the click: <div _ngcontent-c1="" id="spinner">...</div>
+  (Session info: chrome=91.0.4472.114)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'DESKTOP-B8QHPPA', ip: '192.168.1.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.114, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\Priyanka\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55981}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ed378da39db9187d2a1ac6335598a51d
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+at com.sun.proxy.$Proxy12.click(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy10.click(Unknown Source)
+at com.ort.qa.pages.SearchCaseFlowPage.clickOnUpdateButton(SearchCaseFlowPage.java:145)
+at com.ort.qa.testcases.SearchCaseFlowPageTest.clickOnUpDateButton(SearchCaseFlowPageTest.java:57)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnOpenCases -->
-        <test-method status="PASS" signature="clickOnCartReview()[pri:7, instance:com.ort.qa.testcases.CreateCaseFlowPageTest@e25b2fe]" name="clickOnCartReview" duration-ms="512" started-at="2021-06-25T12:12:29Z" finished-at="2021-06-25T12:12:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickOnCartReview -->
-        <test-method status="PASS" signature="openCases(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:7, instance:com.ort.qa.testcases.CreateCaseFlowPageTest@e25b2fe]" name="openCases" duration-ms="14792" started-at="2021-06-25T12:12:30Z" data-provider="OpenCases" finished-at="2021-06-25T12:12:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Active]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Sharma]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Vikash]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[646464]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Trauma]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[619]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openCases -->
-        <test-method status="PASS" signature="cartReviewCases(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:8, instance:com.ort.qa.testcases.CreateCaseFlowPageTest@e25b2fe]" name="cartReviewCases" duration-ms="16880" started-at="2021-06-25T12:12:45Z" data-provider="OpenCases" finished-at="2021-06-25T12:13:02Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Active]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Sharma]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Vikash]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[646464]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Trauma]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[619]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cartReviewCases -->
-        <test-method status="PASS" signature="clickOnORreadyLink()[pri:9, instance:com.ort.qa.testcases.CreateCaseFlowPageTest@e25b2fe]" name="clickOnORreadyLink" duration-ms="93" started-at="2021-06-25T12:13:02Z" finished-at="2021-06-25T12:13:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickOnORreadyLink -->
-        <test-method status="PASS" signature="oRreadyCases(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:10, instance:com.ort.qa.testcases.CreateCaseFlowPageTest@e25b2fe]" name="oRreadyCases" duration-ms="17016" started-at="2021-06-25T12:13:02Z" data-provider="OpenCases" finished-at="2021-06-25T12:13:19Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Active]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Sharma]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Vikash]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[646464]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Trauma]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[619]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- oRreadyCases -->
-        <test-method status="PASS" signature="clickOnInProgressLink()[pri:11, instance:com.ort.qa.testcases.CreateCaseFlowPageTest@e25b2fe]" name="clickOnInProgressLink" duration-ms="86" started-at="2021-06-25T12:13:19Z" finished-at="2021-06-25T12:13:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickOnInProgressLink -->
-        <test-method status="PASS" signature="inProgressCases(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:12, instance:com.ort.qa.testcases.CreateCaseFlowPageTest@e25b2fe]" name="inProgressCases" duration-ms="17040" started-at="2021-06-25T12:13:19Z" data-provider="OpenCases" finished-at="2021-06-25T12:13:36Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Active]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Sharma]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Vikash]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[646464]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Trauma]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[619]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- inProgressCases -->
-        <test-method status="PASS" signature="clickOnOnHoldLink()[pri:13, instance:com.ort.qa.testcases.CreateCaseFlowPageTest@e25b2fe]" name="clickOnOnHoldLink" duration-ms="161" started-at="2021-06-25T12:13:36Z" finished-at="2021-06-25T12:13:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickOnOnHoldLink -->
-        <test-method status="PASS" signature="onHoldCases(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:14, instance:com.ort.qa.testcases.CreateCaseFlowPageTest@e25b2fe]" name="onHoldCases" duration-ms="16994" started-at="2021-06-25T12:13:36Z" data-provider="OpenCases" finished-at="2021-06-25T12:13:53Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Active]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Sharma]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Vikash]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[646464]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Trauma]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[619]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- onHoldCases -->
-      </class> <!-- com.ort.qa.testcases.CreateCaseFlowPageTest -->
+        </test-method> <!-- clickOnUpDateButton -->
+      </class> <!-- com.ort.qa.testcases.SearchCaseFlowPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
